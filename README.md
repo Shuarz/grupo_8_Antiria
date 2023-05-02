@@ -28,9 +28,10 @@ Tono de comunicación:
 	-	Dinámico y eficiente
 
 Paleta de colores
-	-	#
-	-	#
-	-	#
+	-	#FAF2D7: (beige) Es el color neutro para el sitio web. Con esta tonalidad, creamos, para todo el sitio, seriedad y antiguedad en el.
+	-	#1C232A: (azul oscuro) Con este color buscamos darle profesionalidad al sitio. Se usara principalmente para la tipografia, para dar seriedad, confianza y seguridad a los usuarios.
+	-	#956441: (marron): Es el color ideal para el sitio. Usando este color transmitimos antiguedad, transparencia. Es el toque retro que se busca expresar.
+	-	#AA9D16: (dorado): Se utiliza para darle profesionalidad, exclusividad y lujosidad, ya que el sitio web se especializa en la compra venta de articulos valiosos y unicos.
 
 Referentes
 	-	https://www.catawiki.com/en/
