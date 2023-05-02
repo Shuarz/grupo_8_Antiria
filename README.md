@@ -48,8 +48,3 @@ Integrantes:
 	-	Olmedo, Bernardo
 	-	Zevola, Leonardo
 	-	Canavide, Santiago
-
-
-marron --> viejo gastado vintage
-dorado --> premium unico vistoso
-blanco --> profesional calido y sobrio
