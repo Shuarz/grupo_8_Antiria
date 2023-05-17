@@ -251,21 +251,24 @@ body .cuerpo_pagina{
     background-color: #faf2d7;
     background-size: cover;
     height: 50vh;
-  
-    align-items: flex-end;
-    
+}
+.cuerpo_pagina .carrito p{
+text-align: center;
+color: #1c232a;;
+display: flex;
+position: absolute;
+font-size: 30px;
+left: 150px;
+top: 20%;
 
 }
 footer .piepagina{
-     display: flex;
+    display: flex;
     background: url('/fondo.jpg') no-repeat;
     background-color: #faf2d7;
     background-size: cover;
     height: 30vh;
-  
     align-items: flex-end;
-    
-
 }
 
 
