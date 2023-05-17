@@ -1,5 +1,26 @@
 {
   "dependencies": {
     "express": "^4.18.2"
-  }
+  },
+  "name": "grupo_8_antiria",
+  "description": "Antiria - Venta de antiguedades",
+  "version": "1.0.0",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "grupo8",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shuarz/grupo_8_Antiria.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Shuarz/grupo_8_Antiria/issues"
+  },
+  "homepage": "https://github.com/Shuarz/grupo_8_Antiria#readme"
 }
