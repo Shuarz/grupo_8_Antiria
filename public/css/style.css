@@ -189,17 +189,25 @@ body {
 
 /************************************** CARRITO ************************************/
 
+
 header section.pie_pagina{
-   display: flex;
+    
     width: 100%;
     height: 20vh;
-    background: url('/fondo.jpg') no-repeat;
     background-color: #faf2d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
     background-size: cover;
+    background-position: center;
+
 }
+
 .pie_pagina ul{
     position: absolute;
-    right: 70px;
+    right: 60px;
     display: flex;
     list-style-type: none;
     top: 30px;
@@ -233,7 +241,7 @@ header section.pie_pagina{
     display: flex;
     position: absolute;
     top: 32px;
-    left: 420px;
+    left: 200px;
     padding: 6px;
     padding-right: 380px;
     font-size: 14px;
@@ -246,11 +254,17 @@ section .shop{
     right: 40px;
 }
 body .cuerpo_pagina{
-    display: flex;
-    background: url('/fondo.jpg') no-repeat;
-    background-color: #faf2d7;
-    background-size: cover;
     height: 50vh;
+    width: 100%;
+    display: flex;
+    background-color: #faf2d7;
+    
+    justify-content: center;
+    align-items: center;
+    
+    background-size: cover;
+    background-position: center;
+
 }
 .cuerpo_pagina .carrito p{
 text-align: center;
@@ -264,13 +278,59 @@ top: 20%;
 }
 footer .piepagina{
     display: flex;
-    background: url('/fondo.jpg') no-repeat;
-    background-color: #faf2d7;
-    background-size: cover;
     height: 30vh;
     align-items: flex-end;
+    width: 100%;
+    background-color: #faf2d7;
+    justify-content: center;
+    align-items: center;
+    
+    background-size: cover;
+    background-position: center;
 }
 
+@media (max-width: 430px){
+    header section.pie_pagina{
+        width: 100%;
+
+        
+    
+    }
+    body .cuerpo_pagina{
+        width: 100%;
+    }
+
+
+
+
+
+    footer .piepagina{ 
+        width: 100%; 
+    }
+    .pie_pagina ul{
+        
+        right: 60px;
+        display: flex;
+        list-style-type: none;
+        top: 30px;
+        
+        
+    }
+    .buscador .lupa{
+        position: relative;
+        left: 0px;
+        font-size: 0px;
+        
+    }
+     .buscador {
+
+        position:relative;
+        font-size: 0px;
+        border: 0px;
+        left: 0px;
+        padding: 0px;
+    }
+}
 
 
 
