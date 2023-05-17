@@ -274,8 +274,26 @@ position: absolute;
 font-size: 30px;
 left: 150px;
 top: 20%;
-
 }
+
+
+
+
+.cuerpo_pagina .seguimiento p{
+    text-align: center;
+color: #1c232a;;
+display: flex;
+position: absolute;
+font-size: 30px;
+left: 320px;
+top: 20%;
+}
+
+
+
+
+
+
 footer .piepagina{
     display: flex;
     height: 30vh;
