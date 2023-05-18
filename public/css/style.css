@@ -258,42 +258,40 @@ body .cuerpo_pagina{
     width: 100%;
     display: flex;
     background-color: #faf2d7;
-    
     justify-content: center;
     align-items: center;
-    
     background-size: cover;
     background-position: center;
 
 }
-.cuerpo_pagina .carrito p{
-text-align: center;
-color: #1c232a;;
-display: flex;
-position: absolute;
-font-size: 30px;
-left: 150px;
-top: 20%;
+.cuerpo_pagina .buscador .lupa{
+    position: absolute;
+    top: 5px;
+    left: 405px;
+    display: flex;
 }
 
-
-
-
-.cuerpo_pagina .seguimiento p{
-    text-align: center;
-color: #1c232a;;
-display: flex;
-position: absolute;
-font-size: 30px;
-left: 320px;
-top: 20%;
+.carrito-seguimiento{
+    position: absolute;
+    left:50px;
+    display: flex;
+    list-style-type: none;
+    top: 150px;
+    
+    
 }
 
+.carrito-seguimiento li p{
 
+    text-decoration: none;
+    color: black;
+    margin-left: 50px;
+}
+.productos{
 
+font-size: 10px;
 
-
-
+}
 footer .piepagina{
     display: flex;
     height: 30vh;
@@ -306,6 +304,7 @@ footer .piepagina{
     background-size: cover;
     background-position: center;
 }
+
 
 @media (max-width: 430px){
     header section.pie_pagina{
