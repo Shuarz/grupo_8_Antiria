@@ -240,6 +240,21 @@ header section.pie_pagina{
     font-size: 14px;
 }
 
+.carousel {
+    background-color: #fa07b5;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 3px;
+} 
+
+.item {
+    padding: 3px;
+    margin: 0px 10px;
+    align-items: center;
+    border: 10px transparent;
+}
+
 
 
 /************************************** CARRITO ************************************/
