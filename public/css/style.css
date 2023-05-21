@@ -371,6 +371,14 @@ header section.pie_pagina{
 
 }
 
+.login_header img{
+    padding: 1rem;
+    width: 120px;
+    filter: drop-shadow(5px 5px 4px #956441);
+    transition: 0.2s;
+}
+
+
 .pie_pagina ul{
     position: absolute;
     right: 60px;
@@ -385,6 +393,8 @@ header section.pie_pagina{
     color: inherit;
     
 }
+
+
 
 .pie_pagina ul li{
     display: flex;
@@ -412,7 +422,12 @@ header section.pie_pagina{
     padding-right: 380px;
     font-size: 14px;
 }
-
+.imagen-del-producto{
+    display: flex;
+    justify-content: center;
+    
+  
+}
 .carousel {
     background-color: #fa07b5;
     display: flex;
@@ -426,6 +441,14 @@ header section.pie_pagina{
     margin: 0px 10px;
     align-items: center;
     border: 10px transparent;
+}
+
+@media (max-width:430px) {
+    header ul {
+        display: none;
+    }
+
+
 }
 
 
