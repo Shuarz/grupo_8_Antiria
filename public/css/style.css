@@ -171,10 +171,29 @@ body {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background: url('/fondo.jpg') no-repeat;
-    background-color: #faf2d7;
+    background: url('/img/background_login.png') no-repeat;
+    /*background-color: #faf2d7;*/
     background-size: cover;
     background-position: center;
+}
+
+.login_header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.login_header img{
+    padding: 1rem;
+    width: 120px;
+    filter: drop-shadow(5px 5px 4px #956441);
+    transition: 0.2s;
+}
+
+.login_header a:hover img{
+    transition: 0.2s;
+    filter: drop-shadow(10px 10px 5px #956441);
 }
 
 
@@ -303,7 +322,23 @@ body {
     text-decoration: underline;
 }
 
-@media (max-width: 430px){
+.footer_login{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    font-size: 0.9em;;
+}
+
+@media (max-width: 1279px){
+    .login_header img{
+        width: 110px;
+    }
+}
+
+@media (max-width: 480px){
+    .login_header img{
+        width: 100px;
+    }
     .login-box{
         width: 100%;
         height: 100vh;
