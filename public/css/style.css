@@ -323,10 +323,29 @@ nav ul li .link-nav-index:hover {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background: url('/fondo.jpg') no-repeat;
-    background-color: #faf2d7;
+    background: url('/img/background_login.png') no-repeat;
+    /*background-color: #faf2d7;*/
     background-size: cover;
     background-position: center;
+}
+
+.login_header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.login_header img{
+    padding: 1rem;
+    width: 120px;
+    filter: drop-shadow(5px 5px 4px #956441);
+    transition: 0.2s;
+}
+
+.login_header a:hover img{
+    transition: 0.2s;
+    filter: drop-shadow(10px 10px 5px #956441);
 }
 
 
@@ -455,7 +474,23 @@ nav ul li .link-nav-index:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 430px){
+.footer_login{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    font-size: 0.9em;;
+}
+
+@media (max-width: 1279px){
+    .login_header img{
+        width: 110px;
+    }
+}
+
+@media (max-width: 480px){
+    .login_header img{
+        width: 100px;
+    }
     .login-box{
         width: 100%;
         height: 100vh;
@@ -473,7 +508,7 @@ nav ul li .link-nav-index:hover {
 
 
 /************************************** DETALLE DE PROD ****************************/
-header section.pie_pagina{
+header section.nav{
     
     width: 100%;
     height: 20vh;
@@ -487,23 +522,29 @@ header section.pie_pagina{
     background-position: center;
 
 }
-
-.pie_pagina ul{
+.logo img{
+    padding: 1rem;
+    width: 70px;
+    filter: drop-shadow(5px 5px 4px #956441);
+    transition: 0.2s;
+}
+.logo a:hover img{
+    transition: 0.2s;
+    filter: drop-shadow(10px 10px 5px #956441);
+}
+.nav ul{
     position: absolute;
     right: 60px;
     display: flex;
     list-style-type: none;
     top: 30px;
-    
-    
 }
-.pie_pagina ul a{
+.nav ul a{
     text-decoration: none;
     color: inherit;
     
 }
-
-.pie_pagina ul li{
+.nav ul li{
     display: flex;
     align-items: flex-end;
     height: 28px;
@@ -517,7 +558,7 @@ header section.pie_pagina{
     left: 405px;
     display: flex;
 }
- .buscador {
+.buscador {
     background-color: #faf2d7;
     border: 1px solid black;
     color:#666;
@@ -529,7 +570,25 @@ header section.pie_pagina{
     padding-right: 380px;
     font-size: 14px;
 }
+.imagen-del-producto{
+    display: flex;
+    justify-content: center;
+}
+header div.burger-menu i {
+    color: #fff;
+    background-color: #1259c3;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px 0px 20px 0px;
+    border-radius: 5px;
+    align-self: flex-end;
+}
 
+header div.burger-menu {
+    text-align: right;
+    display: flex;
+    justify-content: right;
+}
 .carousel {
     background-color: #fa07b5;
     display: flex;
@@ -543,6 +602,15 @@ header section.pie_pagina{
     margin: 0px 10px;
     align-items: center;
     border: 10px transparent;
+}
+
+@media (max-width:430px) {
+    header ul {
+        display: none;
+    }
+    header nav {
+        display: none;
+    }
 }
 
 
