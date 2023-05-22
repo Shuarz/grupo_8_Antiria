@@ -29,6 +29,158 @@ body {
     #FAF2D7 beige
 */
 
+.header-index{
+    display: flex;
+    width: 80%;
+    height: 80px;
+    background:#FAF2D7 ;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-radius: 0 0 10px 10px;
+    border: 1px solid #956441 ;
+    box-shadow: 0 0 20px black;
+    margin: 0 auto;
+}
+
+.input-buscador{
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #1c232a;
+    transition: 0.7s;
+}
+
+.input-buscador:hover{
+    background: none;
+}
+
+.logo-index {
+    width: 120px;
+    margin-top: 8px;
+
+}
+
+nav .logo-index-nav {
+    display: none;
+}
+
+nav .lista-nav-index {
+    display:flex;
+    list-style:none;
+
+}
+
+.div-buscador .input-buscador {
+    
+    display: block;
+    margin: 0 100px;
+    font-weight: 600;
+    padding: 8px 18px;
+    transition: 1s;
+    
+}
+
+.div-buscador .input-buscador:hover{
+    width: 300px;
+    box-shadow: 0 0 20px black; 
+    cursor: pointer;
+    transition: 2s;
+}
+
+
+nav ul li .link-nav-index {
+    color: #1C232A;
+    display: block;
+    margin: 0 2px;
+    font-weight: 600;
+    padding: 8px 18px;
+    transition: 0.7s;
+    border-radius:30px;
+}
+
+nav ul li .link-nav-index:hover {
+    background-color: #956441;
+
+}
+
+.menu-burger{
+    /*display: none;*/
+    height: fit-content;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.menu-burger:hover {
+    background:#c8bb8e ;
+}
+
+.menu-burger div{
+    width: 30px;
+    height: 5px;
+    margin: 6px 0;
+    background: black;
+    border-radius: 3px;
+    
+}
+
+@media only screen and (max-width:1100px) {
+    .header-index{
+        width:90%;
+        padding: 0 20px;
+
+    }
+
+    .nav-index{
+        position: absolute;
+        left: -300px;
+        top: 0;
+        z-index: 999;
+        width: 280px;
+        height: 100vh;
+        background-color: #c8bb8e;
+        transition: 0.7s;
+        box-shadow: 2px 0 20px 0 rgba( 0,0,0,0.05);
+
+    }
+
+    #nav-check-index:checked ~ .nav-index {
+        left: 0;
+
+    }
+
+    nav .logo-index-nav{
+        display: block;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+
+    }
+    nav .lista-nav-index{
+        display: block;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+    nav ul li .link-nav-index {
+        margin-bottom: 5px;
+        padding: 10px 15px;
+        border-radius: 5px;
+
+    }
+    .menu-burger {
+        display: block;
+    }
+}
+
+@media  (min-width:1101px) {
+    header .menu-burger{
+        display: none;
+        
+    }
+    
+}
 
 
 
