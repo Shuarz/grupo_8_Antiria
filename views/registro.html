@@ -1,64 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro - Antiria</title>
     <link rel="stylesheet" href="css/style.css">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/img/isotipo.png">
+    <script src="https://kit.fontawesome.com/955163d0fd.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
       
     <section class="registro_maestro_box">
+
+        <header class="login_header">
+            <a href="/">
+                <img src="img/isotipo.png" alt="Antiria">
+            </a>
+        </header>
+
         <div class="registro-box">
+            
             <form action="">
                 <h2>Registrate</h2>
 
                 <div class="input-box">
                     <span class="icono">
-                        <i class="fa-solid fa-envelope"></i>
+                        <i class="fa-solid fa-envelope"></i>  <!-- cambiar icono a persona -->
                     </span>
-                    <input type="text" placeholder="Nombre">
+                    <input type="text" required>
+                    <label>Nombre</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icono">
+                        <i class="fa-solid fa-lock"></i>  <!-- cambiar icono a persona -->
+                    </span>
+                    <input type="text" required>
+                    <label>Apellido</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icono">
+                        <i class="fa-solid fa-lock"></i> 
+                    </span>
+                    <input type="text" required>
+                    <label>Email</label>
                 </div>
 
                 <div class="input-box">
                     <span class="icono">
                         <i class="fa-solid fa-lock"></i>
                     </span>
-                    <input type="text" placeholder="Apellido">
+                    <input type="password" required>
+                    <label>Contraseña</label>
                 </div>
 
                 <div class="input-box">
                     <span class="icono">
                         <i class="fa-solid fa-lock"></i>
                     </span>
-                    <input type="text" placeholder="Email">
-                </div>
-
-                <div class="input-box">
-                    <span class="icono">
-                        <i class="fa-solid fa-lock"></i>
-                    </span>
-                    <input type="password" placeholder="Contraseña">
-                </div>
-
-                <div class="input-box">
-                    <span class="icono">
-                        <i class="fa-solid fa-lock"></i>
-                    </span>
-                    <input type="password" placeholder="Confirme Contraseña">
+                    <input type="password" required>
+                    <label>Confirmar Contraseña</label>
                 </div>
 
                 <button type="submit">Registrate</button>
-                <div class="iniciar_sesion_link">
-                    <p>Ya eres miembro? <a href="">Inicia tu sesion</a></p>
+                <div class="registrar_link">
+                    <p>¿Ya eres miembro? <a href="/login">Inicia tu sesion</a></p>
                 </div>
             </form>
         </div>
     </section>
+    <footer class="foor_login">
+        <p>Antiria -  2023 &copy</p>
+    </footer>
     
 </body>
 </html>
