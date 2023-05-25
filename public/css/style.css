@@ -728,13 +728,14 @@ header section.nav{
     text-decoration: none;
     color: inherit;
     
+    
 }
 .nav ul li{
     display: flex;
     align-items: flex-end;
     height: 28px;
     margin-right: 40px;
-    font-size: 17px;
+    font-size: 10px;
     
 }
 .buscador .lupa{
@@ -743,18 +744,9 @@ header section.nav{
     left: 405px;
     display: flex;
 }
-.buscador {
-    background-color: #faf2d7;
-    border: 1px solid black;
-    color:#666;
-    display: flex;
-    position: absolute;
-    top: 32px;
-    left: 200px;
-    padding: 6px;
-    padding-right: 380px;
-    font-size: 14px;
-}
+
+
+
 .imagen-del-producto{
     display: flex;
     justify-content: center;
@@ -796,6 +788,7 @@ header div.burger-menu {
     header nav {
         display: none;
     }
+    
 }
 
 
@@ -803,64 +796,36 @@ header div.burger-menu {
 
 
 /************************************** CARRITO ************************************/
-
-
-header section.pie_pagina{
-    
-    width: 100%;
-    height: 20vh;
-    background-color: #faf2d7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
-    background-size: cover;
-    background-position: center;
-
+ul.header-carrito {
+display: none;
+flex-wrap: wrap;
+list-style-type: none;
 }
-
-.pie_pagina ul{
-    position: absolute;
-    right: 60px;
-    display: flex;
-    list-style-type: none;
-    top: 30px;
-    
+.buscador-carrito{
+    display: none;
+    position: relative;
     
 }
-.pie_pagina ul a{
-    text-decoration: none;
-    color: inherit;
-    
-}
-
-.pie_pagina ul li{
-    display: flex;
-    align-items: flex-end;
-    height: 28px;
-    margin-right: 40px;
-    font-size: 17px;
-    
-}
-.buscador .lupa{
-    position: absolute;
-    top: 5px;
-    left: 405px;
-    display: flex;
-}
- .buscador {
-    background-color: #faf2d7;
-    border: 1px solid black;
-    color:#666;
+.lupa-carrito{
     display: flex;
     position: absolute;
-    top: 32px;
-    left: 200px;
-    padding: 6px;
-    padding-right: 380px;
-    font-size: 14px;
+    top: 37px;
+    right: 10px;
 }
+section.logo img{
+        width: 20%;
+        align-items: center;
+        position: relative;
+        
+    }
+.burger-menu-carrito{
+    position: absolute;
+    display: flex;
+    top: 40px;
+    right: 80px;
+}
+
+
 section .shop{
     color: black;
     top: 37px;
@@ -873,22 +838,20 @@ body .cuerpo_pagina{
     width: 100%;
     display: flex;
     background-color: #faf2d7;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background-size: cover;
     background-position: center;
+    flex-direction: column;
 
 }
-.cuerpo_pagina .buscador .lupa{
-    position: absolute;
-    top: 5px;
-    left: 405px;
-    display: flex;
-}
 
+.seguimiento{
+    display: none;
+}
 .carrito-seguimiento{
     position: absolute;
-    left:50px;
+    left:130px;
     display: flex;
     list-style-type: none;
     top: 150px;
@@ -898,15 +861,46 @@ body .cuerpo_pagina{
 
 .carrito-seguimiento li p{
 
+
+
+    
     text-decoration: none;
     color: black;
     margin-left: 50px;
 }
 .productos{
 
+
 font-size: 10px;
 
 }
+
+.product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: row;
+}
+.product img{
+    width: 100px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.product-name{
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.total{
+    font-weight: bold;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
 footer .piepagina{
     display: flex;
     height: 30vh;
@@ -921,47 +915,62 @@ footer .piepagina{
 }
 
 
-@media (max-width: 430px){
-    header section.pie_pagina{
-        width: 100%;
-
-        
+@media (min-width: 430px){
     
+    ul.header-carrito {
+    display: none;
+    flex-wrap: wrap;
+    list-style-type: none;
     }
-    body .cuerpo_pagina{
-        width: 100%;
-    }
+}
 
-
-
-
-
-    footer .piepagina{ 
-        width: 100%; 
-    }
-    .pie_pagina ul{
-        
-        right: 60px;
+@media (min-width: 780px){
+    .buscador-carrito{
         display: flex;
-        list-style-type: none;
-        top: 30px;
-        
-        
-    }
-    .buscador .lupa{
-        position: relative;
-        left: 0px;
-        font-size: 0px;
+        position: absolute;
+        left: 200px;
+        top:36px;
+        padding: 6px;
+        padding-right:100px;
+        margin-right: 1px; 
         
     }
-     .buscador {
 
-        position:relative;
-        font-size: 0px;
-        border: 0px;
-        left: 0px;
-        padding: 0px;
-    }
+   
+   
+   
+    ul.header-carrito {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        }
+        section.logo img{
+            width: 8%;
+            align-items: center;
+            position: relative;
+            
+        }
+        .burger-menu-carrito{
+            display: none;
+        }
+    section .shop{
+        display: none;
+      }
+      ul.header-carrito {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        position:absolute;
+        top: 36px;
+        right: 70px;
+        }
+        ul.header-carrito li {
+        margin-left: 20px;
+        text-decoration-style: none;
+        }
+        ul.header-carrito li a{
+            color: #1a1a1a;
+        }
 }
 
 
