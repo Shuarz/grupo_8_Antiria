@@ -688,10 +688,11 @@ body .cuerpo_pagina{
     width: 100%;
     display: flex;
     background-color: #faf2d7;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background-size: cover;
     background-position: center;
+    flex-direction: column;
 
 }
 .cuerpo_pagina .buscador .lupa{
@@ -722,6 +723,33 @@ body .cuerpo_pagina{
 font-size: 10px;
 
 }
+
+.product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: row;
+}
+.product img{
+    width: 100px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.product-name{
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.total{
+    font-weight: bold;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
 footer .piepagina{
     display: flex;
     height: 30vh;
