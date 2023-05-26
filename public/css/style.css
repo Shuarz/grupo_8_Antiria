@@ -707,30 +707,29 @@ header section.nav{
     background-position: center;
 
 }
-.logo img{
+header .logo img{
     padding: 1rem;
     width: 70px;
     filter: drop-shadow(5px 5px 4px #956441);
     transition: 0.2s;
 }
-.logo a:hover img{
+header .logo a:hover img{
     transition: 0.2s;
     filter: drop-shadow(10px 10px 5px #956441);
 }
-.nav ul{
+nav ul{
     position: absolute;
     right: 60px;
     display: flex;
     list-style-type: none;
     top: 30px;
 }
-.nav ul a{
+nav ul a{
     text-decoration: none;
     color: inherit;
-    
-    
+    list-style-type: none;
 }
-.nav ul li{
+nav ul li{
     display: flex;
     align-items: flex-end;
     height: 28px;
@@ -744,8 +743,6 @@ header section.nav{
     left: 405px;
     display: flex;
 }
-
-
 
 .imagen-del-producto{
     display: flex;
@@ -782,13 +779,32 @@ header div.burger-menu {
 }
 
 @media (max-width:430px) {
-    header ul {
+    nav {
+        display: flex;
+        justify-content: right;
+    }
+    nav ul li {
         display: none;
     }
-    header nav {
-        display: none;
+    header div.burger-menu {
+        text-align: right;
+        display: flex;
+        justify-content: right;
     }
-    
+    .buscador .lupa{
+        position: absolute;
+        top: 5px;
+        left: 405px;
+        display: flex;
+        align-items: right;
+    }
+    header .logo {
+        width: 90vw;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+
 }
 
 
