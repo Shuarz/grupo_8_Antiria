@@ -600,7 +600,9 @@ nav ul li .link-nav-index:hover::after {
 
 
 /************************************** DETALLE DE PROD ****************************/
-
+.fondoDetalleProd{
+    background-color: #f1f1f1;
+}
 .main-detalle-prod {
     padding-top: 100px;
 }
@@ -613,6 +615,29 @@ nav ul li .link-nav-index:hover::after {
 .imagen-del-producto {
     display: flex;
     justify-content: center;
+}
+
+.nombre-precio{
+padding: 20px;
+border: #696a6b 1px solid;
+border-radius: 4px;
+}
+
+.nombre-precio h3 {
+    padding: 10px;
+
+}
+.nombre-precio h4{
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.nombre-precio a{
+    width: 80%;
+    padding: 4px;
+    align-items: center;
+    border: solid 1px black ; 
+    margin: 10%;
+    cursor: pointer;
 }
 
 .carousel {
