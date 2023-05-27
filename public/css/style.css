@@ -43,7 +43,7 @@ body {
 .input-buscador {
     border-radius: 30px;
     border: 1px solid #1c232a;
-    transition: 0.7s;
+    transition: width 1s;
 }
 
 
@@ -87,6 +87,7 @@ nav .lista-nav-index {
 
 .input-buscador {
     display: block;
+    width: 250px;
     font-weight: 600;
     padding: 8px 18px;
 }
@@ -96,8 +97,9 @@ nav .lista-nav-index {
 }
 
 .input-buscador:focus {
-    width: 300px;
+    width: 400px;
     box-shadow: 0 0 10px rgb(68, 68, 68);
+    
 }
 
 
