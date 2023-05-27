@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,23 +10,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/img/isotipo.png">
     <title>Antiria</title>
 </head>
-<body>
+
+<body class="body_index">
     <header class="header-index">
         <div class="logo-index">
-            <h1>ANTIRIA</h1>
+            <h1><a href="#top"><img src="/img/logotipo.png" alt="Antiria"></a></h1>
         </div>
         <input type="checkbox" id="nav-check-index" hidden>
         <nav class="nav-index">
-            <div class="logo-index-nav">
-                <h1>ANTIRIA</h1>
-            </div>
             <ul class="lista-nav-index">
                 <li>
                     <div class="div-buscador">
-                        <input type="text" placeholder="buscar productos" class="input-buscador">
-                    <div>
+                        <input type="text" placeholder="Buscar productos" class="input-buscador">
+                    </div>
                 </li>
                 <li>
                     <a href="" class="link-nav-index">Categorias</a>
@@ -42,96 +43,123 @@
                 <li>
                     <a href="" class="link-nav-index">Ayuda</a>
                 </li>
-                
-
-
-
+                <li>
+                    <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+            </ul>
         </nav>
         <label for="nav-check-index" class="menu-burger">
-            <div></div>
-            <div></div>
-            <div></div>
+            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href=""><i class="fa-solid fa-bars"></i></a>
         </label>
-
-
-
-
     </header>
 
     <main class="main-index">
         <div class="contenedor">
-            <div class="slider">
-
-                <input type="radio" name="slider" id="slideUno" checked>
-                <input type="radio" name="slider" id="slideDos">
-                <input type="radio" name="slider" id="slideTres">
-
-                <div class="boton">
-                    <label for="slideUno"></label>
-                    <label for="slideDos"></label>
-                    <label for="slideTres"></label>
+            <div class="contenido">
+                <div class="primerSlide">
+                    <div class="imagen">
+                        <img src="\img\reloj-antiria.jpg" alt="producto">
+                    </div>
+                    <div class="descripcion">
+                        <h3>
+                            Novedades
+                        </h3>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus deleniti sit maxime
+                            natus inventore officiis error .</p>
+                    </div>
                 </div>
-
-                <div class="contenido">
-                    <div class="primerSlide">
-                        <div class="imagen">
-                            <img src="\img\reloj-antiria.jpg" alt="producto">
-
-                        </div>
-                        <div class="descripcion">
-                            <h3>
-                                PRODUCTO PRIMERO
-                            </h3>
-                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus deleniti sit maxime natus
-                            inventore officiis error ipsa dolore, quae vitae magnam, cumque nesciunt.
-                            Aliquid ipsum corrupti a consectetur similique ut.</p>
-
-                        </div>
-                    </div>
-                    <div class="segundoSlide">
-                        <div class="imagen">
-                            <img src="\img\reloj-antiria.jpg" alt="producto">
-
-                        </div>
-                        <div class="descripcion">
-                            <h3>
-                                PRODUCTO PRIMERO
-                            </h3>
-                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus deleniti sit maxime natus
-                            inventore officiis error ipsa dolore, quae vitae magnam, cumque nesciunt.
-                            Aliquid ipsum corrupti a consectetur similique ut.</p>
-
-                        </div>
-                    </div>
-                    <div class="tercerSlide">
-                        <div class="imagen">
-                            <img src="\img\reloj-antiria.jpg" alt="producto">
-
-                        </div>
-                        <div class="descripcion">
-                            <h3>
-                                PRODUCTO PRIMERO
-                            </h3>
-                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus deleniti sit maxime natus
-                            inventore officiis error ipsa dolore, quae vitae magnam, cumque nesciunt.
-                            Aliquid ipsum corrupti a consectetur similique ut.</p>
-
-                        </div>
-                    </div>
-                        
-                </div>
-
-
-
-
-
-
             </div>
-
-    
-
+        </div>
+        <div class="contenedor2">
+            <h3>Productos destacados</h3>
+            <div class="productos-destacados">
+                <a href="/productDetail">
+                    <article>
+                        <img src="/img/camaraDeFotos.png" alt="producto">
+                        <div class="info-de-producto">
+                            <h4>Camara de fotos</h4>
+                            <h5>$17.000</h5>
+                        </div>
+                    </article>
+                </a>
+                <a href="/productDetail">
+                    <article>
+                        <img src="/img/camaraDeFotos.png" alt="producto">
+                        <div class="info-de-producto">
+                            <h4>Camara de fotos</h4>
+                            <h5>$17.000</h5>
+                        </div>
+                    </article>
+                </a>
+                <a href="/productDetail">
+                    <article>
+                        <img src="/img/camaraDeFotos.png" alt="producto">
+                        <div class="info-de-producto">
+                            <h4>Camara de fotos</h4>
+                            <h5>$17.000</h5>
+                        </div>
+                    </article>
+                </a>
+                <a href="/productDetail">
+                    <article>
+                        <img src="/img/camaraDeFotos.png" alt="producto">
+                        <div class="info-de-producto">
+                            <h4>Camara de fotos</h4>
+                            <h5>$17.000</h5>
+                        </div>
+                    </article>
+                </a>
+            </div>
         </div>
     </main>
+    <footer class="footer-general">
+        <div class="footer-general-contenedor">
+            <div class="contenedor-footer">
+                <h4>Marca</h4>
+                <ul class="info-footer">
+                    <li><a href="">Acerca de nosotros</a></li>
+                    <li><a href="">Ayuda</a></li>
+                    <li><a href="">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+            <div class="contenedor-footer">
+                <h4>Comprar</h4>
+                <ul class="info-footer">
+                    <li><a href="">¿Como comprar?</a></li>
+                    <li><a href="">Terminos y condiciones</a></li>
+                </ul>
+            </div>
+            <div class="contenedor-footer">
+                <h4>Vender</h4>
+                <ul class="info-footer">
+                    <li><a href="">¿Como vender?</a></li>
+                    <li><a href="">¿Como subastar un producto?</a></li>
+                    <li><a href="">Terminos y condiciones</a></li>
+                </ul>
+            </div>
+            <div class="contenedor-footer">
+                <h4>Usuario</h4>
+                <ul class="info-footer">
+                    <li><a href="/login">Ingresar</a></li>
+                    <li><a href="/registro">Registrarse</a></li>
+                </ul>
+            </div>
+            <div class="contenedor-footer">
+                <h4 class="redes-h4">Redes</h4>
+                <ul class="redes">
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    </li>
+                    <li><a href="https://twitter.com/Twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
 </body>
+
 </html>
