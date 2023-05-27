@@ -43,7 +43,7 @@ body {
 .input-buscador {
     border-radius: 30px;
     border: 1px solid #1c232a;
-    transition: 0.7s;
+    transition: width 1s;
 }
 
 
@@ -87,6 +87,7 @@ nav .lista-nav-index {
 
 .input-buscador {
     display: block;
+    width: 250px;
     font-weight: 600;
     padding: 8px 18px;
 }
@@ -96,8 +97,9 @@ nav .lista-nav-index {
 }
 
 .input-buscador:focus {
-    width: 300px;
+    width: 400px;
     box-shadow: 0 0 10px rgb(68, 68, 68);
+    
 }
 
 
@@ -689,16 +691,17 @@ border-radius: 4px;
 /************************************** CARRITO ************************************/
 
 body .cuerpo_pagina {
-    height: 50vh;
+    height: 70vh;
     width: 100%;
     display: flex;
-    background-color: #faf2d7;
+    
+    border-radius: 10px;
     justify-content: space-evenly;
     align-items: center;
     background-size: cover;
     background-position: center;
     flex-direction: column;
-
+    
 }
 
 .carrito-main{
@@ -710,11 +713,11 @@ body .cuerpo_pagina {
 }
 
 .carrito-seguimiento {
-    position: absolute;
-    left: 130px;
+    position: relative;
+    bottom:10px  ;
     display: flex;
     list-style-type: none;
-    top: 150px;
+    border-bottom: 1px solid gray;
 
 
 }
@@ -734,6 +737,11 @@ body .cuerpo_pagina {
     align-items: center;
     margin-bottom: 20px;
     flex-direction: row;
+    position: relative;
+    top: 20px;
+
+
+   
 }
 
 .product img {
@@ -741,6 +749,8 @@ body .cuerpo_pagina {
     margin-right: 100px;
     display: flex;
     flex-direction: row;
+    position: relative;
+    left: 15px;
 }
 
 .product-name {
@@ -756,6 +766,20 @@ body .cuerpo_pagina {
     flex-direction: row;
 }
 
+.carrito-main{
+    margin-bottom: 3rem;
+}
+.carrito p{
+    border-bottom: 1px solid black;
+}
+.realizar-compra{
+    background-color: white ;
+    border-radius: 30px;
+    padding: 8px;
+    border: 1px solid black;
+
+}
+
 /************************************** RESPONSIVE ************************************/
 @media (min-width:481px) {
     .main-index h3 {
@@ -765,9 +789,29 @@ body .cuerpo_pagina {
     .descripcion p {
         font-size: 15px;
     }
+    .seguimiento{
+        display: flex;
+        
+    }
+
 }
 
 @media (min-width:769px) {
+
+    .product{
+    width: 100%;
+   
+
+    }
+
+    
+    .product:hover{
+        border-radius: 10px;
+        border: 3px solid #956441;
+        transition: 0.2s;
+        background-color: #956441;
+    
+    }
     .footer-general .footer-general-contenedor {
         display: flex;
         flex-wrap: wrap;
@@ -817,6 +861,9 @@ body .cuerpo_pagina {
 
     .productos-destacados {
         justify-content: start;
+    }
+    .seguimiento{
+        display: flex;
     }
 }
 
