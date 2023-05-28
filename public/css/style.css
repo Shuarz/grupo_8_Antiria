@@ -272,6 +272,7 @@ nav ul li .link-nav-index:hover::after {
     box-shadow:  0 0 20px black;
     border-radius: 5px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .tarjeta{
@@ -423,6 +424,9 @@ nav ul li .link-nav-index:hover::after {
         display: flex;
         flex-wrap: wrap;
     }
+    .contenedor-3{
+        flex-wrap: nowrap;
+    }
 
     .footer-general h4 {
         font-size: 20px;
@@ -457,6 +461,9 @@ nav ul li .link-nav-index:hover::after {
 @media (min-width: 1280px) {
     .footer-general .contenedor-footer {
         width: 20%;
+    }
+    .contenedor-3{
+        flex-wrap: no   wrap;
     }
 }
 
@@ -702,7 +709,7 @@ nav ul li .link-nav-index:hover::after {
 
 .imagen-del-producto {
     display: flex;
-    justify-content: ;
+    
     width: 300;
     height: 300px;
     padding-left: 230px;
@@ -816,6 +823,27 @@ padding: 80px;
 
 
 /************************************** CARRITO ************************************/
+.product-price{ 
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-top: 5px;
+    
+    
+}
+.product-total{
+    width: 80%;
+}
+.eliminar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 20px;
+    height: 50%;
+    width: 25px;
+    border-radius:10px;
+}
+
 
 body .cuerpo_pagina {
     height: 70vh;
@@ -873,7 +901,7 @@ body .cuerpo_pagina {
 
 .product img {
     width: 100px;
-    margin-right: 100px;
+    margin-right: 60px;
     display: flex;
     flex-direction: row;
     position: relative;
@@ -883,6 +911,7 @@ body .cuerpo_pagina {
 .product-name {
     font-size: 20px;
     font-weight: bold;
+
 
 }
 
@@ -908,7 +937,7 @@ body .cuerpo_pagina {
 }
 
 /************************************** RESPONSIVE ************************************/
-@media (min-width:481px) {
+@media (min-width:480px) {
     .main-index h3 {
         font-size: 22px;
     }
@@ -931,7 +960,18 @@ body .cuerpo_pagina {
 
     }
 
-    
+    .product-name{
+        position: absolute;
+        display: flex;
+        width: 50%;
+        bottom: 70px;
+    }
+    .eliminar:hover{
+        background-color:red;
+        transition: 0.4s;
+        border-radius:5px;
+        
+    }
     .product:hover{
         border-radius: 10px;
         border: 3px solid #956441;
