@@ -711,6 +711,11 @@ nav ul li .link-nav-index:hover::after {
 .foto-producto{
 justify-content: center ;
 align-items: center;
+transition: 0.5s;
+object-fit: cover;
+}
+.foto-producto:hover{
+    transform: scale(1.1);
 }
 
 .nombre-precio{
@@ -734,6 +739,7 @@ padding: 80px;
 }
 .nombre-precio a{
     text-decoration: none;
+    text-align: center;
     display: inline-block;
     padding: 10px;
     margin-top: 10px;
@@ -741,7 +747,7 @@ padding: 80px;
     border: 2px solid #956441;
     border-radius: 4px;
     transition: all 0.6s ease;
-    width: 50%;
+    width: 100%;
 }
 .nombre-precio a:hover{
     background-color: #956441;
@@ -760,23 +766,38 @@ padding: 80px;
     width: 100px;
     
 }
-
-.descripcion-prod {
-    padding: 20px 10px;
-    margin-top: 1rem;
-    border: 1px solid #4d3422;
-    background-color: #FFF;
-    color: #1C232A;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-}
-
 .item {
     padding: 3px;
     margin: 0px 10px;
     align-items: center;
     border: 10px transparent;
 }
+
+
+.descripcion-prod {
+    padding: 20px 30px;
+    margin-top: 1rem;
+    margin-left: 20px;
+    width: 92%;
+    border: 1px solid #956441;
+    background-color: #FFF;
+    color: #1C232A;
+    border-radius: 7px;
+    margin-bottom: 1rem;
+}
+.descripcion-prod h4{
+    margin-bottom: 10px;
+}
+.descripcion-prod hr{
+    height: 3px;
+    color:#956441 ;
+    margin-bottom: 20px;
+}
+.descripcion-prod h5{
+    margin-bottom: 10px;
+
+}
+
 
 @media (min-width:768px) {
     .detalle-prod-main {
