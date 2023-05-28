@@ -863,6 +863,9 @@ nav ul li .link-nav-index:hover::after {
 
 
 /************************************** CARRITO ************************************/
+.descripcion-carrito{
+    display: none;
+}
 .product-price {
     display: flex;
     
@@ -923,6 +926,7 @@ body .cuerpo_pagina {
     text-decoration: none;
     color: black;
     margin-left: 50px;
+
 }
 
 .productos {
@@ -951,7 +955,7 @@ body .cuerpo_pagina {
 }
 
 .product-name {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
 
 
@@ -1001,6 +1005,11 @@ body .cuerpo_pagina {
 
 @media (min-width:769px) {
 
+    .descripcion-carrito{
+        display: flex;
+        width: 70%;
+        font-size: 10px;
+    }
     .product {
         width: 100%;
 
@@ -1012,6 +1021,7 @@ body .cuerpo_pagina {
         display: flex;
         width: 50%;
         bottom: 70px;
+        font-size: 20px;
     }
 
     .eliminar:hover {
