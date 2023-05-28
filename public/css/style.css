@@ -825,7 +825,7 @@ padding: 80px;
 /************************************** CARRITO ************************************/
 .product-price{ 
     display: flex;
-    justify-content: end;
+    
     width: 100%;
     margin-top: 5px;
     
@@ -929,7 +929,7 @@ body .cuerpo_pagina {
     border-bottom: 1px solid black;
 }
 .realizar-compra{
-    background-color: white ;
+    background-color: #FAF2D7 ;
     border-radius: 30px;
     padding: 8px;
     border: 1px solid black;
@@ -948,6 +948,9 @@ body .cuerpo_pagina {
     .seguimiento{
         display: flex;
         
+    }
+    .product-price{
+        justify-content: end;
     }
 
 }
@@ -1031,6 +1034,11 @@ body .cuerpo_pagina {
     }
     .seguimiento{
         display: flex;
+    }
+    .realizar-compra:hover{
+        background-color:#956441 ;
+        transition: 0.2s;
+        color: #FAF2D7;
     }
 }
 
