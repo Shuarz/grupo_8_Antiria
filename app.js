@@ -7,8 +7,7 @@ const app = express();
 const path = require('path');
 
 
-app.use(express.static('Public'))  app.listen(process.env.PORT || 8000, () => 
-{     console.log('Servidor corriendo en el puerto 8000') })
+
 
 
 //statics => css / js / images
@@ -16,6 +15,7 @@ const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
 //server
+
 app.listen(8000, () => console.log("Levantando un servidor con Express"));
 
 //pages
