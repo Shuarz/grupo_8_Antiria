@@ -90,6 +90,8 @@ nav .lista-nav-index {
     width: 250px;
     font-weight: 600;
     padding: 8px 18px;
+    transition: 0.5s;
+    outline: none;
 }
 
 .div-buscador .input-buscador:hover {
