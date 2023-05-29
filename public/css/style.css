@@ -940,6 +940,7 @@ body .cuerpo_pagina {
     flex-direction: row;
     position: relative;
     top: 20px;
+    border-bottom: 1px groove gray;
 
 
 
@@ -1094,7 +1095,7 @@ body .cuerpo_pagina {
         display: flex;
     }
     .realizar-compra:hover{
-        background-color:#956441 ;
+        background-color:#1c232a ;
         transition: 0.2s;
         color: #FAF2D7;
     }
