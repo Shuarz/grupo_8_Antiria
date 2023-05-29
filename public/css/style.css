@@ -263,94 +263,93 @@ nav ul li .link-nav-index:hover::after {
     font-size: 16px;
 }
 
-.contenedor-3 {
-    z-index: 999;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    width: 98%;
-    background-color: #956441;
-    box-shadow: 0 0 20px black;
-    border-radius: 5px;
+
+.contenedor-4{
+
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    width: 98%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #1c232a;
+    padding: 1rem 0 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 0 20px black;
 }
 
-.tarjeta {
+
+.tarjeta-2{
+    width: 425px;
+    height: 50vh;
+    background-color: #956441;
+    border-radius: 10px;
+    box-shadow: 0 0 20px black;
+    margin: 1rem;
+    transition: all 0.6s;
+    
+}
+.contenedor-img{
+    height:50%;
     width: 100%;
-    margin: 20px;
-    border-radius: 6px;
-    overflow: hidden;
-    background: #FAF2D7;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.8);
-    cursor: default;
-    transition: all 400ms ease;
-
+    
 }
 
-.tarjeta:hover {
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 2);
-    transform: translateY(-5%);
-}
-
-.tarjeta img {
+.contenedor-img img {
+    height: 100%;
     width: 100%;
-    height: 250px;
+    border-bottom: 1px solid #FAF2D7;
+    border-radius:  10px 10px 0px 0px;
 }
 
-.tarjeta .contenido-tarjeta {
-    padding: 15px;
+.tarjeta-2 img {
+    width: 100%;
+    
+}
+
+.detalle-tarjeta {
+    color: #fffdfd;
     text-align: center;
-
+    margin: 5px auto;
+    height: 50%;
+    width: 100%;
 }
 
-.tarjeta .contenido-tarjeta p {
-    line-height: 1.5;
-    color: #956441;
+.detalle-tarjeta h4 {
+    margin: 5px auto;
 }
 
-.tarjeta .contenido-tarjeta h3 {
-    font-weight: 400;
-    margin-bottom: 15px;
-    color: #1a1a1a;
-}
-
-.tarjeta .contenido-tarjeta h4 {
-    font-weight: 400;
-    margin-bottom: 15px;
-    color: #1a1a1a;
-}
-
-.tarjeta .contenido-tarjeta a {
+.detalle-tarjeta button {
     text-decoration: none;
     display: inline-block;
     padding: 10px;
-    margin-top: 10px;
-    color: #956441;
-    border: 2px solid #956441;
+    margin-top: 2rem;
+    color: #FAF2D7;
+    background-color: #956441;
+    border: 2px solid #FAF2D7;
     border-radius: 4px;
     transition: all 0.6s ease;
-    width: 30%;
+    width: 60%;
+    cursor: pointer;
 }
 
-.tarjeta .contenido-tarjeta a:hover {
-    background-color: #956441;
-    color: #FAF2D7;
+.detalle-tarjeta button:hover{
+    background-color: #FAF2D7;
+    color:#956441 ;
 
 }
 
+.tarjeta-2:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,2);
+    transform: translateY(-5%);
+}
 
+@media(min-width:1280px){
+    .contenedor-4{
+        justify-content: space-around;
 
-
-
-
-
-
-
-
-
-
-
-
+    }
+}
 /************************************** FOOTER *************************************/
 .footer-general {
     background-color: #956441;
