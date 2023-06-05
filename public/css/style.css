@@ -712,11 +712,12 @@ nav ul li .link-nav-index:hover::after {
 
 .contenedor-producto {
     width: 98%;
-    background-color: #1c232a;
+    background-color: #faf2d7e6;
     box-shadow: 0 0 20px black;
     margin: 3vw auto;
     margin-top: 1vh;
     border-radius: 7px;
+    border:  #956441;
 }
 
 .imagen-del-producto {
@@ -742,7 +743,12 @@ nav ul li .link-nav-index:hover::after {
 }
 .imagenes-web{
     width: 50%;
-    height: 100%;
+    height: 80%;
+    margin: .5rem 0;
+    
+    border: 1px solid black;
+    border-radius: 5px;
+
 }
 
 .nombre-precio {
@@ -757,7 +763,7 @@ nav ul li .link-nav-index:hover::after {
     padding: 10px;
     justify-content: center;
     font-size: 30px;
-    color: #FAF2D7;
+    color: #1c232a;
 
 }
 
@@ -766,7 +772,7 @@ nav ul li .link-nav-index:hover::after {
     margin-bottom: 10px;
     justify-content: center;
     font-size: 20px;
-    color: #FAF2D7;
+    color: #1c232a;
 
 }
 
@@ -776,7 +782,7 @@ nav ul li .link-nav-index:hover::after {
     display: inline-block;
     padding: 10px;
     margin-top: 10px;
-    color: #FAF2D7;
+    color: #1c232a;
     ;
     border: 2px solid #956441;
     border-radius: 4px;
@@ -788,7 +794,9 @@ nav ul li .link-nav-index:hover::after {
     background-color: #956441;
     color: #FAF2D7;
 }
-
+.nombre-precio h6{
+    color: #AA9D16;
+}
 .carousel {
 
     display: flex;
@@ -813,7 +821,7 @@ nav ul li .link-nav-index:hover::after {
 
 .descripcion-prod {
     padding: 20px 30px;
-    background-color: #1c232a;
+    background-color: #faf2d7e6;
     box-shadow: 0 0 20px black;
     border: 1px solid #956441;
     color: #1C232A;
@@ -825,7 +833,7 @@ nav ul li .link-nav-index:hover::after {
 
 .descripcion-prod h4 {
     margin-bottom: 10px;
-    color: #FAF2D7;
+    color: #1c232a;
 }
 
 .descripcion-prod hr {
@@ -836,13 +844,14 @@ nav ul li .link-nav-index:hover::after {
 
 .descripcion-prod h5 {
     margin-bottom: 10px;
-    color: #FAF2D7
+    color: #1c232a
 
 }
 .descripcion-prod p{
-    color: #FAF2D7;
+    color: #1c232a;
  
 }
+
 
 
 @media (min-width:768px) {
@@ -850,13 +859,8 @@ nav ul li .link-nav-index:hover::after {
         display: flex;
     }
 
-    .main-detalle-prod {
-        padding-top: 100px;
-        display: block;
-    }
-
     .imagenes-web {
-        width: 50%;
+        width: 100%;
     }
 }
 
