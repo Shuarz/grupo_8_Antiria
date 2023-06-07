@@ -9,9 +9,8 @@
   "directories": {
     "doc": "docs"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon ./src/app.js"
   },
   "author": "grupo8",
   "license": "ISC",
