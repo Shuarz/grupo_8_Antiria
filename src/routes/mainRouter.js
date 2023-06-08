@@ -4,7 +4,11 @@ const router = express.Router();
 const controller = require("../controller/mainController");
 
 router.get("/", controller.index);
-router.get("/", controller.detalleProducto);
+router.get("/carrito", controller.carrito);
+router.get("/productDetail", controller.detalleProducto);
+router.get("/login", controller.login);
+router.get("/registro", controller.registro);
+
 
 module.exports = router;
 
