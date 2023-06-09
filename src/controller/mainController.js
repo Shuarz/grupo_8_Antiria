@@ -1,22 +1,22 @@
 module.exports = {
-    index: () => {
+    index: (req, res) => {
         return res.render('index', {})
 
     },
 
-    detalleProducto: () => {
+    detalleProducto: (req, res) => {
         return res.render('detalleProducto', {})
 
     },
-    carrito: () => {
+    carrito: (req, res) => {
         return res.render('carrito', {})
 
     },
-    login: () => {
+    login: (req, res) => {
         return res.render('login', {})
 
     },
-    registro: () => {
+    registro: (req, res) => {
         return res.render('registro', {})
 
     },
