@@ -160,7 +160,7 @@ nav ul li .link-nav-index:hover::after {
 
 }
 
-.main-index h3 {
+.main-index .primerSlide h3 {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 1rem;
@@ -283,17 +283,17 @@ nav ul li .link-nav-index:hover::after {
 
 
 .tarjeta-2 {
-    width: 425px;
-    height: 50vh;
+    width: 400px;
+    height: 445px;
     background-color: #956441;
     border-radius: 10px;
     box-shadow: 0 0 20px black;
-    margin: 1rem;
-    transition: all 0.6s;
+    margin: 0.5rem;
+    transition: all 0.3s;
 }
 
 .contenedor-img {
-    height: 50%;
+    height: 220px;
     width: 100%;
 }
 
@@ -312,7 +312,7 @@ nav ul li .link-nav-index:hover::after {
     color: #fffdfd;
     text-align: center;
     margin: 5px auto;
-    height: 50%;
+    padding-top: 10px;
     width: 100%;
 }
 
@@ -320,21 +320,23 @@ nav ul li .link-nav-index:hover::after {
     margin: 5px auto;
 }
 
-.detalle-tarjeta button {
+.detalle-tarjeta p{
+    margin-bottom: 2rem;
+}
+
+.detalle-tarjeta a{
     text-decoration: none;
-    display: inline-block;
-    padding: 10px;
-    margin-top: 2rem;
+    padding: 10px 40px;
     color: #FAF2D7;
     background-color: #956441;
     border: 2px solid #FAF2D7;
     border-radius: 4px;
     transition: all 0.6s ease;
-    width: 60%;
-    cursor: pointer;
 }
 
-.detalle-tarjeta button:hover {
+
+
+.detalle-tarjeta a:hover {
     background-color: #FAF2D7;
     color: #956441;
 
@@ -342,16 +344,15 @@ nav ul li .link-nav-index:hover::after {
 
 .tarjeta-2:hover {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 2);
-    transform: translateY(-5%);
+    transform: translateY(-3%);
 }
 
 @media(min-width:1280px) {
     .contenedor-4 {
-        justify-content: space-around;
+        justify-content: space-between;
 
     }
 }
-
 /************************************** FOOTER *************************************/
 .footer-general {
     background-color: #956441;
@@ -739,20 +740,17 @@ nav ul li .link-nav-index:hover::after {
 .foto-producto:hover {
     transform: scale(1.1);
 }
-<<<<<<< HEAD
+
 .imagenes-web{
     width: 50%;
     height: 80%;
     margin: .5rem 0;
-    
     border: 1px solid black;
     border-radius: 5px;
-
-=======
+}
 
 .imagenes-web {
     height: 100%;
->>>>>>> b39a06735141a8da85eb9f70edd6f63f1a5144aa
 }
 
 .nombre-precio {
@@ -786,10 +784,9 @@ nav ul li .link-nav-index:hover::after {
     padding: 10px;
     margin-top: 10px;
     color: #1c232a;
-    ;
     border: 2px solid #956441;
     border-radius: 4px;
-    transition: all 0.6s ease;
+    transition: all 0.3s ease;
     width: 100%;
 }
 
@@ -845,22 +842,13 @@ nav ul li .link-nav-index:hover::after {
 
 .descripcion-prod h5 {
     margin-bottom: 10px;
-<<<<<<< HEAD
     color: #1c232a
 
 }
 .descripcion-prod p{
     color: #1c232a;
- 
-=======
-    color: #FAF2D7
 }
 
-.descripcion-prod p {
-    color: #FAF2D7;
-
->>>>>>> b39a06735141a8da85eb9f70edd6f63f1a5144aa
-}
 
 
 
@@ -990,9 +978,20 @@ body .cuerpo_pagina {
 
 }
 
+.box-ofertas{
+    width: 98%;
+}
+
+.ofertas{
+    font-size: 23px;
+    margin-top: 3rem;
+    color: #1C232A;
+    text-align: start;
+}
+
 /************************************** RESPONSIVE ************************************/
 @media (min-width:480px) {
-    .main-index h3 {
+    .main-index .primerSlide h3 {
         font-size: 22px;
     }
 
