@@ -2,81 +2,71 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/img/isotipo.png">
+    <!-- HEAD -->
+    <%- include("./partials/head")%>
+    <!-- FIN HEAD -->
     <title>Antiria - Carrito</title>
 </head>
 
 <body>
-    <header >
-        
     <!-- HEADER -->
     <%- include("./partials/header")%>
     <!-- FIN HEADER -->
 
-    </header>
-    <main class="carrito-main">
-        <ul class="carrito-seguimiento">
-            <li>
-                <div class="carrito">
-                    <p>Carrito</p>
-                </div>
-            </li>
-            <li>
-                <div class="seguimiento">
-                    <p>Seguimiento</p>
-                </div>
-            </li>
-        </ul>
-        <section class="cuerpo_pagina">
-            <div class="product">
-                <a href="productDetail"><img class="imagen-producto" src="/img/anillo-antiria.jpg" alt="Producto 1"></a>
-                <div class="product-total">
-                    <p class="product-name">Collar Nathan Drake. Uncharted</p>
-                    
-                  
-                    <p class="product-price">
-                        $20.000
-                    </p>
-                    <p class="descripcion-carrito">Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Maxime repellendus ab repellat in, totam laudantium doloribus voluptates sequi nam rem.</p>
-                    <a class="eliminar"><span   class="material-symbols-outlined  ">delete</span></a>
-                </div>
-            </div>
-            <div  class="product">
-                <a href="productDetail"><img class="imagen-producto" src="/img/anillo-antiria.jpg" alt="Producto 2"></a>
-                <div class="product-total">
-                    <p class="product-name">Collar Nathan Drake. Uncharted</p>
-                    
-                    
-                    <p class="product-price">
-                        $20.000
-                    </p>
-                    <p class="descripcion-carrito">Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Maxime repellendus ab repellat in, totam laudantium doloribus voluptates sequi nam rem.</p>
-                    <a class="eliminar"><span   class="material-symbols-outlined  ">delete</span></a>
-                    
-                </div>
-            </div>
-            <h2 class="total">Total:$40.000</h2>
-            <button class="realizar-compra">Realizar compra</button>
-        </section>
-    </main>
-    <footer >
-      
-        
-    <!-- FOOTER -->
-    <%- include("./partials/footer")%>
-    <!-- FIN FOOTER -->
+        <main class="carrito-main">
+            <ul class="carrito-seguimiento">
+                <li>
+                    <div class="carrito">
+                        <p>Carrito</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="seguimiento">
+                        <p>Seguimiento</p>
+                    </div>
+                </li>
+            </ul>
+            <section class="cuerpo_pagina">
+                <div class="product">
+                    <a href="productDetail"><img class="imagen-producto" src="/img/anillo-antiria.jpg"
+                            alt="Producto 1"></a>
+                    <div class="product-total">
+                        <p class="product-name">Collar Nathan Drake. Uncharted</p>
 
-    </footer>
+
+                        <p class="product-price">
+                            $20.000
+                        </p>
+                        <p class="descripcion-carrito">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
+                            repellendus ab repellat in, totam laudantium doloribus voluptates sequi nam rem.</p>
+                        <a class="eliminar"><span class="material-symbols-outlined  ">delete</span></a>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="productDetail"><img class="imagen-producto" src="/img/anillo-antiria.jpg"
+                            alt="Producto 2"></a>
+                    <div class="product-total">
+                        <p class="product-name">Collar Nathan Drake. Uncharted</p>
+
+
+                        <p class="product-price">
+                            $20.000
+                        </p>
+                        <p class="descripcion-carrito">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
+                            repellendus ab repellat in, totam laudantium doloribus voluptates sequi nam rem.</p>
+                        <a class="eliminar"><span class="material-symbols-outlined  ">delete</span></a>
+
+                    </div>
+                </div>
+                <h2 class="total">Total:$40.000</h2>
+                <button class="realizar-compra">Realizar compra</button>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <%- include("./partials/footer")%>
+        <!-- FIN FOOTER -->
+
 </body>
 
 </html>
