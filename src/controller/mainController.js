@@ -20,5 +20,8 @@ module.exports = {
         return res.render('registro', {})
 
     },
+    vender: (req,res)=>{
+        return res.render('vender', {})
+    }
 
 }
