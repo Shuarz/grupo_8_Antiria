@@ -965,12 +965,16 @@ body .cuerpo_pagina {
     display: flex;
     list-style-type: none;
     border-bottom: 1px solid gray;
+    
 }
 
-.carrito-seguimiento li p {
-    text-decoration: none;
-    color: black;
+.carrito-seguimiento li i {
+    
+    
     margin-left: 50px;
+}
+.carrito-seguimiento li a{
+    color: black;
 }
 
 .productos {
@@ -1013,7 +1017,7 @@ body .cuerpo_pagina {
     margin-bottom: 3rem;
 }
 
-.carrito p {
+.carrito i {
     border-bottom: 1px solid black;
 }
 
@@ -1058,7 +1062,7 @@ body .cuerpo_pagina {
 }
 .input-box input:focus~.nombre_precio,
 .input-box input:valid~.nombre_precio{
-display: none;
+top: -5px;
 }
 
 .categoria{
