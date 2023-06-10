@@ -17,23 +17,56 @@
 
 
     <main class="carrito-main">
+        <section class="vender-box">
            <form action="">
-                <h2>Vende tu producto</h2>
-
-                       <input type="text" required>
-                       <label>Nombre del producto</label>
-
-                       <label>Descripcion del producto</label>
-                       <textarea></textarea>
- 
-
-
-
-
-
+                <h2 class="title">Vende tu producto</h2>
+                     <div class="input-box">
+                         <input type="text" required>
+                         <label>Nombre del producto</label>
+                    </div>
+                    <div>
+                         <label>Descripcion del producto</label>
+                    </div>
+                    <textarea required></textarea>
+                     <div>
+                       <label>Subir imagen del producto</label>
+                       </div>
+                       <input type="file">
+                     </div>
+                      <div class="categoria">
+                        <label>Categoria del producto</label>
+                    </div>
+                    <div class="categoria">
+                        <label>Joyeria</label>
+                        <input type="radio" value="Joyeria" name="categoria" >
+                    </div>
+                    <div class="categoria">
+                        <label>Reliquia</label>
+                        <input type="radio" value="Reliquia" name="categoria">
+                    </div>
+                    <div class="categoria">
+                        <label >Mueble</label>
+                        <input type="radio" value="Mueble" name="categoria" >
+                    </div>
+                    <div class="categoria">
+                        <label>Arte</label>
+                        <input type="radio" value="Arte" name="categoria" >
+                    </div>
+                    <div class="categoria">
+                        <label >Discos</label>
+                       <input type="radio" value="Discos" name="categoria">
+                    </div>
+                        
+                      <div class="input-box">
+                        <label>Precio del producto</label>
+                        <input type="number" required>
+                      </div>
+                      <div>
                        <button type="reset">Cancelar</button>
                        <button type="submit">Publicar</button>
+                    </div>
            </form>
+        </section>
     </main>
 
 

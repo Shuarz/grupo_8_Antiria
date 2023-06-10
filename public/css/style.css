@@ -1036,6 +1036,31 @@ body .cuerpo_pagina {
     text-align: start;
 }
 
+/************************************** VENDER ************************************/
+
+.categoria{
+    display: flex;
+    flex-direction:row;
+    size: 10px;
+    text-align: center;
+}
+.vender-box{
+    position:relative;
+    width: 600px;
+    height: 800px;
+    background-color: transparent;
+    border: 2px solid #956441;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px black;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+}
+
 /************************************** RESPONSIVE ************************************/
 @media (min-width:480px) {
     .main-index .primerSlide h3 {
