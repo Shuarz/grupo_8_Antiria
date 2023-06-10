@@ -18,54 +18,50 @@
 
     <main class="carrito-main">
         <section class="vender-box">
-           <form action="">
-                <h2 class="title">Vende tu producto</h2>
-                     <div class="input-box">
-                         <input type="text" required>
-                         <label>Nombre del producto</label>
+        <form action="">
+                <h2 class="title , title-vender">Vende tu producto</h2>
+                    <div class="input-box">
+                        <input type="text" required>
+                    <label>Nombre del producto</label>
                     </div>
                     <div>
-                         <label>Descripcion del producto</label>
+                    <label>Descripcion del producto</label>
                     </div>
                     <textarea required></textarea>
-                     <div>
-                       <label>Subir imagen del producto</label>
-                       </div>
-                       <input type="file">
-                     </div>
-                      <div class="categoria">
-                        <label>Categoria del producto</label>
+                    <div>
+                    <label>Subir imagen del producto</label>
                     </div>
-                    <div class="categoria">
-                        <label>Joyeria</label>
-                        <input type="radio" value="Joyeria" name="categoria" >
+                    <input type="file">
                     </div>
-                    <div class="categoria">
-                        <label>Reliquia</label>
-                        <input type="radio" value="Reliquia" name="categoria">
-                    </div>
-                    <div class="categoria">
+                    <div class="categoria-vender">
+                        <p>Categoria del producto</p>
+                        <label >Joyeria</label>
+                        <input type="radio" value="Joyeria"  >
+                        
+                        <label >Reliquia</label>
+                        <input type="radio" value="Reliquia" >
+                        
                         <label >Mueble</label>
-                        <input type="radio" value="Mueble" name="categoria" >
-                    </div>
-                    <div class="categoria">
+                        <input type="radio" value="Mueble" >
                         <label>Arte</label>
-                        <input type="radio" value="Arte" name="categoria" >
-                    </div>
-                    <div class="categoria">
+                        <input type="radio" value="Arte"  >
                         <label >Discos</label>
-                       <input type="radio" value="Discos" name="categoria">
+                        <input type="radio" value="Discos" >
+                        
+                        
                     </div>
                         
-                      <div class="input-box">
-                        <label>Precio del producto</label>
+                    <div class="input-box">
                         <input type="number" required>
-                      </div>
-                      <div>
-                       <button type="reset">Cancelar</button>
-                       <button type="submit">Publicar</button>
+                        <label class="nombre_precio">precio del producto</label>
+                        
+                        
                     </div>
-           </form>
+                    <div class="realizarlacompra">
+                    <button class="realizar-compra , Cancelar " type="reset">Cancelar</button>
+                    <button class="realizar-compra , publicar , " type="submit"> Publicar </button>
+                    </div>
+        </form>
         </section>
     </main>
 
