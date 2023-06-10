@@ -1041,11 +1041,37 @@ body .cuerpo_pagina {
 }
 
 /************************************** VENDER ************************************/
+.vender-box h2 {
+    display: flex;
+    position: relative;
+    left: 40px;
+    bottom: 10px;
+}
+#myTextarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    height: 10%;
+    background-color: #faf2d7c2;
+    resize: none;
+}
 .categoria-vender {
     flex-direction: column;
-    
     display: flex;
-    
+}
+.categoria-vender p {
+    margin-top: 1rem;
+}
+.botonera{
+    margin-top: 1rem;
+}
+.opciones-botonera {
+    width: 100%;
+    background-color:#956441;
+    height: 2rem;
+}
+.vender-box div {
+    margin-top: 1rem;
 }
 .realizarlacompra{
     flex-direction: column-reverse;
@@ -1087,6 +1113,12 @@ top: -5px;
     margin: auto;
     padding: 10px;
 }
+.vender-box:active {
+    background-color: #956441;
+    transition: 0.2s;
+}
+.vender-box input:focus~.vender-box,
+.vender-box input:valid~.vender-box
 .title-vender{
     display: block;
 }
@@ -1098,7 +1130,7 @@ top: -5px;
     }
     .vender-box{
         width: 450px;
-        height: 600px;
+        height: 650px;
         
     }
     .realizarlacompra{
