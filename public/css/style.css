@@ -81,11 +81,11 @@ blockquote{
 
 .logo-index img {
     width: 140px;
-    filter: drop-shadow(0px 0px 5px #4d3422);
+    filter: drop-shadow(0px 0px 4px #000000a8);
 }
 
 .logo-index a:hover img {
-    filter: drop-shadow(0px 0px 3px #3f2a1c);
+    filter: drop-shadow(0px 0px 3px #000000);
     transition: .2s;
 }
 
@@ -188,7 +188,7 @@ nav ul li .link-nav-index:hover::after {
 }
 
 .main-index .primerSlide h3 {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     margin-bottom: 1rem;
 }
@@ -200,12 +200,16 @@ nav ul li .link-nav-index:hover::after {
     position: relative;
     width: 98%;
     height: 35vh;
-    background-color: #1a1a1a;
+    background-image: url('/img/p1.jpg');
+    background-size: cover;
     box-shadow: 0 0 20px black;
     border-radius: 10px;
+    transition: 0.2s all;
 }
 
+
 .imagen {
+    display: none;
     width: 50%;
 }
 
@@ -217,13 +221,12 @@ nav ul li .link-nav-index:hover::after {
 
 .descripcion {
     padding: 20px;
-    width: 50%;
-
+    text-shadow: 1px 1px 2px black;
 }
 
 .descripcion p,
 blockquote {
-    font-size: 13px;
+    font-size: 18px;
 }
 
 .contenido {
@@ -382,10 +385,52 @@ blockquote {
 .tarjeta-2:hover {
     box-shadow: 0 0 10px black;
     transform: translateY(-1%);
+    cursor: pointer;
 }
 
 .tarjeta-2:hover .detalle-tarjeta p{
     color: #FAF2D7;
+}
+
+.main-index h3 {
+    font-size: 23px;
+}
+
+.descripcion p,
+blockquote {
+    font-size: 15px;
+}
+
+.categorias{
+    position: absolute;
+    list-style: none;
+    background-color: #726a52;
+    padding: 1rem;
+    bottom: -2.4rem;
+    border-radius: 20px;
+    display: none;
+    box-shadow: 0 0 20px rgb(56, 56, 56);
+}
+
+.categorias li{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.categorias li a{
+    color: #f1f1f1;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.categorias li a:hover{
+    color: #2c1e13;
+}
+
+
+.categorias-nav:hover .categorias{
+    display: flex;
+    transition: 3s ease-in-out;
 }
 
 @media(min-width:1280px) {
@@ -750,27 +795,27 @@ blockquote {
 
 .main-detalle-prod {
     padding-top: 100px;
+    width: 98%;
+    margin: 0 auto;
+}
+
+.main-contenedor-detalle-prod{
+    box-shadow: 0px 0px 25px #6d6d6d;
+    border-radius: 10px;
 }
 
 .detalle-prod-main {
-    width: 98%;
     height: 100%;
     margin: 0 auto;
 }
 
 .contenedor-producto {
-    width: 98%;
-    background-color: #faf2d7e6;
-    box-shadow: 0 0 20px black;
     margin: 3vw auto;
     margin-top: 1vh;
     border-radius: 7px;
-    border: #956441;
 }
 
 .imagen-del-producto {
-    width: 98%;
-    height: 98%;
     display: flex;
     justify-content: center;
     padding-top: 1rem;
@@ -783,14 +828,12 @@ blockquote {
 }
 
 .foto-producto:hover {
-    transform: scale(1.1);
+    transform: scale(1.01);
 }
 
 .imagenes-web {
-    width: 50%;
     height: 80%;
     margin: .5rem 0;
-    border: 1px solid black;
     border-radius: 5px;
 }
 
@@ -829,15 +872,19 @@ blockquote {
     padding: 10px;
     margin-top: 10px;
     color: #1c232a;
-    border: 2px solid #956441;
     border-radius: 4px;
     transition: all 0.3s ease;
     width: 100%;
+    background-color: #956441;
+    color: #FAF2D7;
 }
 
 .nombre-precio a:hover {
-    background-color: #956441;
-    color: #FAF2D7;
+    background-color: #5a3b25;
+}
+
+.nombre-precio a:active{
+    box-shadow: 0px 0px 10px #2c1e13 inset;
 }
 
 .nombre-precio h6 {
@@ -852,7 +899,15 @@ blockquote {
 }
 
 .carousel img {
+    border-radius: 5px;
     width: 100px;
+    border: 2px solid transparent ;
+    transition: .2s;
+
+}
+
+.carousel img:hover {
+    border: 2px solid #AA9D16 ;
 
 }
 
@@ -866,9 +921,6 @@ blockquote {
 
 .descripcion-prod {
     padding: 20px 30px;
-    background-color: #faf2d7e6;
-    box-shadow: 0 0 20px black;
-    border: 1px solid #956441;
     color: #1C232A;
     border-radius: 7px;
     margin-bottom: 1rem;
@@ -1168,11 +1220,6 @@ top: -5px;
         font-size: 27px;
     }
 
-    .descripcion p,
-    blockquote{
-        font-size: 15px;
-    }
-
     .seguimiento {
         display: flex;
 
@@ -1190,6 +1237,15 @@ top: -5px;
         display: flex;
         width: 70%;
         font-size: 10px;
+    }
+
+    .main-index h3 {
+        font-size: 25px;
+    }
+
+    .descripcion p,
+    blockquote {
+        font-size: 18px;
     }
 
     .product {
@@ -1266,7 +1322,7 @@ top: -5px;
     }
 
     .imagenes-web {
-        width: 50%;
+        width: 40%;
     }
 
     .productos-destacados {
@@ -1292,7 +1348,7 @@ top: -5px;
     }
 
     .imagenes-web {
-        width: 50%;
+        width: 40%;
         height: 100%;
     }
 
@@ -1322,13 +1378,8 @@ top: -5px;
         display: none;
     }
 
-    .main-index h3 {
-        font-size: 25px;
-    }
-
-    .descripcion p,
-    blockquote {
-        font-size: 18px;
+    .imagen {
+        display: block;
     }
 
     nav .lista-nav-index {
@@ -1345,4 +1396,11 @@ top: -5px;
     .detalle-tarjeta p {
         color: transparent;
     }
+
+    .contenedor {
+        background-image: none;
+        background-color: #1a1a1a;
+        color: #FAF2D7;
+    }
+
 }
