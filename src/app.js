@@ -5,6 +5,9 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const mainRouter = require("./routes/mainRouter")
+const productsRoute = require('./routes/productsRoute');
+const usersRoute = require('./routes/usersRoute');
+
 
 
 app.set('views', path.join(__dirname, '../views'));
@@ -21,6 +24,7 @@ app.listen(3008, () => console.log("Levantando un servidor con Express"));
 
 app.use(mainRouter);
 
-//pages
-//index
+app.use(usersRoute);
+
+app.use(productsRoute);
 
