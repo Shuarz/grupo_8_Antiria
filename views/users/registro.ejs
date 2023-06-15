@@ -2,16 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/img/isotipo.png">
+    <!-- HEAD -->
+    <%- include("../partials/head.ejs")%>
+    <!-- FIN HEAD -->
     <title>Antiria - Registro</title>
 </head>
 
@@ -45,7 +38,7 @@
                     <i class="fa-solid fa-envelope"></i>
                 </span>
                 <input type="text" required>
-                <label>Email</label>
+                <label>Correo electrónico</label>
             </div>
 
             <div class="input-box">
@@ -63,10 +56,13 @@
                 <input type="password" required>
                 <label>Confirmar contraseña</label>
             </div>
+            <div class="recordar">
+                <label><input type="checkbox">Términos y condiciones</label>
+            </div>
 
             <button type="submit">Registrate</button>
             <div class="registrar_link">
-                <p>¿Ya eres miembro? <a href="/login">Inicia tu sesion</a></p>
+                <p>¿Ya sos miembro? <a href="/login">Inicia tu sesión</a></p>
             </div>
         </form>
     </section>
