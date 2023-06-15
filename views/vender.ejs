@@ -19,43 +19,47 @@
         <main class="carrito-main">
             <section class="vender-box">
                 <form action="">
-                    <h2 class="title , title-vender">Vende tu producto</h2>
-                    <div class="input-box">
+                    <h2 class="title , opciones , title-vender">Vende tu producto</h2>
+                    <div class="input-box , opciones ">
                         <input type="text" required>
                         <label>Nombre del producto</label>
                     </div>
-                    <div class="input-box">
+                    <div class="input-box , opciones ">
                         <input type="number" required>
                         <label class="nombre_precio">precio del producto</label>
                     </div>
-                    <div class="categoria-vender">
-                        <p>Categoria del producto</p>
-                        <div class="botonera">
+                    <div class="categoria-vender ">
+                        <p class=" opciones" >Categoria del producto</p>
+                        <div class="botonera , opciones">
                             <select class="opciones-botonera">
-                                <option selected disabled>Categorias</option>
-                                <option value="joyeria">Joyeria</option>
-                                <option value="joyeria">Reliquia</option>
-                                <option value="joyeria">Mueble</option>
-                                <option value="joyeria">Arte</option>
-                                <option value="joyeria">Discos</option>
+                                <option selected disabled class="opcion">Categorias</option>
+                                <option value="joyeria" class="opcion">Joyeria</option>
+                                <option value="joyeria" class="opcion">Reliquia</option>
+                                <option value="joyeria" class="opcion">Mueble</option>
+                                <option value="joyeria" class="opcion">Arte</option>
+                                <option value="joyeria" class="opcion">Discos</option>
                             </select>
                         </div>
                     </div>
-                    <div>
+                    <div  class="opciones">
                         <label>Descripcion del producto</label>
-                    </div>
-                    <textarea id="myTextarea" required></textarea>
+                    
+                    
+                </div>
+                <textarea  class="myTextarea , opciones" required></textarea>
                     <div>
-                        <label>Subir imagen del producto</label>
+                        <label class="opciones">Subir imagen del producto</label>
+                    
                     </div>
-                    <input type="file">
+                    <div class="subir-imagen , opciones"><input  type="file"></div>
+                    
                     </div>
                     
 
                     
                     <div class="realizarlacompra">
-                        <button class="realizar-compra , Cancelar " type="reset">Cancelar</button>
-                        <button class="realizar-compra , publicar , " type="submit"> Publicar </button>
+                        <button class="realizar-compra , Cancelar  , opciones" type="reset">Cancelar</button>
+                        <button class="realizar-compra , publicar ,   opciones" type="submit"> Publicar </button>
                     </div>
                 </form>
             </section>
