@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <!-- HEAD -->
-    <%- include("../partials/head.ejs")%>
-    <!-- FIN HEAD -->
-    <title>Antiria - Registro</title>
-</head>
+<%- include('../partials/head', {tituloWeb: 'Antiria - Registro'}) %>
 
 <body class="login_maestro_box">
     <header class="login_header">
@@ -57,7 +49,7 @@
                 <label>Confirmar contraseña</label>
             </div>
             <div class="recordar">
-                <label><input type="checkbox">Términos y condiciones</label>
+                <label><input type="checkbox" required>Términos y condiciones</label>
             </div>
 
             <button type="submit">Registrate</button>

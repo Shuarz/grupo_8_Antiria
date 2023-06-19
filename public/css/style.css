@@ -17,7 +17,7 @@ body {
     */
 }
 
-blockquote{
+blockquote {
     font-style: italic;
 }
 
@@ -61,12 +61,12 @@ blockquote{
     transition: .2s all;
 }
 
-.div-buscador i{
+.div-buscador i {
     padding: 10px;
     transition: 0.2s all;
 }
 
-.div-buscador i:hover{
+.div-buscador i:hover {
     cursor: pointer;
     color: #AA9D16;
 }
@@ -134,6 +134,15 @@ nav .lista-nav-index {
 
 
 nav ul li .link-nav-index {
+    color: #1C232A;
+    margin: 0 2px;
+    font-weight: 600;
+    padding: 8px 18px;
+    position: relative;
+    display: inline-block;
+}
+
+nav ul li .link-nav-index-2 {
     color: #1C232A;
     margin: 0 2px;
     font-weight: 600;
@@ -365,7 +374,7 @@ blockquote {
     transition: all 0.3s ease;
 }
 
-.detalle-tarjeta div{
+.detalle-tarjeta div {
     position: absolute;
     left: 0;
     right: 0;
@@ -388,7 +397,7 @@ blockquote {
     cursor: pointer;
 }
 
-.tarjeta-2:hover .detalle-tarjeta p{
+.tarjeta-2:hover .detalle-tarjeta p {
     color: #FAF2D7;
 }
 
@@ -401,37 +410,37 @@ blockquote {
     font-size: 15px;
 }
 
-.categorias{
+.categorias {
     position: absolute;
     list-style: none;
     background-color: #726a52;
     padding: 1rem;
     bottom: -2.4rem;
     border-radius: 20px;
-    display: none;
     box-shadow: 0 0 20px rgb(56, 56, 56);
+    transition: 0.3s ease-in-out;
+    display: none;
 }
 
-.categorias li{
+.categorias li {
     margin-right: 20px;
     margin-left: 20px;
 }
 
-.categorias li a{
-    color: #f1f1f1;
+.categorias li a {
+    color: #f1f1f1b7;
     font-weight: bold;
     transition: 0.2s;
 }
 
-.categorias li a:hover{
-    color: #2c1e13;
+.categorias-nav .categorias li a:hover {
+    color: #ffffff;
 }
 
-
-.categorias-nav:hover .categorias{
+.categorias-nav:hover .categorias {
     display: flex;
-    transition: 3s ease-in-out;
 }
+
 
 @media(min-width:1280px) {
     .contenedor-4 {
@@ -442,7 +451,6 @@ blockquote {
 
 /************************************** FOOTER *************************************/
 .footer-general {
-    margin-top: 2rem;
     background-color: #1a1a1a;
     box-shadow: 0 0 20px rgb(20, 20, 20);
     display: flex;
@@ -614,7 +622,7 @@ blockquote {
     font-size: 2em;
     color: #1c232a;
     text-align: center;
-    
+
 }
 
 .input-box {
@@ -758,7 +766,7 @@ blockquote {
 .registro-box {
     position: relative;
     width: 400px;
-    height: 630px;
+    height: 650px;
     background-color: transparent;
     border: 2px solid #956441;
     border-radius: 20px;
@@ -800,9 +808,10 @@ blockquote {
     margin: 0 auto;
 }
 
-.main-contenedor-detalle-prod{
+.main-contenedor-detalle-prod {
     box-shadow: 0px 0px 25px #6d6d6d;
     border-radius: 10px;
+    margin-bottom: 2rem;
 }
 
 .detalle-prod-main {
@@ -884,7 +893,7 @@ blockquote {
     background-color: #5a3b25;
 }
 
-.nombre-precio a:active{
+.nombre-precio a:active {
     box-shadow: 0px 0px 10px #2c1e13 inset;
 }
 
@@ -902,13 +911,13 @@ blockquote {
 .carousel img {
     border-radius: 5px;
     width: 100px;
-    border: 2px solid transparent ;
+    border: 2px solid transparent;
     transition: .2s;
 
 }
 
 .carousel img:hover {
-    border: 2px solid #AA9D16 ;
+    border: 2px solid #AA9D16;
 
 }
 
@@ -1018,15 +1027,16 @@ body .cuerpo_pagina {
     display: flex;
     list-style-type: none;
     border-bottom: 1px solid gray;
-    
+
 }
 
 .carrito-seguimiento li i {
-    
-    
+
+
     margin-left: 50px;
 }
-.carrito-seguimiento li a{
+
+.carrito-seguimiento li a {
     color: black;
 }
 
@@ -1099,85 +1109,97 @@ body .cuerpo_pagina {
     position: relative;
     left: 40px;
     bottom: 10px;
-    
-    
+
+
 }
+
 .myTextarea {
     width: 90%;
     box-sizing: border-box;
     resize: vertical;
     height: 20%;
-    background-color:#FAF2D7;
+    background-color: #FAF2D7;
     resize: none;
-    
+
 }
+
 .categoria-vender {
     flex-direction: column;
     display: flex;
-    
+
 }
+
 .categoria-vender p {
     margin-top: 1rem
-    
 }
-.botonera{
+
+.botonera {
     margin-top: 1rem;
 }
+
 .opciones-botonera {
     width: 90%;
     background-color: #FAF2D7;
     height: 2rem;
 }
-.opciones-botonera:focus{
-    background-color:#956441 ;
+
+.opciones-botonera:focus {
+    background-color: #956441;
     transition: 0.5s;
 }
+
 .vender-box div {
     margin-top: 1rem;
-    
 
-    
+
+
 }
-.realizarlacompra{
+
+.realizarlacompra {
     flex-direction: column-reverse;
     display: flex;
     align-items: center;
 }
-.Cancelar{
+
+.Cancelar {
     width: 80px;
     margin-top: 1rem;
-    
+
 
 }
-.publicar{
+
+.publicar {
     width: 150px;
-    
+
 
 
 }
+
 .input-box input:focus~.nombre_precio,
-.input-box input:valid~.nombre_precio{
-top: -5px;
+.input-box input:valid~.nombre_precio {
+    top: -5px;
 }
 
-.categoria{
+.categoria {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     size: 10px;
     text-align: center;
 }
-.opcion{
+
+.opcion {
     color: #AA9D16;
 }
-.vender-box{
-    position:relative;
+
+.vender-box {
+    position: relative;
     width: 100%;
     height: 100%;
-    background-color:transparent;
+    background-color: transparent;
     border: 2px solid #956441;
     border-radius: 20px;
     display: flex;
-    justify-content: center ;
+    justify-content: center;
     align-items: center;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 20px black;
@@ -1185,53 +1207,59 @@ top: -5px;
     margin: auto;
     padding: 10px;
 }
-.opciones{
+
+.opciones {
     margin-left: 0rem;
 }
 
-@media(min-width:480px){
-    .opciones{
+@media(min-width:480px) {
+    .opciones {
         margin-left: 3rem;
     }
 
-    .vender-box{
+    .vender-box {
         display: block;
     }
+
     .myTextarea {
         height: 100px;
         width: 300px;
         box-sizing: border-box;
         resize: vertical;
         height: 10%;
-        background-color:#FAF2D7;
+        background-color: #FAF2D7;
         resize: none;
-        
+
     }
-    .myTextarea:focus{
-    transition: 0.2s;
-    height: 120px;
-    
+
+    .myTextarea:focus {
+        transition: 0.2s;
+        height: 120px;
+
     }
-    
-    .title-vender{
+
+    .title-vender {
         display: flex;
         position: relative;
         left: 4rem;
     }
-    .vender-box{
+
+    .vender-box {
         width: 450px;
-        height: 650px; 
-        
+        height: 650px;
+
     }
-    .realizarlacompra{
+
+    .realizarlacompra {
         flex-direction: row-reverse;
         align-items: start;
-        display: block; 
+        display: block;
         left: 30px;
         top: 15px;
         position: relative;
     }
-    .Cancelar{
+
+    .Cancelar {
         width: 60px;
         margin-top: 0;
         height: 30px;
@@ -1241,19 +1269,40 @@ top: -5px;
         top: 2px;
         background-color: #956441
     }
-    .publicar{
+
+    .publicar {
         width: 150px;
         margin-left: 1rem;
-        right: 30px ;
+        right: 30px;
         position: relative;
         background-color: #956441
-        
+    }
+
+    .categoria-vender {
+        width: 90%;
+        display: block;
+
+    }
 }
-.categoria-vender {
-    width: 90%;
-    display: block;
-    
+
+/************************************** 404 ************************************/
+.main-404 {
+    padding-top: 115px;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
+
+.main-404 h2 {
+    color: #956441;
+    font-size: 40px;
+}
+
+.main-404 h3 {
+    font-size: 25px;
+    color: #1a1a1a;
 }
 
 /************************************** RESPONSIVE ************************************/
@@ -1346,7 +1395,7 @@ top: -5px;
     }
 
     .footer-general {
-        min-height: 250px;
+        min-height: 30vh;
     }
 
     .footer-general .redes {
