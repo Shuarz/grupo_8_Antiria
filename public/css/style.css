@@ -11,7 +11,7 @@ body {
     background-color: #FAF2D7;
     font-family: 'Poppins', sans-serif;
     /*
-    POR SI AGREGAMOS UNA IMAGEN DE FONDO
+    background-image: url('/img/background.png');
     background-attachment: fixed;
     background-size: cover;
     */
@@ -35,7 +35,6 @@ blockquote {
     width: 99%;
     height: 80px;
     background: #faf2d7c2;
-    box-shadow: 0px 0px 25px #6d6d6d;
     backdrop-filter: blur(10px);
     align-items: center;
     justify-content: space-between;
@@ -809,6 +808,7 @@ blockquote {
 }
 
 .main-contenedor-detalle-prod {
+    backdrop-filter: blur(6px);
     box-shadow: 0px 0px 25px #6d6d6d;
     border-radius: 10px;
     margin-bottom: 2rem;
@@ -960,18 +960,6 @@ blockquote {
 
 
 
-
-@media (min-width:768px) {
-    .detalle-prod-main {
-        display: flex;
-    }
-
-    .imagenes-web {
-        width: 100%;
-    }
-}
-
-
 /************************************** CARRITO ************************************/
 .descripcion-carrito {
     display: none;
@@ -1099,7 +1087,7 @@ body .cuerpo_pagina {
 .ofertas {
     font-size: 23px;
     margin-top: 3rem;
-    color: #1C232A;
+    color: #1a1a1a;
     text-align: start;
 }
 
@@ -1413,7 +1401,13 @@ body .cuerpo_pagina {
     }
 
     .imagenes-web {
-        width: 40%;
+        width: 50%;
+    }
+
+    .nombre-precio {
+        padding: 80px;
+        width: 50%;
+        height: 100%;
     }
 
     .productos-destacados {
@@ -1430,35 +1424,18 @@ body .cuerpo_pagina {
         color: #FAF2D7;
     }
 
-    .carousel {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 30px 5px;
-        width: 100%;
-    }
+    
 
     .imagenes-web {
-        width: 40%;
-        height: 100%;
-    }
-
-    .nombre-precio {
-        padding: 80px;
         width: 50%;
         height: 100%;
     }
 
-    .foto-producto {
-        width: 50%;
-        transition: 0.5s;
-        object-fit: cover;
-        margin-left: 25%;
-    }
 
     .imagen-del-producto {
         width: 98%;
         height: 98%;
+        margin-left: 1rem;
         display: block;
         padding-top: 1rem;
     }
@@ -1492,6 +1469,27 @@ body .cuerpo_pagina {
         background-image: none;
         background-color: #1a1a1a;
         color: #FAF2D7;
+    }
+
+    .carousel {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 30px 5px;
+        width: 100%;
+    }
+
+    .foto-producto {
+        width: 50%;
+        transition: 0.5s;
+        object-fit: cover;
+        margin-left: 25%;
+    }
+
+    .nombre-precio {
+        padding: 80px;
+        width: 50%;
+        height: 100%;
     }
 
 }

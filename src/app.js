@@ -9,6 +9,7 @@ const app = express();
 const mainRouter = require("./routes/mainRouter")
 const productsRoute = require('./routes/productsRoute');
 const usersRoute = require('./routes/usersRoute');
+const searchRoute = require('./routes/searchRouter');
 
 //port
 const port = 3008;
@@ -26,10 +27,10 @@ app.listen(port, () => console.log("Levantando servidor http://localhost:" + por
 
 //routes
 app.use(mainRouter);
-
 app.use(usersRoute);
-
 app.use(productsRoute);
+app.use(searchRoute);
+
 
 //404
 app.use((req, res, next) => {

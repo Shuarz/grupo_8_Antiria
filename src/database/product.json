@@ -1,0 +1,9 @@
+{
+    "id": 1,
+    "nombre_prod": "Camisa",
+    "precio": 25.99,
+    "oferta": false,
+    "categoria": "Ropa",
+    "descripcion-index": "Camisa de manga larga en color blanco.",
+    "descripcion-general": "Camisa de manga larga en color blanco."
+}

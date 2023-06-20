@@ -6,10 +6,10 @@
     <nav class="nav-index">
         <ul class="lista-nav-index">
             <li>
-                <div class="div-buscador">
-                    <input type="text" id="nombre" name="nombre" placeholder="Buscar productos" class="input-buscador">
-                    <label for="nombre"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></label>
-                </div>
+                <form class="div-buscador" action="/search" method="GET">
+                    <input type="text" id="search" name="search" placeholder="Buscar productos" class="input-buscador">
+                    <label for="search"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></label>
+                </form>
             </li>
             <li class="categorias-nav">
                 <a href="" class="link-nav-index-2">Categorías</a>
