@@ -1,9 +1,22 @@
-{
-    "id": 1,
-    "nombre_prod": "Camisa",
-    "precio": 25.99,
-    "oferta": false,
-    "categoria": "Ropa",
-    "descripcion-index": "Camisa de manga larga en color blanco.",
-    "descripcion-general": "Camisa de manga larga en color blanco."
-}
+[
+    {
+        "id": 1,
+        "nombre_prod": "Bicicleta Clasica ",
+        "precio": 75.000,
+        "oferta": true,
+        "categoria": "mueble",
+        "descripcion-index": "Bicicleta clasica, perfecto estado.",
+        "descripcion-general": "Camisa de manga larga en color blanco.",
+        "image": "bicicletaAntigua.jpeg",
+    },
+    {
+        "id": 1,
+        "nombre_prod": "Camisa",
+        "precio": 25.99,
+        "oferta": true,
+        "categoria": "Ropa",
+        "descripcion-index": "Camisa de manga larga en color blanco.",
+        "descripcion-general": "Camisa de manga larga en color blanco.",
+        "image": "anillo-antiria.jpg"
+    },
+]
