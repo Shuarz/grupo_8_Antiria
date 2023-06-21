@@ -32,58 +32,24 @@
             <h5 class="ofertas">Ofertas</h5>
         </div>
         <section class="contenedor-4">
+            <% oferta.forEach ((row) => { %>
             <article class="tarjeta-2">
                 <div class="contenedor-img">
-                    <img src="/img/p2.jpg" alt="">
+                    <img src="/img/<%= row.image %>" alt="">
                 </div>
                 <div class="detalle-tarjeta">
-                    <h3>Silla 1953</h3>
-                    <h4>$35.000</h4>
-                    <p>Silla construída en 1953, para la realeza de Europa.</p>
+                    <h3 class="nombre"><%= row.nombre_prod %></h3>
+                    <h4 class="precio"><%= row.precio %></h4>
+                    <p class="categoria"> <%= row.categoria %></p>
+                    <p class="descripcion"><%= row.descripcion-index %></p>
                     <div>
                         <a href="/productDetail">VER MÁS</a>
                     </div>
                 </div>
             </article>
-            <article class="tarjeta-2">
-                <div class="contenedor-img">
-                    <img src="/img/p3.jpg" alt="">
-                </div>
-                <div class="detalle-tarjeta">
-                    <h3>Anillos Reliquia</h3>
-                    <h4>$120.000</h4>
-                    <p>Anillos 100% oro. Año 1932.</p>
-                    <div>
-                        <a href="/productDetail">VER MÁS</a>
-                    </div>
-                </div>
-            </article>
-            <article class="tarjeta-2">
-                <div class="contenedor-img">
-                    <img src="/img/p4.jpg" alt="">
-                </div>
-                <div class="detalle-tarjeta">
-                    <h3>Collar de diamantes</h3>
-                    <h4>$400.000</h4>
-                    <p>Collar de diamantes 100% reales. Nunca usados y cuidados.</p>
-                    <div>
-                        <a href="/productDetail">VER MÁS</a>
-                    </div>
-                </div>
-            </article>
-            <article class="tarjeta-2">
-                <div class="contenedor-img">
-                    <img src="/img/p5.jpg" alt="">
-                </div>
-                <div class="detalle-tarjeta">
-                    <h3>Vasija Vaticano</h3>
-                    <h4>$67.000</h4>
-                    <p>Vasija cristiana, limpia y cuidada</p>
-                    <div>
-                        <a href="/productDetail">VER MÁS</a>
-                    </div>
-                </div>
-            </article>
+            <% }) %>
+            
+           
         </section>
 
 
