@@ -7,7 +7,7 @@
         "categoria": "mueble",
         "descripcion-index": "Bicicleta clasica, perfecto estado.",
         "descripcion-general": "Camisa de manga larga en color blanco.",
-        "image": "bicicletaAntigua.jpeg",
+        "image": "bicicletaAntigua.jpeg"
     },
     {
         "id": 1,
@@ -18,5 +18,5 @@
         "descripcion-index": "Camisa de manga larga en color blanco.",
         "descripcion-general": "Camisa de manga larga en color blanco.",
         "image": "anillo-antiria.jpg"
-    },
+    }
 ]
