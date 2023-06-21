@@ -1256,6 +1256,30 @@ body .cuerpo_pagina {
 }
 
 /************************************** VENDER ************************************/
+#product-delete{
+    display:flex;
+    position: relative;
+    left: 10px;
+    top : 5px;
+
+    width: 1rem;
+    height: 1rem;
+}
+.descripcion-ventas{
+    top: 1rem;
+    position: relative;
+}
+#product-edit{
+    display:flex;
+    position: relative;
+    left: 40px;
+    bottom : 11px;
+
+    width: 1rem;
+    
+
+    
+}
 .vender-box h2 {
     display: flex;
     position: relative;
@@ -1434,6 +1458,13 @@ body .cuerpo_pagina {
         width: 90%;
         display: block;
 
+    }
+    #product-edit {
+        justify-content: end;
+    }
+    #product-edit:hover{
+        color: royalblue;
+        transition: 0.2s;
     }
 }
 
