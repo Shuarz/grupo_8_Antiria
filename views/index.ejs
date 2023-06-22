@@ -1,148 +1,154 @@
-<%- include('partials/head', {tituloWeb: 'Antiria - Home'}) %>
+<%- include('partials/head', {tituloWeb: 'Antiria - Home' }) %>
 
-<body class="body_index">
+    <body class="body_index">
 
-    <!-- HEADER -->
-    <%- include("./partials/header")%>
-    <!-- FIN HEADER -->
+        <!-- HEADER -->
+        <%- include("./partials/header")%>
+            <!-- FIN HEADER -->
 
-    <main class="main-index">
-        <div class="contenedor">
-            <div class="contenido">
-                <div class="primerSlide">
-                    <div class="imagen">
-                        <img src="\img\p1.jpg" alt="producto">
-                    </div>
-                    <div class="descripcion">
-                        <h3>
-                            Novedades
-                        </h3>
-                        <p>
-                            Reliquia:
-                            <blockquote>"Contemplando los huesos, o a veces todo el cuerpo, de
-                                        alguien que dedicó su vida a Dios de modo tan especial que se convirtió en santo, nace el
-                                        deseo de una vida similar"
-                            </blockquote>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="box-ofertas">
-            <h5 class="ofertas">Ofertas</h5>
-        </div>
-        <section class="contenedor-4">
-            <% oferta.forEach ((row) => { %>
-            <article class="tarjeta-2">
-                <div class="contenedor-img">
-                    <img src="/img/<%= row.image %>" alt="">
-                </div>
-                <div class="detalle-tarjeta">
-                    <h3 class="nombre"><%= row.nombre_prod %></h3>
-                    <h4 class="precio"><%= row.precio %></h4>
-                    <p class="categoria"> <%= row.categoria %></p>
-                    <p class="descripcion"><%= row.descripcion-index %></p>
-                    <div>
-                        <a href="/productDetail">VER MÁS</a>
+            <main class="main-index">
+                <div class="contenedor">
+                    <div class="contenido">
+                        <div class="primerSlide">
+                            <div class="imagen">
+                                <img src="\img\p1.jpg" alt="producto">
+                            </div>
+                            <div class="descripcion">
+                                <h3>
+                                    Novedades
+                                </h3>
+                                <p>
+                                    Reliquia:
+                                <blockquote>"Contemplando los huesos, o a veces todo el cuerpo, de
+                                    alguien que dedicó su vida a Dios de modo tan especial que se convirtió en santo,
+                                    nace el
+                                    deseo de una vida similar"
+                                </blockquote>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </article>
-            <% }) %>
-            
-           
-        </section>
-
-
-    </main>
-    <h2 class="categoriash2">Categorias</h2>
-    <section class="categorias-index">
-        
-        <div class="mini-cat">
-            <div class="mini-cat-nombre">
-                <h3>JOYERIA</h3>
-
-            </div>
-
-
-            <div class="mini-cat-img">
-                <div class="img-categorias">
-                    <img src="/img/p4.jpg" alt="categoria">
+                <div class="box-ofertas">
+                    <h5 class="ofertas">Ofertas</h5>
                 </div>
-            </div>
-            
+                <section class="contenedor-4">
 
-        </div>
-        <div class="mini-cat">
-            <div class="mini-cat-nombre">
-                <h3>RELIQUIAS</h3>
+                    <% oferta.forEach ((row)=> { %>
+                        <article class="tarjeta-2">
+                            <div class="contenedor-img">
+                                <img src="/img/<%= row.image %>" alt="">
+                            </div>
+                            <div class="detalle-tarjeta">
+                                <h3 class="nombre">
+                                    <%= row.nombreProd %>
+                                </h3>
+                                <h4 class="precio">
+                                  $  <%= row.precio %>
+                                </h4>
+                                
+                                <div>
+                                    <a href="/productDetail">VER MÁS</a>
+                                </div>
+                            </div>
+                        </article>
+                        <% }) %>
 
-            </div>
 
 
-            <div class="mini-cat-img">
-                <div class="img-categorias">
-                    <img src="/img/p3.jpg" alt="categoria">
+                </section>
+
+
+            </main>
+            <h2 class="categoriash2">Categorias</h2>
+            <section class="categorias-index">
+
+                <div class="mini-cat">
+                    <div class="mini-cat-nombre">
+                        <h3>JOYERIA</h3>
+
+                    </div>
+
+
+                    <div class="mini-cat-img">
+                        <div class="img-categorias">
+                            <img src="/img/p4.jpg" alt="categoria">
+                        </div>
+                    </div>
+
+
                 </div>
-            </div>
-        </div>
-        <div class="mini-cat">
-            <div class="mini-cat-nombre">
-                <h3>MUEBLES</h3>
+                <div class="mini-cat">
+                    <div class="mini-cat-nombre">
+                        <h3>RELIQUIAS</h3>
 
-            </div>
+                    </div>
 
 
-            <div class="mini-cat-img">
-                <div class="img-categorias">
-                    <img src="/img/p2.jpg" alt="categoria">
+                    <div class="mini-cat-img">
+                        <div class="img-categorias">
+                            <img src="/img/p3.jpg" alt="categoria">
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="mini-cat">
-            <div class="mini-cat-nombre">
-                <h3>ARTE</h3>
+                <div class="mini-cat">
+                    <div class="mini-cat-nombre">
+                        <h3>MUEBLES</h3>
 
-            </div>
+                    </div>
 
 
-            <div class="mini-cat-img">
-                <div class="img-categorias">
-                    <img src="/img/p11.jpg" alt="categoria">
+                    <div class="mini-cat-img">
+                        <div class="img-categorias">
+                            <img src="/img/p2.jpg" alt="categoria">
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="mini-cat">
-            <div class="mini-cat-nombre">
-                <h3>DISCOS</h3>
+                <div class="mini-cat">
+                    <div class="mini-cat-nombre">
+                        <h3>ARTE</h3>
 
-            </div>
+                    </div>
 
 
-            <div class="mini-cat-img">
-                <div class="img-categorias">
-                    <img src="/img/p10.jpg" alt="categoria">
+                    <div class="mini-cat-img">
+                        <div class="img-categorias">
+                            <img src="/img/p11.jpg" alt="categoria">
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="mini-cat">
-            <div class="mini-cat-nombre">
-                <h3>RELOJES</h3>
+                <div class="mini-cat">
+                    <div class="mini-cat-nombre">
+                        <h3>DISCOS</h3>
 
-            </div>
+                    </div>
 
 
-            <div class="mini-cat-img">
-                <div class="img-categorias">
-                    <img src="/img/p14.jpg" alt="categoria">
+                    <div class="mini-cat-img">
+                        <div class="img-categorias">
+                            <img src="/img/p10.jpg" alt="categoria">
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+                <div class="mini-cat">
+                    <div class="mini-cat-nombre">
+                        <h3>RELOJES</h3>
 
-    <!-- FOOTER -->
-    <%- include("./partials/footer")%>
-    <!-- FIN FOOTER -->
+                    </div>
 
-</body>
 
-</html>
+                    <div class="mini-cat-img">
+                        <div class="img-categorias">
+                            <img src="/img/p14.jpg" alt="categoria">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <%- include("./partials/footer")%>
+                <!-- FIN FOOTER -->
+
+    </body>
+
+    </html>

@@ -1,22 +1,42 @@
 [
     {
         "id": 1,
-        "nombre_prod": "Bicicleta Clasica ",
-        "precio": 75.000,
+        "nombreProd": "Bicicleta Clasica ",
+        "precio": "75.000",
         "oferta": true,
         "categoria": "mueble",
-        "descripcion-index": "Bicicleta clasica, perfecto estado.",
-        "descripcion-general": "Camisa de manga larga en color blanco.",
-        "image": "bicicletaAntigua.jpeg",
+        "descIndex": "Bicicleta clasica, perfecto estado.",
+        "descGeneral": "Bicicleta clasica, perfecto estado.",
+        "image": "bicicletaAntigua.jpeg"
     },
     {
-        "id": 1,
-        "nombre_prod": "Camisa",
-        "precio": 25.99,
+        "id": 2,
+        "nombreProd": "Disco de vinilo 'Confort y musica para volar'-Soda Stereo Unplugged ",
+        "precio": "30.000",
         "oferta": true,
-        "categoria": "Ropa",
-        "descripcion-index": "Camisa de manga larga en color blanco.",
-        "descripcion-general": "Camisa de manga larga en color blanco.",
-        "image": "anillo-antiria.jpg"
+        "categoria": "Musica",
+        "descIndex": "Disco de vinilo 'Confort y musica para volar'-Soda Stereo Unplugged. Perfecto estado.",
+        "descGeneral": "Disco de vinilo 'Confort y musica para volar'-Soda Stereo Unplugged. Perfecto estado.",
+        "image": "discoVinilo.jpeg"
     },
+    {
+        "id": 3,
+        "nombreProd": " Cuadro de Picasso 'Busto de mujer joven' ",
+        "precio": "150.000",
+        "oferta": true,
+        "categoria": "Arte",
+        "descIndex": "Busto de mujer joven Paris, otoño 1906. Óleo sobre lienzo. 54 x 42 cm..",
+        "descGeneral": "Busto de mujer joven Paris, otoño 1906. Óleo sobre lienzo. 54 x 42 cm.",
+        "image": "cuadroPiccaso.jpg"
+    },
+    {
+        "id": 4,
+        "nombreProd": " Reloj de Bolsillo.",
+        "precio":" 80.000",
+        "oferta": true,
+        "categoria": "Arte",
+        "descIndex": "Reloj de bolsillo (Ernest Magnin, Besançon, ca. 1920)",
+        "descGeneral": "Reloj de bolsillo (Ernest Magnin, Besançon, ca. 1920)",
+        "image": "RelojColeccion.jpg"
+    }
 ]
