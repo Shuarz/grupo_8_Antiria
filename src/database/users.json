@@ -1,8 +1,25 @@
-{
+[
+  {
     "id": 1,
     "nombre": "Juan",
     "apellido": "Pérez",
     "correo": "juan.perez@example.com",
     "contraseña": "secreta123",
-    "terminos": true
-}
+    "terminos": "on"
+  },
+  {
+    "id": 2,
+    "nombre": "santiago",
+    "correo": "usuariofalso@example.com",
+    "contraseña": "contra123",
+    "terminos": "on"
+  },
+  {
+    "id": 3,
+    "nombre": "unapersona",
+    "apellido": "millonaria",
+    "correo": "tengomuchaplata@example.com",
+    "contraseña": "cagoplata",
+    "terminos": "on"
+  }
+]

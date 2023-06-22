@@ -5,8 +5,13 @@
         "precio": "75.000",
         "oferta": true,
         "categoria": "mueble",
+<<<<<<< HEAD
         "descIndex": "Bicicleta clasica, perfecto estado.",
         "descGeneral": "Bicicleta clasica, perfecto estado.",
+=======
+        "descripcion-index": "Bicicleta clasica, perfecto estado.",
+        "descripcion-general": "Camisa de manga larga en color blanco.",
+>>>>>>> ff70aa676131567883aa24aa9910f81eaf1adc3a
         "image": "bicicletaAntigua.jpeg"
     },
     {
@@ -14,6 +19,7 @@
         "nombreProd": "Disco de vinilo 'Confort y musica para volar'-Soda Stereo Unplugged ",
         "precio": "30.000",
         "oferta": true,
+<<<<<<< HEAD
         "categoria": "Musica",
         "descIndex": "Disco de vinilo 'Confort y musica para volar'-Soda Stereo Unplugged. Perfecto estado.",
         "descGeneral": "Disco de vinilo 'Confort y musica para volar'-Soda Stereo Unplugged. Perfecto estado.",
@@ -38,5 +44,11 @@
         "descIndex": "Reloj de bolsillo (Ernest Magnin, Besançon, ca. 1920)",
         "descGeneral": "Reloj de bolsillo (Ernest Magnin, Besançon, ca. 1920)",
         "image": "RelojColeccion.jpg"
+=======
+        "categoria": "Ropa",
+        "descripcion-index": "Camisa de manga larga en color blanco.",
+        "descripcion-general": "Camisa de manga larga en color blanco.",
+        "image": "anillo-antiria.jpg"
+>>>>>>> ff70aa676131567883aa24aa9910f81eaf1adc3a
     }
 ]

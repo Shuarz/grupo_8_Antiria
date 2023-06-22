@@ -464,7 +464,7 @@ blockquote {
     display: flex;
     flex-wrap: wrap;
     align-items: start;
-    margin: 1rem ;
+    margin: 0.5rem ;
     margin-top: 1rem;
     transition:all 0.5s;
     border-radius: 7px;
@@ -507,6 +507,100 @@ blockquote {
     cursor: pointer;
     
 }
+
+.usuarios-vendedores{
+    height: 300px;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.coin-usuario{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    
+    border-radius: 100%;
+}
+
+.coin-usuario div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    backface-visibility: hidden;
+    transition: all 1s;
+    
+}
+
+.coin-front {
+    background: #288ca0;
+    transform: perspective(500px) rotateY(0deg);
+    box-shadow: 0 0 20px rgb(56, 56, 56);
+    background-image: url(/img/u1.png);
+    color: #FAF2D7;
+    border: 2px solid #FAF2D7;
+}
+
+.coin-back {
+    background: #0c0c0b;
+    transform: perspective(500px) rotateY(180deg);
+    box-shadow: 0 0 20px rgb(56, 56, 56);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #FAF2D7;
+    
+}
+.coin-back h2{
+    height: 40%;
+    width: 60%;
+    color: #FAF2D7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.coin-back h3{
+    width: 60%;
+    height: 40%;
+    color: #FAF2D7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coin-usuario:hover .coin-front{
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.coin-usuario:hover .coin-back {
+    transform: perspective(500px) rotateY(360deg)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1162,6 +1256,30 @@ body .cuerpo_pagina {
 }
 
 /************************************** VENDER ************************************/
+#product-delete{
+    display:flex;
+    position: relative;
+    left: 10px;
+    top : 5px;
+
+    width: 1rem;
+    height: 1rem;
+}
+.descripcion-ventas{
+    top: 1rem;
+    position: relative;
+}
+#product-edit{
+    display:flex;
+    position: relative;
+    left: 40px;
+    bottom : 11px;
+
+    width: 1rem;
+    
+
+    
+}
 .vender-box h2 {
     display: flex;
     position: relative;
@@ -1340,6 +1458,13 @@ body .cuerpo_pagina {
         width: 90%;
         display: block;
 
+    }
+    #product-edit {
+        justify-content: end;
+    }
+    #product-edit:hover{
+        color: royalblue;
+        transition: 0.2s;
     }
 }
 
