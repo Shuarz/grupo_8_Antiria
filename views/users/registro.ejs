@@ -7,13 +7,13 @@
         </a>
     </header>
     <section class="registro-box">
-        <form action="">
+        <form method="post" action="/registro">
             <h2>Registrate</h2>
             <div class="input-box">
                 <span class="icono">
                     <i class="fa-solid fa-user"></i>
                 </span>
-                <input type="text" required>
+                <input name="name" type="text" required>
                 <label>Nombre</label>
             </div>
 
@@ -21,7 +21,7 @@
                 <span class="icono">
                     <i class="fa-solid fa-user"></i>
                 </span>
-                <input type="text" required>
+                <input name="lastname" type="text" required>
                 <label>Apellido</label>
             </div>
 
@@ -29,7 +29,7 @@
                 <span class="icono">
                     <i class="fa-solid fa-envelope"></i>
                 </span>
-                <input type="text" required>
+                <input name="mail" type="text" required>
                 <label>Correo electrónico</label>
             </div>
 
@@ -37,7 +37,7 @@
                 <span class="icono">
                     <i class="fa-solid fa-lock"></i>
                 </span>
-                <input type="password" required>
+                <input name="password" type="password" required>
                 <label>Contraseña</label>
             </div>
 
@@ -45,11 +45,11 @@
                 <span class="icono">
                     <i class="fa-solid fa-lock"></i>
                 </span>
-                <input type="password" required>
+                <input  type="password" required>
                 <label>Confirmar contraseña</label>
             </div>
             <div class="recordar">
-                <label><input type="checkbox" required>Términos y condiciones</label>
+                <label><input name="terminos" type="checkbox" required>Términos y condiciones</label>
             </div>
 
             <button type="submit">Registrate</button>

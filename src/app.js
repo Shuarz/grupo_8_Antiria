@@ -13,7 +13,9 @@ const searchRoute = require('./routes/searchRouter');
 
 //port
 const port = 3008;
-
+//basedate
+app.use(express.urlencoded({ extended: false}));
+app.use(express.json());
 //template engines
 app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'ejs');

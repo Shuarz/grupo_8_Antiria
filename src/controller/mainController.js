@@ -6,7 +6,7 @@ const datos = JSON.parse (fs.readFileSync (path.resolve(__dirname,'../database/p
 
 module.exports = {
     index: (req, res) => {
-        const oferta = datos.filter((row) => row.oferta == 'true');
+        const oferta = datos.filter((row) => row.oferta == true);
         return res.render('index', {oferta: oferta});
 
     }
