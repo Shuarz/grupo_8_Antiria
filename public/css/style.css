@@ -448,8 +448,8 @@ blockquote {
     margin: 1.5rem;
 }
 .categorias-index {
-    height: 500px;
-    width: 100vw;
+    margin: 5%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -509,9 +509,10 @@ blockquote {
 }
 
 .usuarios-vendedores{
-    height: 300px;
-    width: 100vw;
+    margin: 5%;
+    width: 90%;
     display: flex;
+    position:relative;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
@@ -522,7 +523,7 @@ blockquote {
     position: relative;
     width: 300px;
     height: 300px;
-    
+    margin:5px;
     border-radius: 100%;
 }
 
@@ -585,7 +586,34 @@ blockquote {
     transform: perspective(500px) rotateY(360deg)
 }
 
+.wave-section{
+    background-color:#FAF2D7;
+    
+}
 
+.contacus-h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+
+    
+}
+
+.contacus-h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    margin-bottom: -100px;
+}
+
+.formulario-contacto{
+    background-color: #1a1a1a;
+    height: 40vh;
+    width: 100%;
+    margin-top: -20px;
+}
 
 
 
@@ -615,7 +643,7 @@ blockquote {
 /************************************** FOOTER *************************************/
 .footer-general {
     background-color: #1a1a1a;
-    box-shadow: 0 0 20px rgb(20, 20, 20);
+    
     display: flex;
     align-items: center;
     justify-content: center;
