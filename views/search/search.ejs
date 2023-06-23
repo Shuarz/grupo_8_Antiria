@@ -7,18 +7,24 @@
     <!-- FIN HEADER -->
 
     <main class="main-search">
-        <article>
-            <div class="imagen-detalle-prod">
-                <img src="/img/p1.jpg" alt="">
-            </div>
-            <div class="descripcion_search_prod">
-                <h3>Prod</h3>
-                <h4 class="green">$$$$</h4>
-                <h5>Envio: <span class="green">$$$$</span></h5>
-                <a href="">Ver</a>
-            </div>
-        </article>
-        <hr>
+        <% if (search.length === 0) { %>
+            <h4 class="notfound-search">No se encontraron resultados 🥲</h4>
+        <% } else { %>
+            <% search.forEach ((row)=> { %>
+                <article>
+                    <div class="imagen-detalle-prod">
+                        <img src="/img/<%= row.image %>" alt="">
+                    </div>
+                    <div class="descripcion_search_prod">
+                        <h3><%= row.nombreProd %></h3>
+                        <h4 class="green">$<%= row.precio %></h4>
+                        <h5>Envio: <span class="green">$ 1.500</span></h5>
+                        <a href="">Ver</a>
+                    </div>
+                </article>
+                <hr>
+            <% }) %>
+        <% } %>
     </main>
 
     <!-- FOOTER -->

@@ -1538,6 +1538,7 @@ body .cuerpo_pagina {
     margin: auto;
     width: 95%;
     margin-bottom: 10px;
+    margin-top: 10px;
     display: flex;
 }
 
@@ -1597,6 +1598,10 @@ body .cuerpo_pagina {
 
 .descripcion_search_prod a:active {
     box-shadow: 0px 0px 10px #2c1e13 inset;
+}
+
+.notfound-search{
+    text-align: center;
 }
 
 /************************************** RESPONSIVE ************************************/
