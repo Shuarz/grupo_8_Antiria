@@ -439,17 +439,18 @@ blockquote {
 .categorias-nav:hover .categorias {
     display: flex;
 }
-.categoriash2{
+
+.categoriash2 {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 40px;
-    
     margin: 1.5rem;
+    color: #1a1a1a;
 }
+
 .categorias-index {
-    margin: 5%;
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -464,13 +465,14 @@ blockquote {
     display: flex;
     flex-wrap: wrap;
     align-items: start;
-    margin: 0.5rem ;
+    margin: 0.5rem;
     margin-top: 1rem;
-    transition:all 0.5s;
+    transition: all 0.5s;
     border-radius: 7px;
-    border: solid  #FAF2D7;
+    border: solid #FAF2D7;
 }
-.mini-cat-nombre{
+
+.mini-cat-nombre {
     height: 50%;
     width: 100%;
     display: flex;
@@ -478,25 +480,27 @@ blockquote {
     justify-content: center;
 
 }
-.mini-cat-nombre h3{
+
+.mini-cat-nombre h3 {
     color: #faf2d7;
     font-size: 30px;
-    
+
 }
 
-.mini-cat-img{
+.mini-cat-img {
     height: 50%;
     width: 100%;
     border-radius: 0 40% 0 0;
     border: solid #FAF2D7;
-    
-    
+
+
 }
-.mini-cat-img  img{
+
+.mini-cat-img img {
     height: 218px;
     width: 100%;
     margin-bottom: 0 auto;
-    border-radius: 0 40% 1px 1px ;
+    border-radius: 0 40% 1px 1px;
 }
 
 
@@ -505,25 +509,24 @@ blockquote {
     height: 450px;
     box-shadow: 0 0 50px rgb(0, 0, 0);
     cursor: pointer;
-    
+
 }
 
-.usuarios-vendedores{
-    margin: 5%;
-    width: 90%;
+.usuarios-vendedores {
+    width: 100vw;
     display: flex;
-    position:relative;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    
+
 }
 
-.coin-usuario{
+.coin-usuario {
     position: relative;
-    width: 300px;
-    height: 300px;
-    margin:5px;
+    width: 250px;
+    height: 250px;
+    margin: 1rem;
+
     border-radius: 100%;
 }
 
@@ -537,20 +540,27 @@ blockquote {
     border-radius: 100%;
     backface-visibility: hidden;
     transition: all 1s;
-    
+
 }
 
+
+
 .coin-front {
-    background: #288ca0;
+    background: transparent;
     transform: perspective(500px) rotateY(0deg);
     box-shadow: 0 0 20px rgb(56, 56, 56);
-    background-image: url(/img/u1.png);
+    background-size: cover;
     color: #FAF2D7;
-    border: 2px solid #FAF2D7;
+}
+
+.coin-front img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
 }
 
 .coin-back {
-    background: #0c0c0b;
+    background: #1a1a1a;
     transform: perspective(500px) rotateY(180deg);
     box-shadow: 0 0 20px rgb(56, 56, 56);
     display: flex;
@@ -558,18 +568,25 @@ blockquote {
     align-items: center;
     justify-content: center;
     border: 3px solid #FAF2D7;
-    
+
 }
-.coin-back h2{
+
+.coin-back img{
+    width: 100%;
+
+}
+
+.coin-back h2 {
     height: 40%;
     width: 60%;
     color: #FAF2D7;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
-.coin-back h3{
+
+.coin-back h3 {
     width: 60%;
     height: 40%;
     color: #FAF2D7;
@@ -578,7 +595,7 @@ blockquote {
     justify-content: center;
 }
 
-.coin-usuario:hover .coin-front{
+.coin-usuario:hover .coin-front {
     transform: perspective(500px) rotateY(180deg);
 }
 
@@ -586,50 +603,34 @@ blockquote {
     transform: perspective(500px) rotateY(360deg)
 }
 
-.wave-section{
-    background-color:#FAF2D7;
-    
+.wave-section {
+    background-color: #FAF2D7;
+
 }
 
-.contacus-h2{
+.contacus-h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 80px;
+    font-size: 28px;
+    margin-top: 3rem;
 
-    
+
 }
 
-.contacus-h3{
+.contacus-h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 50px;
-    margin-bottom: -100px;
+    font-size: 25px;
 }
 
-.formulario-contacto{
+.formulario-contacto {
     background-color: #1a1a1a;
     height: 40vh;
     width: 100%;
     margin-top: -20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -643,7 +644,6 @@ blockquote {
 /************************************** FOOTER *************************************/
 .footer-general {
     background-color: #1a1a1a;
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1284,30 +1284,33 @@ body .cuerpo_pagina {
 }
 
 /************************************** VENDER ************************************/
-#product-delete{
-    display:flex;
+#product-delete {
+    display: flex;
     position: relative;
     left: 10px;
-    top : 5px;
+    top: 5px;
 
     width: 1rem;
     height: 1rem;
 }
-.descripcion-ventas{
+
+.descripcion-ventas {
     top: 1rem;
     position: relative;
 }
-#product-edit{
-    display:flex;
+
+#product-edit {
+    display: flex;
     position: relative;
     left: 40px;
-    bottom : 11px;
+    bottom: 11px;
 
     width: 1rem;
-    
 
-    
+
+
 }
+
 .vender-box h2 {
     display: flex;
     position: relative;
@@ -1487,10 +1490,12 @@ body .cuerpo_pagina {
         display: block;
 
     }
+
     #product-edit {
         justify-content: end;
     }
-    #product-edit:hover{
+
+    #product-edit:hover {
         color: royalblue;
         transition: 0.2s;
     }
@@ -1514,6 +1519,84 @@ body .cuerpo_pagina {
 .main-404 h3 {
     font-size: 25px;
     color: #1a1a1a;
+}
+
+/************************************** SEARCH ************************************/
+
+.main-search {
+    padding-top: 115px;
+    min-height: 70vh;
+}
+
+.main-search hr {
+    margin: auto;
+    width: 95%;
+    color: #1a1a1a;
+}
+
+.main-search article {
+    margin: auto;
+    width: 95%;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.main-search h3 {
+    font-size: 22px;
+}
+
+.main-search h4 {
+    font-size: 19px;
+}
+
+.main-search h5 {
+    font-size: 15px;
+}
+
+
+.imagen-detalle-prod {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #1a1a1a80;
+    box-shadow: 0px 0px 5px #1a1a1a80;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.green {
+    color: green;
+}
+
+.main-search img {
+    width: 100%;
+    max-height: 100%;
+}
+
+.descripcion_search_prod {
+    margin-left: 1rem;
+}
+
+.descripcion_search_prod a {
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #1c232a;
+    width: 100px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background-color: #956441;
+    color: #FAF2D7;
+}
+
+.descripcion_search_prod a:hover {
+    background-color: #5a3b25;
+}
+
+.descripcion_search_prod a:active {
+    box-shadow: 0px 0px 10px #2c1e13 inset;
 }
 
 /************************************** RESPONSIVE ************************************/
@@ -1647,7 +1730,6 @@ body .cuerpo_pagina {
         color: #FAF2D7;
     }
 
-    
 
     .imagenes-web {
         width: 50%;
@@ -1662,6 +1744,25 @@ body .cuerpo_pagina {
         display: block;
         padding-top: 1rem;
     }
+
+    .main-search hr {
+        width: 90%;
+    }
+
+    .main-search article {
+        width: 90%;
+    }
+
+    .contacus-h2 {
+        font-size: 35px;
+    }
+
+    .contacus-h3 {
+        font-size: 30px;
+        margin-bottom: -50px;
+    }
+
+
 }
 
 @media (min-width:1280px) {
@@ -1713,6 +1814,11 @@ body .cuerpo_pagina {
         padding: 80px;
         width: 50%;
         height: 100%;
+    }
+
+
+    .contacus-h3 {
+        margin-bottom: -100px;
     }
 
 }

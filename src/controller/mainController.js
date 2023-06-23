@@ -8,6 +8,5 @@ module.exports = {
     index: (req, res) => {
         const oferta = datos.filter((row) => row.oferta == true);
         return res.render('index', {oferta: oferta});
-
     }
 }

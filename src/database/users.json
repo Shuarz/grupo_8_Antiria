@@ -21,5 +21,13 @@
     "correo": "tengomuchaplata@example.com",
     "contraseña": "cagoplata",
     "terminos": "on"
+  },
+  {
+    "id": 4,
+    "nombre": "ALEJO",
+    "apellido": "PEQUEÑO",
+    "correo": "alejopequeno25@gmail.com",
+    "contraseña": "vedia420",
+    "terminos": "on"
   }
 ]
