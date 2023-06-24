@@ -9,26 +9,26 @@
 
             <main class="carrito-main">
                 <section class="vender-box">
-                    <form action="">
+                    <form action="/vender" method="post">
                         <h2 class="title , opciones , title-vender">Vende tu producto</h2>
                         <div class="input-box , opciones ">
-                            <input type="text" required>
+                            <input name="nombreProducto" type="text" required>
                             <label>Nombre del producto</label>
                         </div>
                         <div class="input-box , opciones ">
-                            <input type="number" required>
+                            <input name="PrecioProducto" type="number" required>
                             <label class="nombre_precio">Precio del producto</label>
                         </div>
                         <div class="categoria-vender ">
                             <p class=" opciones">Categoria del producto</p>
                             <div class="botonera , opciones">
-                                <select class="opciones-botonera">
+                                <select name="categoriaProducto" class="opciones-botonera">
                                     <option selected disabled class="opcion">Categorias</option>
                                     <option value="joyeria" class="opcion">Joyeria</option>
-                                    <option value="joyeria" class="opcion">Reliquia</option>
-                                    <option value="joyeria" class="opcion">Mueble</option>
-                                    <option value="joyeria" class="opcion">Arte</option>
-                                    <option value="joyeria" class="opcion">Discos</option>
+                                    <option value="Reliquia" class="opcion">Reliquia</option>
+                                    <option value="Mueble" class="opcion">Mueble</option>
+                                    <option value="Arte" class="opcion">Arte</option>
+                                    <option value="Discos" class="opcion">Discos</option>
                                 </select>
                             </div>
                         </div>
@@ -37,12 +37,12 @@
 
 
                         </div>
-                        <textarea class="myTextarea , opciones" required></textarea>
+                        <textarea name="descripcionGeneral" class="myTextarea , opciones" required></textarea>
                         <div>
                             <label class="opciones">Subir imagen del producto</label>
 
                         </div>
-                        <div class="subir-imagen , opciones"><input type="file"></div>
+                        <div  class="subir-imagen , opciones"><input name="imagenProducto" type="file"></div>
 
                         </div>
 
