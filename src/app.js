@@ -22,7 +22,6 @@ app.set('view engine', 'ejs');
 
 //statics => css / js / images
 app.use(express.static("public"));
-const publicPath = path.resolve(__dirname, './public');
 
 //server
 app.listen(port, () => console.log("Levantando servidor http://localhost:" + port));

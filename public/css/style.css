@@ -320,7 +320,7 @@ blockquote {
 
 .tarjeta-2 {
     position: relative;
-    width: 400px;
+    width: 370px;
     background-color: #956441;
     border-radius: 10px;
     box-shadow: 0 0 20px black;
@@ -352,9 +352,14 @@ blockquote {
     width: 95%;
 }
 
+.main-index h3 {
+    font-size: 22px;
+}
+
 
 .detalle-tarjeta h4 {
     margin: 5px auto;
+    font-size: 20px;
 }
 
 .detalle-tarjeta p {
@@ -398,10 +403,6 @@ blockquote {
 
 .tarjeta-2:hover .detalle-tarjeta p {
     color: #FAF2D7;
-}
-
-.main-index h3 {
-    font-size: 23px;
 }
 
 .descripcion p,
@@ -460,14 +461,14 @@ blockquote {
 .mini-cat {
     background-color: #1a1a1a;
     width: 280px;
-    box-shadow: 0 0 20px rgb(56, 56, 56);
+    box-shadow: 0 0 20px rgba(56, 56, 56, 0.705);
     height: 450px;
     display: flex;
     flex-wrap: wrap;
     align-items: start;
     margin: 0.5rem;
     margin-top: 1rem;
-    transition: all 0.5s;
+    transition: all 0.3s;
     border-radius: 7px;
     border: solid #FAF2D7;
 }
@@ -507,7 +508,7 @@ blockquote {
 .mini-cat:hover {
     width: 300px;
     height: 450px;
-    box-shadow: 0 0 50px rgb(0, 0, 0);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.774);
     cursor: pointer;
 
 }
@@ -539,7 +540,7 @@ blockquote {
     justify-content: center;
     border-radius: 100%;
     backface-visibility: hidden;
-    transition: all 1s;
+    transition: all 0.7s;
 
 }
 
@@ -1627,10 +1628,6 @@ body .cuerpo_pagina {
         display: flex;
         width: 70%;
         font-size: 10px;
-    }
-
-    .main-index h3 {
-        font-size: 25px;
     }
 
     .descripcion p,

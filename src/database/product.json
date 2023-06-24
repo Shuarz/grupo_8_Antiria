@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "nombreProd": "Bicicleta Clasica ",
+        "nombreProd": "Bicicleta Clasica",
         "precio": "75.000",
         "oferta": true,
         "categoria": "Mueble",
@@ -11,27 +11,27 @@
     },
     {
         "id": 2,
-        "nombreProd": "Disco de vinilo 'Confort y musica para volar'-Soda Stereo Unplugged ",
+        "nombreProd": "'Confort y musica para volar'",
         "precio": "30.000",
         "oferta": true,
         "categoria": "Musica",
-        "descIndex": "Disco de vinilo 'Confort y musica para volar'-Soda Stereo Unplugged. Perfecto estado.",
-        "descGeneral": "Disco de vinilo 'Confort y musica para volar'-Soda Stereo Unplugged. Perfecto estado.",
+        "descIndex": "Disco de vinilo 'Confort y musica para volar' - Soda Stereo Unplugged. Perfecto estado.",
+        "descGeneral": "Disco de vinilo 'Confort y musica para volar' - Soda Stereo Unplugged. Perfecto estado.",
         "image": "discoVinilo.jpeg"
     },
     {
         "id": 3,
-        "nombreProd": " Cuadro de Picasso 'Busto de mujer joven' ",
+        "nombreProd": "'Busto de mujer joven'",
         "precio": "150.000",
         "oferta": true,
         "categoria": "Arte",
-        "descIndex": "Busto de mujer joven Paris, otoño 1906. Óleo sobre lienzo. 54 x 42 cm..",
+        "descIndex": "Busto de mujer joven Paris, otoño 1906. Óleo sobre lienzo. 54 x 42 cm.",
         "descGeneral": "Busto de mujer joven Paris, otoño 1906. Óleo sobre lienzo. 54 x 42 cm.",
         "image": "cuadroPiccaso.jpg"
     },
     {
         "id": 4,
-        "nombreProd": " Reloj de Bolsillo.",
+        "nombreProd": "Reloj de Bolsillo.",
         "precio": " 80.000",
         "oferta": true,
         "categoria": "Arte",
@@ -40,3 +40,4 @@
         "image": "RelojColeccion.jpg"
     }
 ]
+
