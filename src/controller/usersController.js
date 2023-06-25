@@ -12,9 +12,6 @@ module.exports = {
     registro: (req, res) =>{
         return res.render('../views/users/registro.ejs');
     },
-    tusventas:(req,res)=>{
-        return res.render('../views/users/tusventas')
-    },
     regisrado:(req,res)=>{
         let registroNuevo = {
             "id":usuariosregistrados.length+1,

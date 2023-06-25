@@ -1,53 +1,53 @@
-<%- include('../partials/head', {tituloWeb: 'Antiria - Listado productos'}) %>
-<body>
-    
-    <%- include("../partials/header") %>
-    
-    <main class="carrito-main">
-    </div>
-    <ul class="carrito-seguimiento">
-        <li>
-            <div class="carrito">
-            <i ><a >tus publicaciones</a></i>
-            </div>
-        </li>
-    
-    </ul>
-    <section class="cuerpo_pagina">
-            <div class="products">
-                <% if (row.length===0){ %>
-                    <p>No tiene publicaciones hechas</p>
-                 
-                <% } else{ %>
+<%- include('../partials/head', {tituloWeb: 'Antiria - Carrito' }) %>
 
-                    <% row.forEach((row) => { %>
-
-                        <div class="product">
-                            <a href="productDetail"><img class="imagen-producto" src="/img/<%= row.image %>"
-                                    alt="Producto 1"></a>
-                            <div class="product-total">
-                                <p class="product-name"><%= row.nombreProd %></p>
-        
-        
-                                <p class="product-price">
-                                
-                                </p>
-                                <p class="descripcion-carrito , descripcion-ventas"><%= row.descIndex %></p>
-        
-                                
-                                    <a class="eliminar" id="product-delete" href="/tusventas" onclick="return confirm('¿Realmente desea eliminar este producto?')"><i class="fa-sharp fa-solid fa-trash"></i></a>
-        
-                                    <a id="product-edit" href="/edicionProducto"> <i class="fa-solid fa-pen-to-square "></i></a>
-                            </div>
+    <body>
+        <!-- HEADER -->
+        <%- include("../partials/header.ejs")%>
+            <!-- FIN HEADER -->
+            <main class="carrito-main">
+                </div>
+                <ul class="carrito-seguimiento">
+                    <li>
+                        <div class="carrito">
+                            <i><a>tus publicaciones</a></i>
                         </div>
-    
-                    <% }); %>
-                        
-                    <% } %>
-            </div>
-        </section>
-    </main>
-            <%- include("../partials/footer") %>
-        </body>
-        
-        </html>
+                    </li>
+
+                </ul>
+                <section class="cuerpo_pagina">
+                    <% if (row.length===0){ %>
+                        <p>No tiene publicaciones hechas</p>
+
+                        <% } else{ %>
+
+                            <% row.forEach((row)=> { %>
+
+                                <div class="product">
+                                    <a href="/productDetail/<%= row.id %>"><img class="imagen-producto" src="/img/<%= row.image %>"
+                                            alt="Producto 1"></a>
+                                    <div class="product-total">
+                                        <p class="product-name"><%= row.nombreProd %></p>
+                                        <p class="product-price">
+                                        </p>
+                                        <p class="descripcion-carrito , descripcion-ventas"><%= row.descIndex %></p>
+                                            <a class="eliminar" id="product-delete" href="/" onclick="return confirm('¿Realmente desea eliminar este producto?')"><i class="fa-sharp fa-solid fa-trash"></i></a>
+                                            <a id="product-edit" href="/edicionProducto"> <i class="fa-solid fa-pen-to-square "></i></a>
+                                    </div>
+                                </div>
+
+                                <% }); %>
+
+                                    <% } %>
+
+                                        <a href="/vender" class="total , realizar-compra ">vender tu producto</a>
+
+                </section>
+            </main>
+
+
+            <!-- FOOTER -->
+            <%- include("../partials/footer.ejs")%>
+                <!-- FIN FOOTER -->
+    </body>
+
+    </html>
