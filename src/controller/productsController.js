@@ -4,6 +4,7 @@ const rutaproducto = path.resolve('./src/database/product.json')
 const datos = JSON.parse (fs.readFileSync (path.resolve(__dirname,'../database/product.json')));
 
 module.exports = {
+
     carrito: (req, res) =>{
         return res.render('../views/products/carrito.ejs' );
 

@@ -8,6 +8,7 @@ const app = express();
 //call routes
 const mainRouter = require("./routes/mainRouter")
 const productsRoute = require('./routes/productsRoute');
+const listadoRoute = require("./routes/listadoRoute")
 const usersRoute = require('./routes/usersRoute');
 const searchRoute = require('./routes/searchRouter');
 
@@ -29,6 +30,7 @@ app.listen(port, () => console.log("Levantando servidor http://localhost:" + por
 //routes
 app.use(mainRouter);
 app.use(usersRoute);
+app.use(listadoRoute);
 app.use(productsRoute);
 app.use(searchRoute);
 

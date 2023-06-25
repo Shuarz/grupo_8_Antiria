@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "vendedor" : 1,
     "nombreProd": "Bicicleta Clasica",
     "precio": "75.000",
     "oferta": true,
@@ -11,6 +12,7 @@
   },
   {
     "id": 2,
+    "vendedor" : 2,
     "nombreProd": "'Confort y musica para volar'",
     "precio": "30.000",
     "oferta": true,
@@ -21,6 +23,7 @@
   },
   {
     "id": 3,
+    "vendedor" : 1,
     "nombreProd": "'Busto de mujer joven'",
     "precio": "150.000",
     "oferta": true,
@@ -31,6 +34,7 @@
   },
   {
     "id": 4,
+    "vendedor" : 2,
     "nombreProd": "Reloj de Bolsillo.",
     "precio": " 80.000",
     "oferta": true,
