@@ -16,6 +16,29 @@ module.exports = {
             "image":productoEncontrado.image,
             "descGeneral":productoEncontrado.descGeneral})
     },
+
+    editarProducto: (req,res)=>{
+        const editarProducto = datos.find(row=>row.id==req.params.id)
+        return res.render('products/edicionProducto')
+                
+      },
+    
+      editarProceso:(req,res)=>{
+        let editarProducto = {}
+        editarProducto = datos.find(row => row.id == req.params.id)
+        editarProducto.nombreProd = req.body.nombreProducto
+        editarProducto.precio = req.body.precioProducto  
+        editarProducto.categoria = req.body.categoriaProducto  
+        editarProducto.descGeneral = req.body.descripcionGeneral  
+        editarProducto.imagen = req.file.imagenProducto  
+    
+    
+        fs.writeFileSync(rutaArchivo, JSON.stringify(datos, null, 2), "utf-8") 
+        console.log(req.editarProducto)
+        return res.redirect("/")
+            
+      },
+
     vender: (req, res) =>{
         
         return res.render('../views/products/vender.ejs');
