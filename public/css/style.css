@@ -397,7 +397,7 @@ blockquote {
 
 .tarjeta-2:hover {
     box-shadow: 0 0 10px black;
-    transform: translateY(-1%);
+    transform: translateY(-2%);
     cursor: pointer;
 }
 
