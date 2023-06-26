@@ -456,6 +456,7 @@ blockquote {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .mini-cat {
@@ -642,6 +643,36 @@ blockquote {
     }
 }
 
+.contenedor-icon-mobile{
+    display: flex;
+}
+
+.contenedor-icon-mobile i{
+    font-size: 22px;
+    padding: 2px;
+}
+
+.lupa-mobile input{
+    position: fixed;
+    width: 0px;
+    top: 105px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 40px;
+    border-radius: 20px;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.lupa-mobile input:focus {
+    width: 60%;
+    border: 1px solid black;
+    background-color: #FFF;
+}
 /************************************** FOOTER *************************************/
 .footer-general {
     background-color: #1a1a1a;
@@ -1768,6 +1799,10 @@ body .cuerpo_pagina {
 }
 
 @media (min-width:1280px) {
+    .contenedor-icon-mobile{
+        display: none;
+    }
+
     header .menu-burger {
         display: none;
     }

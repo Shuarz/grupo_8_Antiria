@@ -38,9 +38,14 @@
             </li>
         </ul>
     </nav>
-    <label for="nav-check-index" class="menu-burger">
-        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-        <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-        <a href=""><i class="fa-solid fa-bars"></i></a>
-    </label>
+    <div class="contenedor-icon-mobile">
+        <form class="lupa-mobile" action="/search" method="GET">
+            <input type="text" id="search-mobile" name="search" placeholder="Buscar productos"/>
+            <label for="search-mobile"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></label>
+        </form>
+        <label for="nav-check-index" class="menu-burger">
+            <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href=""><i class="fa-solid fa-bars"></i></a>
+        </label>
+    </div>
 </header>
