@@ -320,7 +320,7 @@ blockquote {
 
 .tarjeta-2 {
     position: relative;
-    width: 370px;
+    width: 340px;
     background-color: #956441;
     border-radius: 10px;
     box-shadow: 0 0 20px black;
@@ -348,22 +348,23 @@ blockquote {
     color: #fffdfd;
     margin: 5px auto;
     padding-top: 10px;
-    height: 200px;
+    height: 215px;
     width: 95%;
 }
 
 .main-index h3 {
-    font-size: 22px;
+    font-size: 19px;
 }
 
 
 .detalle-tarjeta h4 {
     margin: 5px auto;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .detalle-tarjeta p {
     color: #FAF2D7;
+    font-size: 14px;
     margin-bottom: 1rem;
     transition: 0.2s all;
 }
