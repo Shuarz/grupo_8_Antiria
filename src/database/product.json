@@ -123,5 +123,15 @@
     "oferta": false,
     "descGeneral": "Lambertus Jacobus Johannes Boers (1903-1981) - The old man",
     "image": "cuadro.jpg"
+  },
+  {
+    "id": 14,
+    "nombreProd": "esmeralda 5 quilates",
+    "precio": "1200000",
+    "oferta": "on",
+    "categoria": "joyeria",
+    "descGeneral": "esmeralda de 5 quilates extraida de la Mina de Coscuez en Colombia.",
+    "image": "Esmeralda 03.jpg",
+    "descIndex": "esmeralda brillante"
   }
 ]

@@ -51,11 +51,12 @@ module.exports = {
         let productoNuevo ={
             "id": datos.length+1,
             "nombreProd": req.body.nombreProducto,
-            "Precio": req.body.precioProducto,
-            // agregar oferta
+            "precio": req.body.precioProducto,
+            "oferta": req.body.oferta,
             "categoria": req.body.categoriaProducto,
             "descGeneral": req.body.descripcionGeneral,
             "image": req.body.imagenProducto,
+            "descIndex": req.body.descripcionbreve
         }
         fs.writeFileSync(rutaproducto, JSON.stringify([...datos, productoNuevo], null ,2 ), "utf-8")
         res.send("producto subido!")

@@ -1361,6 +1361,14 @@ body .cuerpo_pagina {
     resize: none;
 
 }
+.breve{
+    width: 90%;
+    box-sizing: border-box;
+    resize: vertical;
+    height: 20%;
+    background-color: #FAF2D7;
+    resize: none;
+}
 
 .categoria-vender {
     flex-direction: column;
@@ -1433,7 +1441,7 @@ body .cuerpo_pagina {
 .vender-box {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 700px;
     background-color: transparent;
     border: 2px solid #956441;
     border-radius: 20px;
@@ -1470,6 +1478,16 @@ body .cuerpo_pagina {
         resize: none;
 
     }
+    .breve{
+        height: 100px;
+        width: 300px;
+        box-sizing: border-box;
+        resize: vertical;
+        height: 10%;
+        background-color: #FAF2D7;
+        resize: none;
+
+    }
 
     .myTextarea:focus {
         transition: 0.2s;
@@ -1485,7 +1503,7 @@ body .cuerpo_pagina {
 
     .vender-box {
         width: 450px;
-        height: 650px;
+        height: 750px;
 
     }
 
@@ -1530,6 +1548,12 @@ body .cuerpo_pagina {
     #product-edit:hover {
         color: royalblue;
         transition: 0.2s;
+    }
+    .boton-oferta{
+        display: flex;
+        position: relative;
+        left: 222px;
+        bottom: 17px;
     }
 }
 

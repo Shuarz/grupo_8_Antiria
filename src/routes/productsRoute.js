@@ -1,25 +1,25 @@
 const express = require('express');
 const router = express.Router();
-
 const Controller = require('../controller/productsController.js');
 const multer= require('multer');
 const path = require('path')
 
 const storage = multer.diskStorage({
-    destination:(req, res ,cb)=>[
-        cb(null, path.join(__dirname,'../../public/img'))
-    ],
-    filename:(req,file,cd)=>{
-        let imageName = Date.now() + path.extname(file.originalname)
-        cb(null, imageName)
+    destination:(req, file , cb)=>{
+        cb(null, path.join(__dirname, '../../public/img'));
+    },
+    filename:(req , file , cb)=>{
+        console.log(file);
+        const newFilename = 'product-' + Date.now() + path.extname(file.originalname)
+        cb(null, newFilename);
     }
 });
 
-const upload = multer({storage: storage});
+const fileupload = multer({ storage: multer.diskStorage});
 
 router.get("/carrito", Controller.carrito);
 router.get("/productDetail/:id", Controller.detalleProducto);
 router.get ("/vender", Controller.vender);
-router.post("/vender", upload.single("imagenProducto") ,Controller.publicado);
+router.post("/vender", fileupload.single("imagenProducto") ,Controller.publicado);
 
 module.exports = router;
