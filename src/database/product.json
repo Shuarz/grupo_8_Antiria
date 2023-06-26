@@ -127,11 +127,11 @@
   {
     "id": 14,
     "nombreProd": "esmeralda 5 quilates",
-    "precio": "1200000",
-    "oferta": "on",
+    "precio": "120.000",
+    "oferta": false,
     "categoria": "joyeria",
     "descGeneral": "esmeralda de 5 quilates extraida de la Mina de Coscuez en Colombia.",
-    "image": "Esmeralda 03.jpg",
-    "descIndex": "esmeralda brillante"
+    "image": "Esmeralda 03.jpg"
+    
   }
 ]

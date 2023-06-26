@@ -9,5 +9,8 @@ module.exports = {
             return res.render("./products/listadoProducto",
             {row: productoEncontrado})
     
+    },
+    eliminar: (req, res) => {
+        cart = cart.filter((id) => id !== productId);
     }
-}
+};
