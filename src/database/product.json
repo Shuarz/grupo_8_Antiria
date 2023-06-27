@@ -153,5 +153,29 @@
     "descIndex": "4534543",
     "descGeneral": "543534",
     "image": "WhatsApp Image 2023-06-26 at 15.14.44.jpg"
+  },
+  {
+    "id": 16,
+    "vendedor": "1",
+    "nombreProd": "345435",
+    "precio": "345435",
+    "oferta": "True",
+    "categoria": "Reliquia",
+    "marca": "Rolex",
+    "descIndex": "fdsfsd",
+    "descGeneral": "sdffsdf",
+    "image": "WhatsApp Image 2023-06-26 at 15.14.44.jpg"
+  },
+  {
+    "id": 17,
+    "vendedor": "1",
+    "nombreProd": "3454353432",
+    "precio": "23213",
+    "oferta": "False",
+    "categoria": "joyeria",
+    "marca": "Sony",
+    "descIndex": "fsdfdfd",
+    "descGeneral": "sffds",
+    "image": "WhatsApp Image 2023-06-26 at 15.14.44.jpg"
   }
 ]

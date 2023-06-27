@@ -9,38 +9,35 @@
                 <ul class="carrito-seguimiento">
                     <li>
                         <div class="carrito">
-                            <i><a>tus publicaciones</a></i>
+                            <a>Tus publicaciones</a>
                         </div>
                     </li>
 
                 </ul>
-                <section class="cuerpo_pagina">
-                    <% if (row.length===0){ %>
-                        <p>No tiene publicaciones hechas</p>
-
-                        <% } else{ %>
-
-                            <% row.forEach((row)=> { %>
-
-                                <div class="product">
-                                    <a href="/productDetail/<%= row.id %>"><img class="imagen-producto" src="/img/<%= row.image %>"
-                                            alt="Producto 1"></a>
-                                    <div class="product-total">
-                                        <p class="product-name"><%= row.nombreProd %></p>
-                                        <p class="product-price">
-                                            $<%= row.precio %>
-                                        </p>
-                                        <p class="descripcion-carrito , descripcion-ventas"><%= row.descGeneral %></p>
-                                            <a class="eliminar" id="product-delete" href="/" onclick="return confirm('¿Realmente desea eliminar este producto?')"><i class="fa-sharp fa-solid fa-trash"></i></a>
-                                            <a id="product-edit" href="/edicionProducto"> <i class="fa-solid fa-pen-to-square "></i></a>
+                <section class="main-search2">
+                    <% if (row.length===0) { %>
+                        <h4 class="notfound-search">No tiene publicaciones hechas 😔</h4>
+                    <% } else { %>
+                        <% row.forEach ((row)=> { %>
+                            <article>
+                                <div class="imagen-detalle-prod">
+                                    <img src="/img/<%= row.image %>" alt="">
+                                </div>
+                                <div class="descripcion_search_prod2">
+                                    <h3><%= row.nombreProd %></h3>
+                                    <h4 class="green">$<%= row.precio %></h4>
+                                    <div class="eliminar-edit">
+                                        <a class="eliminar" id="product-delete" href="/" onclick="return confirm('¿Realmente desea eliminar este producto?')"><i class="fa-sharp fa-solid fa-trash"></i></a>
+                                        <a id="product-edit" href="/listadoProducto/1/edicionProducto/<%= row.id %>"> <i class="fa-solid fa-pen-to-square "></i></a>
                                     </div>
                                 </div>
-
-                                <% }); %>
-
-                                    <% } %>
-
-                                        <a href="/vender" class="total , realizar-compra ">Vender tu producto</a>
+                            </article>
+                            <hr>
+                        <% }) %>
+                    <% } %>
+                    <div class="realizar-compra3">
+                        <a href="/listadoProducto/1/vender" class="realizar-compra2 ">Vender tu producto</a>
+                    </div>
 
                 </section>
             </main>

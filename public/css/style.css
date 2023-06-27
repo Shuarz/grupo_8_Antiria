@@ -1255,7 +1255,7 @@ nav ul li .link-nav-index-3 {
 
 
 body .cuerpo_pagina {
-    height: 70vh;
+    min-height: 70vh;
     width: 100%;
     display: flex;
     border-radius: 10px;
@@ -1334,7 +1334,8 @@ body .cuerpo_pagina {
     margin-bottom: 3rem;
 }
 
-.carrito i {
+.carrito a {
+    margin-left: 1rem;
     border-bottom: 1px solid black;
 }
 
@@ -1345,6 +1346,26 @@ body .cuerpo_pagina {
     padding: 8px;
     border: 1px solid black;
     font-weight: bold;
+}
+
+.realizar-compra3{
+    text-align: center;
+    margin-top: 2rem ;
+}
+
+.realizar-compra2 {
+    text-align: center;
+    color: #1a1a1a;
+    border-radius: 30px;
+    padding: 8px;
+    border: 2px solid black;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.realizar-compra2:hover {
+    background-color: #1a1a1a;
+    color: #FAF2D7;
 }
 
 .box-ofertas {
@@ -1394,11 +1415,7 @@ body .cuerpo_pagina {
 
 
 .vender-box h2 {
-    display: flex;
-    position: relative;
-    left: 40px;
-    bottom: 10px;
-    margin-top: 1rem;
+    text-align: center;
 
 
 }
@@ -1515,7 +1532,11 @@ body .cuerpo_pagina {
     margin-left: 0rem;
 }
 
-@media(min-width:480px) {
+.marron{
+    color: #5a3b25;
+}
+
+@media(min-width:769px) {
     .vender-box {
         width: 100%;
         background-color: transparent;
@@ -1655,13 +1676,19 @@ body .cuerpo_pagina {
     min-height: 70vh;
 }
 
-.main-search hr {
+.main-search2 {
+    min-height: 70vh;
+}
+
+.main-search hr,
+.main-search2 hr {
     margin: auto;
     width: 95%;
     color: #1a1a1a;
 }
 
-.main-search article {
+.main-search article,
+.main-search2 article {
     margin: auto;
     width: 95%;
     margin-bottom: 10px;
@@ -1669,21 +1696,26 @@ body .cuerpo_pagina {
     display: flex;
 }
 
-.main-search h3 {
-    font-size: 22px;
+
+.main-search h3,
+.main-search2 h3 {
+    font-size: 17px;
 }
 
-.main-search h4 {
-    font-size: 19px;
-}
-
-.main-search h5 {
+.main-search h4,
+.main-search2 h4 {
     font-size: 15px;
+}
+
+.main-search h5,
+.main-search2 h5 {
+    font-size: 14px;
 }
 
 
 .imagen-detalle-prod {
     width: 200px;
+    width: 50%;
     height: 200px;
     border: 1px solid #1a1a1a80;
     box-shadow: 0px 0px 5px #1a1a1a80;
@@ -1696,13 +1728,15 @@ body .cuerpo_pagina {
     color: green;
 }
 
-.main-search img {
+.main-search img,
+.main-search2 img {
     width: 100%;
     max-height: 100%;
 }
 
 .descripcion_search_prod {
     margin-left: 1rem;
+    width: 50%;
 }
 
 .descripcion_search_prod a {
@@ -1727,9 +1761,37 @@ body .cuerpo_pagina {
     box-shadow: 0px 0px 10px #2c1e13 inset;
 }
 
+.descripcion_search_prod2 {
+    margin-left: 1rem;
+    width: 50%;
+}
+
+.descripcion_search_prod2 a {
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #1c232a;
+    width: 100px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    color: #1a1a1a;
+}
+
 .notfound-search{
     text-align: center;
 }
+
+.eliminar-edit{
+    display: flex;
+}
+
+.eliminar-edit a{
+
+}
+
+
 
 /************************************** RESPONSIVE ************************************/
 @media (min-width:480px) {
@@ -1744,6 +1806,18 @@ body .cuerpo_pagina {
 
     .product-price {
         justify-content: end;
+    }
+
+    .imagen-detalle-prod {
+        width: 30%;
+    }
+
+    .descripcion_search_prod{
+        width: 70%;
+    }
+
+    .descripcion_search_prod2{
+        width: 70%;
     }
 
 }
@@ -1772,7 +1846,7 @@ body .cuerpo_pagina {
         display: flex;
         width: 50%;
         bottom: 70px;
-        font-size: 20px;
+        font-size: 17px;
     }
 
     .eliminar:hover {
@@ -1881,11 +1955,13 @@ body .cuerpo_pagina {
         padding-top: 1rem;
     }
 
-    .main-search hr {
+    .main-search hr,
+    .main-search2 hr {
         width: 90%;
     }
 
-    .main-search article {
+    .main-search article,
+    .main-search2 article {
         width: 90%;
     }
 
@@ -1896,6 +1972,37 @@ body .cuerpo_pagina {
     .contacus-h3 {
         font-size: 30px;
         margin-bottom: -50px;
+    }
+
+    .imagen-detalle-prod {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #1a1a1a80;
+        box-shadow: 0px 0px 5px #1a1a1a80;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    .descripcion_search_prod {
+        margin-left: 1rem;
+    }
+
+    .descripcion_search_prod2 {
+        margin-left: 1rem;
+    }
+
+    .main-search h3,
+    .main-search2 h3 {
+        font-size: 20px;
+    }
+    .main-search h4,
+    .main-search2 h4 {
+        font-size: 19px;
+    }
+    .main-search h5,
+    .main-search2 h5 {
+        font-size: 15px;
     }
 
 

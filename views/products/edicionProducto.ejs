@@ -10,7 +10,8 @@
             <main class="vender-main">
                 <section class="vender-box">
                     <form action="/vender" method="post">
-                        <h2 class="title , opciones , title-vender">Vende tu producto</h2>
+                        <h2 class="title , opciones , title-vender">Edita tu producto</h2>
+                        <h2 class="marron">"<%= nombre %>"</h2>
                         <div class="input-box , opciones ">
                             <input name="nombreProducto" type="text" required>
                             <label>Nombre del producto</label>
@@ -79,7 +80,7 @@
 
                         <div class="realizarlacompra">
                             <button class="realizar-compra , Cancelar  , opciones" type="reset">Cancelar</button>
-                            <button class="realizar-compra , publicar ,   opciones" type="submit"> Publicar </button>
+                            <button class="realizar-compra , publicar ,   opciones" type="submit">Guardar cambios</button>
                         </div>
                     </form>
                 </section>

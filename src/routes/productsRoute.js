@@ -19,8 +19,16 @@ const fileupload = multer({ storage: multer.diskStorage});
 
 router.get("/carrito", Controller.carrito);
 router.get("/productDetail/:id", Controller.detalleProducto);
-router.get ("/vender", Controller.vender);
-router.post("/vender", fileupload.single("imagenProducto") ,Controller.publicado);
-router.get("/edicionProducto", Controller.editarProducto);
+router.get("/listadoProducto/:id", Controller.listado);
+router.get ("/listadoProducto/:id/vender", Controller.vender);
+router.post("/listadoProducto/:id/vender", fileupload.single("imagenProducto") ,Controller.publicado);
+router.get("/listadoProducto/:id/edicionProducto/:idprod", Controller.editarProducto);
+
+
+router.post('/eliminar', (req, res) => {
+    const id = req.body.id;
+    Controller.eliminar(id);
+    res.redirect('/listadoProducto');
+  });
 
 module.exports = router;

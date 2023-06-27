@@ -21,14 +21,16 @@ module.exports = {
     },
 
     editarProducto: (req, res) => {
-        const editarProducto = datos.find(row => row.id == req.params.id)
-        return res.render('./products/edicionProducto')
+        const editarProducto = datos.find(row => row.id == req.params.idprod)
+        return res.render('./products/edicionProducto',{
+            "nombre" : editarProducto.nombreProd
+        })
 
     },
 
     editarProceso: (req, res) => {
         let editarProducto = {}
-        editarProducto = datos.find(row => row.id == req.params.id)
+        editarProducto = datos.find(row => row.id == req.params.idprod)
         editarProducto.nombreProd = req.body.nombreProducto
         editarProducto.precio = req.body.precioProducto
         editarProducto.categoria = req.body.categoriaProducto
@@ -52,6 +54,7 @@ module.exports = {
     publicado: (req, res) => {
         let productoNuevo = {
             "id": datos.length + 1,
+            "vendedor": req.params.id,
             "nombreProd": req.body.nombreProducto,
             "precio": req.body.precioProducto,
             "oferta": req.body.oferta,
@@ -63,5 +66,15 @@ module.exports = {
         }
         fs.writeFileSync(rutaproducto, JSON.stringify([...datos, productoNuevo], null, 2), "utf-8")
         res.render('./products/createProduct')
+    },
+    listado: (req, res) => 
+    {
+        const productoEncontrado = datos.filter(row => row.vendedor == req.params.id)
+            return res.render("./products/listadoProducto",
+            {row: productoEncontrado})
+    
+    },
+    eliminar: (req, res) => {
+        cart = cart.filter((id) => id !== productId);
     }
 };
