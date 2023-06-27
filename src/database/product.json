@@ -142,5 +142,16 @@
     "categoria": "joyeria",
     "descGeneral": "esmeralda de 5 quilates extraida de la Mina de Coscuez en Colombia.",
     "image": "Esmeralda 03.jpg"
+  },
+  {
+    "id": 15,
+    "nombreProd": "fdggfgd",
+    "precio": "453534",
+    "oferta": "True",
+    "categoria": "joyeria",
+    "marca": "Sony",
+    "descIndex": "4534543",
+    "descGeneral": "543534",
+    "image": "WhatsApp Image 2023-06-26 at 15.14.44.jpg"
   }
 ]

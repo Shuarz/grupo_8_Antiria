@@ -1,60 +1,97 @@
-<%- include('../partials/head', {tituloWeb: 'Antiria - Carrito'}) %>
+<%- include('../partials/head', {tituloWeb: 'Antiria - Edicion' }) %>
 
-<body>
-    <!-- HEADER -->
-    <%- include("../partials/header.ejs")%>
-    <!-- FIN HEADER -->
+    <body>
 
-    
-    <main class="carrito-main">
-        <section class="vender-box">
-            <form action="/tusventas" method="post">
-                <h2 class="title , opciones , title-vender">Edite tu producto</h2>
-                <div class="input-box , opciones ">
-                    <input name="nombreProducto" type="text" required>
-                    <label>Nombre del producto</label>
-                </div>
-                <div class="input-box , opciones ">
-                    <input name="PrecioProducto" type="number" required>
-                    <label class="nombre_precio">Precio del producto</label>
-                </div>
-                <div class="categoria-vender ">
-                    <p class=" opciones">Categoria del producto</p>
-                    <div class="botonera , opciones">
-                        <select name="categoriaProducto" class="opciones-botonera">
-                            <option selected disabled class="opcion">Categorias</option>
-                            <option value="joyeria" class="opcion">Joyeria</option>
-                            <option value="Reliquia" class="opcion">Reliquia</option>
-                            <option value="Mueble" class="opcion">Mueble</option>
-                            <option value="Arte" class="opcion">Arte</option>
-                            <option value="Discos" class="opcion">Discos</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="opciones">
-                    <label>Descripcion del producto</label>
+        <!-- HEADER -->
+        <%- include("../partials/header")%>
+            <!-- FIN HEADER -->
 
 
-                </div>
-                <textarea name="descripcionGeneral" class="myTextarea , opciones" required></textarea>
-                <div>
-                    <label class="opciones">Subir imagen del producto</label>
+            <main class="vender-main">
+                <section class="vender-box">
+                    <form action="/vender" method="post">
+                        <h2 class="title , opciones , title-vender">Vende tu producto</h2>
+                        <div class="input-box , opciones ">
+                            <input name="nombreProducto" type="text" required>
+                            <label>Nombre del producto</label>
+                        </div>
+                        <div class="input-box , opciones ">
+                            <input name="precioProducto" type="number" required>
+                            <label class="nombre_precio">Precio del producto</label>
+                        </div>
+                        <div class="categoria-vender ">
+                            <p class=" opciones">Categoría del producto</p>
+                            <article class="botonera , opciones">
+                                <select name="categoriaProducto" class="opciones-botonera" required>
+                                    <option selected disabled class="opcion">Categorias</option>
+                                    <option value="joyeria" class="opcion">Joyeria</option>
+                                    <option value="Reliquia" class="opcion">Reliquia</option>
+                                    <option value="Mueble" class="opcion">Mueble</option>
+                                    <option value="Arte" class="opcion">Arte</option>
+                                    <option value="Discos" class="opcion">Discos</option>
+                                </select>
+                            </article>
+                        </div>
 
-                </div>
-                <div  class="subir-imagen , opciones"><input name="imagenProducto" type="file"></div>
+                        <div class="categoria-vender ">
+                            <p class=" opciones">Marca del producto</p>
+                            <article class="botonera , opciones">
+                                <select name="marca" class="opciones-botonera" required>
+                                    <option selected disabled class="opcion">Marcas</option>
+                                    <option value="Sony" class="opcion">Sony</option>
+                                    <option value="Rolex" class="opcion">Rolex</option>
+                                    <option value="Louis Vuitton" class="opcion">Louis Vuitton</option>
+                                    <option value="Nintendo" class="opcion">Nintendo</option>
+                                    <option value="Mercedes Benz" class="opcion">Mercedes Benz</option>
+                                    <option value="Otro" class="opcion">Otro</option>
+                                </select>
+                            </article>
+                        </div>
 
-                </div>
+                        <div class="opciones">
+                            <label>Breve descripción de tu producto</label>
 
-                <div class="realizarlacompra">
-                    <button class="realizar-compra , Cancelar  , opciones" type="reset">Cancelar</button>
-                    <button class="realizar-compra , publicar ,   opciones" type="submit"> Terminar edicion </button>
-                </div>
-            </form>
-        </section>
-    </main>
-    <!-- FOOTER -->
-    <%- include("../partials/footer.ejs")%>
-    <!-- FIN FOOTER -->
-  </body>
-  
-  </html>
+
+                        </div>
+                        <textarea name="descripcionbreve" class="breve , opciones" maxlength="20" required ></textarea>
+                        <div class="opciones">
+                            <label>Descripción del producto</label>
+
+
+                        </div>
+                        <textarea name="descripcionGeneral" class="myTextarea , opciones" required></textarea>
+                        <div>
+                            <label class="opciones">Subir imagen del producto</label>
+
+                        </div>
+                        <div  class="subir-imagen , opciones"><input name="imagenProducto" type="file" required></div>
+                        </div>
+                        <div class="opciones" required>
+                            <p>¿Se encuentra en oferta?</p>
+                            <input type="radio" name="oferta" value=True required>
+                            <label for="">Si</label><br>
+
+                            <input type="radio" name="oferta" value=False required>
+                            <label for="">No</label><br>
+
+                        </div>
+
+
+                        <div class="realizarlacompra">
+                            <button class="realizar-compra , Cancelar  , opciones" type="reset">Cancelar</button>
+                            <button class="realizar-compra , publicar ,   opciones" type="submit"> Publicar </button>
+                        </div>
+                    </form>
+                </section>
+            </main>
+
+
+
+
+            <!-- FOOTER -->
+            <%- include("../partials/footer")%>
+                <!-- FIN FOOTER -->
+
+    </body>
+
+    </html>

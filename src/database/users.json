@@ -10,6 +10,7 @@
   {
     "id": 2,
     "nombre": "santiago",
+    "apellido": "canavide",
     "correo": "usuariofalso@example.com",
     "contraseña": "contra123",
     "terminos": "on"
@@ -20,14 +21,6 @@
     "apellido": "millonaria",
     "correo": "tengomuchaplata@example.com",
     "contraseña": "cagoplata",
-    "terminos": "on"
-  },
-  {
-    "id": 4,
-    "nombre": "ALEJO",
-    "apellido": "PEQUEÑO",
-    "correo": "alejopequeno25@gmail.com",
-    "contraseña": "vedia420",
     "terminos": "on"
   },
   {

@@ -21,5 +21,6 @@ router.get("/carrito", Controller.carrito);
 router.get("/productDetail/:id", Controller.detalleProducto);
 router.get ("/vender", Controller.vender);
 router.post("/vender", fileupload.single("imagenProducto") ,Controller.publicado);
+router.get("/edicionProducto", Controller.editarProducto);
 
 module.exports = router;
