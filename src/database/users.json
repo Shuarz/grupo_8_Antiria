@@ -29,5 +29,13 @@
     "correo": "alejopequeno25@gmail.com",
     "contraseña": "vedia420",
     "terminos": "on"
+  },
+  {
+    "id": 5,
+    "nombre": "Pedro",
+    "apellido": "Gonzales",
+    "correo": "alejito@gmail.com",
+    "contraseña": "pipipipipi",
+    "terminos": "on"
   }
 ]

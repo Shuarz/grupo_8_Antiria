@@ -442,6 +442,46 @@ blockquote {
     display: flex;
 }
 
+nav ul li .link-nav-index-3 {
+    color: #1C232A;
+    margin: 0 2px;
+    font-weight: 600;
+    padding: 8px 18px;
+    position: relative;
+    display: inline-block;
+}
+
+.categorias3 {
+    position: absolute;
+    list-style: none;
+    background-color: #726a52;
+    padding: 1rem;
+    bottom: -2.4rem;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgb(56, 56, 56);
+    transition: 0.3s ease-in-out;
+    display: none;
+}
+
+.categorias3 li {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.categorias3 li a {
+    color: #f1f1f1b7;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.categorias-nav3 .categorias3 li a:hover {
+    color: #ffffff;
+}
+
+.categorias-nav3:hover .categorias3 {
+    display: flex;
+}
+
 .categoriash2 {
     display: flex;
     align-items: center;
@@ -1259,6 +1299,7 @@ body .cuerpo_pagina {
 
 .product {
     display: flex;
+    width: 100%;
     align-items: center;
     margin-bottom: 20px;
     flex-direction: row;
@@ -1299,10 +1340,11 @@ body .cuerpo_pagina {
 
 .realizar-compra {
     background-color: #FAF2D7;
+    color: #1a1a1a;
     border-radius: 30px;
     padding: 8px;
     border: 1px solid black;
-
+    font-weight: bold;
 }
 
 .box-ofertas {
@@ -1344,11 +1386,19 @@ body .cuerpo_pagina {
 
 }
 
+
+.vender-main {
+    padding-top: 110px;
+}
+
+
+
 .vender-box h2 {
     display: flex;
     position: relative;
     left: 40px;
     bottom: 10px;
+    margin-top: 1rem;
 
 
 }
@@ -1360,6 +1410,8 @@ body .cuerpo_pagina {
     height: 20%;
     background-color: #FAF2D7;
     resize: none;
+    border-radius: 10px;
+    border: 2px solid #000000;
 
 }
 .breve{
@@ -1369,6 +1421,8 @@ body .cuerpo_pagina {
     height: 20%;
     background-color: #FAF2D7;
     resize: none;
+    border-radius: 10px;
+    border: 2px solid #000000;
 }
 
 .categoria-vender {
@@ -1382,17 +1436,19 @@ body .cuerpo_pagina {
 }
 
 .botonera {
-    margin-top: 1rem;
+    margin-top: .1rem;
 }
 
 .opciones-botonera {
     width: 90%;
     background-color: #FAF2D7;
     height: 2rem;
+    border-radius: 10px;
+    border: 2px solid #000000;
 }
 
 .opciones-botonera:focus {
-    background-color: #956441;
+    background-color: #ffffff;
     transition: 0.5s;
 }
 
@@ -1407,6 +1463,12 @@ body .cuerpo_pagina {
     flex-direction: column-reverse;
     display: flex;
     align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.realizar-compra{
+    border-radius: 10px;
+    border: 2px solid #000000;
 }
 
 .Cancelar {
@@ -1436,24 +1498,17 @@ body .cuerpo_pagina {
 }
 
 .opcion {
-    color: #AA9D16;
+    color: #1a1a1a;
 }
 
 .vender-box {
     position: relative;
     width: 100%;
-    height: 700px;
-    background-color: transparent;
-    border: 2px solid #956441;
-    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 20px black;
     flex-direction: column;
     margin: auto;
-    padding: 10px;
 }
 
 .opciones {
@@ -1461,6 +1516,23 @@ body .cuerpo_pagina {
 }
 
 @media(min-width:480px) {
+    .vender-box {
+        width: 100%;
+        background-color: transparent;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.616);
+        flex-direction: column;
+        margin: auto;
+        padding: 10px;
+        padding-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+
     .opciones {
         margin-left: 3rem;
     }
@@ -1504,7 +1576,6 @@ body .cuerpo_pagina {
 
     .vender-box {
         width: 450px;
-        height: 750px;
 
     }
 
@@ -1518,18 +1589,17 @@ body .cuerpo_pagina {
     }
 
     .Cancelar {
-        width: 60px;
-        margin-top: 0;
-        height: 30px;
+        margin: 0;
+        margin-right: 1rem;
         font-size: 10px;
-        position: relative;
-        right: 15px;
-        top: 2px;
-        background-color: #956441
+        background-color: #956441;
+        font-weight: bold;
     }
 
     .publicar {
-        width: 150px;
+        text-align: center;
+        margin: 0;
+        font-weight: bold;
         margin-left: 1rem;
         right: 30px;
         position: relative;
@@ -1784,6 +1854,14 @@ body .cuerpo_pagina {
 
     .realizar-compra:hover {
         background-color: #1c232a;
+        transition: 0.2s;
+        color: #FAF2D7;
+        cursor: pointer;
+        box-shadow: 0 0 20px rgb(117, 117, 117);
+    }
+
+    .Cancelar:hover {
+        background-color: red;
         transition: 0.2s;
         color: #FAF2D7;
     }

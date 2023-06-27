@@ -28,6 +28,7 @@
                                     <div class="product-total">
                                         <p class="product-name"><%= row.nombreProd %></p>
                                         <p class="product-price">
+                                            $<%= row.precio %>
                                         </p>
                                         <p class="descripcion-carrito , descripcion-ventas"><%= row.descIndex %></p>
                                             <a class="eliminar" id="product-delete" href="/" onclick="return confirm('¿Realmente desea eliminar este producto?')"><i class="fa-sharp fa-solid fa-trash"></i></a>
@@ -39,7 +40,7 @@
 
                                     <% } %>
 
-                                        <a href="/vender" class="total , realizar-compra ">vender tu producto</a>
+                                        <a href="/vender" class="total , realizar-compra ">Vender tu producto</a>
 
                 </section>
             </main>
