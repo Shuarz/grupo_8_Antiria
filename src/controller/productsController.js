@@ -54,9 +54,9 @@ module.exports = {
             "precio": req.body.precioProducto,
             "oferta": req.body.oferta,
             "categoria": req.body.categoriaProducto,
+            "descIndex": req.body.descripcionbreve,
             "descGeneral": req.body.descripcionGeneral,
             "image": req.body.imagenProducto,
-            "descIndex": req.body.descripcionbreve
         }
         fs.writeFileSync(rutaproducto, JSON.stringify([...datos, productoNuevo], null ,2 ), "utf-8")
         res.send("producto subido!")

@@ -45,6 +45,7 @@
   },
   {
     "id": 5,
+    "vendedor": 3,
     "nombreProd": "auto lamborghini diablo",
     "precio": " 80.000.000",
     "oferta": false,
@@ -54,6 +55,7 @@
   },
   {
     "id": 6,
+    "vendedor": 1,
     "nombreProd": "juego Lego de mesa",
     "categoria": "Juegos",
     "precio": " 70.000",
@@ -63,6 +65,7 @@
   },
   {
     "id": 7,
+    "vendedor": 2,
     "nombreProd": "RARO MANUSCRITO DE LIBRO CRISTIANO COPTO ETIOPÍA GE'EZ BIBLIA",
     "categoria": "Reliquia",
     "precio": " 700.000",
@@ -72,6 +75,7 @@
   },
   {
     "id": 8,
+    "vendedor": 3,
     "nombreProd": "Armario triple caoba llama con dos cajones y espejo original",
     "categoria": "Muebles",
     "precio": " 250.000",
@@ -81,6 +85,7 @@
   },
   {
     "id": 9,
+    "vendedor": 2,
     "nombreProd": "Cartier - Panthère Ruban - 2449 - Mujer - 1980",
     "categoria": "Relojes",
     "precio": " 240.000",
@@ -90,6 +95,7 @@
   },
   {
     "id": 10,
+    "vendedor": 3,
     "nombreProd": "Chuck Berry - Signed Photo by Chuck Berry - 20x25cm . Recuerdo Firmado (autografo original)",
     "categoria": "musica",
     "precio": " 150.000",
@@ -99,6 +105,7 @@
   },
   {
     "id": 11,
+    "vendedor": 1,
     "nombreProd": "Panini - World Cup España 82 - Set de adhesivos sueltos completo - 1982",
     "categoria": "Juegos",
     "precio": " 40.000",
@@ -108,6 +115,7 @@
   },
   {
     "id": 12,
+    "vendedor": 2,
     "nombreProd": "Pala Diamond - 18 quilates Oro blanco - Collar con colgante - 2.40 ct Diamante - Diamantes",
     "categoria": "joya",
     "precio": " 90.500",
@@ -117,6 +125,7 @@
   },
   {
     "id": 13,
+    "vendedor": 2,
     "nombreProd": "Lambertus Jacobus Johannes Boers (1903-1981) - The old man",
     "categoria": "arte",
     "precio": " 340.200",
@@ -126,12 +135,12 @@
   },
   {
     "id": 14,
+    "vendedor": 3,
     "nombreProd": "esmeralda 5 quilates",
     "precio": "120.000",
     "oferta": false,
     "categoria": "joyeria",
     "descGeneral": "esmeralda de 5 quilates extraida de la Mina de Coscuez en Colombia.",
     "image": "Esmeralda 03.jpg"
-    
   }
 ]
