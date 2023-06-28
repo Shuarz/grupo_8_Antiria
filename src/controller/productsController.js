@@ -81,6 +81,54 @@ module.exports = {
         fs.writeFileSync(rutaProducto, jsonProductos, 'utf8');
 
         return res.redirect("/");
+        // const idProducto = req.params.idprod;
+        // const nombre = req.body.nombreProducto;
+        // const precio = parseFloat(req.body.precioProducto);
+        // const categoria = req.body.categoriaProducto;
+        // const marca = req.body.marca;
+        // const descIndex = req.body.descripcionbreve;
+        // const descGeneral = req.body.descripcionGeneral;
+        // const oferta = req.body.oferta;
+    
+        // const data = fs.readFileSync(rutaProducto, 'utf8');
+        // let productos = JSON.parse(data);
+    
+        // const productoEditado = productos.find(row => row.id == idProducto);
+    
+        // if (nombre !== undefined) {
+        //     productoEditado.nombreProd = nombre;
+        // }
+        // if (precio !== undefined) {
+        //     productoEditado.precio = precio;
+        // }
+        // if (categoria !== undefined) {
+        //     productoEditado.categoria = categoria;
+        // }
+        // if (marca !== undefined) {
+        //     productoEditado.marca = marca;
+        // }
+        // if (descIndex !== undefined) {
+        //     productoEditado.descIndex = descIndex;
+        // }
+        // if (descGeneral !== undefined) {
+        //     productoEditado.descGeneral = descGeneral;
+        // }
+        // if (oferta !== undefined) {
+        //     productoEditado.oferta = oferta;
+        // }
+    
+        // if (req.file) {
+        //     const nuevaImg = req.file.filename;
+        //     const imagPath = path.join(__dirname, '../../public/img', productoEditado.image);
+        //     fs.unlinkSync(imagPath);
+        //     productoEditado.image = nuevaImg;
+        // }
+    
+        // const jsonProductos = JSON.stringify(productos, null, 2);
+    
+        // fs.writeFileSync(rutaProducto, jsonProductos, 'utf8');
+    
+        // return res.redirect("/");
     },
 
     vender: (req, res) => {
@@ -101,7 +149,7 @@ module.exports = {
             "marca": req.body.marca,
             "descIndex": req.body.descripcionbreve,
             "descGeneral": req.body.descripcionGeneral,
-            "image": req.body.imagenProducto,
+            "image": req.file.filename,
         }
         fs.writeFileSync(rutaProducto, JSON.stringify([...datos, productoNuevo], null, 2), "utf-8")
         res.render('./products/createProduct')

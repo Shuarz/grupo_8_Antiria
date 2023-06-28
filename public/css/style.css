@@ -1532,6 +1532,11 @@ body .cuerpo_pagina {
     border: 2px solid #000000;
 }
 
+.vender-box textarea{
+    text-align: left;
+    white-space: pre-wrap;
+}
+
 .categoria-vender {
     flex-direction: column;
     display: flex;

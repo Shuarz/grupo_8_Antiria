@@ -9,7 +9,7 @@
 
             <main class="vender-main">
                 <section class="vender-box">
-                    <form action="/listadoProducto/1/vender" method="POST">
+                    <form action="/listadoProducto/1/vender" method="POST" enctype="multipart/form-data">
                         <h2 class="title , opciones , title-vender">Vende tu producto</h2>
                         <div class="input-box , opciones ">
                             <input name="nombreProducto" type="text" required>
@@ -64,7 +64,10 @@
                             <label class="opciones">Subir imagen del producto</label>
 
                         </div>
-                        <div  class="subir-imagen , opciones"><input name="imagenProducto" type="file" required></div>
+                        <div  class="subir-imagen , opciones">
+                            <input name="imagenProducto" type="file" required>
+                        </div>
+
                         </div>
                         <div class="opciones" required>
                             <p>¿Se encuentra en oferta?</p>

@@ -145,73 +145,26 @@
   },
   {
     "id": 15,
-    "nombreProd": "fdggfgd",
-    "precio": "453534",
+    "vendedor": "1",
+    "nombreProd": "collar",
+    "precio": 65557,
     "oferta": "True",
     "categoria": "joyeria",
-    "marca": "Sony",
-    "descIndex": "4534543",
-    "descGeneral": "543534",
-    "image": "WhatsApp Image 2023-06-26 at 15.14.44.jpg"
+    "marca": "Otro",
+    "descIndex": "gbvbjbjhb",
+    "descGeneral": "hknjknjn",
+    "image": "product-1687971277668.JPG"
   },
   {
     "id": 16,
     "vendedor": "1",
-    "nombreProd": "345435",
-    "precio": "345435",
-    "oferta": "False",
-    "categoria": "Reliquia",
-    "marca": "Rolex",
-    "descIndex": "fdsfsd",
-    "descGeneral": "sdffsdf",
-    "image": "WhatsApp Image 2023-06-26 at 15.14.44.jpg"
-  },
-  {
-    "id": 17,
-    "vendedor": "1",
-    "nombreProd": "3454353432",
-    "precio": "23213",
-    "oferta": "False",
-    "categoria": "joyeria",
-    "marca": "Sony",
-    "descIndex": "fsdfdfd",
-    "descGeneral": "sffds",
-    "image": "WhatsApp Image 2023-06-26 at 15.14.44.jpg"
-  },
-  {
-    "id": 18,
-    "vendedor": "1",
-    "nombreProd": "kmlgdmgd",
-    "precio": "4553345",
-    "oferta": "False",
-    "categoria": "joyeria",
-    "marca": "Otro",
-    "descIndex": "kmfsmkdfsldkfmsd",
-    "descGeneral": "mfkldfksmfk",
-    "image": "IMG_0836.jpg"
-  },
-  {
-    "id": 19,
-    "vendedor": "1",
-    "nombreProd": "fsdfds",
-    "precio": "34324",
+    "nombreProd": "ALGO",
+    "precio": 13238828,
     "oferta": "True",
     "categoria": "joyeria",
-    "marca": "Rolex",
-    "descIndex": "324324",
-    "descGeneral": "432432",
-    "image": "IMG_0868.jpg"
-  },
-  {
-    "id": 20,
-    "vendedor": "1",
-    "nombreProd": "fdfsdds2243",
-    "precio": 1000022243,
-    "oferta": "True",
-    "categoria": "Reliquia",
     "marca": "Louis Vuitton",
-    "descIndex": "ffdsfsd",
-    "descGeneral": "FADFDS",
-    "image": "IMG_0919.jpg"
+    "descIndex": "ALGO LINDO",
+    "descGeneral": "RE FACHERO ESTO SI LO COMPRAS",
+    "image": "product-1687973255837.JPG"
   }
 ]

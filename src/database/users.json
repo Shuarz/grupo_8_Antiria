@@ -38,5 +38,13 @@
     "correo": "alejopequeno25@gmail.com",
     "contraseña": "pito",
     "terminos": "on"
+  },
+  {
+    "id": 6,
+    "nombre": "Alejo",
+    "apellido": "Pequeño",
+    "correo": "alejitofacha@gmail.com",
+    "contraseña": "papappapa",
+    "terminos": "on"
   }
 ]
