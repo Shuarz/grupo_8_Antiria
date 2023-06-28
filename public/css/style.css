@@ -770,7 +770,6 @@ nav ul li .link-nav-index-3 {
         width: 100%;
     }  
 
-    
 }
 
 .contenedor-icon-mobile{
@@ -1510,6 +1509,7 @@ body .cuerpo_pagina {
 }
 
 .myTextarea {
+    padding: 5px;
     width: 90%;
     box-sizing: border-box;
     resize: vertical;
@@ -1522,6 +1522,7 @@ body .cuerpo_pagina {
 }
 .breve{
     width: 90%;
+    padding:5px;
     box-sizing: border-box;
     resize: vertical;
     height: 20%;

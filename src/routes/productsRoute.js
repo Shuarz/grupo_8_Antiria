@@ -17,13 +17,14 @@ const storage = multer.diskStorage({
 
 const fileupload = multer({ storage: multer.diskStorage});
 
+//router
 router.get("/carrito", Controller.carrito);
 router.get("/productDetail/:id", Controller.detalleProducto);
 router.get("/listadoProducto/:id", Controller.listado);
 router.get ("/listadoProducto/:id/vender", Controller.vender);
 router.post("/listadoProducto/:id/vender", fileupload.single("imagenProducto") ,Controller.publicado);
 router.get("/listadoProducto/:id/edicionProducto/:idprod", Controller.editarProducto);
-
+router.put("/listadoProducto/:id/edicionProducto/:idprod", Controller.editarProceso);
 
 router.post('/eliminar', (req, res) => {
     const id = req.body.id;
