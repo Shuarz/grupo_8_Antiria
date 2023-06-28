@@ -25,7 +25,7 @@ router.get("/listadoProducto/:id/delete/:idprod", Controller.eliminar);
 router.get ("/listadoProducto/:id/vender", Controller.vender);
 router.post("/listadoProducto/:id/vender", fileupload.single("imagenProducto") ,Controller.publicado);
 router.get("/listadoProducto/:id/edicionProducto/:idprod", Controller.editarProducto);
-router.put("/listadoProducto/:id/edicionProducto/:idprod", Controller.editarProceso);
+router.put("/listadoProducto/:id/edicionProducto/:idprod", fileupload.single("imagenProducto") , Controller.editarProceso);
 
 router.post('/eliminar', (req, res) => {
     const id = req.body.id;
