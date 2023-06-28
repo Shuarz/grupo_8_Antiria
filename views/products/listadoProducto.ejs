@@ -27,7 +27,9 @@
                                     <h3><%= row.nombreProd %></h3>
                                     <h4 class="green">$<%= row.precio %></h4>
                                     <div class="eliminar-edit">
-                                        <a class="eliminar" id="product-delete" href="/" onclick="return confirm('¿Realmente desea eliminar este producto?')"><i class="fa-sharp fa-solid fa-trash"></i></a>
+                                        <form method="POST" action="">
+                                            <a type="submit" class="eliminar" id="product-delete" href="/listadoProducto/1/delete/<%= row.id %>?_method=DELETE" onclick="return confirm('¿Realmente desea eliminar este producto?')"><i class="fa-sharp fa-solid fa-trash"></i></a>
+                                        </form>
                                         <a id="product-edit" href="/listadoProducto/1/edicionProducto/<%= row.id %>"> <i class="fa-solid fa-pen-to-square "></i></a>
                                     </div>
                                 </div>

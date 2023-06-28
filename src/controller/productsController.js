@@ -112,7 +112,10 @@ module.exports = {
             { row: productoEncontrado })
 
     },
-    eliminar: (req, res) => {
-        cart = cart.filter((id) => id !== productId);
+    eliminar: (req, res) => {     
+        const idProducto = req.params.idprod;
+        const nuevosProductos = datos.filter(row => row.id != idProducto);
+        fs.writeFileSync(rutaProducto, JSON.stringify(nuevosProductos, null, 2));
+        return res.redirect('/');
     }
 };
