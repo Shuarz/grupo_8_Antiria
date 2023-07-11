@@ -166,5 +166,17 @@
     "descIndex": "ALGO LINDO",
     "descGeneral": "RE FACHERO ESTO SI LO COMPRAS",
     "image": "product-1687973255837.JPG"
+  },
+  {
+    "id": 17,
+    "vendedor": "1",
+    "nombreProd": "Radia Pan-sonic De Bolsillo Antigua",
+    "precio": 30500,
+    "oferta": "False",
+    "categoria": "Mueble",
+    "marca": "Otro",
+    "descIndex": "radio de bolsillo ",
+    "descGeneral": "radio de bolsillo PAN-SONIC sin uso de la década de los 90.",
+    "image": "product-1687978321828.jpeg"
   }
 ]

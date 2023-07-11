@@ -46,5 +46,14 @@
     "correo": "alejitofacha@gmail.com",
     "contraseña": "papappapa",
     "terminos": "on"
+  },
+  {
+    "id": 8,
+    "nombre": "s",
+    "apellido": "sasa",
+    "correo": "sasa",
+    "contraseña": "sasa",
+    "terminos": "on",
+    "imagenUser": "user-1689035267969.png"
   }
 ]

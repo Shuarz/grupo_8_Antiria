@@ -7,7 +7,7 @@
         </a>
     </header>
     <section class="registro-box">
-        <form method="post" action="/registro">
+        <form method="post" action="/registro" enctype="multipart/form-data">
             <h2>Registrate</h2>
             <div class="input-box">
                 <span class="icono">
@@ -31,6 +31,10 @@
                 </span>
                 <input name="mail" type="text" required>
                 <label>Correo electrónico</label>
+            </div>
+            <div>
+              
+                <input name="imagenUser" type="file">
             </div>
 
             <div class="input-box">

@@ -1,27 +1,26 @@
-const fs =require('fs');
+const fs = require('fs');
 const path = require('path')
 const rutaregistro = path.resolve('./src/database/users.json')
-const usuariosregistrados= JSON.parse(fs.readFileSync(rutaregistro))
-
-
+const datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/users.json')));
 
 module.exports = {
-    login: (req, res) =>{
+    login: (req, res) => {
         return res.render('../views/users/login.ejs');
     },
-    registro: (req, res) =>{
+    registro: (req, res) => {
         return res.render('../views/users/registro.ejs');
     },
-    create:(req,res)=>{
+    create: (req, res) => {
         let registroNuevo = {
-            "id":usuariosregistrados.length + 1,
+            "id": datos.length + 1,
             "nombre": req.body.name,
             "apellido": req.body.lastname,
             "correo": req.body.mail,
             "contraseña": req.body.password,
-            "terminos": req.body.terminos
+            "terminos": req.body.terminos,
+            "imagenUser": req.file.filename,
         }
-        fs.writeFileSync(rutaregistro, JSON.stringify([...usuariosregistrados, registroNuevo], null ,2 ), "utf-8")
+        fs.writeFileSync(rutaregistro, JSON.stringify([...datos, registroNuevo], null, 2), "utf-8")
         res.render('./users/create')
     }
 };
