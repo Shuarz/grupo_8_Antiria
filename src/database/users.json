@@ -48,6 +48,7 @@
     "terminos": "on"
   },
   {
+<<<<<<< HEAD
     "id": 8,
     "nombre": "s",
     "apellido": "sasa",
@@ -55,5 +56,13 @@
     "contraseña": "sasa",
     "terminos": "on",
     "imagenUser": "user-1689035267969.png"
+=======
+    "id": 7,
+    "nombre": "Alejko",
+    "apellido": "mfdaskmf",
+    "correo": "fdl,msa,fm",
+    "contraseña": "fgmwmfg,",
+    "terminos": "on"
+>>>>>>> 7601ce9ccf978cc86030bce6c18f611aef648328
   }
 ]

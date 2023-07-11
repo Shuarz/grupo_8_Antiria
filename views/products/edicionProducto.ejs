@@ -9,7 +9,7 @@
 
             <main class="vender-main">
                 <section class="vender-box">
-                    <form action="/listadoProducto/1/edicionProducto/<%= idProd %>?_method=PUT" method="POST">
+                    <form action="/listadoProducto/1/edicionProducto/<%= idProd %>?_method=PUT" method="POST" enctype="multipart/form-data">
                         <h2 class="title , opciones , title-vender">Edita tu producto</h2>
                         <h2 class="marron">"<%= nombre %>"</h2>
                         <div class="input-box , opciones ">
@@ -71,7 +71,8 @@
                             <label class="opciones">Subir imagen del producto</label>
 
                         </div>
-                        <div  class="subir-imagen , opciones"><input name="imagenProducto" type="file"></div>
+                        <div  class="subir-imagen , opciones">
+                            <input name="imagenProducto" type="file" required>
                         </div>
                         <div class="opciones" required>
                             <p>¿Se encuentra en oferta?</p>
