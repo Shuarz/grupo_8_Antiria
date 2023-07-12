@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
+const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
+
 
 const rutaregistro = path.resolve(__dirname, '../database/users.json');
 
@@ -24,7 +26,7 @@ module.exports = {
                 "nombre": req.body.name,
                 "apellido": req.body.lastname,
                 "correo": req.body.mail,
-                "contraseña": req.body.password,
+                "contraseña": bcrypt.hashSync(req.body.password , 10 ),
                 "terminos": req.body.terminos,
                 "imagenUser": req.file ? req.file.filename : 'user_undefined.png'
             };

@@ -108,5 +108,14 @@
     "contraseña": "fsdfsdf",
     "terminos": "on",
     "imagenUser": "user_undefined.png"
+  },
+  {
+    "id": 14,
+    "nombre": "santiago",
+    "apellido": "caanavide",
+    "correo": "unmailcualquiera@gmail.com",
+    "contraseña": "$2b$10$tAIssr/fgSFGTg0CG/Jvt.ji4aT0kMSTBUD54goqUkH83kb0pOYvq",
+    "terminos": "on",
+    "imagenUser": "user-1689191370236.jpg"
   }
 ]
