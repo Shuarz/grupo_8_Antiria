@@ -63,5 +63,50 @@
     "correo": "fdl,msa,fm",
     "contraseña": "fgmwmfg,",
     "terminos": "on"
+  },
+  {
+    "id": 9,
+    "nombre": "Alejo",
+    "apellido": "Pequeño",
+    "correo": "alejito@gfmsdkg.com",
+    "contraseña": "sdffsdfs",
+    "terminos": "on",
+    "imagenUser": "user-1689125421736.jpg"
+  },
+  {
+    "id": 10,
+    "nombre": "Alejo",
+    "apellido": "Pequeño",
+    "correo": "alejopequeno25@gmail.com",
+    "contraseña": "fdsf",
+    "terminos": "on",
+    "imagenUser": "user-1689125950830.jpg"
+  },
+  {
+    "id": 11,
+    "nombre": "dasdsa",
+    "apellido": "dasdsa",
+    "correo": "alejopequeno25@gmail.com",
+    "contraseña": "fsdfsdf",
+    "terminos": "on",
+    "imagenUser": "user_undefined.png"
+  },
+  {
+    "id": 12,
+    "nombre": "Alejo",
+    "apellido": "Pequeño",
+    "correo": "alejopequeno25@gmail.com",
+    "contraseña": "fsdfsdf",
+    "terminos": "on",
+    "imagenUser": "user_undefined.png"
+  },
+  {
+    "id": 13,
+    "nombre": "Alejo",
+    "apellido": "Pequeño",
+    "correo": "alejopequeno25@gmail.com",
+    "contraseña": "fsdfsdf",
+    "terminos": "on",
+    "imagenUser": "user_undefined.png"
   }
 ]

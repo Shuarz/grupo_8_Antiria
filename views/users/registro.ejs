@@ -7,54 +7,109 @@
         </a>
     </header>
     <section class="registro-box">
+
         <form method="post" action="/registro" enctype="multipart/form-data">
             <h2>Registrate</h2>
-            <div class="input-box">
-                <span class="icono">
-                    <i class="fa-solid fa-user"></i>
-                </span>
-                <input name="name" type="text" required>
-                <label>Nombre</label>
-            </div>
+            <% if (locals.errors && errors.name) { %>
+                <div class="input-box2">
+                        <span class="iconored">
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                    <input name="name" type="text">
+                    <label>Nombre</label>
+                </div>
+            <% } else { %>
+                <div class="input-box">
+                        <span class="icono">
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                    <input name="name" type="text">
+                    <label>Nombre</label>
+                </div>
+            <% } %>
 
-            <div class="input-box">
-                <span class="icono">
-                    <i class="fa-solid fa-user"></i>
-                </span>
-                <input name="lastname" type="text" required>
-                <label>Apellido</label>
-            </div>
+            <% if (locals.errors && errors.lastname) { %>
+                <div class="input-box2">
+                        <span class="iconored">
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                    <input name="lastname" type="text">
+                    <label>Apellido</label>
+                </div>
+            <% } else { %>
+                <div class="input-box">
+                        <span class="icono">
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                    <input name="lastname" type="text">
+                    <label>Apellido</label>
+                </div>
+            <% } %>
 
-            <div class="input-box">
-                <span class="icono">
-                    <i class="fa-solid fa-envelope"></i>
-                </span>
-                <input name="mail" type="text" required>
-                <label>Correo electrónico</label>
-            </div>
+            <% if (locals.errors && errors.mail) { %>
+                <div class="input-box2">
+                        <span class="iconored">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                    <input name="mail" type="text">
+                    <label>Correo electrónico</label>
+                </div>
+            <% } else { %>
+                <div class="input-box">
+                        <span class="icono">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                    <input name="mail" type="text">
+                    <label>Correo electrónico</label>
+                </div>
+            <% } %>
+
             <div>
-              
                 <input name="imagenUser" type="file">
             </div>
 
-            <div class="input-box">
-                <span class="icono">
-                    <i class="fa-solid fa-lock"></i>
-                </span>
-                <input name="password" type="password" required>
-                <label>Contraseña</label>
-            </div>
+            <% if (locals.errors && errors.password) { %>
+                <div class="input-box2">
+                        <span class="iconored">
+                            <i class="fa-solid fa-lock"></i>
+                        </span>
+                    <input name="password" type="password">
+                    <label>Contraseña</label>
+                </div>
+            <% } else { %>
+                <div class="input-box">
+                        <span class="icono">
+                            <i class="fa-solid fa-lock"></i>
+                        </span>
+                    <input name="password" type="password">
+                    <label>Contraseña</label>
+                </div>
+            <% } %>
 
-            <div class="input-box">
-                <span class="icono">
-                    <i class="fa-solid fa-lock"></i>
-                </span>
-                <input  type="password" required>
-                <label>Confirmar contraseña</label>
-            </div>
+            <% if (locals.errors && errors.passwordConfirm) { %>
+                <div class="input-box2">
+                        <span class="iconored">
+                            <i class="fa-solid fa-lock"></i>
+                        </span>
+                    <input name="passwordConfirm" type="password">
+                    <label>Confirmar contraseña</label>
+                </div>
+            <% } else { %>
+                <div class="input-box">
+                        <span class="icono">
+                            <i class="fa-solid fa-lock"></i>
+                        </span>
+                    <input name="passwordConfirm" type="password">
+                    <label>Confirmar contraseña</label>
+                </div>
+            <% } %>
+
             <div class="recordar">
-                <label><input name="terminos" type="checkbox" required>Términos y condiciones</label>
+                <label><input name="terminos" type="checkbox">Términos y condiciones</label>
             </div>
+            <% if (locals.errors && errors.terminos) { %>
+                <p class="errors"><%= errors.terminos.msg %></p>
+            <% } %>
 
             <button type="submit">Registrate</button>
             <div class="registrar_link">

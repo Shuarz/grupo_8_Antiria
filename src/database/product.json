@@ -6,7 +6,6 @@
     "precio": "75.000",
     "oferta": false,
     "categoria": "Mueble",
-    "descIndex": "Bicicleta clasica, perfecto estado.",
     "descGeneral": "Bicicleta clasica, perfecto estado.",
     "image": "bicicletaAntigua.jpeg"
   },
@@ -17,7 +16,6 @@
     "precio": "30.000",
     "oferta": true,
     "categoria": "Musica",
-    "descIndex": "Disco de vinilo 'Confort y musica para volar' - Soda Stereo Unplugged. Perfecto estado.",
     "descGeneral": "Disco de vinilo 'Confort y musica para volar' - Soda Stereo Unplugged. Perfecto estado.",
     "image": "discoVinilo.jpeg"
   },
@@ -28,7 +26,6 @@
     "precio": "150.000",
     "oferta": false,
     "categoria": "Arte",
-    "descIndex": "Busto de mujer joven Paris, otoño 1906. Óleo sobre lienzo. 54 x 42 cm.",
     "descGeneral": "Busto de mujer joven Paris, otoño 1906. Óleo sobre lienzo. 54 x 42 cm.",
     "image": "cuadroPiccaso.jpg"
   },
@@ -39,7 +36,6 @@
     "precio": " 80.000",
     "oferta": false,
     "categoria": "Arte",
-    "descIndex": "Reloj de bolsillo (Ernest Magnin, Besançon, ca. 1920)",
     "descGeneral": "Reloj de bolsillo (Ernest Magnin, Besançon, ca. 1920)",
     "image": "RelojColeccion.jpg"
   },
@@ -134,16 +130,6 @@
     "image": "cuadro.jpg"
   },
   {
-    "id": 14,
-    "vendedor": 3,
-    "nombreProd": "esmeralda 5 quilates",
-    "precio": "120.000",
-    "oferta": false,
-    "categoria": "joyeria",
-    "descGeneral": "esmeralda de 5 quilates extraida de la Mina de Coscuez en Colombia.",
-    "image": "Esmeralda 03.jpg"
-  },
-  {
     "id": 15,
     "vendedor": "1",
     "nombreProd": "collar",
@@ -151,7 +137,6 @@
     "oferta": "True",
     "categoria": "joyeria",
     "marca": "Otro",
-    "descIndex": "gbvbjbjhb",
     "descGeneral": "hknjknjn",
     "image": "product-1687971277668.JPG"
   },
@@ -163,7 +148,6 @@
     "oferta": "True",
     "categoria": "joyeria",
     "marca": "Louis Vuitton",
-    "descIndex": "ALGO LINDO",
     "descGeneral": "RE FACHERO ESTO SI LO COMPRAS",
     "image": "product-1687973255837.JPG"
   },
@@ -175,7 +159,6 @@
     "oferta": "False",
     "categoria": "Mueble",
     "marca": "Otro",
-    "descIndex": "radio de bolsillo ",
     "descGeneral": "radio de bolsillo PAN-SONIC sin uso de la década de los 90.",
     "image": "product-1687978321828.jpeg"
   }

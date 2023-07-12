@@ -1,6 +1,8 @@
 //npm i
+//npm i express
 //npm i method-override --save
 //npm i multer
+//npm i express-validator
 
 //call modules
 const express = require('express');
@@ -19,8 +21,10 @@ const searchRoute = require('./routes/searchRouter');
 const port = 3008;
 
 //database
-app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
+
+//form
+app.use(express.urlencoded({ extended: false}));
 
 //template engines
 app.set('views', path.join(__dirname, '../views'));

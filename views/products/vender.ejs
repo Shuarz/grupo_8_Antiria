@@ -12,17 +12,25 @@
                     <form action="/listadoProducto/1/vender" method="POST" enctype="multipart/form-data">
                         <h2 class="title , opciones , title-vender">Vende tu producto</h2>
                         <div class="input-box , opciones ">
-                            <input name="nombreProducto" type="text" required>
+                            <input name="nombreProducto" type="text">
                             <label>Nombre del producto</label>
                         </div>
+                        <% if (locals.errors && errors.nombreProducto) { %>
+                            <p class="errors"><%= errors.nombreProducto.msg %></p>
+                        <% } %>
+
                         <div class="input-box , opciones ">
-                            <input name="precioProducto" type="number" required>
+                            <input name="precioProducto" type="number">
                             <label class="nombre_precio">Precio del producto</label>
                         </div>
+                        <% if (locals.errors && errors.precioProducto) { %>
+                            <p class="errors"><%= errors.precioProducto.msg %></p>
+                        <% } %>
+
                         <div class="categoria-vender ">
                             <p class=" opciones">Categoría del producto</p>
                             <article class="botonera , opciones">
-                                <select name="categoriaProducto" class="opciones-botonera" required>
+                                <select name="categoriaProducto" class="opciones-botonera">
                                     <option selected disabled class="opcion">Categorias</option>
                                     <option value="joyeria" class="opcion">Joyeria</option>
                                     <option value="Reliquia" class="opcion">Reliquia</option>
@@ -32,11 +40,14 @@
                                 </select>
                             </article>
                         </div>
+                        <% if (locals.errors && errors.categoriaProducto) { %>
+                            <p class="errors2"><%= errors.categoriaProducto.msg %></p>
+                        <% } %>
 
                         <div class="categoria-vender ">
                             <p class=" opciones">Marca del producto</p>
                             <article class="botonera , opciones">
-                                <select name="marca" class="opciones-botonera" required>
+                                <select name="marca" class="opciones-botonera" >
                                     <option selected disabled class="opcion">Marcas</option>
                                     <option value="Sony" class="opcion">Sony</option>
                                     <option value="Rolex" class="opcion">Rolex</option>
@@ -47,37 +58,38 @@
                                 </select>
                             </article>
                         </div>
+                        <% if (locals.errors && errors.marca) { %>
+                            <p class="errors2"><%= errors.marca.msg %></p>
+                        <% } %>
 
-                        <div class="opciones">
-                            <label>Breve descripción de tu producto</label>
-
-
-                        </div>
-                        <textarea name="descripcionbreve" class="breve , opciones" maxlength="40" required ></textarea>
                         <div class="opciones">
                             <label>Descripción del producto</label>
-
-
                         </div>
-                        <textarea name="descripcionGeneral" class="myTextarea , opciones" required></textarea>
+                        <textarea name="descripcionGeneral" class="myTextarea , opciones"></textarea>
+                        <% if (locals.errors && errors.descripcionGeneral) { %>
+                            <p class="errors2"><%= errors.descripcionGeneral.msg %></p>
+                        <% } %>
                         <div>
                             <label class="opciones">Subir imagen del producto</label>
-
                         </div>
                         <div  class="subir-imagen , opciones">
-                            <input name="imagenProducto" type="file" required>
+                            <input name="imagenProducto" type="file">
                         </div>
-
+                        <% if (locals.errors && errors.imagenProducto) { %>
+                            <p class="errors2"><%= errors.imagenProducto.msg %></p>
+                        <% } %>
                         </div>
-                        <div class="opciones" required>
+                        <div class="opciones">
                             <p>¿Se encuentra en oferta?</p>
-                            <input type="radio" name="oferta" value=True required>
+                            <input type="radio" name="oferta" value=True >
                             <label for="">Si</label><br>
 
-                            <input type="radio" name="oferta" value=False required>
+                            <input type="radio" name="oferta" value=False>
                             <label for="">No</label><br>
-
                         </div>
+                        <% if (locals.errors && errors.oferta) { %>
+                            <p class="errors2"><%= errors.oferta.msg %></p>
+                        <% } %>
 
 
                         <div class="realizarlacompra">

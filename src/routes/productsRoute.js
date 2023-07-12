@@ -17,13 +17,16 @@ const storage = multer.diskStorage({
 
 const fileupload = multer({ storage: storage });
 
+//validar
+const validations = require('../middlewares/createProdMiddleware.js')
+
 //router
 router.get("/carrito", Controller.carrito);
 router.get("/productDetail/:id", Controller.detalleProducto);
 router.get("/listadoProducto/:id", Controller.listado);
 router.get("/listadoProducto/:id/delete/:idprod", Controller.eliminar);
 router.get ("/listadoProducto/:id/vender", Controller.vender);
-router.post("/listadoProducto/:id/vender", fileupload.single("imagenProducto") ,Controller.publicado);
+router.post("/listadoProducto/:id/vender", fileupload.single("imagenProducto"), validations,Controller.publicado);
 router.get("/listadoProducto/:id/edicionProducto/:idprod", Controller.editarProducto);
 router.put("/listadoProducto/:id/edicionProducto/:idprod", fileupload.single("imagenProducto") , Controller.editarProceso);
 

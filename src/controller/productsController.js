@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const rutaProducto = path.resolve('./src/database/product.json')
 const datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/product.json')));
+const { validationResult } = require('express-validator');
 
 module.exports = {
 
@@ -86,26 +87,33 @@ module.exports = {
 
     vender: (req, res) => {
 
-        return res.render('../views/products/vender.ejs');
+        return res.render('./products/vender.ejs');
 
 
     },
 
     publicado: (req, res) => {
-        let productoNuevo = {
-            "id": datos.length + 1,
-            "vendedor": req.params.id,
-            "nombreProd": req.body.nombreProducto,
-            "precio": parseFloat(req.body.precioProducto),
-            "oferta": req.body.oferta,
-            "categoria": req.body.categoriaProducto,
-            "marca": req.body.marca,
-            "descIndex": req.body.descripcionbreve,
-            "descGeneral": req.body.descripcionGeneral,
-            "image": req.file.filename,
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            return res.render('./products/vender.ejs', {
+                errors: resultValidation.mapped()
+            });
+        } else{
+            let productoNuevo = {
+                "id": datos.length + 1,
+                "vendedor": req.params.id,
+                "nombreProd": req.body.nombreProducto,
+                "precio": parseFloat(req.body.precioProducto),
+                "oferta": req.body.oferta,
+                "categoria": req.body.categoriaProducto,
+                "marca": req.body.marca,
+                "descIndex": req.body.descripcionbreve,
+                "descGeneral": req.body.descripcionGeneral,
+                "image": req.file.filename,
+            }
+            fs.writeFileSync(rutaProducto, JSON.stringify([...datos, productoNuevo], null, 2), "utf-8")
+            res.render('./products/createProduct')
         }
-        fs.writeFileSync(rutaProducto, JSON.stringify([...datos, productoNuevo], null, 2), "utf-8")
-        res.render('./products/createProduct')
     },
     listado: (req, res) => {
         const productoEncontrado = datos.filter(row => row.vendedor == req.params.id)
