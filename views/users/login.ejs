@@ -7,25 +7,28 @@
         </a>
     </header>
     <section class="login-box">
-        <form action="">
+        <form action="/login" method="post">
             <h2>Iniciar Sesión</h2>
             <div class="input-box">
                 <span class="icono">
                     <i class="fa-solid fa-envelope"></i>
                 </span>
-                <input type="text" required>
+                <input type="text" placeholder="correo" name="correo" id="correo" required>
                 <label>Correo electrónico</label>
             </div>
             <div class="input-box">
                 <span class="icono">
                     <i class="fa-solid fa-lock"></i>
                 </span>
-                <input type="password" required>
+                <input type="text"  placeholder="contraseña" name="contraseña" id="contraseña" required>
                 <label>Contraseña</label>
             </div>
             <div class="recordar">
                 <label><input type="checkbox">Recordar</label>
             </div>
+            <% if (locals.errors && errors.datosMal) { %>
+                <p><%- errors.datosMal.msg %></p>
+                <% } %>
             <button type="submit">Ingresar</button>
             <div class="registrar_link">
                 <p>¿No tenés una cuenta? <a href="/registro">Registrate</a></p>

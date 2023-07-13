@@ -21,6 +21,7 @@ const fileupload = multer({ storage: storage });
 const validations = require('../middlewares/registerMiddleware.js')
 
 router.get("/login", userController.login);
+router.post("/login",  userController.processLogin);
 router.get("/registro", userController.registro);
 router.post("/registro", fileupload.single('imagenUser'), validations, userController.create);
 

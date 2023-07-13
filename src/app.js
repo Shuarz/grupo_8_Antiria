@@ -9,6 +9,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const methodOverride = require('method-override');
+const session = require ('express-session');
 
 //call routes
 const mainRouter = require("./routes/mainRouter")
@@ -25,6 +26,14 @@ app.use(express.json());
 
 //form
 app.use(express.urlencoded({ extended: false}));
+
+//session
+app.use (session ({
+    secret: "mensaje secreto",
+    resave : false,
+    saveUninitialized:false,
+}));
+
 
 //template engines
 app.set('views', path.join(__dirname, '../views'));
