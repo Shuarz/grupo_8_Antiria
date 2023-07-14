@@ -117,5 +117,68 @@
     "contraseña": "$2b$10$tAIssr/fgSFGTg0CG/Jvt.ji4aT0kMSTBUD54goqUkH83kb0pOYvq",
     "terminos": "on",
     "imagenUser": "user-1689191370236.jpg"
+  },
+  {
+    "id": 15,
+    "nombre": "bernardo",
+    "apellido": "olmedo",
+    "correo": "olmedoberny@gmail.com",
+    "contraseña": "$2b$10$0KNF1GZuwuoYin39Dous3utDUU3CzwGP.vlUWTGmWXcPLG1/jpGm6",
+    "terminos": "on",
+    "imagenUser": "user-1689338608034.jpg"
+  },
+  {
+    "id": 16,
+    "nombre": "bernardo",
+    "apellido": "olmedo",
+    "correo": "olmedoberny@gmail.com",
+    "contraseña": "$2b$10$AogKsNERCyf1mFkY97qSGOiMcDuzc40w2wO53es.VrxBaaw4LDibu",
+    "terminos": "on",
+    "imagenUser": "user_undefined.png"
+  },
+  {
+    "id": 17,
+    "nombre": "bernardo",
+    "apellido": "olmedo",
+    "correo": "olmedoberny@gmail.com",
+    "contraseña": "$2b$10$vreCXIrDX7DbQ6zNcEbK9elDgIDTlSALfSIMcwdj0FCci2.LSweV6",
+    "terminos": "on",
+    "imagenUser": "user_undefined.png"
+  },
+  {
+    "id": 18,
+    "nombre": "bernardo",
+    "apellido": "olmedo",
+    "correo": "olmedoberny@gmail.com",
+    "contraseña": "$2b$10$/nohbPUBNiuvqSdhcMQV6.8PLNsv6HFh3WZHIXGulc4yE33O9Yh8G",
+    "terminos": "on",
+    "imagenUser": "user_undefined.png"
+  },
+  {
+    "id": 19,
+    "nombre": "bernardo",
+    "apellido": "olmedo",
+    "correo": "olmedoberny@mail.com",
+    "contraseña": "$2b$10$lv02BNMP7rQouP.jJj6.0.37d/CifL.89CA5Wqlf0wDUXKqgvRopG",
+    "terminos": "on",
+    "imagenUser": "user_undefined.png"
+  },
+  {
+    "id": 20,
+    "nombre": "bernardo",
+    "apellido": "olmedo",
+    "correo": "olmedoberny@gmail.com",
+    "contraseña": "$2b$10$WcAvllHeW0.Wd2B0EViJWeVpADKuZf8acY1Q2AMjs1HKpKF8iLQB.",
+    "terminos": "on",
+    "imagenUser": "user_undefined.png"
+  },
+  {
+    "id": 21,
+    "nombre": "bernardo",
+    "apellido": "olmedo",
+    "correo": "olmedoberny@gmail.com",
+    "contraseña": "$2b$10$S1luCie1WzPJalqp0FRbuud.4k7jEsLIOC8FjXWChzY8i9fgKv0K.",
+    "terminos": "on",
+    "imagenUser": "user_undefined.png"
   }
 ]
