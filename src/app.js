@@ -1,22 +1,15 @@
-//npm i
-//npm i express
-//npm i method-override --save
-//npm i multer
-//npm i express-validator
-
 //call modules
 const express = require('express');
-const path = require('path');
-const app = express();
 const methodOverride = require('method-override');
 const session = require ('express-session');
+const cookies = require('cookie-parser');
+const path = require('path');
+const app = express();
 
 //call routes
 const mainRouter = require("./routes/mainRouter")
-const productsRoute = require('./routes/productsRoute');
-
 const usersRoute = require('./routes/usersRoute');
-const searchRoute = require('./routes/searchRouter');
+const productsRoute = require('./routes/productsRoute');
 
 //port
 const port = 3008;
@@ -29,11 +22,17 @@ app.use(express.urlencoded({ extended: false}));
 
 //session
 app.use (session ({
-    secret: "mensaje secreto",
+    secret: "Shhhhh, es un secreto",
     resave : false,
     saveUninitialized:false,
 }));
 
+//cookies
+app.use(cookies());
+
+//user logged
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+app.use(userLoggedMiddleware);
 
 //template engines
 app.set('views', path.join(__dirname, '../views'));
@@ -46,18 +45,17 @@ app.use(express.static("public"));
 app.use(methodOverride("_method"))
 
 //server
-app.listen(port, () => console.log("Levantando servidor http://localhost:" + port));
+app.listen(process.env.PORT || port, () => {
+    console.log('Levantando servidor http://localhost:' + port)
+})
 
 //routes
 app.use(mainRouter)
 app.use(usersRoute);
-
 app.use(productsRoute);
-app.use(searchRoute);
-
 
 //404
 app.use((req, res, next) => {
-    res.status(404).render('./404/404');
+    res.status(404).render('./error/404');
 });
 

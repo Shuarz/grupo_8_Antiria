@@ -1,39 +1,41 @@
 const express = require('express');
 const router = express.Router();
+
+//controller
 const Controller = require('../controller/productsController.js');
-const multer = require('multer');
-const path = require('path');
 
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../../public/img'));
-    },
-    filename: (req, file, cb) => {
-        console.log(file);
-        const newFilename = 'product-' + Date.now() + path.extname(file.originalname);
-        cb(null, newFilename);
-    }
-});
-
-const fileupload = multer({ storage: storage });
+//multer
+const fileupload = require('../middlewares/multerProdMiddleware.js');
 
 //validar
-const validations = require('../middlewares/createProdMiddleware.js')
+const validations = require('../middlewares/createProdMiddleware.js');
+
+//session / logged
+const authMiddleware = require('../middlewares/authMiddleware.js');
 
 //router
-router.get("/carrito", Controller.carrito);
-router.get("/productDetail/:id", Controller.detalleProducto);
-router.get("/listadoProducto/:id", Controller.listado);
-router.get("/listadoProducto/:id/delete/:idprod", Controller.eliminar);
-router.get ("/listadoProducto/:id/vender", Controller.vender);
-router.post("/listadoProducto/:id/vender", fileupload.single("imagenProducto"), validations,Controller.publicado);
-router.get("/listadoProducto/:id/edicionProducto/:idprod", Controller.editarProducto);
-router.put("/listadoProducto/:id/edicionProducto/:idprod", fileupload.single("imagenProducto") , Controller.editarProceso);
+//vender
+router.get ("/listadoProducto/:idUser/vender", authMiddleware, Controller.sell);
+router.post("/listadoProducto/:idUser/vender", fileupload.single("imagenProducto"), validations,Controller.public);
 
-router.post('/eliminar', (req, res) => {
-    const id = req.body.id;
-    Controller.eliminar(id);
-    res.redirect('/listadoProducto');
-  });
+//detail prod
+router.get("/productDetail/:IdProd", Controller.prodDetail);
+
+//carrito
+router.get("/carrito/:idUser", authMiddleware, Controller.cart);
+
+//list prod
+router.get("/listadoProducto/:idUser", authMiddleware, Controller.list);
+router.get("/listadoProducto/:idUser/delete/:IdProd", authMiddleware, Controller.eliminar);
+
+//edit prod
+router.get("/listadoProducto/:idUser/edicionProducto/:IdProd", authMiddleware, Controller.editarProducto);
+router.put("/listadoProducto/:idUser/edicionProducto/:IdProd", fileupload.single("imagenProducto") , Controller.editarProceso);
+
+//search
+router.get("/search", Controller.search);
+
+//delete prod
+router.post('/eliminar', Controller.delete);
 
 module.exports = router;

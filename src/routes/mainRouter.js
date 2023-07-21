@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const controller = require("../controller/mainController");
+const Controller = require("../controller/mainController");
 
-router.get("/", controller.index);
-router.post("/", controller.contacto)
+router.get("/", Controller.index);
+router.post("/", Controller.contacto)
 
 
 

@@ -7,28 +7,28 @@
         </a>
     </header>
     <section class="login-box">
-        <form action="/login" method="POST" enctype="multipart/form-data">
+        <form action="/login" method="POST">
             <h2>Iniciar Sesión</h2>
             <div class="input-box">
                 <span class="icono">
                     <i class="fa-solid fa-envelope"></i>
                 </span>
-                <input type="text" placeholder="correo" name="correo" id="correo" required>
+                <input type="text" id="mail" name="mail" required>
                 <label>Correo electrónico</label>
             </div>
+            <% if (locals.errors && errors.mail) { %>
+                <p class="errors"><%= errors.mail.msg %></p>
+            <% } %>
             <div class="input-box">
                 <span class="icono">
                     <i class="fa-solid fa-lock"></i>
                 </span>
-                <input type="text"  placeholder="contraseña" name="contraseña" id="contraseña" required>
+                <input type="password" id="password" name="password" required>
                 <label>Contraseña</label>
             </div>
             <div class="recordar">
-                <label><input type="checkbox">Recordar</label>
+                <label><input type="checkbox" name="remember_user" value="on">Recordar</label>
             </div>
-            <% if (locals.errors && errors.datosMal) { %>
-                <p><%- errors.datosMal.msg %></p>
-                <% } %>
             <button type="submit">Ingresar</button>
             <div class="registrar_link">
                 <p>¿No tenés una cuenta? <a href="/registro">Registrate</a></p>

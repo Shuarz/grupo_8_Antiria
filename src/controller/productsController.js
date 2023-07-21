@@ -1,25 +1,70 @@
-const fs = require('fs');
-const path = require('path');
-const rutaProducto = path.resolve('./src/database/product.json')
-const datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/product.json')));
 const { validationResult } = require('express-validator');
+const User = require('../models/User')
+const Product = require('../models/Product')
 
 module.exports = {
-
-    carrito: (req, res) => {
-        return res.render('../views/products/carrito.ejs');
-
+    sell: (req, res) => {
+        return res.render('./products/vender');
     },
-    detalleProducto: (req, res) => {
-        const productoEncontrado = datos.find(row => row.id == req.params.id)
-        return res.render("./products/detalleProducto",
-            {
-                "nombreProd": productoEncontrado.nombreProd,
-                "precio": productoEncontrado.precio,
-                "image": productoEncontrado.image,
-                "descGeneral": productoEncontrado.descGeneral
-            })
+
+    public: (req, res) => {
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            return res.render('./products/vender', {
+                errors: resultValidation.mapped()
+            });
+        }
+
+        let prodToCreate = {
+            ...req.body,
+            vendedor: req.params.idUser
+        };
+
+        Product.create(prodToCreate);
+        res.render('./products/createProduct')
+        // } else{
+        //     let productoNuevo = {
+        //         "id": datos.length + 1,
+        //         "vendedor": req.params.id,
+        //         "nombreProd": req.body.nombreProducto,
+        //         "precio": parseFloat(req.body.precioProducto),
+        //         "oferta": req.body.oferta,
+        //         "categoria": req.body.categoriaProducto,
+        //         "marca": req.body.marca,
+        //         "descIndex": req.body.descripcionbreve,
+        //         "descGeneral": req.body.descripcionGeneral,
+        //         "image": req.file.filename,
+        //     }
+        //     fs.writeFileSync(rutaProducto, JSON.stringify([...datos, productoNuevo], null, 2), "utf-8")
+        //     res.render('./products/createProduct')
+        // }
     },
+
+    prodDetail: (req, res) => {
+        let prodUD = Product.findByField('id', req.params.IdProd);
+        return res.render("./products/detalleProducto", {prodUD})
+    },
+
+    cart: (req, res) => {
+        let prodUser = User.findByField('id', req.params.idUser);
+        return res.render('./products/carrito', {cart: prodUser.cart});
+    },
+
+    list: (req, res) => {
+        const productsUser = Product.findByFildFilter('vendedor', req.params.idUser)
+        return res.render("./products/listadoProducto", { productsUser: productsUser })
+    },
+
+
+
+
+
+
+
+
+
+
+
 
     editarProducto: (req, res) => {
         const editarProducto = datos.find(row => row.id == req.params.idprod)
@@ -85,46 +130,30 @@ module.exports = {
         return res.redirect("/");
     },
 
-    vender: (req, res) => {
-
-        return res.render('./products/vender.ejs');
-
-
-    },
-
-    publicado: (req, res) => {
-        const resultValidation = validationResult(req);
-        if (resultValidation.errors.length > 0) {
-            return res.render('./products/vender.ejs', {
-                errors: resultValidation.mapped()
-            });
-        } else{
-            let productoNuevo = {
-                "id": datos.length + 1,
-                "vendedor": req.params.id,
-                "nombreProd": req.body.nombreProducto,
-                "precio": parseFloat(req.body.precioProducto),
-                "oferta": req.body.oferta,
-                "categoria": req.body.categoriaProducto,
-                "marca": req.body.marca,
-                "descIndex": req.body.descripcionbreve,
-                "descGeneral": req.body.descripcionGeneral,
-                "image": req.file.filename,
-            }
-            fs.writeFileSync(rutaProducto, JSON.stringify([...datos, productoNuevo], null, 2), "utf-8")
-            res.render('./products/createProduct')
-        }
-    },
-    listado: (req, res) => {
-        const productoEncontrado = datos.filter(row => row.vendedor == req.params.id)
-        return res.render("./products/listadoProducto",
-            { row: productoEncontrado })
-
-    },
     eliminar: (req, res) => {
         const idProducto = req.params.idprod;
         const nuevosProductos = datos.filter(row => row.id != idProducto);
         fs.writeFileSync(rutaProducto, JSON.stringify(nuevosProductos, null, 2));
         return res.redirect('/');
+    },
+
+    search: (req, res) => {
+        let search = datos.filter((row) => {
+            const nombre = (row.nombreProd || '').toString().toLowerCase();
+            const categoria = (row.categoria || '').toString().toLowerCase();
+            const descIndex = (row.descIndex || '').toString().toLowerCase();
+            const marca = (row.marca || '').toString().toLowerCase();
+            const query = (req.query.search || '').toString().toLowerCase();
+
+            return categoria.includes(query) || descIndex.includes(query) || marca.includes(query) || nombre.includes(query);
+        });
+
+        return res.render('./products/search', { search: search });
+    },
+
+    delete: (req, res) => {
+        const id = req.body.id;
+        Controller.eliminar(id);
+        res.redirect('/listadoProducto');
     }
 };

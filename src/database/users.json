@@ -1,184 +1,24 @@
 [
-  {
-    "id": 1,
-    "nombre": "Juan",
-    "apellido": "Pérez",
-    "correo": "juan.perez@example.com",
-    "contraseña": "secreta123",
-    "terminos": "on"
-  },
-  {
-    "id": 2,
-    "nombre": "santiago",
-    "apellido": "canavide",
-    "correo": "usuariofalso@example.com",
-    "contraseña": "contra123",
-    "terminos": "on"
-  },
-  {
-    "id": 3,
-    "nombre": "unapersona",
-    "apellido": "millonaria",
-    "correo": "tengomuchaplata@example.com",
-    "contraseña": "cagoplata",
-    "terminos": "on"
-  },
-  {
-    "id": 5,
-    "nombre": "Pedro",
-    "apellido": "Gonzales",
-    "correo": "alejito@gmail.com",
-    "contraseña": "pipipipipi",
-    "terminos": "on"
-  },
-  {
-    "id": 5,
-    "nombre": "Alejo",
-    "apellido": "Pequeño",
-    "correo": "alejopequeno25@gmail.com",
-    "contraseña": "pito",
-    "terminos": "on"
-  },
-  {
-    "id": 6,
-    "nombre": "Alejo",
-    "apellido": "Pequeño",
-    "correo": "alejitofacha@gmail.com",
-    "contraseña": "papappapa",
-    "terminos": "on"
-  },
-  {
-    "id": 8,
-    "nombre": "s",
-    "apellido": "sasa",
-    "correo": "sasa",
-    "contraseña": "sasa",
-    "terminos": "on",
-    "imagenUser": "user-1689035267969.png"
-  },
-  {
-    "id": 7,
-    "nombre": "Alejko",
-    "apellido": "mfdaskmf",
-    "correo": "fdl,msa,fm",
-    "contraseña": "fgmwmfg,",
-    "terminos": "on"
-  },
-  {
-    "id": 9,
-    "nombre": "Alejo",
-    "apellido": "Pequeño",
-    "correo": "alejito@gfmsdkg.com",
-    "contraseña": "sdffsdfs",
-    "terminos": "on",
-    "imagenUser": "user-1689125421736.jpg"
-  },
-  {
-    "id": 10,
-    "nombre": "Alejo",
-    "apellido": "Pequeño",
-    "correo": "alejopequeno25@gmail.com",
-    "contraseña": "fdsf",
-    "terminos": "on",
-    "imagenUser": "user-1689125950830.jpg"
-  },
-  {
-    "id": 11,
-    "nombre": "dasdsa",
-    "apellido": "dasdsa",
-    "correo": "alejopequeno25@gmail.com",
-    "contraseña": "fsdfsdf",
-    "terminos": "on",
-    "imagenUser": "user_undefined.png"
-  },
-  {
-    "id": 12,
-    "nombre": "Alejo",
-    "apellido": "Pequeño",
-    "correo": "alejopequeno25@gmail.com",
-    "contraseña": "fsdfsdf",
-    "terminos": "on",
-    "imagenUser": "user_undefined.png"
-  },
-  {
-    "id": 13,
-    "nombre": "Alejo",
-    "apellido": "Pequeño",
-    "correo": "alejopequeno25@gmail.com",
-    "contraseña": "fsdfsdf",
-    "terminos": "on",
-    "imagenUser": "user_undefined.png"
-  },
-  {
-    "id": 14,
-    "nombre": "santiago",
-    "apellido": "caanavide",
-    "correo": "unmailcualquiera@gmail.com",
-    "contraseña": "$2b$10$tAIssr/fgSFGTg0CG/Jvt.ji4aT0kMSTBUD54goqUkH83kb0pOYvq",
-    "terminos": "on",
-    "imagenUser": "user-1689191370236.jpg"
-  },
-  {
-    "id": 15,
-    "nombre": "bernardo",
-    "apellido": "olmedo",
-    "correo": "olmedoberny@gmail.com",
-    "contraseña": "$2b$10$0KNF1GZuwuoYin39Dous3utDUU3CzwGP.vlUWTGmWXcPLG1/jpGm6",
-    "terminos": "on",
-    "imagenUser": "user-1689338608034.jpg"
-  },
-  {
-    "id": 16,
-    "nombre": "bernardo",
-    "apellido": "olmedo",
-    "correo": "olmedoberny@gmail.com",
-    "contraseña": "$2b$10$AogKsNERCyf1mFkY97qSGOiMcDuzc40w2wO53es.VrxBaaw4LDibu",
-    "terminos": "on",
-    "imagenUser": "user_undefined.png"
-  },
-  {
-    "id": 17,
-    "nombre": "bernardo",
-    "apellido": "olmedo",
-    "correo": "olmedoberny@gmail.com",
-    "contraseña": "$2b$10$vreCXIrDX7DbQ6zNcEbK9elDgIDTlSALfSIMcwdj0FCci2.LSweV6",
-    "terminos": "on",
-    "imagenUser": "user_undefined.png"
-  },
-  {
-    "id": 18,
-    "nombre": "bernardo",
-    "apellido": "olmedo",
-    "correo": "olmedoberny@gmail.com",
-    "contraseña": "$2b$10$/nohbPUBNiuvqSdhcMQV6.8PLNsv6HFh3WZHIXGulc4yE33O9Yh8G",
-    "terminos": "on",
-    "imagenUser": "user_undefined.png"
-  },
-  {
-    "id": 19,
-    "nombre": "bernardo",
-    "apellido": "olmedo",
-    "correo": "olmedoberny@mail.com",
-    "contraseña": "$2b$10$lv02BNMP7rQouP.jJj6.0.37d/CifL.89CA5Wqlf0wDUXKqgvRopG",
-    "terminos": "on",
-    "imagenUser": "user_undefined.png"
-  },
-  {
-    "id": 20,
-    "nombre": "bernardo",
-    "apellido": "olmedo",
-    "correo": "olmedoberny@gmail.com",
-    "contraseña": "$2b$10$WcAvllHeW0.Wd2B0EViJWeVpADKuZf8acY1Q2AMjs1HKpKF8iLQB.",
-    "terminos": "on",
-    "imagenUser": "user_undefined.png"
-  },
-  {
-    "id": 21,
-    "nombre": "bernardo",
-    "apellido": "olmedo",
-    "correo": "olmedoberny@gmail.com",
-    "contraseña": "$2b$10$S1luCie1WzPJalqp0FRbuud.4k7jEsLIOC8FjXWChzY8i9fgKv0K.",
-    "terminos": "on",
-    "imagenUser": "user_undefined.png"
-  }
+ {
+  "id": 1,
+  "name": "Alejo",
+  "lastname": "Pequeño",
+  "mail": "alejopequeno25@gmail.com",
+  "password": "$2a$10$nFUjN3B6fmUfqXmB6SIDsuT/qN8Qo6O4KkQQSIP.dIf4VETlneFPK",
+  "passwordConfirm": "$2a$10$Bthbi1NQ/.1GFLZffDTruOckzoARJO.lLK2nfENOmll4VA7bMXb8y",
+  "terminos": "on",
+  "avatar": "user-1689869933150.jpg",
+  "cart": []
+ },
+ {
+  "id": 2,
+  "name": "Alejo",
+  "lastname": "Pequeño",
+  "mail": "alejito@gfmsdkg.com",
+  "password": "$2a$10$mAJLNLegO8Z51jxNF5s4h.HiEuzPop6HeVxTKnCcykRE4MJMypGo2",
+  "passwordConfirm": "$2a$10$WZQrQM3L2N7w.kzd7r709OkP7n7mbeOH9MOsiR4GuwXIcgY2CleSe",
+  "terminos": "on",
+  "avatar": "user_undefined.png",
+  "cart": []
+ }
 ]

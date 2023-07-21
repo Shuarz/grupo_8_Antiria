@@ -54,6 +54,7 @@
                     <input name="mail" type="text">
                     <label>Correo electrónico</label>
                 </div>
+                <p class="errors"><%= errors.mail.msg %></p>
             <% } else { %>
                 <div class="input-box">
                         <span class="icono">
@@ -65,7 +66,7 @@
             <% } %>
 
             <div>
-                <input name="imagenUser" type="file">
+                <input name="avatar" type="file">
             </div>
 
             <% if (locals.errors && errors.password) { %>
