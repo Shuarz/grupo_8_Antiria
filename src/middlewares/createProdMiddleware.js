@@ -9,8 +9,9 @@ module.exports = [
     body('imagenProducto').custom((value, { req }) => {
         let file = req.file;
         if (!file) {
-            throw new Error('Tienes que subir una imagen')
+            throw new Error('Tienes que subir una imagen');
         }
+        return true;
     }),
     body('oferta').notEmpty().withMessage('Debes seleccionar una opción'),
 ]

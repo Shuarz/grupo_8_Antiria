@@ -1,13 +1,13 @@
-const { render } = require('ejs');
 const fs = require ('fs');
 const path = require ('path');
-const datos = JSON.parse(fs.readFileSync (path.resolve(__dirname,'../database/product.json'))); 
+const datos = JSON.parse(fs.readFileSync (path.resolve(__dirname,'../database/product.json')));
 const contacto = JSON.parse(fs.readFileSync(path.resolve(__dirname,'../database/contact.json')));
 const rutaContacto = path.resolve('./src/database/contact.json')
 
 module.exports = {
     index: (req, res) => {
-        const oferta = datos.filter((row) => row.oferta == true);
+        const ofertas = datos.filter((row) => row.oferta == 'true');
+        const oferta = ofertas.slice(-5);
         return res.render('index', {oferta: oferta});
 
     },
@@ -22,6 +22,5 @@ module.exports = {
         }
         fs.writeFileSync(rutaContacto,JSON.stringify([...contacto, consulta], null, 2), "utf-8")
         return res.redirect("/")
-    
     }
 }

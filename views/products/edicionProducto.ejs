@@ -9,7 +9,7 @@
 
             <main class="vender-main">
                 <section class="vender-box">
-                    <form action="/listadoProducto/1/edicionProducto/<%= idProd %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <form action="/listadoProducto/<%= locals.userLogged.id %>/edicionProducto/<%= idProd %>?_method=PUT" method="POST" enctype="multipart/form-data">
                         <h2 class="title , opciones , title-vender">Edita tu producto</h2>
                         <h2 class="marron">"<%= nombre %>"</h2>
                         <div class="input-box , opciones ">
@@ -50,29 +50,18 @@
                                 </select>
                             </article>
                         </div>
-
-                        <div class="opciones">
-                            <label>Breve descripción de tu producto</label>
-
-
-                        </div>
-                        <textarea name="descripcionbreve" class="breve , opciones" maxlength="20" required >
-                            <%= descIndex %>
-                        </textarea>
                         <div class="opciones">
                             <label>Descripción del producto</label>
 
 
                         </div>
-                        <textarea name="descripcionGeneral" class="myTextarea , opciones" required>
-                            <%= descGeneral %>
-                        </textarea>
+                        <input type="text" name="descripcionGeneral" class="myTextarea , opciones" value="<%= descGeneral %>">
                         <div>
                             <label class="opciones">Subir imagen del producto</label>
 
                         </div>
                         <div  class="subir-imagen , opciones">
-                            <input name="imagenProducto" type="file" required>
+                            <input name="imagenProducto" type="file">
                         </div>
                         <div class="opciones" required>
                             <p>¿Se encuentra en oferta?</p>

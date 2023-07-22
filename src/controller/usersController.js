@@ -32,6 +32,7 @@ module.exports = {
             password: bcryptjs.hashSync(req.body.password, 10),
             passwordConfirm: bcryptjs.hashSync(req.body.passwordConfirm, 10),
             avatar: req.file ? req.file.filename : 'user_undefined.png',
+            product: [],
             cart: []
         }
         User.create(userToCreate);

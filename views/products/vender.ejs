@@ -9,7 +9,7 @@
 
             <main class="vender-main">
                 <section class="vender-box">
-                    <form action="/listadoProducto/1/vender" method="POST" enctype="multipart/form-data">
+                    <form action="/listadoProducto/<%= locals.userLogged.id %>/vender" method="POST" enctype="multipart/form-data">
                         <h2 class="title , opciones , title-vender">Vende tu producto</h2>
                         <div class="input-box , opciones ">
                             <input name="nombreProducto" type="text">
@@ -65,7 +65,7 @@
                         <div class="opciones">
                             <label>Descripción del producto</label>
                         </div>
-                        <textarea name="descripcionGeneral" class="myTextarea , opciones"></textarea>
+                        <input name="descripcionGeneral" class="myTextarea , opciones">
                         <% if (locals.errors && errors.descripcionGeneral) { %>
                             <p class="errors2"><%= errors.descripcionGeneral.msg %></p>
                         <% } %>

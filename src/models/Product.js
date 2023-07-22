@@ -43,11 +43,77 @@ const Product = {
         return newProduct;
     },
 
+    edit: function(req){
+        let allProducts = this.findAll();
+
+        let idProducto = req.params.IdProd;
+        let nombre = req.body.nombreProducto;
+        let precio = parseFloat(req.body.precioProducto);
+        let categoria = req.body.categoriaProducto;
+        let marca = req.body.marca;
+        let descGeneral = req.body.descripcionGeneral;
+        let oferta = req.body.oferta;
+
+        let productoEditado = allProducts.find(row => row.id == idProducto);
+
+        if (nombre !== undefined) {
+            productoEditado.nombreProducto = nombre;
+        }
+        if (precio !== undefined) {
+            productoEditado.precioProducto = precio;
+        }
+        if (categoria !== undefined) {
+            productoEditado.categoriaProducto = categoria;
+        }
+        if (marca !== undefined) {
+            productoEditado.marca = marca;
+        }
+        if (descGeneral !== undefined) {
+            productoEditado.descripcionGeneral = descGeneral;
+        }
+        if (oferta !== undefined) {
+            productoEditado.oferta = oferta;
+        }
+
+        if (req.file) {
+            const nuevaImg = req.file.filename;
+            productoEditado.image = nuevaImg;
+        }
+
+        const jsonProductos = JSON.stringify(allProducts, null, 2);
+        fs.writeFileSync(this.fileName, jsonProductos, 'utf8');
+
+    },
+
     delete: function (id) {
         let allProducts = this.findAll();
-        let finalProducts = allProducts.filter(row => row.id !== id);
-        fs.writeFileSync(this.fileName, JSON.stringify(finalProducts, null, ' '));
+        let productIndex = allProducts.findIndex((row) => row.id === id);
+
+        if (productIndex === -1) {
+            return false;
+        }
+
+        allProducts.splice(productIndex, 1);
+        fs.writeFileSync(this.fileName, JSON.stringify(allProducts, null, ' '));
+
         return true;
+    },
+
+    search: function (element) {
+        const allProducts = this.findAll();
+
+        let search = allProducts.filter((row) => {
+            const nombre = (row.nombreProducto || '').toString().toLowerCase();
+            const categoria = (row.categoriaProducto || '').toString().toLowerCase();
+            const descripcionGeneral = (row.descripcionGeneral || '').toString().toLowerCase();
+            const marca = (row.marca || '').toString().toLowerCase();
+            const query = (element || '').toString().toLowerCase();
+
+            return categoria.includes(query) || descripcionGeneral.includes(query) || marca.includes(query) || nombre.includes(query);
+        });
+
+        return search
+
     }
 }
 

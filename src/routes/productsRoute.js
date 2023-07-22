@@ -26,16 +26,14 @@ router.get("/carrito/:idUser", authMiddleware, Controller.cart);
 
 //list prod
 router.get("/listadoProducto/:idUser", authMiddleware, Controller.list);
-router.get("/listadoProducto/:idUser/delete/:IdProd", authMiddleware, Controller.eliminar);
+router.get("/listadoProducto/:idUser/delete/:IdProd", authMiddleware, Controller.delete);
 
 //edit prod
-router.get("/listadoProducto/:idUser/edicionProducto/:IdProd", authMiddleware, Controller.editarProducto);
-router.put("/listadoProducto/:idUser/edicionProducto/:IdProd", fileupload.single("imagenProducto") , Controller.editarProceso);
+router.get("/listadoProducto/:idUser/edicionProducto/:IdProd", authMiddleware, Controller.edit);
+router.put("/listadoProducto/:idUser/edicionProducto/:IdProd", fileupload.single("imagenProducto") , Controller.editProcess);
 
 //search
 router.get("/search", Controller.search);
 
-//delete prod
-router.post('/eliminar', Controller.delete);
 
 module.exports = router;

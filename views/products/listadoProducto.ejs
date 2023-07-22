@@ -15,22 +15,22 @@
 
                 </ul>
                 <section class="main-search2">
-                    <% if (row.length===0) { %>
+                    <% if (productsUser.length===0) { %>
                         <h4 class="notfound-search">No tiene publicaciones hechas 😔</h4>
                     <% } else { %>
-                        <% row.forEach ((row)=> { %>
+                        <% productsUser.forEach ((row)=> { %>
                             <article>
                                 <div class="imagen-detalle-prod">
                                     <img src="/img/<%= row.image %>" alt="">
                                 </div>
                                 <div class="descripcion_search_prod2">
-                                    <h3><%= row.nombreProd %></h3>
-                                    <h4 class="green">$<%= row.precio %></h4>
+                                    <h3><%= row.nombreProducto %></h3>
+                                    <h4 class="green">$<%= row.precioProducto %></h4>
                                     <div class="eliminar-edit">
                                         <form method="POST" action="">
-                                            <a type="submit" class="eliminar" id="product-delete" href="/listadoProducto/1/delete/<%= row.id %>?_method=DELETE" onclick="return confirm('¿Realmente desea eliminar este producto?')"><i class="fa-sharp fa-solid fa-trash"></i></a>
+                                            <a type="submit" class="eliminar" id="product-delete" href="/listadoProducto/<%= locals.userLogged.id %>/delete/<%= row.id %>?_method=DELETE" onclick="return confirm('¿Realmente desea eliminar este producto?')"><i class="fa-sharp fa-solid fa-trash"></i></a>
                                         </form>
-                                        <a id="product-edit" href="/listadoProducto/1/edicionProducto/<%= row.id %>"> <i class="fa-solid fa-pen-to-square "></i></a>
+                                        <a id="product-edit" href="/listadoProducto/<%= locals.userLogged.id %>/edicionProducto/<%= row.id %>"> <i class="fa-solid fa-pen-to-square "></i></a>
                                     </div>
                                 </div>
                             </article>
@@ -38,7 +38,7 @@
                         <% }) %>
                     <% } %>
                     <div class="realizar-compra3">
-                        <a href="/listadoProducto/1/vender" class="realizar-compra2 ">Vender tu producto</a>
+                        <a href="/listadoProducto/<%= locals.userLogged.id %>/vender" class="realizar-compra2 ">Vender tu producto</a>
                     </div>
 
                 </section>

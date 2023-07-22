@@ -40,18 +40,18 @@
                             </div>
                             <div class="detalle-tarjeta">
                                 <h3 class="nombre">
-                                    <%= row.nombreProd.slice(0, 42); %>
+                                    <%= row.nombreProducto.slice(0, 42); %>
                                 </h3>
                                 <h4 class="precio">
-                                    $ <%= row.precio %>
+                                    $ <%= row.precioProducto %>
                                 </h4>
-                                <p><%= row.descGeneral.slice(0, 80); %> ...</p>
+                                <p><%= row.descripcionGeneral.slice(0, 80); %> ...</p>
                                 <div>
                                     <a href="/productDetail/<%= row.id %>">VER MÁS</a>
                                 </div>
                             </div>
                         </article>
-                        <% }) %>
+                    <% }) %>
 
 
 

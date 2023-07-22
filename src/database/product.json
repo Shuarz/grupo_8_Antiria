@@ -1,165 +1,189 @@
 [
-  {
-    "id": 1,
-    "vendedor": 1,
-    "nombreProd": "Bicicleta Clasica",
-    "precio": "75.000",
-    "oferta": false,
-    "categoria": "Mueble",
-    "descGeneral": "Bicicleta clasica, perfecto estado.",
-    "image": "bicicletaAntigua.jpeg"
-  },
-  {
-    "id": 2,
-    "vendedor": 2,
-    "nombreProd": "'Confort y musica para volar'",
-    "precio": "30.000",
-    "oferta": true,
-    "categoria": "Musica",
-    "descGeneral": "Disco de vinilo 'Confort y musica para volar' - Soda Stereo Unplugged. Perfecto estado.",
-    "image": "discoVinilo.jpeg"
-  },
-  {
-    "id": 3,
-    "vendedor": 1,
-    "nombreProd": "'Busto de mujer joven'",
-    "precio": "150.000",
-    "oferta": false,
-    "categoria": "Arte",
-    "descGeneral": "Busto de mujer joven Paris, otoño 1906. Óleo sobre lienzo. 54 x 42 cm.",
-    "image": "cuadroPiccaso.jpg"
-  },
-  {
-    "id": 4,
-    "vendedor": 2,
-    "nombreProd": "Reloj de Bolsillo.",
-    "precio": " 80.000",
-    "oferta": false,
-    "categoria": "Arte",
-    "descGeneral": "Reloj de bolsillo (Ernest Magnin, Besançon, ca. 1920)",
-    "image": "RelojColeccion.jpg"
-  },
-  {
-    "id": 5,
-    "vendedor": 3,
-    "nombreProd": "auto lamborghini diablo",
-    "precio": " 80.000.000",
-    "oferta": false,
-    "categoria": "Reliquia",
-    "descGeneral": "En 1993, Lamborghini lanzó el Diablo VT, el primer Lambo Gran Turismo equipado con tracción en las cuatro ruedas. También incluyó una serie de mejoras mecánicas y cambios estilísticos que pronto serían adoptadas por la versión de tracción trasera.",
-    "image": "NAZ_20601763cb584800924b8d43a6e2a471.jpg"
-  },
-  {
-    "id": 6,
-    "vendedor": 1,
-    "nombreProd": "juego Lego de mesa",
-    "categoria": "Juegos",
-    "precio": " 70.000",
-    "oferta": true,
-    "descGeneral": "Juego Lego antiguo-'Lego System' año 1970.",
-    "image": "juegoLego.jpg"
-  },
-  {
-    "id": 7,
-    "vendedor": 2,
-    "nombreProd": "RARO MANUSCRITO DE LIBRO CRISTIANO COPTO ETIOPÍA GE'EZ BIBLIA",
-    "categoria": "Reliquia",
-    "precio": " 700.000",
-    "oferta": false,
-    "descGeneral": " rarísimo manuscrito etíope de un libro cristiano copto, cuidadosamente escrito a mano con tinta sobre vitela (o pergamino, un material de piel animal).",
-    "image": "manuscritoReliquia.jpg"
-  },
-  {
-    "id": 8,
-    "vendedor": 3,
-    "nombreProd": "Armario triple caoba llama con dos cajones y espejo original",
-    "categoria": "Muebles",
-    "precio": " 250.000",
-    "oferta": true,
-    "descGeneral": " Armario  de caoba Vintage triple armario con espejo.",
-    "image": "armario.jpg"
-  },
-  {
-    "id": 9,
-    "vendedor": 2,
-    "nombreProd": "Cartier - Panthère Ruban - 2449 - Mujer - 1980",
-    "categoria": "Relojes",
-    "precio": " 240.000",
-    "oferta": true,
-    "descGeneral": "Reloj Cartier - Panthère Ruban Oro Amarillo de 18 Quilates y 12 Diamantes redondos con engaste original de Cartier de 0,03 quilates. .",
-    "image": "relojRolex.jpg"
-  },
-  {
-    "id": 10,
-    "vendedor": 3,
-    "nombreProd": "Chuck Berry - Signed Photo by Chuck Berry - 20x25cm . Recuerdo Firmado (autografo original)",
-    "categoria": "musica",
-    "precio": " 150.000",
-    "oferta": false,
-    "descGeneral": "Chuck Berry - Auténtico y original autógrafo firmado en fotografía asombrosa ( 20 x 25 cm ) - Con certificado de autenticidad.",
-    "image": "autografoMusica.jpg"
-  },
-  {
-    "id": 11,
-    "vendedor": 1,
-    "nombreProd": "Panini - World Cup España 82 - Set de adhesivos sueltos completo - 1982",
-    "categoria": "Juegos",
-    "precio": " 40.000",
-    "oferta": true,
-    "descGeneral": "Panini FIFA World Cup 1982 ESPANA / SPAIN - ¡Colección oficial de Panini para la FIFA World Cup 1982 ",
-    "image": "figuritasArgentina.jpg"
-  },
-  {
-    "id": 12,
-    "vendedor": 2,
-    "nombreProd": "Pala Diamond - 18 quilates Oro blanco - Collar con colgante - 2.40 ct Diamante - Diamantes",
-    "categoria": "joya",
-    "precio": " 90.500",
-    "oferta": false,
-    "descGeneral": "collar gargantilla estilo gargantilla de Pala Diamond Gioielli Joyas de lujo Made in Italy con certificado de laboratorio gemológico .",
-    "image": "joyas.jpg"
-  },
-  {
-    "id": 13,
-    "vendedor": 2,
-    "nombreProd": "Lambertus Jacobus Johannes Boers (1903-1981) - The old man",
-    "categoria": "arte",
-    "precio": " 340.200",
-    "oferta": false,
-    "descGeneral": "Lambertus Jacobus Johannes Boers (1903-1981) - The old man",
-    "image": "cuadro.jpg"
-  },
-  {
-    "id": 15,
-    "vendedor": "1",
-    "nombreProd": "collar",
-    "precio": 65557,
-    "oferta": "True",
-    "categoria": "joyeria",
-    "marca": "Otro",
-    "descGeneral": "hknjknjn",
-    "image": "product-1687971277668.JPG"
-  },
-  {
-    "id": 16,
-    "vendedor": "1",
-    "nombreProd": "ALGO",
-    "precio": 13238828,
-    "oferta": "True",
-    "categoria": "joyeria",
-    "marca": "Louis Vuitton",
-    "descGeneral": "RE FACHERO ESTO SI LO COMPRAS",
-    "image": "product-1687973255837.JPG"
-  },
-  {
-    "id": 17,
-    "vendedor": "1",
-    "nombreProd": "Radia Pan-sonic De Bolsillo Antigua",
-    "precio": 30500,
-    "oferta": "False",
-    "categoria": "Mueble",
-    "marca": "Otro",
-    "descGeneral": "radio de bolsillo PAN-SONIC sin uso de la década de los 90.",
-    "image": "product-1687978321828.jpeg"
-  }
+ {
+  "id": 1,
+  "vendedor": 1,
+  "nombreProducto": "Bicicleta Clasica",
+  "precioProducto": "75.000",
+  "oferta": "false",
+  "categoriaProducto": "Mueble",
+  "marca": "Otro",
+  "descripcionGeneral": "Bicicleta clasica, perfecto estado.",
+  "image": "bicicletaAntigua.jpeg"
+ },
+ {
+  "id": 2,
+  "vendedor": 2,
+  "nombreProducto": "'Confort y musica para volar'",
+  "precioProducto": "30.000",
+  "oferta": "true",
+  "categoriaProducto": "Musica",
+  "marca": "Otro",
+  "descripcionGeneral": "Disco de vinilo 'Confort y musica para volar' - Soda Stereo Unplugged. Perfecto estado.",
+  "image": "discoVinilo.jpeg"
+ },
+ {
+  "id": 3,
+  "vendedor": 1,
+  "nombreProducto": "'Busto de mujer joven'",
+  "precioProducto": "150.000",
+  "oferta": "false",
+  "categoriaProducto": "Arte",
+  "marca": "Otro",
+  "descripcionGeneral": "Busto de mujer joven Paris, otoño 1906. Óleo sobre lienzo. 54 x 42 cm.",
+  "image": "cuadroPiccaso.jpg"
+ },
+ {
+  "id": 4,
+  "vendedor": 2,
+  "nombreProducto": "Reloj de Bolsillo.",
+  "precioProducto": " 80.000",
+  "oferta": "false",
+  "categoriaProducto": "Arte",
+  "marca": "Otro",
+  "descripcionGeneral": "Reloj de bolsillo (Ernest Magnin, Besançon, ca. 1920)",
+  "image": "RelojColeccion.jpg"
+ },
+ {
+  "id": 5,
+  "vendedor": 3,
+  "nombreProducto": "auto lamborghini diablo",
+  "precioProducto": " 80.000.000",
+  "oferta": "false",
+  "categoriaProducto": "Reliquia",
+  "marca": "Otro",
+  "descripcionGeneral": "En 1993, Lamborghini lanzó el Diablo VT, el primer Lambo Gran Turismo equipado con tracción en las cuatro ruedas. También incluyó una serie de mejoras mecánicas y cambios estilísticos que pronto serían adoptadas por la versión de tracción trasera.",
+  "image": "NAZ_20601763cb584800924b8d43a6e2a471.jpg"
+ },
+ {
+  "id": 6,
+  "vendedor": 1,
+  "nombreProducto": "juego Lego de mesa",
+  "precioProducto": " 70.000",
+  "oferta": "true",
+  "categoriaProducto": "Juegos",
+  "marca": "Otro",
+  "descripcionGeneral": "Juego Lego antiguo-'Lego System' año 1970.",
+  "image": "juegoLego.jpg"
+ },
+ {
+  "id": 7,
+  "vendedor": 2,
+  "nombreProducto": "RARO MANUSCRITO DE LIBRO CRISTIANO COPTO ETIOPÍA GE'EZ BIBLIA",
+  "precioProducto": " 700.000",
+  "oferta": "false",
+  "categoriaProducto": "Reliquia",
+  "marca": "Otro",
+  "descripcionGeneral": " rarísimo manuscrito etíope de un libro cristiano copto, cuidadosamente escrito a mano con tinta sobre vitela (o pergamino, un material de piel animal).",
+  "image": "manuscritoReliquia.jpg"
+ },
+ {
+  "id": 8,
+  "vendedor": 3,
+  "nombreProducto": "Armario triple caoba llama con dos cajones y espejo original",
+  "precioProducto": " 250.000",
+  "oferta": "true",
+  "categoriaProducto": "Muebles",
+  "marca": "Otro",
+  "descripcionGeneral": " Armario  de caoba Vintage triple armario con espejo.",
+  "image": "armario.jpg"
+ },
+ {
+  "id": 9,
+  "vendedor": 2,
+  "nombreProducto": "Cartier - Panthère Ruban - 2449 - Mujer - 1980",
+  "precioProducto": " 240.000",
+  "oferta": "true",
+  "categoriaProducto": "Relojes",
+  "marca": "Otro",
+  "descripcionGeneral": "Reloj Cartier - Panthère Ruban Oro Amarillo de 18 Quilates y 12 Diamantes redondos con engaste original de Cartier de 0,03 quilates. .",
+  "image": "relojRolex.jpg"
+ },
+ {
+  "id": 10,
+  "vendedor": 3,
+  "nombreProducto": "Chuck Berry - Signed Photo by Chuck Berry - 20x25cm . Recuerdo Firmado (autografo original)",
+  "precioProducto": " 150.000",
+  "oferta": "false",
+  "categoriaProducto": "musica",
+  "marca": "Otro",
+  "descripcionGeneral": "Chuck Berry - Auténtico y original autógrafo firmado en fotografía asombrosa ( 20 x 25 cm ) - Con certificado de autenticidad.",
+  "image": "autografoMusica.jpg"
+ },
+ {
+  "id": 11,
+  "vendedor": 1,
+  "nombreProducto": "Panini - World Cup España 82 - Set de adhesivos sueltos completo - 1982",
+  "precioProducto": " 40.000",
+  "oferta": "true",
+  "categoriaProducto": "Juegos",
+  "marca": "Otro",
+  "descripcionGeneral": "Panini FIFA World Cup 1982 ESPANA / SPAIN - ¡Colección oficial de Panini para la FIFA World Cup 1982 ",
+  "image": "figuritasArgentina.jpg"
+ },
+ {
+  "id": 12,
+  "vendedor": 2,
+  "nombreProducto": "Pala Diamond - 18 quilates Oro blanco - Collar con colgante - 2.40 ct Diamante - Diamantes",
+  "precioProducto": " 90.500",
+  "oferta": "false",
+  "categoriaProducto": "joya",
+  "marca": "Otro",
+  "descripcionGeneral": "collar gargantilla estilo gargantilla de Pala Diamond Gioielli Joyas de lujo Made in Italy con certificado de laboratorio gemológico .",
+  "image": "joyas.jpg"
+ },
+ {
+  "id": 13,
+  "vendedor": 2,
+  "nombreProducto": "Lambertus Jacobus Johannes Boers (1903-1981) - The old man",
+  "precioProducto": " 340.200",
+  "oferta": "false",
+  "categoriaProducto": "arte",
+  "marca": "Otro",
+  "descripcionGeneral": "Lambertus Jacobus Johannes Boers (1903-1981) - The old man",
+  "image": "cuadro.jpg"
+ },
+ {
+  "id": 15,
+  "vendedor": 1,
+  "nombreProducto": "collar",
+  "precioProducto": 65557,
+  "oferta": "true",
+  "categoriaProducto": "joyeria",
+  "marca": "Rolex",
+  "descripcionGeneral": "hknjknjn",
+  "image": "product-1687971277668.JPG"
+ },
+ {
+  "id": 16,
+  "vendedor": 1,
+  "nombreProducto": "ALGOAAAAA",
+  "precioProducto": 13238828,
+  "oferta": "True",
+  "categoriaProducto": "joyeria",
+  "marca": "Louis Vuitton",
+  "descripcionGeneral": "RE FACHERO ESTO SI LO COMPRAS",
+  "image": "product-1687973255837.JPG"
+ },
+ {
+  "id": 17,
+  "vendedor": 1,
+  "nombreProducto": "Radia Pan-sonic De Bolsillo Antigua",
+  "precioProducto": 30500,
+  "oferta": "false",
+  "categoriaProducto": "Mueble",
+  "marca": "Otro",
+  "descripcionGeneral": "radio de bolsillo PAN-SONIC sin uso de la década de los 90.",
+  "image": "product-1687978321828.jpeg"
+ },
+ {
+  "id": 18,
+  "nombreProducto": "ALEJO",
+  "precioProducto": 443425324,
+  "categoriaProducto": "Reliquia",
+  "marca": "Louis Vuitton",
+  "descripcionGeneral": "sdfsfsdf",
+  "oferta": "True",
+  "image": "product-1690059123627.jpg",
+  "vendedor": 2
+ }
 ]
