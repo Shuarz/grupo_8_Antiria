@@ -22,5 +22,17 @@
   "avatar": "user_undefined.png",
   "product": [],
   "cart": []
+ },
+ {
+  "id": 3,
+  "name": "santiago",
+  "lastname": "caanavide",
+  "mail": "santiagito23@gmail.com",
+  "password": "$2a$10$oo3r5S15a/i0FnR7eXdNc.nYYQJpa5gRScbmPmRj3TpPJGo2DMi.m",
+  "passwordConfirm": "$2a$10$ocHazSLc7VfLI9p33.yiUue4idKyJS4hZYUHU.93rvdl8WM8EGRRa",
+  "terminos": "on",
+  "avatar": "user-1690066149117.jpeg",
+  "product": [],
+  "cart": []
  }
 ]

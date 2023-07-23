@@ -45,14 +45,14 @@ const User = {
     },
 
     addToCart: function (userId, productId) {
+
+    },
+    edit: function(userId, productId){
         let allUsers = this.findAll();
-        let indexToUpdate = allUsers.findIndex((user) => user.id === userId);
-        if (indexToUpdate !== -1) {
-            allUsers[indexToUpdate].cart.push(productId);
-            fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ' '));
-            return true;
-        }
-        return false;
+        let userFound = allUsers.find(row => row[userId] === text);
+        let cartfound = userFound.find('cart')
+        return userFound;
+
     }
 }
 

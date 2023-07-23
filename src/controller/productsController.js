@@ -26,21 +26,38 @@ module.exports = {
         let userToUpdate = User.findByField('id', UserId);
         let productIdToAdd = prodToCreate.id;
         User.addToCart(userToUpdate, productIdToAdd);
-
-        Product.create(prodToCreate);
         res.render('./products/createProduct')
     },
 
-    prodDetail: (req, res) => {
+    prodDetail: (req, res) => {    
         let productId = parseInt(req.params.IdProd);
         let prodUD = Product.findByField('id', productId);
-        return res.render("./products/detalleProducto", {prodUD: prodUD});
-    },
+        User.addToCart(prodUD);
+        console.log(prodUD)
+        
 
-    cart: (req, res) => {
+        return res.render("./products/detalleProducto", {prodUD});
+
+    },
+    prosessprodDetail:(req, res) =>{
         let UserId = parseInt(req.params.idUser);
         let prodUser = User.findByField('id', UserId);
-        return res.render('./products/carrito', {cart: prodUser.cart});
+        console.log(prodUser)
+
+    },
+    
+
+    cart: (req, res) => {
+        
+        let UserId = parseInt(req.params.idUser);
+        
+        let prodUser = User.findByField('id', UserId);
+        console.log(prodUser)
+        
+        
+        return res.render('./products/carrito', {cart: prodUser.cart})
+        
+        ;
     },
 
     list: (req, res) => {

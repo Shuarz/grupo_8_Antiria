@@ -50,8 +50,8 @@ module.exports = {
             if (isOkPassword) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
-                if (req.body.remember_user) {
-                    res.cookie('userCokkie', req.body.mail, {maxAge: (1000 * 60) * 2})
+                if (req.body.remember_user != undefined) {
+                    res.cookie('userCokkie', req.body.mail, {maxAge: (10000 * 60) * 2})
                 };
                 return res.redirect('/profile');
             };
