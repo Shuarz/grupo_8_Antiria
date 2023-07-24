@@ -6,7 +6,7 @@ const rutaContacto = path.resolve('./src/database/contact.json')
 
 module.exports = {
     index: (req, res) => {
-        const ofertas = datos.filter((row) => row.oferta == 'true');
+        const ofertas = datos.filter((row) => row.oferta == 'True');
         const oferta = ofertas.slice(-5);
         return res.render('index', {oferta: oferta});
 

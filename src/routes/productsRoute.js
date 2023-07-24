@@ -19,18 +19,20 @@ router.get ("/listadoProducto/:idUser/vender", authMiddleware, Controller.sell);
 router.post("/listadoProducto/:idUser/vender", fileupload.single("imagenProducto"), validations,Controller.public);
 
 //detail prod
-router.get("/productDetail/:IdProd", Controller.prodDetail);
+router.get("/productDetail/:idProd", Controller.prodDetail);
+router.post("/productDetail/:idProd/:idUser", authMiddleware, Controller.addToCartUser);
 
 //carrito
 router.get("/carrito/:idUser", authMiddleware, Controller.cart);
+router.get("/carrito/:idUser/:idProd", authMiddleware, Controller.deleteToCart);
 
 //list prod
 router.get("/listadoProducto/:idUser", authMiddleware, Controller.list);
-router.get("/listadoProducto/:idUser/delete/:IdProd", authMiddleware, Controller.delete);
+router.get("/listadoProducto/:idUser/delete/:idProd", authMiddleware, Controller.delete);
 
 //edit prod
-router.get("/listadoProducto/:idUser/edicionProducto/:IdProd", authMiddleware, Controller.edit);
-router.put("/listadoProducto/:idUser/edicionProducto/:IdProd", fileupload.single("imagenProducto") , Controller.editProcess);
+router.get("/listadoProducto/:idUser/edicionProducto/:idProd", authMiddleware, Controller.edit);
+router.put("/listadoProducto/:idUser/edicionProducto/:idProd", fileupload.single("imagenProducto") , Controller.editProcess);
 
 //search
 router.get("/search", Controller.search);

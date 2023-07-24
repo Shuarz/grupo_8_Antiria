@@ -16,7 +16,7 @@ const User = {
         return 1;
     },
 
-    findAll: function (){
+    findAll: function () {
         return this.getData();
     },
 
@@ -26,12 +26,12 @@ const User = {
         return userFound;
     },
 
-    create: function(userData){
+    create: function (userData) {
         let allUsers = this.findAll();
         let newUser = {
             id: this.generateId(),
             ...userData
-        }
+        };
         allUsers.push(newUser);
         fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ' '));
         return newUser;
@@ -44,16 +44,69 @@ const User = {
         return true;
     },
 
-    addToCart: function (userId, productId) {
-
-    },
-    edit: function(userId, productId){
+    addToProduct: function (userId, productId) {
         let allUsers = this.findAll();
-        let userFound = allUsers.find(row => row[userId] === text);
-        let cartfound = userFound.find('cart')
-        return userFound;
+        let userIndex = allUsers.findIndex(user => user.id === userId);
 
+        if (userIndex !== -1) {
+            if (!allUsers[userIndex].product) {
+                allUsers[userIndex].product = [];
+            }
+
+            allUsers[userIndex].product.push(productId);
+            fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ' '));
+            return true;
+        }
+
+        return false;
+    },
+
+    removeFromProduct: function (userId, productId) {
+        let allUsers = this.findAll();
+        let userIndex = allUsers.findIndex(user => user.id == userId);
+        if (userIndex != -1) {
+            let productIndex = allUsers[userIndex].product.findIndex(id => id == productId);
+            if (productIndex != -1) {
+                allUsers[userIndex].product.splice(productIndex, 1);
+                fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ' '));
+                return true;
+            }
+        }
+        return false;
+    },
+
+    addToCart: function (userId, productId) {
+        let allUsers = this.findAll();
+        let userIndex = allUsers.findIndex(user => user.id == userId);
+
+        if (userIndex != -1) {
+            if (!allUsers[userIndex].cart) {
+                allUsers[userIndex].cart = [];
+            }
+
+            allUsers[userIndex].cart.push(productId);
+            fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ' '));
+            return true;
+        }
+
+        return false;
+    },
+
+    removeFromCart: function (userId, productId) {
+        let allUsers = this.findAll();
+        let userIndex = allUsers.findIndex(user => user.id == userId);
+        if (userIndex != -1) {
+            if (productId !== undefined) {
+                let productIndex = allUsers[userIndex].cart.indexOf(productId);
+                if (productIndex != -1) {
+                    allUsers[userIndex].cart.splice(productIndex, 1);
+                    fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ' '));
+                    return true;
+                }
+            }
+        }
+        return false;
     }
-}
+};
 
 module.exports = User;

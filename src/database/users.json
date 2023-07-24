@@ -4,35 +4,55 @@
   "name": "Alejo",
   "lastname": "Pequeño",
   "mail": "alejopequeno25@gmail.com",
-  "password": "$2a$10$nFUjN3B6fmUfqXmB6SIDsuT/qN8Qo6O4KkQQSIP.dIf4VETlneFPK",
-  "passwordConfirm": "$2a$10$Bthbi1NQ/.1GFLZffDTruOckzoARJO.lLK2nfENOmll4VA7bMXb8y",
+  "password": "$2a$10$TJxLsHwoFnakhFCE55ukXu7WU8AWg2NaCpvrGKf40fxjAB4UVJDpC",
+  "passwordConfirm": "$2a$10$TFrbB/bxCqDriYRQ2cDCO.JkHfp4Ki/Sx152Nv0ufrzGoX2uvyt/K",
   "terminos": "on",
-  "avatar": "user-1689869933150.jpg",
-  "product": [],
+  "avatar": "user-1690156726211.jpg",
+  "product": [
+   1,
+   2,
+   3,
+   15
+  ],
   "cart": []
  },
  {
   "id": 2,
-  "name": "Alejo",
-  "lastname": "Pequeño",
-  "mail": "alejito@gfmsdkg.com",
-  "password": "$2a$10$mAJLNLegO8Z51jxNF5s4h.HiEuzPop6HeVxTKnCcykRE4MJMypGo2",
-  "passwordConfirm": "$2a$10$WZQrQM3L2N7w.kzd7r709OkP7n7mbeOH9MOsiR4GuwXIcgY2CleSe",
+  "name": "Jorge",
+  "lastname": "Curioso",
+  "mail": "jorgecurioso@yahoo.com",
+  "password": "$2a$10$RjO41tcLrMuKH57OJ56AtOsHmdyyWbxItqtIxnlt9OBq7Ho/kaRU.",
+  "passwordConfirm": "$2a$10$iaYcrCBjrdmBoymqeLMJVu.0q/CD8xjSH/IaaZJQk/f6sQDWY/UeW",
   "terminos": "on",
-  "avatar": "user_undefined.png",
-  "product": [],
+  "avatar": "user-1690157620808.jpg",
+  "product": [
+   4,
+   5,
+   6,
+   7,
+   11,
+   12
+  ],
   "cart": []
  },
  {
   "id": 3,
-  "name": "santiago",
-  "lastname": "caanavide",
-  "mail": "santiagito23@gmail.com",
-  "password": "$2a$10$oo3r5S15a/i0FnR7eXdNc.nYYQJpa5gRScbmPmRj3TpPJGo2DMi.m",
-  "passwordConfirm": "$2a$10$ocHazSLc7VfLI9p33.yiUue4idKyJS4hZYUHU.93rvdl8WM8EGRRa",
+  "name": "Yimmi",
+  "lastname": "Neutron",
+  "mail": "yimmineutron@gmail.com",
+  "password": "$2a$10$kYQI4zNWirfuQveS7Xy5wOu7rmDXtgz1YmWCNnyqfyOwxKwgHVWDC",
+  "passwordConfirm": "$2a$10$wKHMNWKMy49xNaiQstRVK.q1oUaexivzunPCWMETg0/6LA1w9Kg4y",
   "terminos": "on",
-  "avatar": "user-1690066149117.jpeg",
-  "product": [],
-  "cart": []
+  "avatar": "user-1690159262325.jpeg",
+  "product": [
+   8,
+   9,
+   10,
+   13,
+   14
+  ],
+  "cart": [
+   "5"
+  ]
  }
 ]

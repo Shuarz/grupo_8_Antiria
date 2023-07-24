@@ -21,43 +21,40 @@ module.exports = {
             image: req.file.filename,
             vendedor: parseInt(req.params.idUser)
         };
+        let newProduct = Product.create(prodToCreate);
 
-        let UserId = parseInt(req.params.idUser);
-        let userToUpdate = User.findByField('id', UserId);
-        let productIdToAdd = prodToCreate.id;
-        User.addToCart(userToUpdate, productIdToAdd);
-        res.render('./products/createProduct')
+        let userToUpdate = User.findByField('id', parseInt(req.params.idUser));
+        let productIdToAdd = newProduct.id;
+
+        User.addToProduct(userToUpdate.id, productIdToAdd);
+
+        res.render('./products/createProduct');
     },
 
-    prodDetail: (req, res) => {    
-        let productId = parseInt(req.params.IdProd);
+    prodDetail: (req, res) => {
+        let productId = parseInt(req.params.idProd);
         let prodUD = Product.findByField('id', productId);
-        User.addToCart(prodUD);
-        console.log(prodUD)
-        
-
-        return res.render("./products/detalleProducto", {prodUD});
-
+        return res.render("./products/detalleProducto", { prodUD: prodUD });
     },
-    prosessprodDetail:(req, res) =>{
-        let UserId = parseInt(req.params.idUser);
-        let prodUser = User.findByField('id', UserId);
-        console.log(prodUser)
 
+    addToCartUser: (req, res) => {
+        let userId = req.params.idUser;
+        let productId = req.params.idProd;
+        User.addToCart(userId, productId);
+
+        res.redirect('/carrito/' + req.params.idUser);
     },
-    
 
     cart: (req, res) => {
-        
-        let UserId = parseInt(req.params.idUser);
-        
-        let prodUser = User.findByField('id', UserId);
-        console.log(prodUser)
-        
-        
-        return res.render('./products/carrito', {cart: prodUser.cart})
-        
-        ;
+        let userId = parseInt(req.params.idUser);
+        let prodUser = User.findByField('id', userId);
+
+        const cartProductIds = prodUser.cart.map(productId => parseInt(productId));
+        const cartProducts = cartProductIds.map(productId => Product.findByField('id', productId));
+        const totalPrice = cartProducts.reduce((total, product) => total + parseFloat(product.precioProducto), 0);
+        return res.render('./products/carrito', {
+            cart: cartProducts,
+            precio: totalPrice });
     },
 
     list: (req, res) => {
@@ -67,13 +64,22 @@ module.exports = {
     },
 
     delete: (req, res) => {
-        const id = req.body.id;
-        Product.delete(id);
+        const idProd = req.params.idProd;
+        const idUser = req.params.idUser;
+        Product.delete(idProd);
+        User.removeFromProduct(idUser, idProd);
         res.redirect('/listadoProducto/' + req.params.idUser);
     },
 
+    deleteToCart: (req, res) => {
+        const idProd = req.params.idProd;
+        const idUser = req.params.idUser;
+        User.removeFromCart(idUser, idProd);
+        res.redirect('/carrito/' + req.params.idUser);
+    },
+
     edit: (req, res) => {
-        let productId = parseInt(req.params.IdProd);
+        let productId = parseInt(req.params.idProd);
         let prodUser = Product.findByField('id', productId);
         return res.render('./products/edicionProducto', {
             "idProd": prodUser.id,
@@ -82,7 +88,7 @@ module.exports = {
             "categoria": prodUser.categoriaProducto,
             "marca": prodUser.marca,
             "descGeneral": prodUser.descripcionGeneral,
-        })
+        });
     },
 
     editProcess: (req, res) => {

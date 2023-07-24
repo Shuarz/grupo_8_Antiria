@@ -33,7 +33,9 @@
                 </li>
                 <li class="profile-img">
                     <a href="/profile">
-                        <img src="/img/user/<%= locals.userLogged.avatar %>" alt="<%= locals.userLogged.name %>">
+                        <div class="contImgProfile">
+                            <img src="/img/user/<%= locals.userLogged.avatar %>" alt="<%= locals.userLogged.name %>">
+                        </div>
                         <p>Hola, <%= locals.userLogged.name %></p>
                     </a>
                 </li>

@@ -14,13 +14,13 @@
                 <div class="detalle-prod-main">
                     <div class="imagenes-web">
                         <div class="imagen-del-producto">
-                            <img class="foto-producto" src="/img/<%= prodUD.image %>" alt="foto-de-producto">
+                            <img class="foto-producto" src="/img/products/<%= prodUD.image %>" alt="foto-de-producto">
                         </div>
                         <div class="carousel">
-                            <div class="item"><img src="/img/<%= prodUD.image %>"></div>
-                            <div class="item"><img src="/img/<%= prodUD.image %>"></div>
-                            <div class="item"><img src="/img/<%= prodUD.image %>"></div>
-                            <div class="item"><img src="/img/<%= prodUD.image %>"></div>
+                            <div class="item"><img src="/img/products/<%= prodUD.image %>"></div>
+                            <div class="item"><img src="/img/products/<%= prodUD.image %>"></div>
+                            <div class="item"><img src="/img/products/<%= prodUD.image %>"></div>
+                            <div class="item"><img src="/img/products/<%= prodUD.image %>"></div>
 
                         </div>
                     </div>
@@ -33,9 +33,15 @@
                         <h4>
                             $<%= prodUD.precioProducto %>
                         </h4>
-
-                        <a name="cart" href=" " type="submit">   
-                        Agregar al carrito</a>
+                        <% if (locals.isLogged) { %>
+                            <form action="/productDetail/<%= prodUD.id %>/<%= locals.userLogged.id %>" method="POST">
+                                <button class="submitCart" type="submit">Agregar al carrito</button>
+                            </form>
+                        <% } else { %>
+                            <form action="/login">
+                                <button class="submitCart" type="submit">Agregar al carrito</button>
+                            </form>
+                        <% } %>
 
                     </div>
                 </div>

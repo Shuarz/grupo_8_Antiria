@@ -184,10 +184,18 @@ nav ul li .link-nav-index:hover::after {
 .profile-img{
     margin: 0 20px;;
 }
+.contImgProfile{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+}
 
 .profile-img img{
-    width: 35px;
-    border-radius: 50%;
+    width: 100%;
 }
 
 .profile-img a{
@@ -1360,7 +1368,7 @@ nav ul li .link-nav-index~input:checked~.categorias3 {
 
 }
 
-.nombre-precio a {
+.submitCart {
     text-decoration: none;
     text-align: center;
     display: inline-block;
@@ -1372,13 +1380,15 @@ nav ul li .link-nav-index~input:checked~.categorias3 {
     width: 100%;
     background-color: #956441;
     color: #FAF2D7;
+    border: none;
+    cursor: pointer;
 }
 
-.nombre-precio a:hover {
+.submitCart:hover {
     background-color: #5a3b25;
 }
 
-.nombre-precio a:active {
+.submitCart:active {
     box-shadow: 0px 0px 10px #2c1e13 inset;
 }
 
@@ -1446,6 +1456,10 @@ nav ul li .link-nav-index~input:checked~.categorias3 {
 
 
 /************************************** CARRITO ************************************/
+.main-cart {
+    min-height: 51.3vh;
+}
+
 .descripcion-carrito {
     display: none;
 }
@@ -1546,8 +1560,6 @@ body .cuerpo_pagina {
 .total {
     font-weight: bold;
     margin-top: 20px;
-    display: flex;
-    flex-direction: row;
 }
 
 .carrito-main {
@@ -1597,6 +1609,24 @@ body .cuerpo_pagina {
     margin-top: 3rem;
     color: #1a1a1a;
     text-align: start;
+}
+
+.totalCart{
+    text-align: center;
+}
+
+.botonTrash{
+    color: none;
+    border: none;
+    cursor: pointer;
+}
+
+.botonTrash  i{
+    transition: 0.2s ease-in-out;
+}
+
+.botonTrash:hover i{
+    color: red;
 }
 
 /************************************** VENDER ************************************/
@@ -1996,14 +2026,16 @@ body .cuerpo_pagina {
 }
 
 .main-search hr,
-.main-search2 hr {
+.main-search2 hr,
+.main-cart hr  {
     margin: auto;
     width: 95%;
     color: #1a1a1a;
 }
 
 .main-search article,
-.main-search2 article {
+.main-search2 article,
+.main-cart article {
     margin: auto;
     width: 95%;
     margin-bottom: 10px;
@@ -2013,17 +2045,20 @@ body .cuerpo_pagina {
 
 
 .main-search h3,
-.main-search2 h3 {
+.main-search2 h3,
+.main-cart h3  {
     font-size: 17px;
 }
 
 .main-search h4,
-.main-search2 h4 {
+.main-search2 h4,
+.main-cart h4 {
     font-size: 15px;
 }
 
 .main-search h5,
-.main-search2 h5 {
+.main-search2 h5,
+.main-cart h5 {
     font-size: 14px;
 }
 
@@ -2044,7 +2079,8 @@ body .cuerpo_pagina {
 }
 
 .main-search img,
-.main-search2 img {
+.main-search2 img,
+.main-cart img {
     width: 100%;
     max-height: 100%;
 }
@@ -2273,12 +2309,14 @@ body .cuerpo_pagina {
     }
 
     .main-search hr,
-    .main-search2 hr {
+    .main-search2 hr,
+    .main-cart hr {
         width: 90%;
     }
 
     .main-search article,
-    .main-search2 article {
+    .main-search2 article,
+    .main-cart article {
         width: 90%;
     }
 
@@ -2310,15 +2348,18 @@ body .cuerpo_pagina {
     }
 
     .main-search h3,
-    .main-search2 h3 {
+    .main-search2 h3,
+    .main-cart h3 {
         font-size: 20px;
     }
     .main-search h4,
-    .main-search2 h4 {
+    .main-search2 h4,
+    .main-cart h4 {
         font-size: 19px;
     }
     .main-search h5,
-    .main-search2 h5 {
+    .main-search2 h5,
+    .main-cart h5  {
         font-size: 15px;
     }
 

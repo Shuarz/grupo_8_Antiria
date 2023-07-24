@@ -17,24 +17,34 @@
                     </div>
                 </li>
             </ul>
-            <section class="cuerpo_pagina">
-                <div class="product">
-                    <a href="productDetail"><img class="imagen-producto" src="/img/<%= cart.image %>"  alt="Producto 1"></a>
-                    <div class="product-total">
-                        <p class="product-name"></p>
-
-
-                        <p class="product-price">
-                            
-                        </p>
-                        <p class="descripcion-carrito"></p>
-                        <a class="eliminar"><i class="fa-sharp fa-solid fa-trash"></i></a>
-                    </div>
+            <section class="main-cart">
+                <% if (cart.length===0) { %>
+                    <h4 class="notfound-search">Carrito vacio 🫨</h4>
+                <% } else { %>
+                    <% cart.forEach ((row)=> { %>
+                        <article>
+                            <div class="imagen-detalle-prod">
+                                <img src="/img/products/<%= row.image %>" alt="">
+                            </div>
+                            <div class="descripcion_search_prod2">
+                                <h3><%= row.nombreProducto %></h3>
+                                <h4 class="green">$<%= row.precioProducto %></h4>
+                                <div class="eliminar-edit">
+                                    <form method="POST" action="">
+                                        <a type="submit" class="eliminar" id="product-delete" href="/carrito/<%= locals.userLogged.id %>/<%= row.id %>?_method=DELETE" onclick="return confirm('¿Realmente desea eliminar este producto?')">
+                                            <i class="fa-sharp fa-solid fa-trash"></i>
+                                        </a>
+                                    </form>
+                                </div>
+                            </div>
+                        </article>
+                        <hr>
+                    <% }) %>
+                <% } %>
+                <div class="totalCart">
+                    <h2 class="total">Total: <%= precio.toFixed(2) %></h2>
+                    <button class="realizar-compra">Realizar compra</button>
                 </div>
-                
-                </div>
-                <h2 class="total"></h2>
-                <button class="realizar-compra">Realizar compra</button>
             </section>
         </main>
 

@@ -6,16 +6,6 @@ const Product = {
     getData: function () {
         return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
     },
-    editcart: function(userId, productId){
-        let allUsers = this.findAll();
-        let indexToUpdate = allUsers.findIndex((user) => user.id === userId);
-        if (indexToUpdate !== 1 ) {
-            allUsers[indexToUpdate].cart.push(productId);
-            fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ' '));
-            return true;
-        }
-        return false;
-    },
 
     generateId: function () {
         let allProducts = this.findAll();
@@ -97,14 +87,8 @@ const Product = {
 
     delete: function (id) {
         let allProducts = this.findAll();
-        let productIndex = allProducts.findIndex((row) => row.id === id);
-
-        if (productIndex === -1) {
-            return false;
-        }
-
-        allProducts.splice(productIndex, 1);
-        fs.writeFileSync(this.fileName, JSON.stringify(allProducts, null, ' '));
+        let newsProducts = allProducts.filter((row) => row.id != id);
+        fs.writeFileSync(this.fileName, JSON.stringify(newsProducts, null, 2));
 
         return true;
     },
