@@ -7,6 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #FAF2D7;
     font-family: 'Poppins', sans-serif;
@@ -2148,6 +2152,35 @@ body .cuerpo_pagina {
     display: flex;
 }
 
+/************************************** HELP ************************************/
+.mainHelp{
+    min-height: 70vh;
+    padding-top: 100px;
+}
+
+.mainHelp .titleHelp{
+    text-align: center;
+    font-size: 30px;
+    color: #5a3b25;
+}
+
+.mainHelp .title2Help{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 25px;
+    color: #AA9D16;
+}
+
+.mainHelp .title3Help{
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.mainHelp .textHelp{
+    text-align: center;
+    font-size: 17px;
+}
 
 
 
@@ -2439,6 +2472,11 @@ body .cuerpo_pagina {
     .profile div .img-profile{
         width: 300px;
         height: 300px;
+    }
+
+    .mainHelp{
+        margin: 0 auto;
+        width: 80%;
     }
 
 }

@@ -82,5 +82,9 @@ module.exports = {
         res.clearCookie('userCokkie')
         req.session.destroy();
         return res.redirect('/');
+    },
+
+    help: (req, res) => {
+        return res.render('user/help');
     }
 }
