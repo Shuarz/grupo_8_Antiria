@@ -1,9 +1,9 @@
 [
  {
   "id": 1,
-  "name": "Alejo",
-  "lastname": "Pequeño",
-  "mail": "alejopequeno25@gmail.com",
+  "name": "Shrek",
+  "lastname": "El Ogro",
+  "mail": "shrek@gmail.com",
   "password": "$2a$10$TJxLsHwoFnakhFCE55ukXu7WU8AWg2NaCpvrGKf40fxjAB4UVJDpC",
   "passwordConfirm": "$2a$10$TFrbB/bxCqDriYRQ2cDCO.JkHfp4Ki/Sx152Nv0ufrzGoX2uvyt/K",
   "terminos": "on",
