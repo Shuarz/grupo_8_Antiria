@@ -52,9 +52,12 @@ module.exports = {
         const cartProductIds = prodUser.cart.map(productId => parseInt(productId));
         const cartProducts = cartProductIds.map(productId => Product.findByField('id', productId));
         const totalPrice = cartProducts.reduce((total, product) => total + parseFloat(product.precioProducto), 0);
+        const total = totalPrice + 1500;
         return res.render('./products/carrito', {
             cart: cartProducts,
-            precio: totalPrice });
+            precio: total,
+            subtotal: totalPrice
+        });
     },
 
     list: (req, res) => {

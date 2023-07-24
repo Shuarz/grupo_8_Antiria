@@ -17,7 +17,7 @@
                     </div>
                     <div class="descripcion_search_prod">
                         <h3><%= row.nombreProducto %></h3>
-                        <h4 class="green">$<%= row.precioProducto %></h4>
+                        <h4 class="green">$<%= row.precioProducto.toLocaleString('es-ES'); %></h4>
                         <h5>Envió: <span class="green">$ 1.500</span></h5>
                         <a href="/productDetail/<%= row.id %>">Ver</a>
                     </div>

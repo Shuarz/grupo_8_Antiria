@@ -1560,6 +1560,16 @@ body .cuerpo_pagina {
 .total {
     font-weight: bold;
     margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.subtotal {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.subtotal2{
+    margin-top: 15px;
 }
 
 .carrito-main {

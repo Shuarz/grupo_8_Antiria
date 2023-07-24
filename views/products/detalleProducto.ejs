@@ -31,7 +31,7 @@
                         </h3>
 
                         <h4>
-                            $<%= prodUD.precioProducto %>
+                            $<%= prodUD.precioProducto.toLocaleString('es-ES'); %>
                         </h4>
                         <% if (locals.isLogged) { %>
                             <form action="/productDetail/<%= prodUD.id %>/<%= locals.userLogged.id %>" method="POST">

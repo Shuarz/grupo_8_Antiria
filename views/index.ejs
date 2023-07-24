@@ -43,7 +43,7 @@
                                     <%= row.nombreProducto.slice(0, 42); %>
                                 </h3>
                                 <h4 class="precio">
-                                    $ <%= row.precioProducto %>
+                                    $ <%= row.precioProducto.toLocaleString('es-ES'); %>
                                 </h4>
                                 <p><%= row.descripcionGeneral.slice(0, 80); %> ...</p>
                                 <div>

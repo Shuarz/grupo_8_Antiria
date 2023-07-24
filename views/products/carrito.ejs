@@ -28,7 +28,7 @@
                             </div>
                             <div class="descripcion_search_prod2">
                                 <h3><%= row.nombreProducto %></h3>
-                                <h4 class="green">$<%= row.precioProducto %></h4>
+                                <h4 class="green">$<%= row.precioProducto.toLocaleString('es-ES'); %></h4>
                                 <div class="eliminar-edit">
                                     <form method="POST" action="">
                                         <a type="submit" class="eliminar" id="product-delete" href="/carrito/<%= locals.userLogged.id %>/<%= row.id %>?_method=DELETE" onclick="return confirm('¿Realmente desea eliminar este producto?')">
@@ -40,11 +40,13 @@
                         </article>
                         <hr>
                     <% }) %>
+                    <div class="totalCart">
+                        <h3 class="subtotal subtotal2">SubTotal: <%= subtotal.toLocaleString('es-ES') %></h3>
+                        <h3 class="subtotal">Envio: $ 1.500</h3>
+                        <h2 class="total green">Total: <%= precio.toLocaleString('es-ES') %></h2>
+                        <button class="realizar-compra">Realizar compra</button>
+                    </div>
                 <% } %>
-                <div class="totalCart">
-                    <h2 class="total">Total: <%= precio.toFixed(2) %></h2>
-                    <button class="realizar-compra">Realizar compra</button>
-                </div>
             </section>
         </main>
 
