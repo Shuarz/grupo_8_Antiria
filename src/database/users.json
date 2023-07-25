@@ -5,7 +5,6 @@
   "lastname": "El Ogro",
   "mail": "shrek@gmail.com",
   "password": "$2a$10$TJxLsHwoFnakhFCE55ukXu7WU8AWg2NaCpvrGKf40fxjAB4UVJDpC",
-  "passwordConfirm": "$2a$10$TFrbB/bxCqDriYRQ2cDCO.JkHfp4Ki/Sx152Nv0ufrzGoX2uvyt/K",
   "terminos": "on",
   "avatar": "user-1690156726211.jpg",
   "product": [
@@ -22,7 +21,6 @@
   "lastname": "Curioso",
   "mail": "jorgecurioso@yahoo.com",
   "password": "$2a$10$RjO41tcLrMuKH57OJ56AtOsHmdyyWbxItqtIxnlt9OBq7Ho/kaRU.",
-  "passwordConfirm": "$2a$10$iaYcrCBjrdmBoymqeLMJVu.0q/CD8xjSH/IaaZJQk/f6sQDWY/UeW",
   "terminos": "on",
   "avatar": "user-1690157620808.jpg",
   "product": [
@@ -41,7 +39,6 @@
   "lastname": "Neutron",
   "mail": "yimmineutron@gmail.com",
   "password": "$2a$10$kYQI4zNWirfuQveS7Xy5wOu7rmDXtgz1YmWCNnyqfyOwxKwgHVWDC",
-  "passwordConfirm": "$2a$10$wKHMNWKMy49xNaiQstRVK.q1oUaexivzunPCWMETg0/6LA1w9Kg4y",
   "terminos": "on",
   "avatar": "user-1690159262325.jpeg",
   "product": [
@@ -53,6 +50,19 @@
   ],
   "cart": [
    "5"
+  ]
+ },
+ {
+  "id": 4,
+  "name": "Ken",
+  "lastname": "El de barbie",
+  "mail": "ken@gmail.com",
+  "password": "$2a$10$MMwrvEpM5nPu0VvYrBk0MO6LHVvBBkTWFybKuu1klv6VSKTiRFRI6",
+  "terminos": "on",
+  "avatar": "user-1690249906045.jpg",
+  "product": [],
+  "cart": [
+   "15"
   ]
  }
 ]

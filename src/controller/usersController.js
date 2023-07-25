@@ -27,14 +27,26 @@ module.exports = {
             });
         }
 
+        if (req.body.password !== req.body.passwordConfirm){
+            return res.render('./user/register', {
+                errors: {
+                    passwordConfirm: {
+                        msg: 'Ambas contraseñas deben coincidir'
+                    }
+                }
+            })
+        }
+
         let userToCreate = {
             ...req.body,
             password: bcryptjs.hashSync(req.body.password, 10),
-            passwordConfirm: bcryptjs.hashSync(req.body.passwordConfirm, 10),
             avatar: req.file ? req.file.filename : 'user_undefined.png',
             product: [],
             cart: []
         }
+
+        delete userToCreate.passwordConfirm
+
         User.create(userToCreate);
         res.render('./user/create');
     },
