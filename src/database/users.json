@@ -64,5 +64,27 @@
   "cart": [
    "15"
   ]
+ },
+ {
+  "id": 5,
+  "name": "santiago",
+  "lastname": "sanchez",
+  "mail": "s.sanchez2002@hotmail.com",
+  "password": "$2a$10$pttXrGt20ZM.UjUWH8Dx..e6.WaVF.dJVWm04V35UTRE1go5Ca4mW",
+  "terminos": "on",
+  "avatar": "user_undefined.png",
+  "product": [],
+  "cart": []
+ },
+ {
+  "id": 6,
+  "name": "lucas",
+  "lastname": "lucas",
+  "mail": "luquitas@hotmail.com",
+  "password": "$2a$10$OjWKXIrs3YA/DoXv96Rdl.xABPGAjVZhxwZMOozJjuysY/oQS1XYO",
+  "terminos": "on",
+  "avatar": "user-1690855142579.png",
+  "product": [],
+  "cart": []
  }
 ]
