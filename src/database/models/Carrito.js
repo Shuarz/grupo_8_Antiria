@@ -26,11 +26,11 @@ module.exports = (sequelize, dataTypes) => {
 
     // FOREIGN KEY
     Carrito.associate = function(models) {
-        Carrito.hasMany(models.User, {
+        Carrito.belongsTo(models.User, {
             as: "carrito_user",
             foreignKey: "id_user"
         })
-        Carrito.hasMany(models.Product, {
+        Carrito.belongsTo(models.Product, {
             as: "carrito_prod",
             foreignKey: "id_prod"
         })

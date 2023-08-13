@@ -1,6 +1,6 @@
 const { validationResult } = require('express-validator');
-const User = require('../models/User')
-const Product = require('../models/Product')
+
+let db = require('../database/models')
 
 module.exports = {
     sell: (req, res) => {
@@ -100,8 +100,38 @@ module.exports = {
     },
 
     search: (req, res) => {
-        const search = Product.search(req.query.search);
-        return res.render('./products/search', { search: search });
+        const searchQuery = req.query.search;
+        db.Product.findAll({
+            include: [
+                {
+                    model: db.Categoria,
+                    as: 'categoria',
+                    attributes: [] // Si no necesitas ningún atributo de la tabla Categoria en esta consulta
+                }
+            ],
+            where: {
+                [db.Sequelize.Op.or]: [
+                    db.Sequelize.where(db.Sequelize.fn('LOWER', db.Sequelize.col('Product.nombre')), 'LIKE', `%${searchQuery.toLowerCase()}%`),
+                    db.Sequelize.where(db.Sequelize.fn('LOWER', db.Sequelize.col('Product.descripcion')), 'LIKE', `%${searchQuery.toLowerCase()}%`),
+                    db.Sequelize.where(db.Sequelize.fn('LOWER', db.Sequelize.col('Categoria.nombre')), 'LIKE', `%${searchQuery.toLowerCase()}%`)
+                ]
+            }
+        }).then((products) => {
+            res.render('./products/search', { search: products });
+        });
+
+
+        // db.Product.findAll({
+        //     where: {
+        //         [db.Sequelize.Op.or]: [
+        //             db.Sequelize.where(db.Sequelize.fn('LOWER', db.Sequelize.col('nombre')), 'LIKE', `%${searchQuery.toLowerCase()}%`),
+        //             db.Sequelize.where(db.Sequelize.fn('LOWER', db.Sequelize.col('id_categoria')), 'LIKE', `%${searchQuery.toLowerCase()}%`),
+        //             db.Sequelize.where(db.Sequelize.fn('LOWER', db.Sequelize.col('descripcion')), 'LIKE', `%${searchQuery.toLowerCase()}%`)
+        //         ]
+        //     }
+        // }).then((product) => {
+        //         res.render('./product/search', { search: product });
+        //     })
     },
 
 };

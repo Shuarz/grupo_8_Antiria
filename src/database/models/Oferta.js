@@ -20,10 +20,11 @@ module.exports = (sequelize, dataTypes) => {
     // FOREIGN KEY
     Oferta.associate = function(models) {
         Oferta.belongsTo(models.Product, {
-            as: "oferta",
+            as: "productoOferta",
             foreignKey: "id_prod"
-        })
+        });
     }
+
 
     return Oferta;
 }

@@ -36,18 +36,18 @@
                     <% oferta.forEach ((row)=> { %>
                         <article class="tarjeta-2">
                             <div class="contenedor-img">
-                                <img src="/img/products/<%= row.image %>" alt="">
+                                <img src="/img/products/<%= row.productoOferta.imagen_prod %>" alt="">
                             </div>
                             <div class="detalle-tarjeta">
                                 <h3 class="nombre">
-                                    <%= row.nombreProducto.slice(0, 42); %>
+                                    <%= row.productoOferta.nombre.slice(0, 42); %>
                                 </h3>
                                 <h4 class="precio">
-                                    $ <%= row.precioProducto.toLocaleString('es-ES'); %>
+                                    $ <%= row.productoOferta.precio.toLocaleString('es-ES'); %>
                                 </h4>
-                                <p><%= row.descripcionGeneral.slice(0, 80); %> ...</p>
+                                <p><%= row.productoOferta.descripcion.slice(0, 80); %> ...</p>
                                 <div>
-                                    <a href="/productDetail/<%= row.id %>">VER MÁS</a>
+                                    <a href="/productDetail/<%= row.productoOferta.id %>">VER MÁS</a>
                                 </div>
                             </div>
                         </article>
@@ -246,7 +246,7 @@
                 </div>
 
             </section>
-            
+
             <div class="content">
 
                 <div class="contact-wrapper">
@@ -289,9 +289,6 @@
 
                     </div>
                 </div>
-
-
-            
             </div>
 
             <!-- FOOTER -->

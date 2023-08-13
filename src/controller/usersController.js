@@ -1,6 +1,7 @@
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
-const User = require('../models/User')
+
+let db = require('../database/models')
 
 module.exports = {
     register: (req, res) => {
@@ -15,40 +16,41 @@ module.exports = {
             });
         }
 
-        let userInDB = User.findByField('mail', req.body.mail);
-
-        if (userInDB){
-            return res.render('./user/register', {
-                errors: {
-                    mail: {
-                        msg: 'Este email ya está registrado'
+        db.User.findOne({
+            where: {
+                EMAIL: req.body.mail
+            }
+        }).then((emailResult) => {
+            if (emailResult) {
+                return res.render('./user/register', {
+                    errors: {
+                        mail: {
+                            msg: 'Este email ya está registrado'
+                        }
                     }
+                });
+            }else {
+                if (req.body.password !== req.body.passwordConfirm) {
+                    return res.render('./user/register', {
+                        errors: {
+                            passwordConfirm: {
+                                msg: 'Ambas contraseñas deben coincidir'
+                            }
+                        }
+                    });
+                } else {
+                    db.User.create({
+                        nombre: req.body.name,
+                        apellido: req.body.lastname,
+                        email: req.body.mail,
+                        password: bcryptjs.hashSync(req.body.password, 10),
+                        avatar: req.file ? req.file.filename : 'user_undefined.png'
+                    }).then(() => {
+                        res.render('./user/create');
+                    });
                 }
-            });
-        }
-
-        if (req.body.password !== req.body.passwordConfirm){
-            return res.render('./user/register', {
-                errors: {
-                    passwordConfirm: {
-                        msg: 'Ambas contraseñas deben coincidir'
-                    }
-                }
-            })
-        }
-
-        let userToCreate = {
-            ...req.body,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            avatar: req.file ? req.file.filename : 'user_undefined.png',
-            product: [],
-            cart: []
-        }
-
-        delete userToCreate.passwordConfirm
-
-        User.create(userToCreate);
-        res.render('./user/create');
+            }
+        });
     },
 
     login: (req, res) => {
@@ -56,38 +58,37 @@ module.exports = {
     },
 
     loginProcess: (req, res) => {
-        let userToLogin = User.findByField('mail', req.body.mail);
-        if (userToLogin) {
-            let isOkPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-            if (isOkPassword) {
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin;
-                if (req.body.remember_user) {
-                    res.cookie('userCokkie', req.body.mail, {maxAge: (1000 * 60) * 20})
-                };
-                return res.redirect('/profile');
-            };
+        db.User.findOne({
+            where: {
+                email: req.body.mail
+            }
+        }).then((userToLogin) => {
+            if (userToLogin) {
+                const isOkPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                if (isOkPassword) {
+                    delete userToLogin.password;
+                    req.session.userLogged = userToLogin;
+                    if (req.body.remember_user) {
+                        res.cookie('userCookie', req.body.usuario, { maxAge: (1000 * 60) * 1 });
+                    }
+                    return res.redirect('/profile');
+                }
+            }
             return res.render('user/login', {
                 errors: {
                     mail: {
-                        msg: 'Las credenciales no son validas'
+                        msg: 'Las credenciales no son válidas'
                     }
                 }
             });
-        };
-        return res.render('user/login', {
-            errors: {
-                mail: {
-                    msg: 'Email no registrado'
-                }
-            }
         });
     },
 
     profile: (req, res) => {
-        return res.render('user/profile', {
-            user: req.session.userLogged
-        });
+        db.User.findByPk(req.session.userLogged.id)
+            .then(function (user) {
+                res.render('user/profile', { user: user })
+            })
     },
 
     logout: (req, res) => {

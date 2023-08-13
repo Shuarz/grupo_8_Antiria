@@ -17,24 +17,12 @@ module.exports = (sequelize, dataTypes) => {
         },
         id_user: {
             type: dataTypes.INTEGER,
-            // references: {
-            //     model: User,
-            //     key: 'id'
-            // }
         },
         id_marca: {
             type: dataTypes.INTEGER,
-            // references: {
-            //     model: Marca,
-            //     key: 'id'
-            // }
         },
         id_categoria: {
             type: dataTypes.INTEGER,
-            // references: {
-            //     model: Categoria,
-            //     key: 'id'
-            // }
         },
         imagen_prod: {
             type: dataTypes.STRING,

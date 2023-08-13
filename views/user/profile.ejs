@@ -6,14 +6,14 @@
     <!-- FIN HEADER -->
     <main class="profile">
         <div>
-            <h3>Hola, <%= user.name %></h3>
+            <h3>Hola, <%= user.nombre %></h3>
             <div class="img-profile">
                 <img src="./img/user/<%= user.avatar %>" alt="<%= user.mail %>">
             </div>
             <div class="info-profile">
-                <p><span>Nombre:</span> <%= user.name %></p>
-                <p><span>Apellido:</span> <%= user.lastname %></p>
-                <p><span>Email:</span> <%= user.mail %></p>
+                <p><span>Nombre:</span> <%= user.nombre %></p>
+                <p><span>Apellido:</span> <%= user.apellido %></p>
+                <p><span>Email:</span> <%= user.email %></p>
             </div>
             <a href="/logout">Logout</a>
         </div>

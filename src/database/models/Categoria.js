@@ -7,7 +7,7 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
         },
         nombre: {
-            type: dataTypes.STRING,
+            type: dataTypes.INTEGER
         },
     };
     let config = {
@@ -19,8 +19,8 @@ module.exports = (sequelize, dataTypes) => {
 
     // FOREIGN KEY
     Categoria.associate = function(models) {
-        Categoria.belongsTo(models.Product, {
-            as: "categoria",
+        Categoria.hasMany(models.Product, {
+            as: "productos",
             foreignKey: "id_categoria"
         })
     }
