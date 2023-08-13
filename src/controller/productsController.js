@@ -106,14 +106,18 @@ module.exports = {
                 {
                     model: db.Categoria,
                     as: 'categoria',
-                    attributes: [] // Si no necesitas ningún atributo de la tabla Categoria en esta consulta
+                },
+                {
+                    model: db.Marca,
+                    as: 'marca',
                 }
             ],
             where: {
                 [db.Sequelize.Op.or]: [
                     db.Sequelize.where(db.Sequelize.fn('LOWER', db.Sequelize.col('Product.nombre')), 'LIKE', `%${searchQuery.toLowerCase()}%`),
                     db.Sequelize.where(db.Sequelize.fn('LOWER', db.Sequelize.col('Product.descripcion')), 'LIKE', `%${searchQuery.toLowerCase()}%`),
-                    db.Sequelize.where(db.Sequelize.fn('LOWER', db.Sequelize.col('Categoria.nombre')), 'LIKE', `%${searchQuery.toLowerCase()}%`)
+                    db.Sequelize.where(db.Sequelize.fn('LOWER', db.Sequelize.col('Categoria.nombre')), 'LIKE', `%${searchQuery.toLowerCase()}%`),
+                    db.Sequelize.where(db.Sequelize.fn('LOWER', db.Sequelize.col('Marca.nombre')), 'LIKE', `%${searchQuery.toLowerCase()}%`)
                 ]
             }
         }).then((products) => {
