@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Asesoramientos';
+    let alias = 'Asesoramiento';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -9,13 +9,16 @@ module.exports = (sequelize, dataTypes) => {
         nombre: {
             type: dataTypes.STRING,
         },
-        nombre: {
+        email: {
             type: dataTypes.STRING,
         },
-        nombre: {
+        telefono: {
             type: dataTypes.STRING,
         },
-        nombre: {
+        asunto: {
+            type: dataTypes.STRING,
+        },
+        mensaje: {
             type: dataTypes.STRING,
         }
     };

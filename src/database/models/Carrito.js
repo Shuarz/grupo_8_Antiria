@@ -3,7 +3,7 @@ const User = require('./User');
 const Product = require('./Product');
 
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Carritos';
+    let alias = 'Carrito';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -11,18 +11,10 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
         },
         id_user: {
-            type: dataTypes.INTEGER,
-            references: {
-                model: User,
-                key: 'id'
-            }
+            type: dataTypes.INTEGER
         },
         id_prod: {
-            type: dataTypes.INTEGER,
-            references: {
-                model: Product,
-                key: 'id'
-            }
+            type: dataTypes.INTEGER
         },
     };
     let config = {
@@ -33,8 +25,17 @@ module.exports = (sequelize, dataTypes) => {
     const Carrito = sequelize.define(alias, cols, config);
 
     // FOREIGN KEY
-    Carrito.belongsTo(User, { foreignKey: 'id_user', as: 'Users' });
-    Carrito.belongsTo(Product, { foreignKey: 'id_prod', as: 'Products' });
+    Carrito.associate = function(models) {
+        Carrito.hasMany(models.User, {
+            as: "carrito_user",
+            foreignKey: "id_user"
+        })
+        Carrito.hasMany(models.Product, {
+            as: "carrito_prod",
+            foreignKey: "id_prod"
+        })
+    }
+
 
     return Carrito;
 }

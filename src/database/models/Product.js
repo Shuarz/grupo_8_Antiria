@@ -1,10 +1,5 @@
-//IMPORTAMOS LAS TABLAS PARA LAS FOREIGN KEY
-const User = require('./User');
-const Marca = require('./Marca');
-const Categoria = require('./Categoria');
-
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Products';
+    let alias = 'Product';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -22,24 +17,24 @@ module.exports = (sequelize, dataTypes) => {
         },
         id_user: {
             type: dataTypes.INTEGER,
-            references: {
-                model: User,
-                key: 'id'
-            }
+            // references: {
+            //     model: User,
+            //     key: 'id'
+            // }
         },
         id_marca: {
             type: dataTypes.INTEGER,
-            references: {
-                model: Marca,
-                key: 'id'
-            }
+            // references: {
+            //     model: Marca,
+            //     key: 'id'
+            // }
         },
         id_categoria: {
             type: dataTypes.INTEGER,
-            references: {
-                model: Categoria,
-                key: 'id'
-            }
+            // references: {
+            //     model: Categoria,
+            //     key: 'id'
+            // }
         },
         imagen_prod: {
             type: dataTypes.STRING,
@@ -53,9 +48,20 @@ module.exports = (sequelize, dataTypes) => {
     const Product = sequelize.define(alias, cols, config);
 
     // FOREIGN KEY
-    Product.belongsTo(User, { foreignKey: 'id_user', as: 'Users' });
-    Product.belongsTo(Marca, { foreignKey: 'id_marca', as: 'Marcas' });
-    Product.belongsTo(Categoria, { foreignKey: 'id_categoria', as: 'Categorias' });
+    Product.associate = function(models) {
+        Product.belongsTo(models.User, {
+            as: "user",
+            foreignKey: "id_user"
+        })
+        Product.belongsTo(models.Marca, {
+            as: "marca",
+            foreignKey: "id_marca"
+        })
+        Product.belongsTo(models.Categoria, {
+            as: "categoria",
+            foreignKey: "id_categoria"
+        })
+    }
 
     return Product;
 };

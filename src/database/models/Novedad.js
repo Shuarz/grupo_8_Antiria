@@ -1,8 +1,5 @@
-//IMPORTAMOS LAS TABLAS PARA LAS FOREIGN KEY
-const Product = require('./Product');
-
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Novedades';
+    let alias = 'Novedad';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -10,11 +7,7 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
         },
         id_prod: {
-            type: dataTypes.INTEGER,
-            references: {
-                model: Product,
-                key: 'id'
-            }
+            type: dataTypes.INTEGER
         },
     };
     let config = {
@@ -25,7 +18,12 @@ module.exports = (sequelize, dataTypes) => {
     const Novedad = sequelize.define(alias, cols, config);
 
     // FOREIGN KEY
-    Novedad.belongsTo(Product, { foreignKey: 'id_prod', as: 'Products' });
+    Novedad.associate = function(models) {
+        Novedad.belongsTo(models.Product, {
+            as: "novedad",
+            foreignKey: "id_prod"
+        })
+    }
 
     return Novedad;
 }
