@@ -98,10 +98,13 @@ module.exports = {
         });
     },
 
-    list: (req, res) => {
-        let vendedorId = parseInt(req.params.idUser);
-        const productsUser = Product.findByFildFilter('vendedor', vendedorId);
-        return res.render("./products/listadoProducto", { productsUser: productsUser });
+    list: async(req, res) => {
+        try {
+            const product = await db.Product.findAll()
+            return res.render ("./products/listadoProducto",{productsUser:product})
+        } catch (error) {
+            console.log (error)
+        }
     },
 
     delete: (req, res) => {

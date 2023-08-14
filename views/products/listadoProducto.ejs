@@ -21,11 +21,11 @@
                         <% productsUser.forEach ((row)=> { %>
                             <article>
                                 <div class="imagen-detalle-prod">
-                                    <img src="/img/products/<%= row.image %>" alt="">
+                                    <img src="/img/products/<%= row.imagen_prod %>" alt="">
                                 </div>
                                 <div class="descripcion_search_prod2">
-                                    <h3><%= row.nombreProducto %></h3>
-                                    <h4 class="green">$<%= row.precioProducto.toLocaleString('es-ES'); %></h4>
+                                    <h3><%= row.nombre %></h3>
+                                    <h4 class="green">$<%= row.precio.toLocaleString('es-ES'); %></h4>
                                     <div class="eliminar-edit">
                                         <form method="POST" action="">
                                             <a type="submit" class="eliminar" id="product-delete" href="/listadoProducto/<%= locals.userLogged.id %>/delete/<%= row.id %>?_method=DELETE" onclick="return confirm('¿Realmente desea eliminar este producto?')"><i class="fa-sharp fa-solid fa-trash"></i></a>
