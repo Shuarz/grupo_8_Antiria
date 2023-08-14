@@ -14,24 +14,24 @@
                 <div class="detalle-prod-main">
                     <div class="imagenes-web">
                         <div class="imagen-del-producto">
-                            <img class="foto-producto" src="/img/products/<%= prodUD.image %>" alt="foto-de-producto">
+                            <img class="foto-producto" src="/img/products/<%= prodUD.imagen_prod %>" alt="foto-de-producto">
                         </div>
                         <div class="carousel">
-                            <div class="item"><img src="/img/products/<%= prodUD.image %>"></div>
-                            <div class="item"><img src="/img/products/<%= prodUD.image %>"></div>
-                            <div class="item"><img src="/img/products/<%= prodUD.image %>"></div>
-                            <div class="item"><img src="/img/products/<%= prodUD.image %>"></div>
+                            <div class="item"><img src="/img/products/<%= prodUD.imagen_prod %>"></div>
+                            <div class="item"><img src="/img/products/<%= prodUD.imagen_prod %>"></div>
+                            <div class="item"><img src="/img/products/<%= prodUD.imagen_prod %>"></div>
+                            <div class="item"><img src="/img/products/<%= prodUD.imagen_prod %>"></div>
 
                         </div>
                     </div>
                     <div class="nombre-precio">
 
                         <h3>
-                            <%= prodUD.nombreProducto %>
+                            <%= prodUD.nombre %>
                         </h3>
 
                         <h4>
-                            $<%= prodUD.precioProducto.toLocaleString('es-ES'); %>
+                            $<%= prodUD.precio.toLocaleString('es-ES'); %>
                         </h4>
                         <% if (locals.isLogged) { %>
                             <form action="/productDetail/<%= prodUD.id %>/<%= locals.userLogged.id %>" method="POST">
@@ -51,11 +51,11 @@
                 <hr/>
 
                 <h4>
-                    <%= prodUD.nombreProducto %>
+                    <%= prodUD.nombre %>
                 </h4>
 
                 <h5>
-                    <%= prodUD.descripcionGeneral %>
+                    <%= prodUD.descripcion %>
                 </h5>
 
             </div>

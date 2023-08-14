@@ -14,34 +14,72 @@ module.exports = {
                 errors: resultValidation.mapped()
             });
         }
+        let categoria
+        switch (req.body.categoriaProducto) {
+            case "Arte":
+              categoria = 1
+              break;
+            case "Reloj":
+              categoria = 2
+              break;
+            case "Reliquia":
+              categoria = 3
+              break;
+            case "Mueble":
+              categoria = 4
+              break;
+            case "Joyeria":
+              categoria = 5
+              break;
+            case "Musica":
+              categoria = 6
+              break;
+            default:
+              categoria = 7;
+        }
 
-        let prodToCreate = {
-            ...req.body,
-            precioProducto: parseFloat(req.body.precioProducto),
-            image: req.file.filename,
-            vendedor: parseInt(req.params.idUser)
-        };
-        let newProduct = Product.create(prodToCreate);
+        let marca
+        switch (req.body.marca) {
+            case "Mercedes Benz":
+                marca = 1
+              break;
+            case "Rolex":
+                marca = 2
+              break;
+            case "Sony":
+                marca = 3
+              break;
+            case "Louis Vuitton":
+                marca = 4
+              break;
+            case "Nintendo":
+                marca = 5
+              break;
+            default:
+                marca = 6;
+        }
 
-        let userToUpdate = User.findByField('id', parseInt(req.params.idUser));
-        let productIdToAdd = newProduct.id;
-
-        User.addToProduct(userToUpdate.id, productIdToAdd);
+        db.Products.create({
+            nombre: req.body.nombreProducto,
+            descripcion: req.body.nombreProducto,
+            precio: parseFloat(req.body.precioProducto),
+            id_user: req.params.idUser,
+            id_marca: marca,
+            id_categoria: categoria,
+            imagen: req.file.filename
+        });
 
         res.render('./products/createProduct');
     },
 
     prodDetail: (req, res) => {
-        let productId = parseInt(req.params.idProd);
-        let prodUD = Product.findByField('id', productId);
-        return res.render("./products/detalleProducto", { prodUD: prodUD });
+        db.Product.findByPk(req.params.idProd)
+            .then(function (prodUD) {
+                res.render("./products/detalleProducto", { prodUD: prodUD });
+            })
     },
 
     addToCartUser: (req, res) => {
-        let userId = req.params.idUser;
-        let productId = req.params.idProd;
-        User.addToCart(userId, productId);
-
         res.redirect('/carrito/' + req.params.idUser);
     },
 
