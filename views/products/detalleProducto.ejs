@@ -34,7 +34,7 @@
                             $<%= prodUD.precio.toLocaleString('es-ES'); %>
                         </h4>
                         <% if (locals.isLogged) { %>
-                            <form action="/productDetail/<%= prodUD.id %>/<%= locals.userLogged.id %>" method="POST">
+                            <form action="">
                                 <button class="submitCart" type="submit">Agregar al carrito</button>
                             </form>
                         <% } else { %>

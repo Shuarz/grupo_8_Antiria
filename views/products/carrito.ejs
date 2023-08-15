@@ -18,35 +18,29 @@
                 </li>
             </ul>
             <section class="main-cart">
-                <% if (cart.length===0) { %>
-                    <h4 class="notfound-search">Carrito vacio 🫨</h4>
-                <% } else { %>
-                    <% cart.forEach ((row)=> { %>
-                        <article>
-                            <div class="imagen-detalle-prod">
-                                <img src="/img/products/<%= row.image %>" alt="">
-                            </div>
-                            <div class="descripcion_search_prod2">
-                                <h3><%= row.nombreProducto %></h3>
-                                <h4 class="green">$<%= row.precioProducto.toLocaleString('es-ES'); %></h4>
-                                <div class="eliminar-edit">
-                                    <form method="POST" action="">
-                                        <a type="submit" class="eliminar" id="product-delete" href="/carrito/<%= locals.userLogged.id %>/<%= row.id %>?_method=DELETE" onclick="return confirm('¿Realmente desea eliminar este producto?')">
-                                            <i class="fa-sharp fa-solid fa-trash"></i>
-                                        </a>
-                                    </form>
-                                </div>
-                            </div>
-                        </article>
-                        <hr>
-                    <% }) %>
-                    <div class="totalCart">
-                        <h3 class="subtotal subtotal2">SubTotal: <%= subtotal.toLocaleString('es-ES') %></h3>
-                        <h3 class="subtotal">Envio: $ 1.500</h3>
-                        <h2 class="total green">Total: <%= precio.toLocaleString('es-ES') %></h2>
-                        <button class="realizar-compra">Realizar compra</button>
+                <article>
+                    <div class="imagen-detalle-prod">
+                        <img src="/img/products/product-1690172318207.jpg" alt="">
                     </div>
-                <% } %>
+                    <div class="descripcion_search_prod2">
+                        <h3>Retro NES AV/h3>
+                        <h4 class="green">$250.000</h4>
+                        <div class="eliminar-edit">
+                            <form action="">
+                                <a type="submit" class="eliminar" id="product-delete" href="#" onclick="return confirm('¿Realmente desea eliminar este producto?')">
+                                    <i class="fa-sharp fa-solid fa-trash"></i>
+                                </a>
+                            </form>
+                        </div>
+                    </div>
+                </article>
+                <hr>
+                <div class="totalCart">
+                    <h3 class="subtotal subtotal2">SubTotal: $250.000</h3>
+                    <h3 class="subtotal">Envio: $ 1.500</h3>
+                    <h2 class="total green">Total: $251.500</h2>
+                    <button class="realizar-compra">Realizar compra</button>
+                </div>
             </section>
         </main>
 

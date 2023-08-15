@@ -59,39 +59,57 @@ module.exports = {
                 marca = 6;
         }
 
-        db.Products.create({
+        // db.Product.create({
+        //     nombre: req.body.nombreProducto,
+        //     descripcion: req.body.nombreProducto,
+        //     precio: parseFloat(req.body.precioProducto),
+        //     id_user: req.params.idUser,
+        //     id_marca: marca,
+        //     id_categoria: categoria,
+        //     imagen: req.file.filename
+        // });
+
+        db.Product.create({
             nombre: req.body.nombreProducto,
             descripcion: req.body.nombreProducto,
             precio: parseFloat(req.body.precioProducto),
             id_user: req.params.idUser,
             id_marca: marca,
             id_categoria: categoria,
-            imagen: req.file.filename
+            imagen_prod: req.file.filename
+        }).then(product => {
+            if(req.body.oferta == "True"){
+                db.Oferta.create({
+                    id_prod: product.id
+                }).then(() => {
+                    res.render('./products/createProduct');
+                });
+            } else{
+                res.render('./products/createProduct');
+            }
         });
-
-        res.render('./products/createProduct');
     },
 
     prodDetail: (req, res) => {
         db.Product.findByPk(req.params.idProd)
             .then(function (prodUD) {
-                res.render("./products/detalleProducto", { prodUD: prodUD });
+                if (prodUD){
+                    res.render("./products/detalleProducto", { prodUD: prodUD });
+                } else{
+                    res.redirect('/')
+                }
             })
     },
 
     cart: (req, res) => {
-        let userId = parseInt(req.params.idUser);
-        let prodUser = User.findByField('id', userId);
+        // let userId = parseInt(req.params.idUser);
+        // let prodUser = User.findByField('id', userId);
 
-        const cartProductIds = prodUser.cart.map(productId => parseInt(productId));
-        const cartProducts = cartProductIds.map(productId => Product.findByField('id', productId));
-        const totalPrice = cartProducts.reduce((total, product) => total + parseFloat(product.precioProducto), 0);
-        const total = totalPrice + 1500;
-        return res.render('./products/carrito', {
-            cart: cartProducts,
-            precio: total,
-            subtotal: totalPrice
-        });
+        // const cartProductIds = prodUser.cart.map(productId => parseInt(productId));
+        // const cartProducts = cartProductIds.map(productId => Product.findByField('id', productId));
+        // const totalPrice = cartProducts.reduce((total, product) => total + parseFloat(product.precioProducto), 0);
+        // const total = totalPrice + 1500;
+        return res.render('./products/carrito')
     },
 
     list: async(req, res) => {
