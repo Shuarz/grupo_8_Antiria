@@ -9,15 +9,15 @@
 
             <main class="vender-main">
                 <section class="vender-box">
-                    <form action="/listadoProducto/<%= locals.userLogged.id %>/edicionProducto/<%= idProd %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <form action="/listadoProducto/<%= locals.userLogged.id %>/edicionProducto/<%= productsUser.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                         <h2 class="title , opciones , title-vender">Edita tu producto</h2>
-                        <h2 class="marron">"<%= nombre %>"</h2>
+                        <h2 class="marron">"<%= productsUser.nombre %>"</h2>
                         <div class="input-box , opciones ">
-                            <input name="nombreProducto" type="text" value="<%= nombre %>" required>
+                            <input name="nombreProducto" type="text" value="<%= productsUser.nombre %>" required>
                             <label>Nombre del producto</label>
                         </div>
                         <div class="input-box , opciones ">
-                            <input name="precioProducto" type="number" value="<%= precio %>" required>
+                            <input name="precioProducto" type="number" value="<%= productsUser.precio %>" required>
                             <label class="nombre_precio">Precio del producto</label>
                         </div>
                         <div class="categoria-vender ">
@@ -25,7 +25,7 @@
                             <article class="botonera , opciones">
                                 <select name="categoriaProducto" class="opciones-botonera" required>
                                     <option selected disabled class="opcion">Categorias</option>
-                                    <option value="<%= categoria %>" class="opcion" selected><%= categoria %></option>
+                                    <option value="<%= categoria.nombre %>" class="opcion" selected><%= categoria.nombre %></option>
                                     <option value="joyeria" class="opcion">Joyeria</option>
                                     <option value="Reliquia" class="opcion">Reliquia</option>
                                     <option value="Mueble" class="opcion">Mueble</option>
@@ -42,7 +42,7 @@
                             <article class="botonera , opciones">
                                 <select name="marca" class="opciones-botonera" required>
                                     <option selected disabled class="opcion">Marcas</option>
-                                    <option value="<%= marca %>" class="opcion" selected><%= marca %></option>
+                                    <option value="<%= marca.nombre %>" class="opcion" selected><%= marca.nombre %></option>
                                     <option value="Sony" class="opcion">Sony</option>
                                     <option value="Rolex" class="opcion">Rolex</option>
                                     <option value="Louis Vuitton" class="opcion">Louis Vuitton</option>
@@ -57,7 +57,7 @@
 
 
                         </div>
-                        <input type="text" name="descripcionGeneral" class="myTextarea , opciones" value="<%= descGeneral %>">
+                        <input type="text" name="descripcionGeneral" class="myTextarea , opciones" value="<%= productsUser.descripcion %>">
                         <div>
                             <label class="opciones">Subir imagen del producto</label>
 

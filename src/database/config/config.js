@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": null,
+    "password": '44110',
     "database": "antiria_db",
     "host": "127.0.0.1",
     "dialect": "mysql",

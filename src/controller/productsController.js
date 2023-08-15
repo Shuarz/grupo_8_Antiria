@@ -17,44 +17,44 @@ module.exports = {
         let categoria
         switch (req.body.categoriaProducto) {
             case "Arte":
-              categoria = 1
-              break;
+                categoria = 1
+                break;
             case "Reloj":
-              categoria = 2
-              break;
+                categoria = 2
+                break;
             case "Reliquia":
-              categoria = 3
-              break;
+                categoria = 3
+                break;
             case "Mueble":
-              categoria = 4
-              break;
+                categoria = 4
+                break;
             case "Joyeria":
-              categoria = 5
-              break;
+                categoria = 5
+                break;
             case "Musica":
-              categoria = 6
-              break;
+                categoria = 6
+                break;
             default:
-              categoria = 7;
+                categoria = 7;
         }
 
         let marca
         switch (req.body.marca) {
             case "Mercedes Benz":
                 marca = 1
-              break;
+                break;
             case "Rolex":
                 marca = 2
-              break;
+                break;
             case "Sony":
                 marca = 3
-              break;
+                break;
             case "Louis Vuitton":
                 marca = 4
-              break;
+                break;
             case "Nintendo":
                 marca = 5
-              break;
+                break;
             default:
                 marca = 6;
         }
@@ -78,13 +78,13 @@ module.exports = {
             id_categoria: categoria,
             imagen_prod: req.file.filename
         }).then(product => {
-            if(req.body.oferta == "True"){
+            if (req.body.oferta == "True") {
                 db.Oferta.create({
                     id_prod: product.id
                 }).then(() => {
                     res.render('./products/createProduct');
                 });
-            } else{
+            } else {
                 res.render('./products/createProduct');
             }
         });
@@ -93,9 +93,9 @@ module.exports = {
     prodDetail: (req, res) => {
         db.Product.findByPk(req.params.idProd)
             .then(function (prodUD) {
-                if (prodUD){
+                if (prodUD) {
                     res.render("./products/detalleProducto", { prodUD: prodUD });
-                } else{
+                } else {
                     res.redirect('/')
                 }
             })
@@ -112,12 +112,12 @@ module.exports = {
         return res.render('./products/carrito')
     },
 
-    list: async(req, res) => {
+    list: async (req, res) => {
         try {
             const product = await db.Product.findAll()
-            return res.render ("./products/listadoProducto",{productsUser:product})
+            return res.render("./products/listadoProducto", { productsUser: product })
         } catch (error) {
-            console.log (error)
+            console.log(error)
         }
     },
 
@@ -129,22 +129,50 @@ module.exports = {
         res.redirect('/listadoProducto/' + req.params.idUser);
     },
 
-    edit: (req, res) => {
-        let productId = parseInt(req.params.idProd);
-        let prodUser = Product.findByField('id', productId);
-        return res.render('./products/edicionProducto', {
-            "idProd": prodUser.id,
-            "nombre": prodUser.nombreProducto,
-            "precio": prodUser.precioProducto,
-            "categoria": prodUser.categoriaProducto,
-            "marca": prodUser.marca,
-            "descGeneral": prodUser.descripcionGeneral,
-        });
+    edit: async (req, res) => {
+        try {
+            const productoEcontrado = await db.Product.findByPk(req.params.idProd)
+            const categorias = await db.Categoria.findByPk(productoEcontrado.id_categoria)
+            const marca = await db.Marca.findByPk(productoEcontrado.id_marca)
+
+
+            //throw new error('hubo un error')
+            return res.render('./products/edicionProducto', {
+                productsUser: productoEcontrado,
+                categoria: categorias, marca: marca
+            })
+
+        } catch (error) {
+            console.log(error)
+        }
     },
 
     editProcess: (req, res) => {
-        Product.edit(req);
-        res.redirect('/listadoProducto/' + req.params.idUser);
+        db.Product.findByPk(req.params.idProd).then(function (resultado) {
+            if (req.body.nombreProducto == !undefined);
+            if (req.body.precioProducto == !undefined);
+            if (req.body.categoriaProducto == !undefined);
+            if (req.body.marca == !undefined);
+            if (req.body.descripcionGeneral == !undefined);
+            if (req.file );
+
+
+
+        })
+        db.Product.update({
+            nombre:  req.body.nombreProducto,
+            descripcion: req.body.nombreProducto,
+            precio: parseFloat(req.body.precioProducto),
+            id_user: req.params.idUser,
+            id_marca: req.marca,
+            id_categoria: categoria,
+            imagen_prod: req.file.filename
+        }), {
+            where: {
+                id: req.params.idProd
+            }
+        }
+
     },
 
     search: (req, res) => {
