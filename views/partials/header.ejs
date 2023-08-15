@@ -23,23 +23,25 @@
                 </ul>
             </li>
             <% if (locals.isLogged) { %>
-                <li class="categorias-nav3">
-                    <label for="vender" class="link-nav-index">Vender</label>
-                    <input type="checkbox" name="vender" id="vender">
-                    <ul class="categorias3">
-                        <li><a href="/listadoProducto/<%= locals.userLogged.id %>">Tus ventas</a></li>
-                        <li><a href="/listadoProducto/<%= locals.userLogged.id %>/vender">Vender</a></li>
-                    </ul>
-                </li>
+                <% if (locals.userLogged.admin) { %>
+                    <li class="categorias-nav3">
+                        <label for="vender" class="link-nav-index">Publicaciones</label>
+                        <input type="checkbox" name="vender" id="vender">
+                        <ul class="categorias3">
+                            <li><a href="/listadoProducto/<%= locals.userLogged.id %>">Publicaciones</a></li>
+                            <li><a href="/listadoProducto/<%= locals.userLogged.id %>/vender">Vender</a></li>
+                        </ul>
+                    </li>
+                <% } %>
                 <li>
                     <a href="/help" class="link-nav-index">Ayuda</a>
                 </li>
                 <li class="profile-img">
                     <a href="/profile">
                         <div class="contImgProfile">
-                            <img src="/img/user/<%= locals.userLogged.avatar %>" alt="<%= locals.userLogged.name %>">
+                            <img src="/img/user/<%= locals.userLogged.avatar %>" alt="<%= locals.userLogged.nombre %>">
                         </div>
-                        <p>Hola, <%= locals.userLogged.name %></p>
+                        <p>Hola, <%= locals.userLogged.nombre %></p>
                     </a>
                 </li>
                 <li>

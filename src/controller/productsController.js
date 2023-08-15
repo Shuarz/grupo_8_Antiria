@@ -79,10 +79,6 @@ module.exports = {
             })
     },
 
-    addToCartUser: (req, res) => {
-        res.redirect('/carrito/' + req.params.idUser);
-    },
-
     cart: (req, res) => {
         let userId = parseInt(req.params.idUser);
         let prodUser = User.findByField('id', userId);
@@ -113,13 +109,6 @@ module.exports = {
         Product.delete(idProd);
         User.removeFromProduct(idUser, idProd);
         res.redirect('/listadoProducto/' + req.params.idUser);
-    },
-
-    deleteToCart: (req, res) => {
-        const idProd = req.params.idProd;
-        const idUser = req.params.idUser;
-        User.removeFromCart(idUser, idProd);
-        res.redirect('/carrito/' + req.params.idUser);
     },
 
     edit: (req, res) => {

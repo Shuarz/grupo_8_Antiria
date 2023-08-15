@@ -69,7 +69,7 @@ module.exports = {
                     delete userToLogin.password;
                     req.session.userLogged = userToLogin;
                     if (req.body.remember_user) {
-                        res.cookie('userCookie', req.body.usuario, { maxAge: (1000 * 60) * 1 });
+                        res.cookie('userCookie', req.body.mail, { maxAge: (1000 * 60) * 1 });
                     }
                     return res.redirect('/profile');
                 }
@@ -92,7 +92,7 @@ module.exports = {
     },
 
     logout: (req, res) => {
-        res.clearCookie('userCokkie')
+        res.clearCookie('userCookie')
         req.session.destroy();
         return res.redirect('/');
     },

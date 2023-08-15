@@ -634,8 +634,6 @@ nav ul li .link-nav-index~input:checked~.categorias3 {
 
 
 .mini-cat:hover {
-    width: 300px;
-    height: 450px;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.774);
     cursor: pointer;
 

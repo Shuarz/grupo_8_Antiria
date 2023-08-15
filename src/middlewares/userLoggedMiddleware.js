@@ -5,23 +5,27 @@ function userLoggedMiddleware(req, res, next) {
     let userInCookie = req.cookies.userCookie;
 
     if (userInCookie) {
-        db.Users.findOne({
+        db.User.findOne({
             where: {
-                usuario: userInCookie
+                email: userInCookie
             }
         }).then((userFromCookie) => {
             if (userFromCookie) {
                 req.session.userLogged = userFromCookie;
                 res.locals.isLogged = true;
                 res.locals.userLogged = req.session.userLogged;
+                if (res.locals.userLogged.id == 1) {
+                    res.locals.userLogged.admin = 1;
+                }
             }
             next();
         });
 
         return;
+    } else {
+        delete req.session.userLogged;
+        next();
     }
-    req.session.destroy();
-    next();
 }
 
 module.exports = userLoggedMiddleware;

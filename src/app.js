@@ -31,8 +31,8 @@ app.use (session ({
 app.use(cookies());
 
 //user logged
- //const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
- //app.use(userLoggedMiddleware);
+ const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+ app.use(userLoggedMiddleware);
 
 //template engines
 app.set('views', path.join(__dirname, '../views'));
