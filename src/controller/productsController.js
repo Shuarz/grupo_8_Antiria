@@ -122,11 +122,14 @@ module.exports = {
     },
 
     delete: (req, res) => {
-        const idProd = req.params.idProd;
-        const idUser = req.params.idUser;
-        Product.delete(idProd);
-        User.removeFromProduct(idUser, idProd);
-        res.redirect('/listadoProducto/' + req.params.idUser);
+        db.Product.destroy({
+            where: {
+                id: req.params.idProd
+            }
+        }).then(function(resultado){
+            res.redirect("/listadoProducto/"+req.params.idUser)
+        })
+
     },
 
     edit: async (req, res) => {
