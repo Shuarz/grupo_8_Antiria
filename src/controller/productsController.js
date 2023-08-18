@@ -59,16 +59,6 @@ module.exports = {
                 marca = 6;
         }
 
-        // db.Product.create({
-        //     nombre: req.body.nombreProducto,
-        //     descripcion: req.body.nombreProducto,
-        //     precio: parseFloat(req.body.precioProducto),
-        //     id_user: req.params.idUser,
-        //     id_marca: marca,
-        //     id_categoria: categoria,
-        //     imagen: req.file.filename
-        // });
-
         db.Product.create({
             nombre: req.body.nombreProducto,
             descripcion: req.body.nombreProducto,
@@ -127,7 +117,7 @@ module.exports = {
                 id: req.params.idProd
             }
         }).then(function(resultado){
-            res.redirect("/listadoProducto/"+req.params.idUser)
+            res.redirect("/listadoProducto/" + req.params.idUser)
         })
 
     },
@@ -138,8 +128,6 @@ module.exports = {
             const categorias = await db.Categoria.findByPk(productoEcontrado.id_categoria)
             const marca = await db.Marca.findByPk(productoEcontrado.id_marca)
 
-
-            //throw new error('hubo un error')
             return res.render('./products/edicionProducto', {
                 productsUser: productoEcontrado,
                 categoria: categorias, marca: marca
@@ -151,32 +139,132 @@ module.exports = {
     },
 
     editProcess: (req, res) => {
-        db.Product.findByPk(req.params.idProd).then(function (resultado) {
-            if (req.body.nombreProducto == !undefined);
-            if (req.body.precioProducto == !undefined);
-            if (req.body.categoriaProducto == !undefined);
-            if (req.body.marca == !undefined);
-            if (req.body.descripcionGeneral == !undefined);
-            if (req.file );
-
-
-
-        })
-        db.Product.update({
-            nombre:  req.body.nombreProducto,
-            descripcion: req.body.nombreProducto,
-            precio: parseFloat(req.body.precioProducto),
-            id_user: req.params.idUser,
-            id_marca: req.marca,
-            id_categoria: categoria,
-            imagen_prod: req.file.filename
-        }), {
-            where: {
-                id: req.params.idProd
-            }
+        let categoria
+        switch (req.body.categoriaProducto) {
+            case "Arte":
+                categoria = 1
+                break;
+            case "Reloj":
+                categoria = 2
+                break;
+            case "Reliquia":
+                categoria = 3
+                break;
+            case "Mueble":
+                categoria = 4
+                break;
+            case "Joyeria":
+                categoria = 5
+                break;
+            case "Musica":
+                categoria = 6
+                break;
+            default:
+                categoria = 7;
         }
 
-    },
+        let marca
+        switch (req.body.marca) {
+            case "Mercedes Benz":
+                marca = 1
+                break;
+            case "Rolex":
+                marca = 2
+                break;
+            case "Sony":
+                marca = 3
+                break;
+            case "Louis Vuitton":
+                marca = 4
+                break;
+            case "Nintendo":
+                marca = 5
+                break;
+            default:
+                marca = 6;
+        }
+        if (req.file) {
+            db.Product.update(
+                {
+                    nombre: req.body.nombreProducto,
+                    descripcion: req.body.descripcionGeneral,
+                    precio: parseFloat(req.body.precioProducto),
+                    id_user: req.params.idUser,
+                    id_marca: marca,
+                    id_categoria: categoria,
+                    imagen_prod: req.file.filename
+                },
+                {
+                    where: {
+                        id: req.params.idProd
+                    }
+                }
+            ).then((update) => {
+                db.Oferta.findOne({
+                    where: {
+                        id_prod: update.id
+                    }
+                }).then((prod_oferta) => {
+                    if (req.body.oferta !== "True") {
+                        if (prod_oferta) {
+                            db.Oferta.destroy({
+                                where: {
+                                    id_prod: update.id
+                                }
+                            });
+                        }
+                    } else {
+                        if (!prod_oferta) {
+                            db.Oferta.create({
+                                id_prod: update.id
+                            });
+                            res.redirect('/listadoProducto/' + req.params.idUser);
+                        }
+                    }
+                });
+            });
+        } else {
+            db.Product.update(
+                {
+                    nombre: req.body.nombreProducto,
+                    descripcion: req.body.descripcionGeneral,
+                    precio: parseFloat(req.body.precioProducto),
+                    id_user: req.params.idUser,
+                    id_marca: marca,
+                    id_categoria: categoria,
+                },
+                {
+                    where: {
+                        id: req.params.idProd
+                    }
+                }
+            ).then((update) => {
+                db.Oferta.findOne({
+                    where: {
+                        id_prod: update.id
+                    }
+                }).then((prod_oferta) => {
+                    if (req.body.oferta !== "True") {
+                        if (prod_oferta) {
+                            db.Oferta.destroy({
+                                where: {
+                                    id_prod: update.id
+                                }
+                            });
+                        }
+                    } else {
+                        if (!prod_oferta) {
+                            db.Oferta.create({
+                                id_prod: update.id
+                            });
+                            res.redirect('/listadoProducto/' + req.params.idUser);
+                        }
+                    }
+                });
+            });
+        }
+    }
+    ,
 
     search: (req, res) => {
         const searchQuery = req.query.search;

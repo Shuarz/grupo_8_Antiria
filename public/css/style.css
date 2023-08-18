@@ -499,10 +499,11 @@ blockquote {
 .categorias {
     position: absolute;
     list-style: none;
+    top: 60px;
     background-color: #726a52;
     padding: 0.5rem;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgb(56, 56, 56);
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0 0 20px rgba(56, 56, 56, 0.541);
     transition: 0.3s ease-in-out;
     display: none;
 }
@@ -516,6 +517,11 @@ blockquote {
     color: #f1f1f1b7;
     font-weight: bold;
     transition: 0.2s;
+}
+
+.categorias-nav,
+.categorias-nav3{
+    position: relative;
 }
 
 .categorias-nav .categorias li a:hover {
@@ -543,11 +549,12 @@ nav ul li .link-nav-index~input:checked~.categorias3 {
 
 .categorias3 {
     position: absolute;
+    top: 60px;
     list-style: none;
     background-color: #726a52;
     padding: 0.5rem;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgb(56, 56, 56);
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0 0 20px rgba(56, 56, 56, 0.541);
     transition: 0.3s ease-in-out;
     display: none;
 }
@@ -730,30 +737,8 @@ nav ul li .link-nav-index~input:checked~.categorias3 {
     transform: perspective(500px) rotateY(360deg)
 }
 
-.wave-section {
-    background-color: #FAF2D7;
-    margin-bottom: -10px;
-
-}
-
-.contacus-h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-    margin-top: 3rem;
-
-
-}
-
-.contacus-h3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-}
-
 .content{
+    margin-top: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -762,7 +747,9 @@ nav ul li .link-nav-index~input:checked~.categorias3 {
     margin-right: auto;
     padding: 1.5em;
     background-color: #1a1a1a;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.781);
     color: #FAF2D7;
+    padding-top: 3rem;
 }
 
 .content h3{
@@ -773,9 +760,8 @@ nav ul li .link-nav-index~input:checked~.categorias3 {
 
 .contact-wrapper{
     height: 60%;
-    width: 80%;
+    width: 60%;
     border-radius: 5px;
-    
 }
 
 .contact-wrapper > * {
@@ -799,6 +785,7 @@ nav ul li .link-nav-index~input:checked~.categorias3 {
 
 
 
+
 .contact-form form button,
 .contact-form form input,
 .contact-form form textarea{
@@ -807,6 +794,7 @@ nav ul li .link-nav-index~input:checked~.categorias3 {
     border: none;
     background: none;
     border-bottom: 2px solid #faf2d7;
+    border-radius: 10px;
     outline: none;
     color: #FAF2D7;
 }
@@ -822,11 +810,11 @@ nav ul li .link-nav-index~input:checked~.categorias3 {
 
 .contact-form form button:hover,
 .contact-form form button:focus{
-    transition: 0.4s all ease-in-out;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
     background-color: #FAF2D7;
     color: #000000;
 }
-
 
 
 
@@ -2361,14 +2349,6 @@ body .cuerpo_pagina {
         width: 90%;
     }
 
-    .contacus-h2 {
-        font-size: 35px;
-    }
-
-    .contacus-h3 {
-        font-size: 30px;
-        margin-bottom: -50px;
-    }
 
     .imagen-detalle-prod {
         width: 200px;
@@ -2402,6 +2382,10 @@ body .cuerpo_pagina {
     .main-search2 h5,
     .main-cart h5  {
         font-size: 15px;
+    }
+
+    .content h3{
+        font-size: 30px;
     }
 
 
@@ -2460,11 +2444,6 @@ body .cuerpo_pagina {
         padding: 80px;
         width: 50%;
         height: 100%;
-    }
-
-
-    .contacus-h3 {
-        margin-bottom: -100px;
     }
 
     .profile div .img-profile{

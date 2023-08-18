@@ -1,0 +1,3 @@
+admin:
+    shrek@gmail.com
+    vedia420
