@@ -41,7 +41,7 @@ blockquote {
     position: fixed;
     width: 99%;
     height: 80px;
-    background: #faf2d7c2;
+    background: #faf2d7;
     backdrop-filter: blur(10px);
     align-items: center;
     justify-content: space-between;
@@ -500,12 +500,13 @@ blockquote {
     position: absolute;
     list-style: none;
     top: 60px;
-    background-color: #726a52;
+    background: #faf2d7;
     padding: 0.5rem;
     border-radius: 0px 0px 20px 20px;
-    box-shadow: 0 0 20px rgba(56, 56, 56, 0.541);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
     transition: 0.3s ease-in-out;
     display: none;
+    z-index: -1;
 }
 
 .categorias li {
@@ -514,7 +515,7 @@ blockquote {
 }
 
 .categorias li a {
-    color: #f1f1f1b7;
+    color: #1c232ac9;
     font-weight: bold;
     transition: 0.2s;
 }
@@ -525,7 +526,7 @@ blockquote {
 }
 
 .categorias-nav .categorias li a:hover {
-    color: #ffffff;
+    color: #1C232A;
 }
 
 nav ul li .link-nav-index {
@@ -549,14 +550,15 @@ nav ul li .link-nav-index~input:checked~.categorias3 {
 
 .categorias3 {
     position: absolute;
-    top: 60px;
     list-style: none;
-    background-color: #726a52;
+    top: 60px;
+    background: #faf2d7;
     padding: 0.5rem;
     border-radius: 0px 0px 20px 20px;
-    box-shadow: 0 0 20px rgba(56, 56, 56, 0.541);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
     transition: 0.3s ease-in-out;
     display: none;
+    z-index: -1;
 }
 
 .categorias3 li {
@@ -565,13 +567,13 @@ nav ul li .link-nav-index~input:checked~.categorias3 {
 }
 
 .categorias3 li a {
-    color: #f1f1f1b7;
+    color: #1c232ac9;
     font-weight: bold;
     transition: 0.2s;
 }
 
 .categorias-nav3 .categorias3 li a:hover {
-    color: #ffffff;
+    color: #1C232A;
 }
 
 
