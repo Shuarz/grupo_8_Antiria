@@ -8,6 +8,9 @@ Sprint 3:
 En el sprint numero 3, nos centramos principalmente en decidir las tareas a tomar, si habia algun tema que nos costaba nos centrabamos en resolver ese conflicto para poder avanzar. En este sprint, pusimos en practica nuestro trabajo en equipo, dos personas tomaban una tarea a realizar para poder ayudarse mutuamente. Ademas, cada commit, cada retoque estetico se avisaba para que de esta forma poder trabajar organizada y comodamente. Nos juntamos para ver nuestros avances cada 3 dias. Tres dias antes de la entrega, nos decidimos juntar para ver que es lo que falta y nos metemos todos los integrantes del grupo a desarrollar esos temas para que de esta forma poder finalizar y no terminar justos.
 
 
-sprint 4:
+Sprint 4:
 En el sprint 4, fue el primer sprint en el que sentimos reales complicaciones a la hora de organizarnos dado que las tareas asignadas se relacionaban cada una entre si y en muchos casos habia que coordinar cumplir alguna para seguir con la otra , esto nos atrasaba el hecho de tener que poder conectarnos todos a la vez para diagramar y resolver en conjunto los conflictos presentados  , no obstante supimos sortear de manera efectiva este inconveniente y logramos avanzar adecuadamente cumpliendo con cada uno de los objetivos apuntalados , reforzamos el compromiso como grupo al ver que nos podiamos apoyar en el otro a la hora de no entender ciertos temas y enriquesimos nuestros conocimientos juntos peldaño a peldaño.
 En materia de tiempo estuvimos holgados y los contenidos a aplicar fueron excelsos , interesantes y muy amenos. 
+
+Sprint 5:
+En el spint 5, nos siguió presentando dificultades en ciertas tareas, ya que no sabíamos como avanzar, pero gracias al trabajo en grupo pudimos resolver los obstáculos y cumplir en tiempo y forma los objetivos pedidos, nos enfocamos en los puntos importantes y los opcionales lo dejamos para el final, ya a esta altura tenemos más experiencia que hace unos meses y de a poco le vamos agarrando la mano al manejo de los sprints.
