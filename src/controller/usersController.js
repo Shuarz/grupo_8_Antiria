@@ -68,7 +68,6 @@ module.exports = {
                 if (isOkPassword) {
                     delete userToLogin.password;
                     req.session.userLogged = userToLogin;
-                    console.log('ESTO SE GUARDA EN EL USER LOGGED ' + req.session.userLogged.email)
                     if (req.body.remember_user) {
                         res.cookie('userCookie', req.body.mail, { maxAge: (1000 * 60) * 10 });
                     }

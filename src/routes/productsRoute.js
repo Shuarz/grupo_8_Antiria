@@ -26,6 +26,7 @@ router.get("/productDetail/:idProd", Controller.prodDetail);
 
 //carrito
 router.get("/carrito/:idUser", authMiddleware, Controller.cart);
+router.post("/carrito/finalizar", Controller.procesoCompra);
 
 //list prod
 router.get("/listadoProducto/:idUser", authMiddleware, adminMiddleware, Controller.list);

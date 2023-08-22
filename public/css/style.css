@@ -515,7 +515,7 @@ blockquote {
 }
 
 .categorias li a {
-    color: #1c232ac9;
+    color: #1c232a91;
     font-weight: bold;
     transition: 0.2s;
 }
@@ -567,7 +567,7 @@ nav ul li .link-nav-index~input:checked~.categorias3 {
 }
 
 .categorias3 li a {
-    color: #1c232ac9;
+    color: #1c232a91;
     font-weight: bold;
     transition: 0.2s;
 }

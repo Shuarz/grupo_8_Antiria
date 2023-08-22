@@ -92,13 +92,6 @@ module.exports = {
     },
 
     cart: (req, res) => {
-        // let userId = parseInt(req.params.idUser);
-        // let prodUser = User.findByField('id', userId);
-
-        // const cartProductIds = prodUser.cart.map(productId => parseInt(productId));
-        // const cartProducts = cartProductIds.map(productId => Product.findByField('id', productId));
-        // const totalPrice = cartProducts.reduce((total, product) => total + parseFloat(product.precioProducto), 0);
-        // const total = totalPrice + 1500;
         return res.render('./products/carrito')
     },
 
@@ -199,29 +192,8 @@ module.exports = {
                         id: req.params.idProd
                     }
                 }
-            ).then((update) => {
-                db.Oferta.findOne({
-                    where: {
-                        id_prod: update.id
-                    }
-                }).then((prod_oferta) => {
-                    if (req.body.oferta !== "True") {
-                        if (prod_oferta) {
-                            db.Oferta.destroy({
-                                where: {
-                                    id_prod: update.id
-                                }
-                            });
-                        }
-                    } else {
-                        if (!prod_oferta) {
-                            db.Oferta.create({
-                                id_prod: update.id
-                            });
-                            res.redirect('/listadoProducto/' + req.params.idUser);
-                        }
-                    }
-                });
+            ).then((prod) => {
+                console.log('EL PRODUCTO EDITADO: ' + prod);
             });
         } else {
             db.Product.update(
@@ -238,31 +210,31 @@ module.exports = {
                         id: req.params.idProd
                     }
                 }
-            ).then((update) => {
-                db.Oferta.findOne({
-                    where: {
-                        id_prod: update.id
-                    }
-                }).then((prod_oferta) => {
-                    if (req.body.oferta !== "True") {
-                        if (prod_oferta) {
-                            db.Oferta.destroy({
-                                where: {
-                                    id_prod: update.id
-                                }
-                            });
-                        }
-                    } else {
-                        if (!prod_oferta) {
-                            db.Oferta.create({
-                                id_prod: update.id
-                            });
-                            res.redirect('/listadoProducto/' + req.params.idUser);
-                        }
-                    }
-                });
-            });
+            );
         }
+        db.Oferta.findOne({
+            where: {
+                id_prod: req.params.idProd
+            }
+        }).then((prod_oferta) => {
+            if (prod_oferta){
+                if (req.body.oferta !== "True") {
+                    db.Oferta.destroy({
+                        where: {
+                            id_prod: req.params.idProd
+                        }
+                    })
+                }
+            } else{
+                console.log("ENTRE AL ELSE DE OFERTA: " + req.body.oferta)
+                if (req.body.oferta === "True"){
+                    db.Oferta.create({
+                        id_prod: req.params.idProd
+                    })
+                }
+            }
+            res.redirect('/listadoProducto/' + req.params.idUser);
+        })
     }
     ,
 
@@ -290,19 +262,15 @@ module.exports = {
         }).then((products) => {
             res.render('./products/search', { search: products });
         });
-
-
-        // db.Product.findAll({
-        //     where: {
-        //         [db.Sequelize.Op.or]: [
-        //             db.Sequelize.where(db.Sequelize.fn('LOWER', db.Sequelize.col('nombre')), 'LIKE', `%${searchQuery.toLowerCase()}%`),
-        //             db.Sequelize.where(db.Sequelize.fn('LOWER', db.Sequelize.col('id_categoria')), 'LIKE', `%${searchQuery.toLowerCase()}%`),
-        //             db.Sequelize.where(db.Sequelize.fn('LOWER', db.Sequelize.col('descripcion')), 'LIKE', `%${searchQuery.toLowerCase()}%`)
-        //         ]
-        //     }
-        // }).then((product) => {
-        //         res.render('./product/search', { search: product });
-        //     })
     },
+    procesoCompra: (req, res) => {
+        let detalleCompra = {
+            id_user: req.session.userLogged.id,
+            total: req.body.total,
+            productos: req.body.productos,
+            fecha: new Date()
+        }
+        res.json(detalleCompra)
+    }
 
 };
