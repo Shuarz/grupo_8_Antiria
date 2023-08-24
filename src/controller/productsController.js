@@ -105,14 +105,33 @@ module.exports = {
     },
 
     delete: (req, res) => {
-        db.Product.destroy({
-            where: {
-                id: req.params.idProd
-            }
-        }).then(function(resultado){
-            res.redirect("/listadoProducto/" + req.params.idUser)
-        })
-
+        db.Oferta
+            .findOne({
+                where: {
+                    id_prod: req.params.idProd
+                }
+            })
+            .then(function(oferta) {
+                if (oferta) {
+                    return db.Oferta.destroy({
+                        where: {
+                            id_prod: req.params.idProd
+                        }
+                    });
+                } else {
+                    return Promise.resolve();
+                }
+            })
+            .then(function() {
+                return db.Product.destroy({
+                    where: {
+                        id: req.params.idProd
+                    }
+                });
+            })
+            .then(function(resultado) {
+                res.redirect("/listadoProducto/" + req.params.idUser);
+            });
     },
 
     edit: async (req, res) => {

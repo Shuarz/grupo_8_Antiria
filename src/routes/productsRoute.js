@@ -30,7 +30,7 @@ router.post("/carrito/finalizar", Controller.procesoCompra);
 
 //list prod
 router.get("/listadoProducto/:idUser", authMiddleware, adminMiddleware, Controller.list);
-router.get("/listadoProducto/:idUser/delete/:idProd", authMiddleware, Controller.delete);
+router.delete("/listadoProducto/:idUser/delete/:idProd", authMiddleware, Controller.delete);
 
 //edit prod
 router.get("/listadoProducto/:idUser/edicionProducto/:idProd", authMiddleware, adminMiddleware, Controller.edit);

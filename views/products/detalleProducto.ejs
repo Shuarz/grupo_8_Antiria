@@ -1,73 +1,122 @@
-<%- include('../partials/head', {tituloWeb: 'Antiria - Detalle Producto'}) %>
+<%- include('../partials/head', {tituloWeb: 'Antiria - Detalle Producto' }) %>
 
-<body>
+    <body>
 
-    <!-- HEADER -->
-    <%- include("../partials/header")%>
-    <!-- FIN HEADER -->
+        <!-- HEADER -->
+        <%- include("../partials/header")%>
+            <!-- FIN HEADER -->
 
-    <main class="main-detalle-prod">
-        <div class="main-contenedor-detalle-prod">
-
-
-            <div class="contenedor-producto">
-                <div class="detalle-prod-main">
-                    <div class="imagenes-web">
-                        <div class="imagen-del-producto">
-                            <img class="foto-producto" src="/img/products/<%= prodUD.imagen_prod %>" alt="foto-de-producto">
-                        </div>
+            <main class="contenedorDetalleProd">
+                <article class="contenedorMaestroCarousel">
+                    <div class="container-carousel">
                         <div class="carousel">
-                            <div class="item"><img src="/img/products/<%= prodUD.imagen_prod %>"></div>
-                            <div class="item"><img src="/img/products/<%= prodUD.imagen_prod %>"></div>
-                            <div class="item"><img src="/img/products/<%= prodUD.imagen_prod %>"></div>
-                            <div class="item"><img src="/img/products/<%= prodUD.imagen_prod %>"></div>
-
+                            <input type="radio" name="slides" checked="checked" id="slide-1">
+                            <input type="radio" name="slides" id="slide-2">
+                            <input type="radio" name="slides" id="slide-3">
+                            <input type="radio" name="slides" id="slide-4">
+                            <input type="radio" name="slides" id="slide-5">
+                            <input type="radio" name="slides" id="slide-6">
+                            <ul class="carousel__slides">
+                                <li class="carousel__slide">
+                                    <figure>
+                                        <div>
+                                            <img src="/img/products/<%= prodUD.imagen_prod %>" alt="">
+                                        </div>
+                                    </figure>
+                                </li>
+                                <li class="carousel__slide">
+                                    <figure>
+                                        <div>
+                                            <img src="/img/products/<%= prodUD.imagen_prod %>" alt="">
+                                        </div>
+                                    </figure>
+                                </li>
+                                <li class="carousel__slide">
+                                    <figure>
+                                        <div>
+                                            <img src="/img/products/<%= prodUD.imagen_prod %>" alt="">
+                                        </div>
+                                    </figure>
+                                </li>
+                                <li class="carousel__slide">
+                                    <figure>
+                                        <div>
+                                            <img src="/img/products/<%= prodUD.imagen_prod %>" alt="">
+                                        </div>
+                                    </figure>
+                                </li>
+                                <li class="carousel__slide">
+                                    <figure>
+                                        <div>
+                                            <img src="/img/products/<%= prodUD.imagen_prod %>" alt="">
+                                        </div>
+                                    </figure>
+                                </li>
+                                <li class="carousel__slide">
+                                    <figure>
+                                        <div>
+                                            <img src="/img/products/<%= prodUD.imagen_prod %>" alt="">
+                                        </div>
+                                    </figure>
+                                </li>
+                            </ul>
+                            <ul class="carousel__thumbnails">
+                                <li>
+                                    <label for="slide-1"><img src="/img/products/<%= prodUD.imagen_prod %>"
+                                            alt=""></label>
+                                </li>
+                                <li>
+                                    <label for="slide-2"><img src="/img/products/<%= prodUD.imagen_prod %>"
+                                            alt=""></label>
+                                </li>
+                                <li>
+                                    <label for="slide-3"><img src="/img/products/<%= prodUD.imagen_prod %>"
+                                            alt=""></label>
+                                </li>
+                                <li>
+                                    <label for="slide-4"><img src="/img/products/<%= prodUD.imagen_prod %>"
+                                            alt=""></label>
+                                </li>
+                                <li>
+                                    <label for="slide-5"><img src="/img/products/<%= prodUD.imagen_prod %>"
+                                            alt=""></label>
+                                </li>
+                                <li>
+                                    <label for="slide-6"><img src="/img/products/<%= prodUD.imagen_prod %>"
+                                            alt=""></label>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="nombre-precio">
-
                         <h3>
                             <%= prodUD.nombre %>
                         </h3>
-
                         <h4>
                             $<%= prodUD.precio.toLocaleString('es-ES'); %>
                         </h4>
-                        <% if (locals.isLogged) { %>
-                            <form action="">
-                                <button class="submitCart" type="submit">Agregar al carrito</button>
-                            </form>
-                        <% } else { %>
-                            <form action="/login">
-                                <button class="submitCart" type="submit">Agregar al carrito</button>
-                            </form>
-                        <% } %>
-
+                        <form action="">
+                            <button class="submitCart" type="submit">Agregar al carrito</button>
+                        </form>
                     </div>
+                </article>
+                <div class="descripcion-prod">
+                    <h4>Descripción del producto</h4>
+                    <hr />
+                    <h4>
+                        <%= prodUD.nombre %>
+                    </h4>
+                    <h5>
+                        <%= prodUD.descripcion %>
+                    </h5>
+
                 </div>
-            </div>
-            <div class="descripcion-prod">
-                <h4>Descripción del producto</h4>
-                <hr/>
+            </main>
 
-                <h4>
-                    <%= prodUD.nombre %>
-                </h4>
+            <!-- FOOTER -->
+            <%- include("../partials/footer")%>
+                <!-- FIN FOOTER -->
 
-                <h5>
-                    <%= prodUD.descripcion %>
-                </h5>
+    </body>
 
-            </div>
-        </div>
-
-
-    </main>
-
-        <!-- FOOTER -->
-        <%- include("../partials/footer")%>
-            <!-- FIN FOOTER -->
-
-</body>
-
-</html>
+    </html>

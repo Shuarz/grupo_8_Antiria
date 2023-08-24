@@ -9,10 +9,12 @@ const fileupload = require('../middlewares/multerUserMiddleware.js');
 
 //validar
 const validations = require('../middlewares/registerMiddleware.js');
-
 //session / logged / profile
 const guestMiddleware = require('../middlewares/guestMiddleware.js');
 const authMiddleware = require('../middlewares/authMiddleware.js');
+
+//admin middleware
+const adminMiddleware = require('../middlewares/adminMiddleware.js')
 
 //register
 router.get("/registro", guestMiddleware, Controller.register);
@@ -30,5 +32,9 @@ router.get("/logout", Controller.logout);
 
 //help
 router.get("/help", Controller.help);
+
+//list prod
+router.get("/listadoUser", authMiddleware, adminMiddleware, Controller.list);
+router.delete("/listadoUser/delete/:idUser", authMiddleware, Controller.delete);
 
 module.exports = router;

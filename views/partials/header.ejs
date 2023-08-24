@@ -25,9 +25,10 @@
             <% if (locals.isLogged) { %>
                 <% if (locals.userLogged.admin) { %>
                     <li class="categorias-nav3">
-                        <label for="vender" class="link-nav-index">Publicaciones</label>
+                        <label for="vender" class="link-nav-index">Opciones</label>
                         <input type="checkbox" name="vender" id="vender">
                         <ul class="categorias3">
+                            <li><a href="/listadoUser">Usuarios</a></li>
                             <li><a href="/listadoProducto/<%= locals.userLogged.id %>">Publicaciones</a></li>
                             <li><a href="/listadoProducto/<%= locals.userLogged.id %>/vender">Vender</a></li>
                         </ul>
@@ -65,9 +66,54 @@
             <input type="text" id="search-mobile" name="search" placeholder="Buscar productos"/>
             <label for="search-mobile"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></label>
         </form>
-        <label for="nav-check-index" class="menu-burger">
-            <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href=""><i class="fa-solid fa-bars"></i></a>
-        </label>
+        <% if (locals.isLogged) { %>
+            <label for="nav-check-index" class="menu-burger">
+                <a href="/carrito/<%= locals.userLogged.id %>"><i class="fa-solid fa-cart-shopping"></i></a>
+            </label>
+        <% } %>
+        <div class="menu-mobile">
+            <input type="checkbox" name="burger" id="burger">
+            <label for="burger" class="burger"><i class="fa-solid fa-bars"></i></label>
+            <label for="burger" class="cross"><i class="fa-solid fa-xmark"></i></label>
+            <ul>
+                <li>
+                    <label class="desplegar" for="cate"><i class="fa-solid fa-caret-down"></i>Categorías</label>
+                    <input type="checkbox" name="cate" id="cate">
+                    <ol id="opciones">
+                        <li><a href="/search?search=joyeria">Joyería</a></li>
+                        <li><a href="/search?search=Reliquia">Reliquias</a></li>
+                        <li><a href="/search?search=Mueble">Muebles</a></li>
+                        <li><a href="/search?search=Arte">Arte</a></li>
+                        <li><a href="/search?search=Musica">Música</a></li>
+                    </ol>
+                </li>
+                <% if (locals.isLogged) { %>
+                    <% if (locals.userLogged.admin) { %>
+                        <li>
+                            <label class="desplegar" for="opcion"><i class="fa-solid fa-caret-down"></i>Opciones</label>
+                            <input type="checkbox" name="opcion" id="opcion">
+                            <ol id="opciones">
+                                <li><a href="/listadoUser">Usuarios</a></li>
+                                <li><a href="/listadoProducto/<%= locals.userLogged.id %>">Publicaciones</a></li>
+                                <li><a href="/listadoProducto/<%= locals.userLogged.id %>/vender">Vender</a></li>
+                            </ol>
+                        </li>
+                    <% } %>
+                    <li>
+                        <a href="/profile">Perfil</a>
+                    </li>
+                <% } else { %>
+                    <li>
+                        <a href="/login">Ingresar</a>
+                    </li>
+                    <li>
+                        <a href="/registro">Registrarse</a>
+                    </li>
+                <% } %>
+                <li>
+                    <a href="/help">Ayuda</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </header>

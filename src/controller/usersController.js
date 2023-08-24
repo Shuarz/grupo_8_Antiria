@@ -1,7 +1,8 @@
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
-let db = require('../database/models')
+let db = require('../database/models');
+const { response } = require('express');
 
 module.exports = {
     register: (req, res) => {
@@ -99,5 +100,29 @@ module.exports = {
 
     help: (req, res) => {
         return res.render('user/help');
+    },
+
+    list: (req, res) => {
+        db.User
+            .findAll()
+            .then(user => {
+                return res.status(200).render('user/listadoUser', {
+                    total: user.length,
+                    data: user,
+                    status: 200
+                })
+            })
+    },
+
+    delete: (req, res) => {
+        db.User
+            .destroy({
+                where: {
+                    id: req.params.idUser
+                }
+            })
+            .then(response => {
+                return res.redirect('/listadoUser')
+            })
     }
 }

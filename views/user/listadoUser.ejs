@@ -9,39 +9,41 @@
                 <ul class="carrito-seguimiento">
                     <li>
                         <div class="carrito">
-                            <a>Tus publicaciones</a>
+                            <a>Usuarios</a>
                         </div>
                     </li>
 
                 </ul>
                 <section class="main-search2">
-                    <% if (productsUser.length===0) { %>
-                        <h4 class="notfound-search">No tiene publicaciones hechas 😔</h4>
+                    <% if (data.length===0) { %>
+                        <h4 class="notfound-search">No hay usuarios creados 😔</h4>
                     <% } else { %>
-                        <% productsUser.forEach ((row)=> { %>
+                        <h4 class="notfound-search">Hay un total de <span class="green"><%= total %></span> usuarios creados</h4>
+                        <% data.forEach ((row)=> { %>
                             <article>
                                 <div class="imagen-detalle-prod">
-                                    <img src="/img/products/<%= row.imagen_prod %>" alt="">
+                                    <img src="/img/user/<%= row.avatar %>" alt="">
                                 </div>
                                 <div class="descripcion_search_prod2">
-                                    <h3><%= row.nombre %></h3>
-                                    <h4 class="green">$<%= row.precio.toLocaleString('es-ES'); %></h4>
-                                    <div class="eliminar-edit2">
-                                        <form method="POST" action="/listadoProducto/<%= locals.userLogged.id %>/delete/<%= row.id %>?_method=DELETE" onsubmit="return confirm('¿Realmente desea eliminar este usuario?')">
+                                    <h3><%= row.nombre + ' ' + row.apellido %></h3>
+                                    <h4 class="dorado"><%= row.email %></h4>
+                                    <% if (row.id == 1) { %>
+                                        <h5 class="green">Admin</h5>
+                                    <% } else { %>
+                                        <h5 class="azul">Usuario</h5>
+                                    <% } %>
+                                    <div class="eliminar-edit">
+                                        <form method="POST" action="/listadoUser/delete/<%= row.id %>?_method=DELETE" onsubmit="return confirm('¿Realmente desea eliminar este usuario?')">
                                             <button type="submit" class="eliminar" id="user-delete">
                                                 <i class="fas fa-trash"></i>
                                             </button>
                                         </form>
-                                        <a id="product-edit" href="/listadoProducto/<%= locals.userLogged.id %>/edicionProducto/<%= row.id %>"> <i class="fa-solid fa-pen-to-square "></i></a>
                                     </div>
                                 </div>
                             </article>
                             <hr>
                         <% }) %>
                     <% } %>
-                    <div class="realizar-compra3">
-                        <a href="/listadoProducto/<%= locals.userLogged.id %>/vender" class="realizar-compra2 ">Vender tu producto</a>
-                    </div>
 
                 </section>
             </main>
