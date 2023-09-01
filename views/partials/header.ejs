@@ -1,6 +1,6 @@
 <header class="header-index">
     <div class="logo-index">
-        <h1><a href="/"><img src="/img/logotipo.png" alt="Antiria"></a></h1>
+        <h1><a href="/"><img src="/img/logotipo.png" alt="Antiria" id="logoAntiria"></a></h1>
     </div>
     <input type="checkbox" id="nav-check-index" hidden>
     <nav class="nav-index">
@@ -46,7 +46,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/carrito/<%= locals.userLogged.id %>"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="/carrito/<%= locals.userLogged.id %>" class="carrito-ident"><i class="fa-solid fa-cart-shopping"></i></a>
                 </li>
             <% } else { %>
                 <li>
@@ -59,13 +59,12 @@
                     <a href="/help" class="link-nav-index">Ayuda</a>
                 </li>
             <% } %>
+            <li class="darkMode">
+                <input type="checkbox" class="toggle-btn" id="toggleBtn">
+            </li>
         </ul>
     </nav>
     <div class="contenedor-icon-mobile">
-        <form class="lupa-mobile" action="/search" method="GET">
-            <input type="text" id="search-mobile" name="search" placeholder="Buscar productos"/>
-            <label for="search-mobile"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></label>
-        </form>
         <% if (locals.isLogged) { %>
             <label for="nav-check-index" class="menu-burger">
                 <a href="/carrito/<%= locals.userLogged.id %>"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -76,6 +75,11 @@
             <label for="burger" class="burger"><i class="fa-solid fa-bars"></i></label>
             <label for="burger" class="cross"><i class="fa-solid fa-xmark"></i></label>
             <ul>
+                <li>
+                    <form class="lupa-mobile" action="/search" method="GET">
+                        <input type="text" id="search-mobile" name="search" placeholder="Buscar productos"/>
+                    </form>
+                </li>
                 <li>
                     <label class="desplegar" for="cate"><i class="fa-solid fa-caret-down"></i>Categorías</label>
                     <input type="checkbox" name="cate" id="cate">
@@ -117,3 +121,4 @@
         </div>
     </div>
 </header>
+<script src="/js/darkMode.js"></script>

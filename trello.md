@@ -6,3 +6,4 @@ Sprint 3: https://trello.com/invite/b/RMbkJuMU/ATTI3961af5f16d8995a51069a49e6dbe
 Sprint 4: https://trello.com/invite/b/BO3H8vpl/ATTI045b817dafc7db31a32f022c2d88eb8c89FE50D9/sprint-4-28-06
 Sprint 5: https://trello.com/invite/b/BO3H8vpl/ATTI045b817dafc7db31a32f022c2d88eb8c89FE50D9/sprint-4-28-06
 Sprint 6: https://trello.com/invite/b/BO3H8vpl/ATTI045b817dafc7db31a32f022c2d88eb8c89FE50D9/sprint-4-28-06
+Sprint 7: https://trello.com/invite/b/WJm0rqQ1/ATTIffda3a54a8bd75c5c8d4e5ac596aae61F504FFC2/sprint-7
