@@ -1432,6 +1432,8 @@ header .menu-mobile .cross {
 
 .carousel__slide div {
     position: relative;
+    border: 2px solid #1a1a1aa4;
+    border-radius: 5px;
     width: 100%;
 }
 
@@ -1448,7 +1450,7 @@ header .menu-mobile .cross {
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
+    margin: auto;
     height: 100%;
 }
 
@@ -1985,6 +1987,41 @@ body.dark-mode {
 .dark-mode .realizar-compra:hover{
     background-color: #353535f3;
     box-shadow: 0px 0px 10px #000000a2;
+}
+
+
+.dark-mode .carousel__slide div {
+    position: relative;
+    border: 2px solid #faf2d7b0;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.dark-mode .eliminar{
+    color: #FAF2D7;
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.dark-mode #product-edit{
+    padding: 0;
+    margin-top: 0;
+    width: auto;
+    border-radius: 0;
+    color: #FAF2D7;
+}
+
+.dark-mode .realizar-compra2 {
+    text-align: center;
+    color: #faf2d7a9;
+    background-color: #474747a2;
+    border-radius: 30px;
+    padding: 8px;
+    border: 2px solid black;
+    font-weight: bold;
+    transition: all 0.2s;
 }
 
 

@@ -81,14 +81,23 @@ module.exports = {
     },
 
     prodDetail: (req, res) => {
+
         db.Product.findByPk(req.params.idProd)
             .then(function (prodUD) {
                 if (prodUD) {
-                    res.render("./products/detalleProducto", { prodUD: prodUD });
+                    db.ImagenesProd.findAll({
+                        where: {
+                            id_prod: req.params.idProd
+                        }
+                    })
+                    .then(function(imagenes){
+                        console.log(imagenes)
+                        res.render("./products/detalleProducto", { prodUD: prodUD, imagenes: imagenes });
+                    });
                 } else {
-                    res.redirect('/')
+                    res.redirect('/');
                 }
-            })
+            });
     },
 
     cart: (req, res) => {
@@ -97,7 +106,14 @@ module.exports = {
 
     list: async (req, res) => {
         try {
-            const product = await db.Product.findAll()
+            const product = await db.Product.findAll({
+                include: [
+                    {
+                        model: db.ImagenesProd,
+                        as: "ImagenesProd",
+                    },
+                ],
+            })
             return res.render("./products/listadoProducto", { productsUser: product })
         } catch (error) {
             console.log(error)
@@ -268,14 +284,18 @@ module.exports = {
                 {
                     model: db.Marca,
                     as: 'marca',
-                }
+                },
+                {
+                    model: db.ImagenesProd,
+                    as: "ImagenesProd",
+                },
             ],
             where: {
                 [db.Sequelize.Op.or]: [
                     db.Sequelize.where(db.Sequelize.fn('LOWER', db.Sequelize.col('Product.nombre')), 'LIKE', `%${searchQuery.toLowerCase()}%`),
                     db.Sequelize.where(db.Sequelize.fn('LOWER', db.Sequelize.col('Product.descripcion')), 'LIKE', `%${searchQuery.toLowerCase()}%`),
-                    db.Sequelize.where(db.Sequelize.fn('LOWER', db.Sequelize.col('Categoria.nombre')), 'LIKE', `%${searchQuery.toLowerCase()}%`),
-                    db.Sequelize.where(db.Sequelize.fn('LOWER', db.Sequelize.col('Marca.nombre')), 'LIKE', `%${searchQuery.toLowerCase()}%`)
+                    db.Sequelize.where(db.Sequelize.fn('LOWER', db.Sequelize.col('categoria.nombre')), 'LIKE', `%${searchQuery.toLowerCase()}%`),
+                    db.Sequelize.where(db.Sequelize.fn('LOWER', db.Sequelize.col('marca.nombre')), 'LIKE', `%${searchQuery.toLowerCase()}%`)
                 ]
             }
         }).then((products) => {

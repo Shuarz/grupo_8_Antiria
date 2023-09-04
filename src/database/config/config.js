@@ -1,9 +1,9 @@
 module.exports = {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "antiria_db",
-    "host": "127.0.0.1",
+    "username": "alepeque9",
+    "password": "Paradadetax1",
+    "database": "alepeque9_antiria_database",
+    "host": "mysql-alepeque9.alwaysdata.net",
     "dialect": "mysql",
     "port":"3306"
   },
