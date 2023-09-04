@@ -1700,7 +1700,7 @@ body.dark-mode {
     background-color: #1c232ae0;;
 }
 
-.header-dark {
+.dark-mode .header-index {
     background: #1a1a1a;
     box-shadow: 0 0 20px black;
     display: flex;
@@ -1721,23 +1721,23 @@ body.dark-mode {
     z-index: 3;
 }
 
-.header-dark .profile-img a p{
+.dark-mode .header-index .profile-img a p{
     color: #FAF2D7;
 }
 
-.header-dark .profile-img a:hover p {
+.dark-mode .header-index .profile-img a:hover p {
     color: #AA9D16;
 }
 
-.header-dark .nav-index ul li a i{
+.dark-mode .header-index .nav-index ul li a i{
     color: #FAF2D7;
 }
 
-.header-dark .nav-index ul li a i:hover{
+.dark-mode .header-index .nav-index ul li a i:hover{
     color: #AA9D16;
 }
 
-.link-nav-dark {
+.dark-mode .header-index .link-nav-index {
     color: #FAF2D7;
     margin: 0 2px;
     font-weight: 600;
@@ -1748,15 +1748,15 @@ body.dark-mode {
     cursor: pointer;
 }
 
-.link-nav-dark~input {
+.dark-mode .header-index .link-nav-index~input {
     display: none;
 }
 
-.link-nav-dark~input:checked~.categorias {
+.dark-mode .header-index .link-nav-index~input:checked~.categorias {
     display: block;
 }
 
-.link-nav-dark~input~.categorias {
+.dark-mode .header-index .link-nav-index~input~.categorias {
     position: absolute;
     list-style: none;
     top: 60px;
@@ -1769,27 +1769,27 @@ body.dark-mode {
     z-index: -1;
 }
 
-.link-nav-dark~input~.categorias li {
+.dark-mode .header-index .link-nav-index~input~.categorias li {
     margin-right: 20px;
     margin-left: 20px;
 }
 
-.link-nav-dark~input~.categorias li a {
+.dark-mode .header-index .link-nav-index~input~.categorias li a {
     color: #faf2d7;
     font-weight: bold;
     transition: 0.2s;
 }
 
 
-.link-nav-dark~input~.categorias li a:hover {
+.dark-mode .header-index .link-nav-index~input~.categorias li a:hover {
     color: #faf2d798;
 }
 
-.link-nav-dark~input:checked~.categorias3 {
+.dark-mode .header-index .link-nav-index~input:checked~.categorias3 {
     display: block;
 }
 
-.link-nav-dark~input~.categorias3 {
+.dark-mode .header-index .link-nav-index~input~.categorias3 {
     position: absolute;
     list-style: none;
     top: 60px;
@@ -1807,17 +1807,17 @@ body.dark-mode {
     margin-left: 20px;
 }
 
-.link-nav-dark~input~.categorias3 li a {
+.dark-mode .header-index .link-nav-index~input~.categorias3 li a {
     color: #faf2d7;
     font-weight: bold;
     transition: 0.2s;
 }
 
-.link-nav-dark~input~.categorias3 li a:hover {
+.dark-mode .header-index .link-nav-index~input~.categorias3 li a:hover {
     color: #faf2d798;
 }
 
-.link-nav-dark::after {
+.dark-mode .header-index .link-nav-index::after {
     content: '';
     position: absolute;
     left: 0;
@@ -1830,7 +1830,7 @@ body.dark-mode {
     transition: transform 0.3s ease-in-out;
 }
 
-.link-nav-dark:hover::after {
+.dark-mode .header-index .link-nav-index:hover::after {
     transform: scaleX(1);
 }
 
@@ -1888,7 +1888,7 @@ body.dark-mode {
 .dark-mode .detalle-tarjeta a {
     text-decoration: none;
     padding: 10px 40px;
-    background-color: #FAF2D7;
+    background-color: #fffcf2e7;
     color: #1a1a1a;
     border-radius: 40px;
     transition: all 0.3s ease;
@@ -1940,6 +1940,51 @@ body.dark-mode {
     border-radius: 5px;
     display: flex;
     align-items: center;
+}
+
+.dark-mode .contenedorDetalleProd {
+    margin-top: 100px;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    box-shadow: 0px 0px 10px #000000;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.dark-mode .nombre-precio h3,
+.dark-mode .nombre-precio h4,
+.dark-mode .descripcion-prod h4,
+.dark-mode .descripcion-prod h5{
+    color: #FAF2D7;
+}
+
+.dark-mode .submitCart{
+    background-color: #353535ab;
+}
+
+.dark-mode .submitCart:focus{
+    box-shadow: 0px 0px 5px #000000a2 inset;
+}
+
+.dark-mode .carrito-seguimiento li a{
+    color: #FAF2D7;
+}
+
+.dark-mode .profile div .info-profile,
+.dark-mode .profile div .img-profile{
+    box-shadow: 0px 0px 10px #000000a2;
+}
+
+.dark-mode .realizar-compra{
+    background-color: #353535ab;
+    color: #FAF2D7;
+    transition: 0.2s ease-in-out;
+}
+
+.dark-mode .realizar-compra:hover{
+    background-color: #353535f3;
+    box-shadow: 0px 0px 10px #000000a2;
 }
 
 
