@@ -1379,27 +1379,27 @@ header .menu-mobile .cross {
 }
 
 .carousel>input:nth-of-type(1):checked~.carousel__thumbnails li:nth-of-type(1) {
-    box-shadow: 0px 0px 0px 5px #AA9D16;
+    box-shadow: 0px 0px 0px 3px #AA9D16;
 }
 
 .carousel>input:nth-of-type(2):checked~.carousel__thumbnails li:nth-of-type(2) {
-    box-shadow: 0px 0px 0px 5px #AA9D16;
+    box-shadow: 0px 0px 0px 3px #AA9D16;
 }
 
 .carousel>input:nth-of-type(3):checked~.carousel__thumbnails li:nth-of-type(3) {
-    box-shadow: 0px 0px 0px 5px #AA9D16;
+    box-shadow: 0px 0px 0px 3px #AA9D16;
 }
 
 .carousel>input:nth-of-type(4):checked~.carousel__thumbnails li:nth-of-type(4) {
-    box-shadow: 0px 0px 0px 5px #AA9D16;
+    box-shadow: 0px 0px 0px 3px #AA9D16;
 }
 
 .carousel>input:nth-of-type(5):checked~.carousel__thumbnails li:nth-of-type(5) {
-    box-shadow: 0px 0px 0px 5px #AA9D16;
+    box-shadow: 0px 0px 0px 3px #AA9D16;
 }
 
 .carousel>input:nth-of-type(6):checked~.carousel__thumbnails li:nth-of-type(6) {
-    box-shadow: 0px 0px 0px 5px #AA9D16;
+    box-shadow: 0px 0px 0px 3px #AA9D16;
 }
 
 .carousel__slides {
@@ -1662,6 +1662,7 @@ body.dark-mode {
 }
 
 .darkMode{
+    position: relative;
     display: flex;
     align-items: center;
 }
@@ -2727,6 +2728,10 @@ body .cuerpo_pagina {
 .mainHelp {
     min-height: 70vh;
     padding-top: 100px;
+}
+
+.mainHelp div{
+    text-align: start;
 }
 
 .mainHelp .titleHelp {

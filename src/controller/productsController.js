@@ -101,9 +101,7 @@ module.exports = {
     },
 
     cart: (req, res) => {
-        
         return res.render('./products/carrito')
-
     },
 
     list: async (req, res) => {
