@@ -7,16 +7,21 @@ module.exports = {
                 {
                     model: db.Product,
                     as: "productoOferta",
+                    include: [
+                        {
+                            model: db.ImagenesProd,
+                            as: "ImagenesProd",
+                        },
+                    ],
                 },
             ],
             order: [
-                [{ model: db.Product, as: 'productoOferta' }, "precio", "ASC"], // Ordenar por precio de producto de forma ascendente
+                [{ model: db.Product, as: 'productoOferta' }, "precio", "ASC"],
             ],
             limit: 5,
         }).then((resultado) => {
             res.render('index', { oferta: resultado });
         });
-
     },
     contacto: (req,res) => {
         db.Asesoramiento.create({

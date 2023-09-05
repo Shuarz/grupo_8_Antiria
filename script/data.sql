@@ -1,8 +1,8 @@
-insert into user values 
+insert into user values
 (DEFAULT, 'Shrek', 'El Ogro', 'shrek@gmail.com', '$2a$10$TJxLsHwoFnakhFCE55ukXu7WU8AWg2NaCpvrGKf40fxjAB4UVJDpC', 'user-1690156726211.jpg'),
 (DEFAULT, 'Jorge', 'Curioso', 'jorgecurioso@yahoo.com', '$2a$10$RjO41tcLrMuKH57OJ56AtOsHmdyyWbxItqtIxnlt9OBq7Ho/kaRU.', 'user-1690157620808.jpg');
 
-insert into marca values 
+insert into marca values
 (DEFAULT, 'Mercedes Benz'),
 (DEFAULT, 'Rolex'),
 (DEFAULT, 'Sony'),
@@ -10,7 +10,7 @@ insert into marca values
 (DEFAULT, 'Nintendo'),
 (DEFAULT, 'Otro');
 
-insert into categoria values 
+insert into categoria values
 (DEFAULT, 'Arte'),
 (DEFAULT, 'Reloj'),
 (DEFAULT, 'Reliquia'),
@@ -19,7 +19,7 @@ insert into categoria values
 (DEFAULT, 'Musica'),
 (DEFAULT, 'Otro');
 
-insert into product values 
+insert into product values
 (DEFAULT, 'Busto de mujer joven', 'Busto de mujer joven Paris, otoño 1906. Óleo sobre lienzo. 54 x 42 cm.', 150000, 1, 6, 1, 'product-1690156954077.jpg'),
 (DEFAULT, 'Reloj de Bolsillo', 'Reloj de bolsillo (Ernest Magnin, Besançon, ca. 1920)', 80000, 1, 6, 2, 'product-1690157231193.jpg'),
 (DEFAULT, 'Auto lamborghini diablo', 'En 1993, Lamborghini lanzó el Diablo VT, el primer Lambo Gran Turismo equipado con tracción en las cuatro ruedas.', 80000000, 1, 6, 3, 'product-1690157493629.jpg'),

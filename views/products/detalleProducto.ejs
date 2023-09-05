@@ -17,9 +17,11 @@
                             <input type="radio" name="slides" id="slide-5">
                             <input type="radio" name="slides" id="slide-6">
                             <ul class="carousel__slides">
+                                <% imagenes.forEach(row => { %>
                                 <li class="carousel__slide">
                                     <figure>
                                         <div>
+
                                             <img class="foto" src="/img/products/<%= prodUD.imagen_prod %>" alt="<%= prodUD.imagen_prod %>">
                                         </div>
                                     </figure>
@@ -56,11 +58,16 @@
                                     <figure>
                                         <div>
                                             <img src="/img/products/<%= prodUD.imagen_prod %>" alt="">
+
+                                            <img src="/img/products/<%= row.imagen_prod %>" alt="">
+
                                         </div>
                                     </figure>
                                 </li>
+                                <% }) %>
                             </ul>
                             <ul class="carousel__thumbnails">
+
                                 <li>
                                     <label for="slide-1"><img class="foto" src=" /img/products/<%= prodUD.imagen_prod %>"
                                             alt=""></label>
@@ -85,6 +92,14 @@
                                     <label for="slide-6"><img src="/img/products/<%= prodUD.imagen_prod %>"
                                             alt=""></label>
                                 </li>
+
+                                <% for( let i = 0; i < imagenes.length; i++ ) { %>
+                                    <li>
+                                        <label for="slide-<%= i + 1 %>"><img src="/img/products/<%= imagenes[i].imagen_prod %>"
+                                                alt=""></label>
+                                    </li>
+                                <% } %>
+
                             </ul>
                         </div>
                     </div>
