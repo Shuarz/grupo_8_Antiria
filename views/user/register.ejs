@@ -15,7 +15,7 @@
                         <span class="iconored">
                             <i class="fa-solid fa-user"></i>
                         </span>
-                    <input name="name" type="text">
+                    <input name="name" type="text" id="name">
                     <label>Nombre</label>
                 </div>
             <% } else { %>
@@ -23,7 +23,7 @@
                         <span class="icono">
                             <i class="fa-solid fa-user"></i>
                         </span>
-                    <input name="name" type="text">
+                    <input name="name" type="text" id="name">
                     <label>Nombre</label>
                 </div>
             <% } %>
@@ -51,7 +51,7 @@
                         <span class="iconored">
                             <i class="fa-solid fa-envelope"></i>
                         </span>
-                    <input name="mail" type="text">
+                    <input name="mail" type="text" id="email">
                     <label>Correo electrónico</label>
                 </div>
                 <p class="errors"><%= errors.mail.msg %></p>
@@ -60,7 +60,7 @@
                         <span class="icono">
                             <i class="fa-solid fa-envelope"></i>
                         </span>
-                    <input name="mail" type="text">
+                    <input name="mail" type="text" id="email">
                     <label>Correo electrónico</label>
                 </div>
             <% } %>
@@ -74,7 +74,7 @@
                         <span class="iconored">
                             <i class="fa-solid fa-lock"></i>
                         </span>
-                    <input name="password" type="password">
+                    <input name="password" type="password" id="password">
                     <label>Contraseña</label>
                 </div>
             <% } else { %>
@@ -82,7 +82,7 @@
                         <span class="icono">
                             <i class="fa-solid fa-lock"></i>
                         </span>
-                    <input name="password" type="password">
+                    <input name="password" type="password" id="password">
                     <label>Contraseña</label>
                 </div>
             <% } %>
@@ -113,6 +113,7 @@
             <% } %>
 
             <button type="submit">Registrate</button>
+            <br id="warnnings">
             <div class="registrar_link">
                 <p>¿Ya sos miembro? <a href="/login">Inicia tu sesión</a></p>
             </div>
