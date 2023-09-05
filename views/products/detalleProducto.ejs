@@ -20,7 +20,7 @@
                                 <li class="carousel__slide">
                                     <figure>
                                         <div>
-                                            <img src="/img/products/<%= prodUD.imagen_prod %>" alt="">
+                                            <img class="foto" src="/img/products/<%= prodUD.imagen_prod %>" alt="<%= prodUD.imagen_prod %>">
                                         </div>
                                     </figure>
                                 </li>
@@ -62,7 +62,7 @@
                             </ul>
                             <ul class="carousel__thumbnails">
                                 <li>
-                                    <label for="slide-1"><img src="/img/products/<%= prodUD.imagen_prod %>"
+                                    <label for="slide-1"><img class="foto" src=" /img/products/<%= prodUD.imagen_prod %>"
                                             alt=""></label>
                                 </li>
                                 <li>
@@ -89,15 +89,15 @@
                         </div>
                     </div>
                     <div class="nombre-precio">
-                        <h3>
+                        <h3 class="nombres">
                             <%= prodUD.nombre %>
                         </h3>
-                        <h4>
+                        <h4 class="precios">
                             $<%= prodUD.precio.toLocaleString('es-ES'); %>
                         </h4>
-                        <form action="">
+                        
                             <button class="submitCart" type="submit">Agregar al carrito</button>
-                        </form>
+                        
                     </div>
                 </article>
                 <div class="descripcion-prod">
@@ -106,7 +106,7 @@
                     <h4>
                         <%= prodUD.nombre %>
                     </h4>
-                    <h5>
+                    <h5 class="descrip">
                         <%= prodUD.descripcion %>
                     </h5>
 
@@ -116,7 +116,7 @@
             <!-- FOOTER -->
             <%- include("../partials/footer")%>
                 <!-- FIN FOOTER -->
-
+<script src="/js/agregadocarrito.js"></script>
     </body>
 
     </html>
