@@ -4,14 +4,11 @@ if (document.readyState == "loading") {
 else {
     ready()
 }
-let productos = [
-    {
-        id: 1,
-        imagen: 'product-1690172318207.jpg',
-        nombre: 'Retro NES AV',
-        precio: 250000,
-    }
-];
+const productosJSON = localStorage.getItem('carrito');
+let productos = JSON.parse(productosJSON);
+;
+
+        
 function ready(){
     if (!JSON.parse(localStorage.getItem('carrito'))){
         localStorage.setItem('carrito', JSON.stringify([]));
@@ -20,6 +17,7 @@ function ready(){
 }
     function borrarElemento(id){
         //necesito traerme los procutos del localStorage
+  
         let elemento = productos.filter((row) => row.id != id);
         mostrarCarrito(elemento);
         //tengo que setear los productos en el localStorage
