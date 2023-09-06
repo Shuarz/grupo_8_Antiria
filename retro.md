@@ -14,3 +14,7 @@ En materia de tiempo estuvimos holgados y los contenidos a aplicar fueron excels
 
 Sprint 5:
 En el spint 5, nos siguió presentando dificultades en ciertas tareas, ya que no sabíamos como avanzar, pero gracias al trabajo en grupo pudimos resolver los obstáculos y cumplir en tiempo y forma los objetivos pedidos, nos enfocamos en los puntos importantes y los opcionales lo dejamos para el final, ya a esta altura tenemos más experiencia que hace unos meses y de a poco le vamos agarrando la mano al manejo de los sprints.
+
+
+sprint 6:
+En el sprint 6, hicimos el diagrama de la base de datos de el proyecto la cual logramos hacer de manera correcta y con ayuda de el profe Lucas con una correccion acercva de una tabla , luego de esto se hizo la creacion de los modelos y las carpetas de Sequelize , tambien se realizo la division de la vista entre el administrador y el usuario , se dasarrollaron los controller de los usuarios, los productos y el main controller un poco mas.Realmente en este sprint nos sentimos muy comodos y logramos llegar a los objetivos propuestos.
