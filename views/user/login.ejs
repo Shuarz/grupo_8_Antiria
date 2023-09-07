@@ -7,28 +7,32 @@
         </a>
     </header>
     <section class="login-box">
-        <form action="/login" method="POST">
+        <form class="validForm" action="/login" method="POST">
             <h2>Iniciar Sesión</h2>
             <div class="input-box">
                 <span class="icono">
                     <i class="fa-solid fa-envelope"></i>
                 </span>
-                <input type="text" id="mail" name="mail" required>
+                <input type="email" id="mail" name="mail" >
                 <label>Correo electrónico</label>
             </div>
-            <% if (locals.errors && errors.mail) { %>
-                <p class="errors"><%= errors.mail.msg %></p>
-            <% } %>
+            
             <div class="input-box">
                 <span class="icono">
                     <i class="fa-solid fa-lock"></i>
                 </span>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="contraseña" name="password" >
                 <label>Contraseña</label>
             </div>
             <div class="recordar">
                 <label><input type="checkbox" name="remember_user" value="on">Recordar</label>
             </div>
+
+            <div class="erroresLogin">
+                <ul id="listaErrores">
+                </ul>
+            </div>
+
             <button type="submit">Ingresar</button>
             <div class="registrar_link">
                 <p>¿No tenés una cuenta? <a href="/registro">Registrate</a></p>
@@ -38,6 +42,10 @@
     <footer class="footer_login">
         <p>Antiria - 2023 &copy</p>
     </footer>
+
+    <script src="/js/validLogin.js" >
+
+    </script>
 </body>
 
 </html>

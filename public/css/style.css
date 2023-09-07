@@ -1202,6 +1202,10 @@ header .menu-mobile .cross {
     text-decoration: underline;
 }
 
+#listaErrores {
+color:red
+}
+
 .login_maestro_box button {
     width: 100%;
     height: 40px;
