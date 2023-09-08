@@ -8,14 +8,14 @@
     </header>
     <section class="registro-box">
 
-        <form method="post" action="/registro" enctype="multipart/form-data">
+        <form method="post" class="validForm" action="/registro" enctype="multipart/form-data">
             <h2>Registrate</h2>
             <% if (locals.errors && errors.name) { %>
                 <div class="input-box2">
                         <span class="iconored">
                             <i class="fa-solid fa-user"></i>
                         </span>
-                    <input name="name" type="text">
+                    <input name="name" class="nombre" type="text">
                     <label>Nombre</label>
                 </div>
             <% } else { %>
@@ -23,7 +23,7 @@
                         <span class="icono">
                             <i class="fa-solid fa-user"></i>
                         </span>
-                    <input name="name" type="text">
+                    <input name="name" class="nombre" type="text">
                     <label>Nombre</label>
                 </div>
             <% } %>
@@ -33,7 +33,7 @@
                         <span class="iconored">
                             <i class="fa-solid fa-user"></i>
                         </span>
-                    <input name="lastname" type="text">
+                    <input name="lastname" id="apellido" type="text">
                     <label>Apellido</label>
                 </div>
             <% } else { %>
@@ -41,7 +41,7 @@
                         <span class="icono">
                             <i class="fa-solid fa-user"></i>
                         </span>
-                    <input name="lastname" type="text">
+                    <input name="lastname" id="apellido" type="text">
                     <label>Apellido</label>
                 </div>
             <% } %>
@@ -51,7 +51,7 @@
                         <span class="iconored">
                             <i class="fa-solid fa-envelope"></i>
                         </span>
-                    <input name="mail" type="text">
+                    <input name="mail" id="email" type="text">
                     <label>Correo electrónico</label>
                 </div>
                 <p class="errors"><%= errors.mail.msg %></p>
@@ -60,7 +60,7 @@
                         <span class="icono">
                             <i class="fa-solid fa-envelope"></i>
                         </span>
-                    <input name="mail" type="text">
+                    <input name="mail" id="email" type="text">
                     <label>Correo electrónico</label>
                 </div>
             <% } %>
@@ -74,7 +74,7 @@
                         <span class="iconored">
                             <i class="fa-solid fa-lock"></i>
                         </span>
-                    <input name="password" type="password">
+                    <input name="password" id="password" type="password">
                     <label>Contraseña</label>
                 </div>
             <% } else { %>
@@ -82,7 +82,7 @@
                         <span class="icono">
                             <i class="fa-solid fa-lock"></i>
                         </span>
-                    <input name="password" type="password">
+                    <input name="password" id="password" type="password">
                     <label>Contraseña</label>
                 </div>
             <% } %>
@@ -92,7 +92,7 @@
                         <span class="iconored">
                             <i class="fa-solid fa-lock"></i>
                         </span>
-                    <input name="passwordConfirm" type="password">
+                    <input name="passwordConfirm"  id="repcontra" type="password">
                     <label>Confirmar contraseña</label>
                 </div>
             <% } else { %>
@@ -100,17 +100,19 @@
                         <span class="icono">
                             <i class="fa-solid fa-lock"></i>
                         </span>
-                    <input name="passwordConfirm" type="password">
+                    <input name="passwordConfirm" id="repcontra" type="password">
                     <label>Confirmar contraseña</label>
                 </div>
             <% } %>
 
-            <div class="recordar">
+            <div class="recordar" id="recordar">
                 <label><input name="terminos" type="checkbox">Términos y condiciones</label>
             </div>
             <% if (locals.errors && errors.terminos) { %>
                 <p class="errors"><%= errors.terminos.msg %></p>
             <% } %>
+            <ul id="listaErrores">
+            </ul>
 
             <button type="submit">Registrate</button>
             <div class="registrar_link">
@@ -120,6 +122,7 @@
     </section>
     <footer class="footer_login">
         <p>Antiria - 2023 &copy</p>
+        <script src="../../public/js/validRegister.js" ></script>
     </footer>
 </body>
 
