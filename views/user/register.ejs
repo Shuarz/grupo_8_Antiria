@@ -8,14 +8,14 @@
     </header>
     <section class="registro-box">
 
-        <form method="post" class="validForm" action="/registro" enctype="multipart/form-data">
+        <form method="post" id="validForm" action="/registro" enctype="multipart/form-data">
             <h2>Registrate</h2>
             <% if (locals.errors && errors.name) { %>
                 <div class="input-box2">
                         <span class="iconored">
                             <i class="fa-solid fa-user"></i>
                         </span>
-                    <input name="name" class="nombre" type="text">
+                    <input name="name" id="nombre" type="text">
                     <label>Nombre</label>
                 </div>
             <% } else { %>
@@ -23,7 +23,7 @@
                         <span class="icono">
                             <i class="fa-solid fa-user"></i>
                         </span>
-                    <input name="name" class="nombre" type="text">
+                    <input name="name" id="nombre" type="text">
                     <label>Nombre</label>
                 </div>
             <% } %>
@@ -105,7 +105,7 @@
                 </div>
             <% } %>
 
-            <div class="recordar" id="recordar">
+            <div  id="recordar">
                 <label><input name="terminos" type="checkbox">Términos y condiciones</label>
             </div>
             <% if (locals.errors && errors.terminos) { %>
