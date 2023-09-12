@@ -16,7 +16,9 @@
                 <input type="email" id="mail" name="mail" >
                 <label>Correo electrónico</label>
             </div>
-            
+            <% if (locals.errors && errors.mail) { %>
+                <p class="errors"><%= errors.mail.msg %></p>
+            <% } %>
             <div class="input-box">
                 <span class="icono">
                     <i class="fa-solid fa-lock"></i>

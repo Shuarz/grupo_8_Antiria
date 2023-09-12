@@ -2,10 +2,16 @@ window.onload = function () {
     let formulario = document.querySelector('.validForm')
     console.log(formulario)
 
+
+
+
+
     formulario.addEventListener('submit', function (e) {
         e.preventDefault();
 
         let errores = [];
+
+
 
         const mail = document.querySelector('#mail')
 
@@ -13,7 +19,7 @@ window.onload = function () {
             errores.push('el campo email debe estar completo ')
 
         }
-        
+
 
         const contra = document.querySelector('#contraseña')
         if (contra.value == '') {
@@ -27,12 +33,18 @@ window.onload = function () {
             e.preventDefault();
 
             let ulErrores = document.querySelector('#listaErrores')
+            ulErrores.innerHTML =''
 
             for (let i = 0; i < errores.length; i++) {
                 ulErrores.innerHTML += "<ul>" + errores[i] + "</ul>"
 
             }
+        } else {
+
+            formulario.submit()
         }
+
+
 
 
 
