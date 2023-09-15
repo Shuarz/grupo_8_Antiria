@@ -3,11 +3,14 @@ if (document.readyState == "loading") {
 }
 else {
     ready()
+    
 }
+;
 const productosJSON = localStorage.getItem('carrito');
 let productos = JSON.parse(productosJSON);
 ;
 
+;
         
 function ready(){
     if (!JSON.parse(localStorage.getItem('carrito'))){
@@ -15,15 +18,24 @@ function ready(){
     };
     mostrarCarrito(productos);
 }
-    function borrarElemento(id){
-        //necesito traerme los procutos del localStorage
-  
-        let elemento = productos.filter((row) => row.id != id);
+    function borrarElemento(id){   
+        if (localStorage.getItem('carrito', JSON.stringify([]))) {
+            
+            localStorage.getItem('carrito', JSON.stringify([]));
+            JSON.parse((localStorage.getItem('carrito')));
+        
+        }
+        let elemento = productos.filter((row) => row.id != id)
         mostrarCarrito(elemento);
-        //tengo que setear los productos en el localStorage
+        
+        const productosJSON = JSON.stringify([]);
+        localStorage.setItem('carrito', productosJSON);
+
+       
     }
     function vaciarCarrito(){
-        //tengo que setear en el localStorage el array vacio
+        const productosJSON = JSON.stringify([]);
+        localStorage.setItem('carrito', productosJSON);
         mostrarCarrito([]);
     }
     async function finalizarCompra(){

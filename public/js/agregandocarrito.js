@@ -23,22 +23,24 @@ function agregaritem (){
         precio:  document.querySelector(".precios").innerText.replace("$",""),
         imagen:  document.querySelector(".foto").alt,
         descripcion:    document.querySelector(".descrip").innerText
-    }
-if(productosCarrito.length == 0){
-    productosCarrito.push(productoEcontrado)
-    productoEcontrado.subtotal = productoEcontrado.precio
-
-}
-else{
-    let buscaproducto = productosCarrito.find(producto =>producto.id == productoEcontrado.id)
-    if(buscaproducto){
-        buscaproducto.subtotal = productoEcontrado.precio
-    }
-    else{
+    } 
+    if(productosCarrito.length == 0){
         productosCarrito.push(productoEcontrado)
         productoEcontrado.subtotal = productoEcontrado.precio
     
     }
-}
-localStorage.setItem("carrito", JSON.stringify(productosCarrito))
-}
+    else{
+        let buscaproducto = productosCarrito.find(producto =>producto.id == productoEcontrado.id)
+        if(buscaproducto){
+            buscaproducto.subtotal = productoEcontrado.precio
+        }
+        else{
+            productosCarrito.push(productoEcontrado)
+            productoEcontrado.subtotal = productoEcontrado.precio
+    
+        }
+    }
+    localStorage.setItem("carrito", JSON.stringify(productosCarrito))
+    }
+
+
