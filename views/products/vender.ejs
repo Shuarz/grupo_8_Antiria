@@ -75,7 +75,7 @@
                             <label class="opciones">Subir imagen del producto</label>
                         </div>
                         <div  class="subir-imagen , opciones">
-                            <input name="imagenProducto" type="file">
+                            <input name="imagenProducto" type="file" multiple>
                         </div>
                         <% if (locals.errors && errors.imagenProducto) { %>
                             <p class="errors2"><%= errors.imagenProducto.msg %></p>

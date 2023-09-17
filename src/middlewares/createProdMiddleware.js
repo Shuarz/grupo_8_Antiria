@@ -7,7 +7,7 @@ module.exports = [
     body('marca').notEmpty().withMessage('Debes seleccionar una opción'),
     body('descripcionGeneral').notEmpty().withMessage('Debes completar este campo'),
     body('imagenProducto').custom((value, { req }) => {
-        let file = req.file;
+        let file = req.files;
         if (!file) {
             throw new Error('Tienes que subir una imagen');
         }

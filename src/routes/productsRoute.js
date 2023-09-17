@@ -19,7 +19,12 @@ const adminMiddleware = require('../middlewares/adminMiddleware.js')
 //router
 //vender
 router.get ("/listadoProducto/:idUser/vender", authMiddleware, adminMiddleware, Controller.sell);
-router.post("/listadoProducto/:idUser/vender", fileupload.single("imagenProducto"), validations,Controller.public);
+router.post(
+    "/listadoProducto/:idUser/vender",
+    fileupload.array("imagenProducto", 6),
+    validations,
+    Controller.public
+  );
 
 //detail prod
 router.get("/productDetail/:idProd", Controller.prodDetail);
@@ -35,6 +40,9 @@ router.delete("/listadoProducto/:idUser/delete/:idProd", authMiddleware, Control
 //edit prod
 router.get("/listadoProducto/:idUser/edicionProducto/:idProd", authMiddleware, adminMiddleware, Controller.edit);
 router.put("/listadoProducto/:idUser/edicionProducto/:idProd", fileupload.single("imagenProducto") , Controller.editProcess);
+
+//borrar imagen
+router.delete("/listadoProducto/:idUser/edicionProducto/:idProd/:idImg", authMiddleware, Controller.processDeleteImg);
 
 //search
 router.get("/search", Controller.search);

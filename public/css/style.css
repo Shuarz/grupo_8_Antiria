@@ -771,14 +771,6 @@ nav ul li .link-nav-index~input:checked~.categorias3 {
 }
 
 
-@media(min-width:1280px) {
-    .contenedor-4 {
-        justify-content: space-between;
-
-    }
-
-}
-
 @media(max-width:1280px) {
     .contact-wrapper {
         height: 70%;
@@ -1203,7 +1195,7 @@ header .menu-mobile .cross {
 }
 
 #listaErrores {
-color:red
+    color: red
 }
 
 .login_maestro_box button {
@@ -1665,7 +1657,7 @@ body.dark-mode {
     color: #1a1a1a;
 }
 
-.darkMode{
+.darkMode {
     position: relative;
     display: flex;
     align-items: center;
@@ -1704,7 +1696,8 @@ body.dark-mode {
 
 .toggle-btn:checked::after {
     left: 32px;
-    background-color: #1c232ae0;;
+    background-color: #1c232ae0;
+    ;
 }
 
 .dark-mode .header-index {
@@ -1728,7 +1721,7 @@ body.dark-mode {
     z-index: 3;
 }
 
-.dark-mode .header-index .profile-img a p{
+.dark-mode .header-index .profile-img a p {
     color: #FAF2D7;
 }
 
@@ -1736,11 +1729,11 @@ body.dark-mode {
     color: #AA9D16;
 }
 
-.dark-mode .header-index .nav-index ul li a i{
+.dark-mode .header-index .nav-index ul li a i {
     color: #FAF2D7;
 }
 
-.dark-mode .header-index .nav-index ul li a i:hover{
+.dark-mode .header-index .nav-index ul li a i:hover {
     color: #AA9D16;
 }
 
@@ -1841,7 +1834,7 @@ body.dark-mode {
     transform: scaleX(1);
 }
 
-.dark-mode .categoriash2{
+.dark-mode .categoriash2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1850,7 +1843,7 @@ body.dark-mode {
     color: #faf2d7;
 }
 
-.dark-mode .tarjeta-2{
+.dark-mode .tarjeta-2 {
     position: relative;
     width: 340px;
     background-color: #353535;
@@ -1860,7 +1853,7 @@ body.dark-mode {
     transition: all 0.3s;
 }
 
-.dark-mode .coin-usuario div{
+.dark-mode .coin-usuario div {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1962,34 +1955,34 @@ body.dark-mode {
 .dark-mode .nombre-precio h3,
 .dark-mode .nombre-precio h4,
 .dark-mode .descripcion-prod h4,
-.dark-mode .descripcion-prod h5{
+.dark-mode .descripcion-prod h5 {
     color: #FAF2D7;
 }
 
-.dark-mode .submitCart{
+.dark-mode .submitCart {
     background-color: #353535ab;
 }
 
-.dark-mode .submitCart:focus{
+.dark-mode .submitCart:focus {
     box-shadow: 0px 0px 5px #000000a2 inset;
 }
 
-.dark-mode .carrito-seguimiento li a{
+.dark-mode .carrito-seguimiento li a {
     color: #FAF2D7;
 }
 
 .dark-mode .profile div .info-profile,
-.dark-mode .profile div .img-profile{
+.dark-mode .profile div .img-profile {
     box-shadow: 0px 0px 10px #000000a2;
 }
 
-.dark-mode .realizar-compra{
+.dark-mode .realizar-compra {
     background-color: #353535ab;
     color: #FAF2D7;
     transition: 0.2s ease-in-out;
 }
 
-.dark-mode .realizar-compra:hover{
+.dark-mode .realizar-compra:hover {
     background-color: #353535f3;
     box-shadow: 0px 0px 10px #000000a2;
 }
@@ -2002,7 +1995,7 @@ body.dark-mode {
     width: 100%;
 }
 
-.dark-mode .eliminar{
+.dark-mode .eliminar {
     color: #FAF2D7;
     border: none;
     background: transparent;
@@ -2010,7 +2003,7 @@ body.dark-mode {
     margin-right: 10px;
 }
 
-.dark-mode #product-edit{
+.dark-mode #product-edit {
     padding: 0;
     margin-top: 0;
     width: auto;
@@ -2035,7 +2028,7 @@ body.dark-mode {
     min-height: 51.3vh;
 }
 
-.carrito-ident{
+.carrito-ident {
     margin-right: 15px;
 }
 
@@ -2206,6 +2199,15 @@ body .cuerpo_pagina {
 
 .botonTrash:hover i {
     color: red;
+}
+
+.carritoVacio {
+    text-align: center;
+    font-size: 20px;
+}
+
+.carritoVacio a {
+    color: green;
 }
 
 /************************************** VENDER ************************************/
@@ -2734,7 +2736,7 @@ body .cuerpo_pagina {
     padding-top: 100px;
 }
 
-.mainHelp div{
+.mainHelp div {
     text-align: start;
 }
 
@@ -2761,6 +2763,54 @@ body .cuerpo_pagina {
     text-align: center;
     font-size: 17px;
 }
+
+/******************************** EDICION DE PROD ******************************/
+.edicionImagenes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+.edicionImagenes button {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+    border: 2px solid #1a1a1a;
+    position: relative;
+    transition: filter 0.3s;
+}
+
+.edicionImagenes button img {
+    width: 100%;
+}
+
+.delete-icon {
+    position: absolute;
+    left: 50%;
+    top: -100%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: red;
+    background-color: rgba(0, 0, 0, 0.397);
+    padding: 30px;
+    display: none;
+    transition: 0.3s;
+}
+
+.edicionImagenes button:hover {
+    filter: brightness(0.7);
+    cursor: pointer;
+}
+
+.edicionImagenes button:hover .delete-icon {
+    display: block;
+    top: 50%;
+}
+
+
 
 
 
@@ -3069,7 +3119,8 @@ body .cuerpo_pagina {
         color: #FAF2D7;
     }
 }
-@media (min-width: 769px){
+
+@media (min-width: 769px) {
     .dark-mode .imagen-detalle-prod {
         width: 200px;
         height: 200px;

@@ -60,10 +60,21 @@
                         <input type="text" name="descripcionGeneral" class="myTextarea , opciones" value="<%= productsUser.descripcion %>">
                         <div>
                             <label class="opciones">Subir imagen del producto</label>
-
+                            <% if (imagenes.length < 6) { %>
+                                <div class="edicionImagenes">
+                                    <% for( let i = 0; i < imagenes.length; i++ ) { %>
+                                        <form method="POST" action="/listadoProducto/<%= locals.userLogged.id %>/edicionProducto/<%= imagenes[i].id_prod %>/<%= imagenes[i].id %>?_method=DELETE">
+                                            <button>
+                                                <img src="/img/products/<%= imagenes[i].imagen_prod %>" alt="">
+                                                <i class="fas fa-trash delete-icon"></i>
+                                              </button>
+                                        </form>
+                                    <% } %>
+                                </div>
+                            <% } %>
                         </div>
                         <div  class="subir-imagen , opciones">
-                            <input name="imagenProducto" type="file">
+                            <input name="imagenProducto" type="file" multiple>
                         </div>
                         <div class="opciones" required>
                             <p>¿Se encuentra en oferta?</p>

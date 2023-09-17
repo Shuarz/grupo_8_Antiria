@@ -7,7 +7,7 @@
             <!-- FIN HEADER -->
 
             <main class="contenedorDetalleProd">
-                
+
                 <article class="contenedorMaestroCarousel">
                     <div class="container-carousel">
                         <div class="carousel">
@@ -18,23 +18,24 @@
                             <input type="radio" name="slides" id="slide-5">
                             <input type="radio" name="slides" id="slide-6">
                             <ul class="carousel__slides">
-                                <% imagenes.forEach(row => { %>
-                                <li class="carousel__slide">
-                                    <figure>
-                                        <div>
-                                            <img class="foto" src="/img/products/<%= row.imagen_prod %>" alt="<%= row.imagen_prod %>">
-                                        </div>
-                                    </figure>
-                                </li>
-                                <% }) %>
+                                <% imagenes.forEach(row=> { %>
+                                    <li class="carousel__slide">
+                                        <figure>
+                                            <div>
+                                                <img class="foto" src="/img/products/<%= row.imagen_prod %>"
+                                                    alt="<%= row.imagen_prod %>">
+                                            </div>
+                                        </figure>
+                                    </li>
+                                    <% }) %>
                             </ul>
                             <ul class="carousel__thumbnails">
-                                <% for( let i = 0; i < imagenes.length; i++ ) { %>
+                                <% for( let i=0; i < imagenes.length; i++ ) { %>
                                     <li>
-                                        <label for="slide-<%= i + 1 %>"><img src="/img/products/<%= imagenes[i].imagen_prod %>"
-                                                alt=""></label>
+                                        <label for="slide-<%= i + 1 %>"><img
+                                                src="/img/products/<%= imagenes[i].imagen_prod %>" alt=""></label>
                                     </li>
-                                <% } %>
+                                    <% } %>
                             </ul>
                         </div>
                     </div>
@@ -45,9 +46,9 @@
                         <h4 class="precios">
                             $ <%= prodUD.precio.toLocaleString('es-ES'); %>
                         </h4>
-                        
-                            <button class="submitCart" type="submit">Agregar al carrito</button>
-                        
+
+                        <button class="submitCart" type="submit">Agregar al carrito</button>
+
                     </div>
                 </article>
                 <div class="descripcion-prod">
@@ -65,8 +66,8 @@
 
             <!-- FOOTER -->
             <%- include("../partials/footer")%>
-                <!-- FIN FOOTER -->
-                <script src="/js/agregandocarrito.js"></script>
+            <!-- FIN FOOTER -->
+            <script src="/js/agregandocarrito.js"></script>
     </body>
 
     </html>
