@@ -231,7 +231,7 @@ module.exports = {
       default:
         marca = 6;
     }
-    if (req.file) {
+    if (req.file || req.files) {
       db.Product.update(
         {
           nombre: req.body.nombreProducto,
@@ -247,7 +247,12 @@ module.exports = {
           },
         }
       ).then((prod) => {
-        console.log("EL PRODUCTO EDITADO: " + prod);
+        req.files.forEach((file) => {
+          db.ImagenesProd.create({
+            id_prod: req.params.idProd,
+            imagen_prod: file.filename,
+          });
+        });
       });
     } else {
       db.Product.update(

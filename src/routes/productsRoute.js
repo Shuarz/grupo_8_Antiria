@@ -39,7 +39,12 @@ router.delete("/listadoProducto/:idUser/delete/:idProd", authMiddleware, Control
 
 //edit prod
 router.get("/listadoProducto/:idUser/edicionProducto/:idProd", authMiddleware, adminMiddleware, Controller.edit);
-router.put("/listadoProducto/:idUser/edicionProducto/:idProd", fileupload.single("imagenProducto") , Controller.editProcess);
+router.put(
+    "/listadoProducto/:idUser/edicionProducto/:idProd",
+    fileupload.array("imagenProducto", 6),
+    validations,
+    Controller.editProcess
+);
 
 //borrar imagen
 router.delete("/listadoProducto/:idUser/edicionProducto/:idProd/:idImg", authMiddleware, Controller.processDeleteImg);
