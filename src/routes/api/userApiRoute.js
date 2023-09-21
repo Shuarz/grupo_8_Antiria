@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 //controller
-const userApiController = require ('../../controller/apis/userApiController')
+const userApiController = require ('../../controller/api/userApiController')
 
 //route
 router.get('/', userApiController.list);
 
 
-module.export = router
+module.exports = router
