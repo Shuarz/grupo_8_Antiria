@@ -209,6 +209,7 @@ nav ul li .link-nav-index:hover::after {
 
 .menu-burger i {
     font-size: 25px;
+    margin-right: 10px;
     color: #1C232A;
 
 }
@@ -2055,6 +2056,13 @@ body.dark-mode {
     margin-top: 1rem;
 }
 
+.dark-mode .menu-burger i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #FAF2D7;
+
+}
+
 /************************************** CARRITO ************************************/
 .main-cart {
     min-height: 51.3vh;
@@ -2342,6 +2350,10 @@ body .cuerpo_pagina {
     margin-bottom: 1.5rem;
     position: relative;
     top: 65px;
+}
+
+.realizarlacompra2 {
+    margin-bottom: 1rem;
 }
 
 .realizar-compra {
@@ -3178,5 +3190,9 @@ body .cuerpo_pagina {
         justify-content: center;
         position: relative;
         top: -65px;
+    }
+
+    .realizarlacompra2 {
+        margin-left: 3rem;
     }
 }

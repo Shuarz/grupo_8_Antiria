@@ -46,9 +46,6 @@ router.put(
     Controller.editProcess
 );
 
-//create prod
-
-
 //borrar imagen
 router.delete("/listadoProducto/:idUser/edicionProducto/:idProd/:idImg", authMiddleware, Controller.processDeleteImg);
 
