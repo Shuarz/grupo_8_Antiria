@@ -3,13 +3,38 @@ if (document.readyState == "loading") {
 } else {
   ready();
 }
+
 function ready() {
   if (JSON.parse(localStorage.getItem("carrito")) == null) {
     localStorage.setItem("carrito", JSON.stringify([]));
   }
+
+  // Agregar evento para el botón "Carrito"
   let carritoboton = document.querySelector(".submitCart");
   carritoboton.addEventListener("click", agregaritem);
+
+  // Agregar evento para el botón "Comprar"
+  let comprarboton = document.querySelector(".submitCart2");
+  comprarboton.addEventListener("click", agregaritem);
 }
+
+function actualizarContadorCarrito() {
+  // Obtén el arreglo desde el localStorage
+  let productosCarrito = JSON.parse(localStorage.getItem("carrito"));
+
+  // Verifica si productosCarrito es un arreglo y tiene elementos
+  if (Array.isArray(productosCarrito) && productosCarrito.length > 0) {
+    // Obtiene la longitud del arreglo
+    let cantidadDePosiciones = productosCarrito.length;
+
+    // Actualiza el contenido del elemento HTML con la cantidad
+    document.querySelector(".contador-carrito-p").textContent = cantidadDePosiciones;
+  } else {
+    // Si no hay elementos en el carrito, puedes mostrar "0" o un mensaje indicando que está vacío
+    document.querySelector(".contador-carrito-p").textContent = "0";
+  }
+}
+
 function agregaritem() {
   let regex = /\/productDetail\/(\d+)/;
   let url = window.location.href;
@@ -38,4 +63,7 @@ function agregaritem() {
     }
   }
   localStorage.setItem("carrito", JSON.stringify(productosCarrito));
+
+  // Llama a la función para actualizar el contador
+  actualizarContadorCarrito();
 }

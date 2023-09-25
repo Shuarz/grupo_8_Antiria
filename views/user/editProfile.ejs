@@ -1,0 +1,25 @@
+<%- include('../partials/head', {tituloWeb: 'Antiria - Alejo' }) %>
+
+<body>
+    <!-- HEADER -->
+    <%- include("../partials/header")%>
+    <!-- FIN HEADER -->
+    <main class="profile">
+        <div>
+            <form action="">
+                <div class="img-profile">
+                    <img src="./img/user/<%= user.avatar %>" alt="<%= user.email %>">
+                </div>
+                <input type="text" placeholder="Nombre" name="name" id="name" value="<%= user.nombre %>">
+                <input type="text" placeholder="Apellido" name="lastName" id="lastName" value="<%= user.apellido %>">
+                <input type="text" placeholder="Email" name="email" id="email" value="<%= user.email %>">
+            </form>
+            <a href="">Guardar</a>
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <%- include("../partials/footer")%>
+    <!-- FIN FOOTER -->
+</body>
+
+</html>

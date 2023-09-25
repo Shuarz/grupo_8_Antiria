@@ -45,8 +45,11 @@
                         <p>Hola, <%= locals.userLogged.nombre %></p>
                     </a>
                 </li>
-                <li>
+                <li class="carrito-contenedor">
                     <a href="/carrito/<%= locals.userLogged.id %>" class="carrito-ident"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <div class="contador-carrito">
+                        <p class="contador-carrito-p">0</p>
+                    </div>
                 </li>
             <% } else { %>
                 <li>
@@ -66,8 +69,11 @@
     </nav>
     <div class="contenedor-icon-mobile">
         <% if (locals.isLogged) { %>
-            <label for="nav-check-index" class="menu-burger">
+            <label for="nav-check-index" class="menu-burger carrito-contenedor">
                 <a href="/carrito/<%= locals.userLogged.id %>"><i class="fa-solid fa-cart-shopping"></i></a>
+                <div class="contador-carrito">
+                    <p class="contador-carrito-p">0</p>
+                </div>
             </label>
         <% } %>
         <div class="menu-mobile">
@@ -122,3 +128,4 @@
     </div>
 </header>
 <script src="/js/darkMode.js"></script>
+<script src="/js/contadorCarrito.js"></script>

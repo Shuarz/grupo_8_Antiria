@@ -17,20 +17,16 @@ function ready() {
 };
 
 function borrarElemento(id) {
-    if (localStorage.getItem('carrito', JSON.stringify([]))) {
+    // Filtrar los productos para eliminar el producto con el ID dado
+    productos = productos.filter((row) => row.id != id);
 
-        localStorage.getItem('carrito', JSON.stringify([]));
-        JSON.parse((localStorage.getItem('carrito')));
+    // Actualizar la lista de productos en el almacenamiento local
+    localStorage.setItem('carrito', JSON.stringify(productos));
 
-    }
-    let elemento = productos.filter((row) => row.id != id)
-    mostrarCarrito(elemento);
+    // Mostrar el carrito actualizado
+    mostrarCarrito(productos);
+}
 
-    const productosJSON = JSON.stringify([]);
-    localStorage.setItem('carrito', productosJSON);
-
-
-};
 
 function vaciarCarrito() {
     const productosJSON = JSON.stringify([]);
@@ -66,7 +62,7 @@ function mostrarCarrito(productosCarrito) {
                     <h3>${element.nombre}</h3>
                     <h4 class="green">$${parseFloat(element.precio).toLocaleString('es-ES')}</h4>
                     <div class="eliminar-edit">
-                        <i class="fa-sharp fa-solid fa-trash" onClick=borrarElemento(${element.id})></i>
+                        <i class="fa-sharp fa-solid fa-trash eliminarCarrito" onClick="borrarElemento(${element.id})"></i>
                     </div>
                 </div>
             </article>`

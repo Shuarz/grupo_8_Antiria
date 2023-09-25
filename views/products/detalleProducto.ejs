@@ -46,8 +46,13 @@
                         <h4 class="precios">
                             $ <%= prodUD.precio.toLocaleString('es-ES'); %>
                         </h4>
-
-                        <button class="submitCart" type="submit">Agregar al carrito</button>
+                        <% if (locals.isLogged) { %>
+                            <button class="submitCart" type="submit">Agregar al carrito</button>
+                            <a class="submitCart2" href="/carrito/<%= locals.userLogged.id %>">Comprar</a>
+                        <% } else { %>
+                            <a class="submitCart" href="/login">Agregar al carrito</a>
+                            <a class="submitCart2" href="/login">Comprar</a>
+                        <% } %>
 
                     </div>
                 </article>
@@ -68,6 +73,7 @@
             <%- include("../partials/footer")%>
             <!-- FIN FOOTER -->
             <script src="/js/agregandocarrito.js"></script>
+            <script src="/js/contadorCarrito.js"></script>
     </body>
 
     </html>

@@ -28,7 +28,7 @@ window.onload = function () {
             errores.push("el campo email debe estar completo")
 
         }
-             
+
         const terminos = document.getElementById('recordar')
 
         if (recordar.value != true){
@@ -63,5 +63,5 @@ window.onload = function () {
             }
         }
 
-    })    
+    })
 }

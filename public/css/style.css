@@ -1090,15 +1090,17 @@ header .menu-mobile .cross {
 
 .input-box {
     position: relative;
-    width: 310px;
+    width: 270px;
     margin: 30px 0;
+    margin-left: 10px;
     border-bottom: 2px solid #1c232a;
 }
 
 .input-box2 {
     position: relative;
-    width: 310px;
+    width: 270px;
     margin: 30px 0;
+    margin-left: 10px;
     border-bottom: 2px solid red;
 }
 
@@ -1255,7 +1257,7 @@ header .menu-mobile .cross {
 
 @media (max-width: 480px) {
     .login_header img {
-        width: 100px;
+        width: 68px;
     }
 
     .login-box {
@@ -1282,6 +1284,7 @@ header .menu-mobile .cross {
     backdrop-filter: blur(10px);
     box-shadow: 0 0 20px black;
 }
+
 
 .iniciar_sesion_link {
     margin-top: 1rem;
@@ -1313,7 +1316,7 @@ header .menu-mobile .cross {
 
 @media (max-width: 480px) {
     .login_header img {
-        width: 100px;
+        width: 68px;
     }
 
     .registro-box {
@@ -1580,6 +1583,7 @@ header .menu-mobile .cross {
     color: #FAF2D7;
     border: none;
     cursor: pointer;
+    font-size: 15px;
 }
 
 .submitCart:hover {
@@ -1587,6 +1591,31 @@ header .menu-mobile .cross {
 }
 
 .submitCart:active {
+    box-shadow: 0px 0px 10px #2c1e13 inset;
+}
+
+.submitCart2 {
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #1c232a;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    width: 100%;
+    background-color: #AA9D16;
+    color: #FAF2D7;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.submitCart2:hover {
+    background-color: #6e6710;
+}
+
+.submitCart2:active {
     box-shadow: 0px 0px 10px #2c1e13 inset;
 }
 
@@ -1968,6 +1997,14 @@ body.dark-mode {
     box-shadow: 0px 0px 5px #000000a2 inset;
 }
 
+.dark-mode .submitCart2 {
+    background-color: #6e6710;
+}
+
+.dark-mode .submitCart2:focus {
+    box-shadow: 0px 0px 5px #000000a2 inset;
+}
+
 .dark-mode .carrito-seguimiento li a {
     color: #FAF2D7;
 }
@@ -2047,7 +2084,7 @@ body.dark-mode {
 
 .dark-mode .input-box {
     position: relative;
-    width: 310px;
+    width: 270px;
     margin: 30px 0;
     border-bottom: 2px solid #FAF2D7;
 }
@@ -2060,7 +2097,23 @@ body.dark-mode {
     font-size: 20px;
     margin-right: 10px;
     color: #FAF2D7;
+}
 
+.dark-mode .contador-carrito{
+    position: absolute;
+    background-color: #FAF2D7;
+    color: #1a1a1a;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    top: 10px;
+    right: 0;
+    transition: 0.2s;
 }
 
 /************************************** CARRITO ************************************/
@@ -2070,6 +2123,26 @@ body.dark-mode {
 
 .carrito-ident {
     margin-right: 15px;
+}
+
+.carrito-contenedor{
+    position: relative;
+}
+
+.contador-carrito{
+    position: absolute;
+    background-color: #1a1a1a;
+    color: #FAF2D7;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    top: 10px;
+    right: 0;
 }
 
 .descripcion-carrito {
@@ -2417,7 +2490,7 @@ body .cuerpo_pagina {
 .errors {
     color: red;
     position: relative;
-    top: -20px;
+    top: -3px;
 }
 
 .errors2 {
@@ -2761,6 +2834,16 @@ body .cuerpo_pagina {
     display: flex;
 }
 
+.eliminarCarrito{
+    cursor: pointer;
+    transition: 0.2s color;
+}
+
+.eliminarCarrito:hover{
+    color: red;
+}
+
+
 .eliminar {
     color: #1a1a1a;
     border: none;
@@ -2866,6 +2949,16 @@ body .cuerpo_pagina {
 @media (min-width:480px) {
     .main-index .primerSlide h3 {
         font-size: 27px;
+    }
+
+    .input-box{
+        width: 310px;
+        margin-left: 0;
+    }
+
+    .input-box2{
+        width: 310px;
+        margin-left: 0;
     }
 
     .seguimiento {
