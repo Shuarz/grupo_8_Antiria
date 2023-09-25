@@ -16,6 +16,25 @@ function ready() {
     mostrarCarrito(productos);
 };
 
+function actualizarContadorCarrito() {
+    // Obtén el arreglo desde el localStorage
+    let productosCarrito = JSON.parse(localStorage.getItem("carrito"));
+
+    // Verifica si productosCarrito es un arreglo y tiene elementos
+    if (productosCarrito && Array.isArray(productosCarrito) && productosCarrito.length > 0) {
+      // Obtiene la longitud del arreglo
+      let cantidadDePosiciones = productosCarrito.length;
+
+      // Actualiza el contenido del elemento HTML con la cantidad
+      let innerCarrito = document.querySelector(".contador-carrito");
+      innerCarrito.innerHTML = `<p class="contador-carrito-p">${cantidadDePosiciones}</p>`;
+    } else {
+      // Si no hay elementos en el carrito, puedes mostrar "0" o un mensaje indicando que está vacío
+      let innerCarrito = document.querySelector(".contador-carrito");
+      innerCarrito.innerHTML = `<p class="contador-carrito-p">0</p>`;
+    }
+  }
+
 function borrarElemento(id) {
     // Filtrar los productos para eliminar el producto con el ID dado
     productos = productos.filter((row) => row.id != id);
@@ -49,6 +68,7 @@ function mostrarCarrito(productosCarrito) {
     if (productosCarrito.length == 0) {
         carritoProd.innerHTML = `<h2 class="carritoVacio">El carrito esta vacio <a href='/'>Compra ahora</a></h2>`
         document.querySelector('.totalCart').innerHTML = ``;
+        actualizarContadorCarrito();
     } else {
         let subTotal = 0;
         carritoProd.innerHTML = ``
@@ -66,12 +86,14 @@ function mostrarCarrito(productosCarrito) {
                     </div>
                 </div>
             </article>`
+            actualizarContadorCarrito();
         });
         console.log('Esta es el subtotal ' + subTotal);
         document.querySelector('.totalCart').innerHTML = `<h3 class="subtotal subtotal2">SubTotal: $${subTotal.toLocaleString('es-ES')}</h3>
             <h3 class="subtotal">Envio: $ 1.500</h3>
             <h2 class="total green">Total: $${(subTotal + 1500).toLocaleString('es-ES')}</h2>
             <button class="realizar-compra" onClick=finalizarCompra()>Realizar compra</button>
-            <button class="realizar-compra" onClick=vaciarCarrito()>Vaciar carrito</button>`
+            <button class="realizar-compra" onClick=vaciarCarrito()>Vaciar carrito</button>`;
+        actualizarContadorCarrito();
     }
 }
