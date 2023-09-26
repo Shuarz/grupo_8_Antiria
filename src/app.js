@@ -13,7 +13,12 @@ const productsRoute = require('./routes/productsRoute');
 
 //call apis
 const productsApis = require("./api/routes/productsApisRouter");
-const userApis = require("./api/routes/userApiRoute")
+const userApis = require("./api/routes/userApiRoute");
+const ofertaApis = require("./api/routes/ofertasApisRoute");
+const marcasApis = require("./api/routes/marcasApisRoute");
+const imagenesApis = require("./api/routes/imagenesProdApisRoute");
+const categoriasApis = require("./api/routes/categoriasApisRoute");
+
 
 //port
 const port = 3008;
@@ -61,9 +66,12 @@ app.use(productsRoute);
 //use apis
 app.use('/api/products', productsApis);
 app.use('/api/users', userApis);
+app.use('/api/ofertas', ofertaApis);
+app.use('/api/marcas', marcasApis);
+app.use('/api/imagenesProd', imagenesApis);
+app.use('/api/categorias', categoriasApis);
 
 //404
 app.use((req, res, next) => {
     res.status(404).render('./error/404');
 });
-

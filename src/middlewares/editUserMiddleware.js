@@ -15,5 +15,4 @@ module.exports = [
             return true;
         }),
     body('passwordConfirm').notEmpty().withMessage('Debes confirmar tu contraseña'),
-    body('terminos').notEmpty().withMessage('Debes aceptar los términos y condiciones')
 ];

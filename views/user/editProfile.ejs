@@ -6,15 +6,23 @@
     <!-- FIN HEADER -->
     <main class="profile">
         <div>
-            <form action="">
-                <div class="img-profile">
-                    <img src="./img/user/<%= user.avatar %>" alt="<%= user.email %>">
-                </div>
-                <input type="text" placeholder="Nombre" name="name" id="name" value="<%= user.nombre %>">
-                <input type="text" placeholder="Apellido" name="lastName" id="lastName" value="<%= user.apellido %>">
-                <input type="text" placeholder="Email" name="email" id="email" value="<%= user.email %>">
+            <div class="img-profile2">
+                <form method="POST" action="/delete/imgProfile/<%= locals.userLogged.id %>?_method=DELETE">
+                    <img src="/img/user/<%= user.avatar %>" alt="<%= user.email %>">
+                    <div class="hover-overlay">
+                        <button type="submit"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                </form>
+            </div>
+            
+            <form class="formEditUser" action="/editProd/<%= locals.userLogged.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <div><input name="avatar" type="file"></div>
+                <div><input class="inputEdit" type="text" placeholder="Nombre" name="name" id="name" value="<%= user.nombre %>"></div>
+                <div><input class="inputEdit" type="text" placeholder="Apellido" name="lastname" id="lastname" value="<%= user.apellido %>"></div>
+                <div><input class="inputEdit" type="text" placeholder="Email" name="mail" id="mail" value="<%= user.email %>"></div>
+                <div><input class="inputEdit" type="password" placeholder="Contraseña" name="password" id="password"></div>
+                <button class="buttonEditUser" type="submit">Guardar</button>
             </form>
-            <a href="">Guardar</a>
         </div>
     </main>
     <!-- FOOTER -->

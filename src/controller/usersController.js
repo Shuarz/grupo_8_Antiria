@@ -2,7 +2,6 @@ const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
 let db = require('../database/models');
-const { response } = require('express');
 
 module.exports = {
     register: (req, res) => {
@@ -124,5 +123,56 @@ module.exports = {
             .then(response => {
                 return res.redirect('/listadoUser')
             })
-    }
+    },
+
+    editUser: (req, res) => {
+        db.User.findByPk(req.session.userLogged.id)
+            .then(function (user) {
+                res.render('user/editProfile', { user: user })
+            })
+    },
+
+    editUserProcess: (req, res) => {
+        const updateData = {
+            nombre: req.body.name,
+            apellido: req.body.lastname,
+            email: req.body.mail,
+            avatar: req.file ? req.file.filename : undefined
+        };
+
+        if (req.body.password) {
+            updateData.password = bcryptjs.hashSync(req.body.password, 10);
+        }
+
+        db.User.update(updateData, {
+            where: {
+                id: req.params.idUser
+            }
+        }).then(user => {
+            res.redirect('/editProd/' + req.params.idUser);
+        }).catch(err => {
+            console.error(err);
+            res.status(500).send('Error interno del servidor');
+        });
+        
+    },
+
+    deleteUserImg: (req, res) => {
+        db.User.update(
+            {
+                avatar: 'user_undefined.png'
+            },
+            {
+                where: {
+                    id: req.params.idUser
+                }
+            }
+        ).then(user => {
+            res.redirect('/editProd/' + req.params.idUser);
+        }).catch(err => {
+            console.error(err);
+            res.status(500).send('Error interno del servidor');
+        });
+    },
+    
 }

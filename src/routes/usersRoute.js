@@ -14,7 +14,7 @@ const guestMiddleware = require('../middlewares/guestMiddleware.js');
 const authMiddleware = require('../middlewares/authMiddleware.js');
 
 //admin middleware
-const adminMiddleware = require('../middlewares/adminMiddleware.js')
+const adminMiddleware = require('../middlewares/adminMiddleware.js');
 
 //register
 router.get("/registro", guestMiddleware, Controller.register);
@@ -35,6 +35,11 @@ router.get("/help", Controller.help);
 
 //list prod
 router.get("/listadoUser", authMiddleware, adminMiddleware, Controller.list);
-router.delete("/listadoUser/delete/:idUser", authMiddleware, Controller.delete);
+router.delete("/listadoUser/delete/:idUser", authMiddleware, adminMiddleware, Controller.delete);
+
+//edit user
+router.get("/editProd/:idUser", authMiddleware, Controller.editUser);
+router.put("/editProd/:idUser", fileupload.single('avatar'), authMiddleware, Controller.editUserProcess);
+router.delete("/delete/imgProfile/:idUser", authMiddleware, Controller.deleteUserImg)
 
 module.exports = router;

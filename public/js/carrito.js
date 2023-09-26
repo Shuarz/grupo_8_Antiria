@@ -65,11 +65,7 @@ async function finalizarCompra() {
 
 function mostrarCarrito(productosCarrito) {
     let carritoProd = document.querySelector('.carrito-prod');
-    if (productosCarrito.length == 0) {
-        carritoProd.innerHTML = `<h2 class="carritoVacio">El carrito esta vacio <a href='/'>Compra ahora</a></h2>`
-        document.querySelector('.totalCart').innerHTML = ``;
-        actualizarContadorCarrito();
-    } else {
+    if (productosCarrito.length > 0) {
         let subTotal = 0;
         carritoProd.innerHTML = ``
         productosCarrito.forEach(element => {
@@ -94,6 +90,10 @@ function mostrarCarrito(productosCarrito) {
             <h2 class="total green">Total: $${(subTotal + 1500).toLocaleString('es-ES')}</h2>
             <button class="realizar-compra" onClick=finalizarCompra()>Realizar compra</button>
             <button class="realizar-compra" onClick=vaciarCarrito()>Vaciar carrito</button>`;
+        actualizarContadorCarrito();
+    } else {
+        carritoProd.innerHTML = `<h2 class="carritoVacio">El carrito esta vacio <a href='/'>Compra ahora</a></h2>`
+        document.querySelector('.totalCart').innerHTML = ``;
         actualizarContadorCarrito();
     }
 }
