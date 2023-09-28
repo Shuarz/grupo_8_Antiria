@@ -821,6 +821,10 @@ header .menu-mobile #burger {
     transition: 0.2s ease;
 }
 
+header .menu-mobile{
+    display: flex;
+}
+
 header .menu-mobile #burger:checked {
     position: absolute;
     top: -10px;

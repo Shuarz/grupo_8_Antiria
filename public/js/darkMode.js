@@ -1,4 +1,4 @@
-const toggleBtn = document.getElementById('toggleBtn');
+const toggleBtns = document.querySelectorAll('.toggle-btn');
 const body = document.body;
 var logo = document.getElementById("logoAntiria");
 
@@ -23,10 +23,12 @@ if (modoOscuroAlmacenado === 'true') {
     activarModoOscuro();
 }
 
-toggleBtn.addEventListener('click', () => {
-    if (body.classList.contains('dark-mode')) {
-        desactivarModoOscuro();
-    } else {
-        activarModoOscuro();
-    }
+toggleBtns.forEach(function(toggleBtn) {
+    toggleBtn.addEventListener('change', () => {
+        if (toggleBtn.checked) {
+            activarModoOscuro();
+        } else {
+            desactivarModoOscuro();
+        }
+    });
 });
