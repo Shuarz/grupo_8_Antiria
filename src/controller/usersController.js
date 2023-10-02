@@ -149,12 +149,11 @@ module.exports = {
                 id: req.params.idUser
             }
         }).then(user => {
-            res.redirect('/editProd/' + req.params.idUser);
+            res.redirect('/profile');
         }).catch(err => {
             console.error(err);
             res.status(500).send('Error interno del servidor');
         });
-        
     },
 
     deleteUserImg: (req, res) => {

@@ -1,12 +1,12 @@
 <%- include('../partials/head', {tituloWeb: 'Antiria - Login'}) %>
 
 <body class="login_maestro_box">
-    <header class="login_header">
+    <header id="logoLogin" class="login_header">
         <a href="/">
             <img src="img/isotipo.png" alt="Antiria">
         </a>
     </header>
-    <section class="login-box">
+    <section id="loginBox" class="login-box">
         <form class="validForm" action="/login" method="POST">
             <h2>Iniciar Sesión</h2>
             <div class="input-box">
@@ -46,8 +46,8 @@
     </footer>
 
     <script src="../../public/js/validLogin.js" >
-
     </script>
+    <script src="/js/scrollrevealindex.js"></script>
 </body>
 
 </html>

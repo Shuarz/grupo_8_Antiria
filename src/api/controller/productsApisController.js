@@ -9,7 +9,8 @@ module.exports = {
         };
         try {
             const products = await db.Product.findAll();
-            response.products = products;
+            response.data = products;
+            response.count = products.length;
             res.json(response);
         } catch (error) {
             response.success = false;

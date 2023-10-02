@@ -11,7 +11,7 @@
             <h4 class="notfound-search">No se encontraron resultados 🤔</h4>
         <% } else { %>
             <% search.forEach ((row)=> { %>
-                <article>
+                <article id="searchProducts">
                     <div class="imagen-detalle-prod">
                         <img src="/img/products/<%= row.ImagenesProd[0].imagen_prod %>" alt="">
                     </div>
@@ -30,6 +30,7 @@
     <!-- FOOTER -->
     <%- include("../partials/footer")%>
     <!-- FIN FOOTER -->
+    <script src="/js/scrollrevealindex.js"></script>
 
 </body>
 

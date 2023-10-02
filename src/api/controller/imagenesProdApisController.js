@@ -9,7 +9,8 @@ module.exports = {
         };
         try {
             const imagenesProd = await db.ImagenesProd.findAll();
-            response.imagenesProd = imagenesProd;
+            response.data = imagenesProd;
+            response.count = imagenesProd.length;
             res.json(response);
         } catch (error) {
             response.success = false;

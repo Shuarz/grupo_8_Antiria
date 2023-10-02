@@ -9,7 +9,8 @@ module.exports = {
         };
         try {
             const user = await db.User.findAll();
-            response.user = user;
+            response.data = user;
+            response.count = user.length;
             res.json(response);
         } catch (error) {
             response.success = false;

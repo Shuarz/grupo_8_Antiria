@@ -1,12 +1,12 @@
 <%- include('../partials/head', {tituloWeb: 'Antiria - Registro'}) %>
 
 <body class="login_maestro_box">
-    <header class="login_header">
+    <header id="logoLogin" class="login_header">
         <a href="/">
             <img src="img/isotipo.png" alt="Antiria">
         </a>
     </header>
-    <section class="registro-box">
+    <section id="loginBox" class="registro-box">
 
         <form method="post" id="validForm" action="/registro" enctype="multipart/form-data">
             <h2>Registrate</h2>
@@ -124,6 +124,7 @@
         <p>Antiria - 2023 &copy</p>
         <script src="../../public/js/validRegister.js" ></script>
     </footer>
+    <script src="/js/scrollrevealindex.js"></script>
 </body>
 
 </html>

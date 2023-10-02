@@ -9,7 +9,8 @@ module.exports = {
         };
         try {
             const oferta = await db.Oferta.findAll();
-            response.oferta = oferta;
+            response.data = oferta;
+            response.count = oferta.length;
             res.json(response);
         } catch (error) {
             response.success = false;

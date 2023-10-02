@@ -61,7 +61,7 @@ module.exports = {
 
     db.Product.create({
       nombre: req.body.nombreProducto,
-      descripcion: req.body.nombreProducto,
+      descripcion: req.body.descripcionGeneral,
       precio: parseFloat(req.body.precioProducto),
       id_user: req.params.idUser,
       id_marca: marca,

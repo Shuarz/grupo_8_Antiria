@@ -27,7 +27,7 @@
                                     <h3><%= row.nombre %></h3>
                                     <h4 class="green">$ <%= row.precio.toLocaleString('es-ES'); %></h4>
                                     <div class="eliminar-edit2">
-                                        <form method="POST" action="/listadoProducto/<%= locals.userLogged.id %>/delete/<%= row.id %>?_method=DELETE" onsubmit="return confirm('¿Realmente desea eliminar este usuario?')">
+                                        <form method="POST" action="/listadoProducto/<%= locals.userLogged.id %>/delete/<%= row.id %>?_method=DELETE" onsubmit="return confirm('¿Realmente desea eliminar este producto?')">
                                             <button type="submit" class="eliminar" id="user-delete">
                                                 <i class="fas fa-trash"></i>
                                             </button>

@@ -9,7 +9,8 @@ module.exports = {
         };
         try {
             const marcas = await db.Marca.findAll();
-            response.marcas = marcas;
+            response.data = marcas;
+            response.count = marcas.length;
             res.json(response);
         } catch (error) {
             response.success = false;

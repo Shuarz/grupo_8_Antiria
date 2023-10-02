@@ -12,7 +12,7 @@
                             <div class="imagen">
                                 <img src="\img\p1.jpg" alt="producto">
                             </div>
-                            <div class="descripcion">
+                            <div id="novedades" class="descripcion">
                                 <h3>
                                     Novedades
                                 </h3>
@@ -31,7 +31,7 @@
                 <div class="box-ofertas">
                     <h5 class="categoriash2">Ofertas</h5>
                 </div>
-                <section class="contenedor-4">
+                <section id="ofertasScroll" class="contenedor-4">
 
                     <% oferta.forEach ((row)=> { %>
                         <article class="tarjeta-2">
@@ -57,7 +57,7 @@
 
                 </section>
                 <h2 class="categoriash2">Marcas emblemáticas</h2>
-                <section class="usuarios-vendedores">
+                <section id="marcasScroll" class="usuarios-vendedores">
                     <a href="/search?search=Sony">
                         <div class="coin-usuario">
                             <div class="coin-front">
@@ -121,7 +121,7 @@
 
             </main>
             <h2 class="categoriash2">Categorías</h2>
-            <section class="categorias-index">
+            <section id="categorias" class="categorias-index">
                 <a href="/search?search=joyeria">
                     <div class="mini-cat">
                         <div class="mini-cat-nombre">
@@ -263,7 +263,7 @@
             <!-- FOOTER -->
             <%- include("./partials/footer")%>
                 <!-- FIN FOOTER -->
-
+            <script src="/js/scrollrevealindex.js"></script>
     </body>
 
     </html>

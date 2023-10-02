@@ -9,7 +9,8 @@ module.exports = {
         };
         try {
             const categorias = await db.Categoria.findAll();
-            response.categorias = categorias;
+            response.data = categorias;
+            response.count = categorias.length;
             res.json(response);
         } catch (error) {
             response.success = false;
